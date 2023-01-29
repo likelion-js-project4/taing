@@ -1,5 +1,5 @@
 ---
-name: Additional Feature description
+name: "✍Additional Feature description"
 about: '추가적인 기능 설명이 필요할 시 사용합니다. '
 title: "[ADD]"
 labels: ''
