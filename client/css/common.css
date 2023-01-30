@@ -24,11 +24,11 @@ a {
 /* 본문 스타일 */
 body {
   font-size: 1rem;
-  color: #191919;
+  color: var(--white);
   font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
     Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-  background: #f9f9f9;
+  background: var(--black);
 }
 
 /* 이미지크기 */
