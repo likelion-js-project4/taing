@@ -1,0 +1,45 @@
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+
+  --silver100:#E1E1E1;
+  --silver200: #c4c4c4;
+  --silver300: #A6A6A6;
+  --silver400: #898989;
+  --silver500: #6B6B6B;
+  --silver600: #565656;
+  --silver700: #404040;
+  --silver800: #2B2B2B;
+  --silver900: #151515;
+ 
+  --red-1: #FF153C;
+  --red-2: #E93945;
+
+  --dark-bg-1: #191919;
+  --dark-bg-2: #212121;
+
+  --skyblue: #61D4E6;
+
+
+  --text-sm: 0.75rem; /* 12px */
+  --text-base: 1rem; /* 16px */
+  --text-md: 1.333rem; /* 21.328px */
+  --text-lg: 1.7769rem; /* 28.43px */
+  --text-xl: 2.3686rem; /* 37.897px */
+  --text-xxl: 3.1573rem; /* 50.517px */
+ 
+
+  /* line-height와 weight는 필요한 사람 알아서 쓸것 */
+
+  --line-height-sm: 140%;
+  --line-height-md: 150%;
+  --line-height-lg: 160%;
+
+  --weight-sm: 400;
+  --weight-md: 600;
+  --weight-lg: 700;
+
+
+
+  --container-width: 64rem; /* 1024px */
+}
