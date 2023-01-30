@@ -24,5 +24,4 @@ module.exports = {
     // 도달하지 못하는 코드는 사용할 수 없다
     "no-unreachable": ["error"],
   },
-
 };
