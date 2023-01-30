@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 * {
   text-decoration: none;
   list-style: none;
@@ -8,6 +8,119 @@
   font-family: "Noto Sans KR", sans-serif;
   box-sizing: border-box;
   white-space: nowrap;
+} */
+
+/* 맨위 공간 */
+.header{
+background-color: brown;
+}
+
+/* 로고 아이콘 이미지 */
+.logo{
+
+}
+
+/* 헤더 밑부터 푸터 위까지 */
+.main{
+
+}
+
+/* 프로필선택~프로필편집 가로 전체 영역 */
+.profile{
+
+}
+
+/* 프로필선택~프로필편집 전체 박스 영역 */
+.profile-container{
+  background-color: aqua;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+
+}
+/* 프로필선택+선택해주세요 합친 영역 */
+.profile-title-wrapper{
+background-color: pink;
+}
+
+/* 프로필 선택 */
+.profile-title{
+background-color: salmon;
+text-align: center;
+color: var(--white);
+font-size: var(--text-xxl);
+font-weight: var(--weight-lg);
+}
+
+/* 선택해주세요 */
+.profile-subtitle{
+  background-color: darkmagenta;
+  text-align: center;
+  color: var(--silver200);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-md);
+}
+
+/* 4개 이미지+텍스트 다 합친 잔체 영역 div */
+.profile-photo-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+/* li 4개 (이미지+텍스트) 합친거 ul */
+.profile-photo-box{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* 이미지+텍스트 개별 li
+.item{
+
+} */
+
+
+
+/* 4개 이미지(버튼)
+.user{
+
+} */
+
+
+/* 프로필 편집 가로 전체 영역 */
+.profile-edit{
+background-color: blue;
+}
+
+
+/* 프로필 편집 버튼 */
+.profile-edit-btn{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--container-width);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: var(--weight-md);
+  font-size: var(--text-lg);
+  color: var(--silver300);
+  border: 1px solid #565656;
+  border-radius: 4px; 
+  padding: 1rem 3.125rem;
+  background-color: transparent;
+
+  
+}
+
+/* p태그 */
+.user-name{
+  text-align: center;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-sm);
+  color: var(--silver300);
 }
 
 
