@@ -49,6 +49,7 @@
   padding: 2rem 0;
   font-size: 1.25rem;
   cursor: pointer;
+  gap: 1.25rem;
 }
 .copyright-box {
 }
