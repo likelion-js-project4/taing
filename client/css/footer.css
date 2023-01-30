@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 * {
   text-decoration: none;
   list-style: none;
   padding: 0;
   margin: 0;
   background-color: #000;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   box-sizing: border-box;
   white-space: nowrap;
 }
@@ -58,11 +58,11 @@
 }
 .copyright_box > p > span::before {
   font: 1rem;
-  content: "|";
+  content: '|';
   padding: 0 0.75rem;
 }
 .copyright_box > p > span:first-child::before {
-  content: "";
+  content: '';
   padding: 0;
   position: absolute;
   top: 50%;
