@@ -10,6 +10,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
+
   rules: {
     "linebreak-style": ["error", "unix"],
     // var는 사용할 수 없다
@@ -23,4 +24,5 @@ module.exports = {
     // 도달하지 못하는 코드는 사용할 수 없다
     "no-unreachable": ["error"],
   },
+
 };

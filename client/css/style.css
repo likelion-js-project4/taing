@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+
+.footer {
+  position: relative;
+  padding: 7rem 4rem 10rem 4rem;
+  border: 1px solid red;
+  position: relative;
+  font-size: 1.25rem;
+  color: rgb(110, 110, 110);
+}
+.footer > div {
+  display: flex;
+  padding: 0 2rem;
+}
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.083rem solid rgb(33, 33, 33);
+  padding: 1rem 0;
+}
+.footer_nav {
+  padding: 1.5rem 0;
+}
+
+.footer_nav > a {
+  margin-right: 1.5rem;
+}
+
+.customer_service {
+  cursor: pointer;
+  color: gray;
+  text-decoration: underline;
+}
+.customer_service:hover {
+  color: lightgray;
+  transition: color 0.1s ease 0s;
+}
+.sns_link_logo {
+  display: flex;
+  padding: 2rem 0;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.copyright_box {
+}
+.copyright_box > p {
+  margin-bottom: 0.5rem;
+}
+.copyright_box > p > span::before {
+  font: 1rem;
+  content: "|";
+  padding: 0 0.75rem;
+}
+.copyright_box > p > span:first-child::before {
+  content: "";
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+}
+.copyright {
+  margin-top: 1.5rem;
+}
