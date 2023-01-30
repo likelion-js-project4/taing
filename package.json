@@ -11,16 +11,16 @@
     "웹표준",
     "함수형 프로그래밍"
   ],
-  "author": "담당자",
+  "author": "최예송, 장세민, 조윤호, 황혜인, 김강철",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx live-server client --host=localhost --port=5500 --no-browser"
+    "start": "npx live-server client --host=localhost --port=5500 --no-browser",
+    "serve": "json-server --watch server/db/data.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/likelion-js-project4/tving.git"
   },
-  "author": "최예송, 장세민, 조윤호, 황혜인, 김강철",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/likelion-js-project4/tving/issues"
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/likelion-js-project4/tving#readme",
   "dependencies": {
     "eslint": "^8.30.0",
+    "json-server": "^0.17.1",
     "live-server": "^1.2.2"
   }
 }
