@@ -1,5 +1,5 @@
 {
-  "name": "Vanilla Project",
+  "name": "vanilla_project",
   "version": "1.0.0",
   "description": "멋쟁이 사자처럼 바닐라 프로젝트",
   "main": "main.js",
@@ -13,9 +13,10 @@
   ],
   "author": "최예송, 장세민, 조윤호, 황혜인, 김강철",
   "scripts": {
+    "all": "run-p serve start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx live-server client --host=localhost --port=5500 --no-browser",
-    "serve": "json-server --watch server/db/data.json"
+    "serve": "npx json-server --watch server/db/data.json"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "dependencies": {
     "eslint": "^8.30.0",
     "json-server": "^0.17.1",
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5"
   }
 }
