@@ -1,3 +1,7 @@
+button {
+  all: unset;
+}
+
 .header {
   /* width: 100px;
   height: 100px; */
@@ -17,15 +21,15 @@
 
 .search-wrapper {
   background-color: navy;
-  margin: auto;
-  width: 77.083%;
+  /* margin: auto;
+  width: 77.083%; */
+  padding: 0 11.4583% 4.84375% 11.4583%;
   height: auto;
 }
 
 /* 검색창 */
 .search-form {
   /* background-color: lightslategray; */
-
   margin: var(--spacing-xl) 0;
   /* margin-bottom: var(--spacing-xl); */
   position: relative;
@@ -34,7 +38,7 @@
 .search-form-wrapper {
   display: flex;
   flex-flow: row nowrap;
-  /* background-color: aqua; */
+  background-color: aqua;
   height: 5.5625rem;
   /* height: 100%; */
 }
@@ -51,6 +55,7 @@
   font-size: min(var(--text-xl), 2vw);
   width: 100%;
   height: 100%;
+  color: var(--silver700);
 }
 
 .search-button {
@@ -64,7 +69,7 @@
 /* 컨텐츠 박스 */
 .search-content-box {
   background-color: sandybrown;
-
+  /* position: relative; */
   display: flex;
   flex-flow: row nowrap;
 }
@@ -74,7 +79,55 @@
   width: 50%;
 }
 
+.search-current h2 {
+  background-color: darkgreen;
+  cursor: default;
+  display: inline-block;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-md);
+  padding-bottom: var(--spacing-md);
+  padding-right: var(--spacing-24);
+}
+
+.list-item {
+  background-color: lightcoral;
+  margin-bottom: var(--spacing-base);
+}
+
+.list-item a {
+  color: var(--silver300);
+  font-size: var(--text-md);
+  margin-right: var(--spacing-md);
+}
+
+.list-item a:hover {
+  color: var(--white);
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: black;
+  width: 0.9375rem;
+  height: 100%;
+}
+
+.delete-all-btn {
+  cursor: pointer;
+  font-size: var(--text-md);
+}
+
+.list-item img {
+  display: block;
+}
+
 .search-favorate {
   background-color: lightpink;
   width: 50%;
+}
+
+.search-favorate h2 {
+  /* background-color: deeppink; */
+  font-size: var(--text-lg);
+  font-weight: var(--weight-md);
+  padding-bottom: var(--spacing-lg);
 }
