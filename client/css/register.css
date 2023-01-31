@@ -1,0 +1,114 @@
+@import url(./theme.css);
+button{
+  border: none;
+}
+
+.register-container{
+  width: 500px;
+  margin: 50px auto;
+}
+
+.register-title{
+  text-align: center;
+  font-size: min(3vw, var(--text-md));
+  font-weight: 700;
+}
+
+.sub-title{
+  text-align: center;
+  color: var(--silver400);
+  font-size: min(3vw, var(--text-base));
+  margin: 15px 0;
+}
+
+.register-wrapper{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.register-wrapper > p{
+  color: var(--silver400);
+  font-size: min(3vw, var(--text-base));
+}
+
+.register-wrapper input{
+  width: 100%;
+  padding: 20px 15px;
+  background-color: var(--silver800);
+  border-radius: 5px;
+  color: var(--silver600);
+  border: none;
+  margin-top: 30px;
+  font-size: min(3vw, var(--text-base));
+}
+
+.register-pw-wrap{
+  position: relative;
+}
+
+.register-pw-wrap img{
+  width: 25px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  background: transparent;
+}
+
+.btn-register{
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px 15px;
+  background-color: var(--silver500);
+  border-radius: 5px;
+  color: var(--silver400);
+  font-weight: 700;
+}
+
+
+/* 모두 동의합니다 */
+.register-content-wrapper{
+
+  margin-top: 30px;
+}
+.all-register-check{
+  border: none;
+}
+
+.all-check-btn{
+  color: var(--silver400);
+  background: transparent;
+
+}
+
+.all-check-btn img{
+  
+  transform: translateY(3px);
+}
+
+/* 동의하기 아이템들 */
+.register-content-wrap{
+  margin-top: 10px;
+
+}
+
+.register-content-item{
+  background: transparent;
+  line-height: 1;
+  font-size: min(3vw, var(--text-sm));
+  display: flex;
+}
+
+.register-content-item img{
+  background: transparent;
+  transform: translateY(25%);
+  padding-right: 5px;
+}
+.content-item-check{
+  background: transparent;
+  color: var(--silver400);
+  align-items: center;
+}
+
+.item-space{
+  padding-left: 20px;
+}

@@ -12,55 +12,118 @@
     <link rel="stylesheet" href="./css/register.css" />
 
     <script src="./js/login.js" type="module"></script>
-    <title>login</title>
+    <title>회원가입</title>
   </head>
   <body>
     <header></header>
     <main>
-      <section class="login-wrap">
-        <div class="login-title">TVING ID 로그인</div>
-        <form action="#" class="form-input">
-          <label for="" class="input-id">
-            <input type="text" placeholder="아이디" />
+      <section class="register-container">
+        <h2 class="register-title">티빙 회원가입</h2>
+        <div class="sub-title">아이디와 이메일로 간편하게 티빙을 시작하세요!</div>
+        <form action="#" class="register-wrapper">
+          <label for="register-id" class="a11y-hidden">
+            아이디입력
           </label>
-          <label for="" class="input-pw">
-            <input type="password" placeholder="비밀번호" class="pw-type" />
+          <input type="text" id="register-id" placeholder="아이디" />
+          <p class="register-id-content">영문 소문자 또는 영문 소문자, 숫자 조합 6~12 자리</p>
+          <div class="register-pw-wrap">
+            <label for="register-pw" class="a11y-hidden">
+              비밀번호 입력
+            </label>
+          
+            <input type="password" id="register-pw" placeholder="비밀번호" class="pw-type" />
             <img
               src="./assets/icons/login_nosee_36_36.png"
               alt="비밀번호 보이기"
               class="pw-see"
             />
-          </label>
-        </form>
-        <a href="#" class="auto-login-btn">
-          <span class="auto-login">
+          </div>
+          <p class="register-pw-content">영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15 자리</p>
+          <!-- 비밀번호 확인 -->
+          <div class="register-pw-wrap">
+            <label for="register-pw-check" class="a11y-hidden">
+              비밀번호 입력 한번더
+            </label>
+          
+            <input type="password" id="register-pw-check" placeholder="비밀번호 확인" class="pw-type" />
             <img
-              src="./assets/icons/login_check_26_26.png"
-              alt="자동로그인 체크 버튼"
-              width="20px"
-              class="auto-login-img"
+              src="./assets/icons/login_nosee_36_36.png"
+              alt="비밀번호 보이기"
+              class="pw-see"
             />
-            자동로그인
-          </span>
-        </a>
+          </div>
+          <!-- 이메일 -->
+          <label for="register-email" class="a11y-hidden">
+            이메일입력
+          </label>
+          <input type="text" id="register-email" placeholder="이메일" />
+        </form>
 
-        <button class="btn-login">로그인하기</button>
-        <div class="user-container">
-          <div class="find-wrapper">
-            <a href="#" class="find-id-btn">
-              <span class="find-id">아이디찾기</span>
-            </a>
-            <a href="#" class="find-pw-btn">
-              <span class="find-pw">비밀번호 찾기</span>
-            </a>
-          </div>
-          <div class="register-wrapper">
-            아직 계정이 없으신가요?
-            <a href="#" class="register-btn">
-              <span class="register">회원가입하기</span>
-            </a>
-          </div>
+        <div class="register-content-wrapper">
+          <button href="#" class="all-register-check">
+            <span class="all-check-btn">
+              <img
+                src="./assets/icons/login_check_26_26.png"
+                alt="모두 동의합니다 체크"
+                width="20px"
+                class="auto-login-img"
+              />
+              모두 동의합니다.
+            </span>
+          </button>
+
+          <ul class="register-content-wrap">
+            <li class="register-content-item">
+              <button type="button" class="content-item-check">
+                <img src="./assets/icons/login_bincheck_26_26.png" alt="체크" />
+                만 14세 이상입니다. 
+              </button>
+            </li>
+            <li class="register-content-item">
+              <button type="button" class="content-item-check">
+                <img src="./assets/icons/login_bincheck_26_26.png" alt="체크" />
+                만 14세 이상입니다. 
+              </button>
+            </li>
+            <li class="register-content-item">
+              <button type="button" class="content-item-check">
+                <img src="./assets/icons/login_bincheck_26_26.png" alt="체크" />
+                만 14세 이상입니다. 
+              </button>
+            </li>
+            <li class="register-content-item">
+              <button type="button" class="content-item-check">
+                <img src="./assets/icons/login_bincheck_26_26.png" alt="체크" />
+                만 14세 이상입니다. 
+              </button>
+            </li>
+            <li class="register-content-item">
+              <button type="button" class="content-item-check">
+                <img src="./assets/icons/login_bincheck_26_26.png" alt="체크" />
+                만 14세 이상입니다. 
+              </button>
+            </li>
+            <li class="register-content-item item-space">
+              <button type="button" class="content-item-check">
+                <img src="./assets/icons/login_bincheck_26_26.png" alt="체크" />
+                만 14세 이상입니다. 
+              </button>
+            </li>
+            <li class="register-content-item item-space">
+              <button type="button" class="content-item-check">
+                <img src="./assets/icons/login_bincheck_26_26.png" alt="체크" />
+                만 14세 이상입니다. 
+              </button>
+            </li>
+            
+           
+          </ul>
         </div>
+       
+
+
+        <button class="btn-register">가입하기</button>
+
       </section>
     </main>
     <!-- footer -->
