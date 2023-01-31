@@ -17,20 +17,25 @@
   <body>
     <header></header>
     <main>
-      <section class="login-wrap">
-        <div class="login-title">TVING ID 로그인</div>
-        <form action="#" class="form-input">
-          <label for="" class="input-id">
-            <input type="text" placeholder="아이디" />
+      <section class="login-container">
+        <h2 class="login-title">TVING ID 로그인</h2>
+        <form action="#" class="input-wrapper">
+          <label for="login-id" class="a11y-hidden">
+            아이디입력받기
           </label>
-          <label for="" class="input-pw">
-            <input type="password" placeholder="비밀번호" class="pw-type" />
+          <input type="text" id="login-id" placeholder="아이디" />
+          <label for="login-pw" class="a11y-hidden">
+            비밀번호 입력받기
+          </label>
+          <div class="pw-wrap">
+            <input type="password" id="login-pw" placeholder="비밀번호" class="pw-type" />
             <img
               src="./assets/icons/login_nosee_36_36.png"
               alt="비밀번호 보이기"
               class="pw-see"
             />
-          </label>
+          </div>
+          
         </form>
         <a href="#" class="auto-login-btn">
           <span class="auto-login">

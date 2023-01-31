@@ -18,15 +18,16 @@
     <header></header>
     <main>
       <section class="find-id-container">
-        <div class="find-id-title">아이디 찾기</div>
+        <h2 class="find-id-title">아이디 찾기</h2>
         <div class="find-wrapper-email">
           <span>이메일로 찾기</span>
           <p>가입시 등록한 이메일을 입력해주세요.</p>
         </div>
         <form action="#" class="form-input">
-          <label for="" class="input-id">
-            <input type="text" placeholder="이메일" />
+          <label for="id-email" class="a11y-hidden">
+            이메일 입력받기
           </label>
+          <input type="text" id="id-email" placeholder="이메일" />
         </form>
         <button type="button" class="email-input-btn">확인</button>
 

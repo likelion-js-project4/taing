@@ -18,14 +18,15 @@
     <header></header>
     <main>
       <section class="find-pw-container">
-        <div class="find-pw-title">비밀번호 찾기</div>
+        <h2 class="find-pw-title">비밀번호 찾기</h2>
         <p class="sub-title">아이디 확인 후 등록된 이메일 주소로 비밀번호 재설정을 위한 인증 메일이 발송됩니다. 
           이메일을 확인하여 12시간 이내에 비밀번호 재설정을 완료해주세요.</p>
         
         <form action="#" class="form-input">
-          <label for="" class="input-id">
-            <input type="text" placeholder="아이디" />
+          <label for="pw-id" class="a11y-hidden">
+            아이디 입력받기
           </label>
+          <input type="text" id="pw-id" placeholder="아이디" />
         </form>
         <button type="button" class="id-input-btn">확인</button>
 

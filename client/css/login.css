@@ -9,7 +9,7 @@ body {
 main {
 }
 
-.login-wrap {
+.login-container {
   width: 532px;
   margin: 100px auto;
   display: flex;
@@ -24,16 +24,19 @@ main {
   margin-bottom: 27px;
 }
 
-.form-input {
+.input-wrapper {
   width: 100%;
-}
-.form-input label {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
-.form-input label > input {
+#login-pw{
+  position: relative;
+  margin-top: 15px;
+}
+
+
+.input-wrapper input {
   width: 100%;
   padding: 20px 15px;
   background-color: var(--silver800);
@@ -42,14 +45,14 @@ main {
   border: none;
 }
 
-.input-pw {
+.pw-wrap{
   position: relative;
 }
 
 .pw-see {
   position: absolute;
   right: 20px;
-  top: 30%;
+  top: 40%;
   background-color: transparent;
   width: min(3vw, 30px);
 }
