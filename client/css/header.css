@@ -1,32 +1,61 @@
 @import url("./theme.css");
-@import url("./normalize.css");
 
-.header {
-  display: flex;
-  justify-content: space-between;
+body {
+  position: relative;
+}
+h1 {
+  margin: 0;
+  display: inline-block;
 }
 
-.header > .header-nav-left,
-.header > .header-nav-right {
+.header {
+  background-color: var(--black);
+  color: rgb(110, 110, 110);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 1rem;
+}
+.header-nav-left,
+.header-nav-right {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
-.header .footer {
-  background-color: var(--black);
-  position: relative;
-  color: rgb(110, 110, 110);
+.nav-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.nav-item:hover {
+  color: var(--white);
+  transition: color 0.1s ease 0s;
+}
+.header-alive {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.header-search,
+.header-profile {
+  all: unset;
+  cursor: pointer;
 }
 
 @media (min-width: 1280px) {
   .header {
     padding: 1rem 4.375rem;
-  }
-
-  .nav-item {
-    display: flex;
-    align-items: center;
   }
 
   .header-search,
@@ -37,7 +66,6 @@
 
 @media (min-width: 769px) and (max-width: 1279px) {
   .header {
-    height: 2.5rem;
     padding: 0.875rem 2.5rem;
   }
   .nav-logo {
@@ -56,7 +84,6 @@
 
 @media (max-width: 768px) {
   .header {
-    height: 2.5rem;
     padding: 0.5rem 1rem;
   }
   .nav-logo {

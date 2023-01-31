@@ -12,8 +12,8 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/theme.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
@@ -25,25 +25,38 @@
   </head>
   <body>
     <header class="header">
-      <nav class="header-nav-left">
-        <div class="nav-logo">
-          <img src="./assets/icons/header_logo_132_42.png" alt="logo" />
+      <h1 class="nav-logo">
+        <span class="a11y-hidden">TAING</span>
+        <a href="./index.html"><img src="./assets/icons/header_logo_132_42.png" alt="TAING" /></a>
+      </h1>
+      <nav class="nav">
+        <ul class="header-nav-left">
+          <li class="nav-item">
+            <a class="header-alive">
+              <img src="./assets/icons/header_live_default_34_34.png" />
+              <h2>&nbsp;실시간</h2>
+            </a>
+          </li>
+          <li class="nav-item">
+            <h2>TV 프로그램</h2>
+          </li>
+          <li class="nav-item">
+            <h2>영화</h2>
+          </li>
+          <li class="nav-item">
+            <h2>파라마운트+</h2>
+          </li>
+        </ul>
+
+        <div class="header-nav-right">
+          <button type="button" class="header-search">
+            <img src="assets/icons/header_search_default_40_40.png" alt="search" />
+          </button>
+          <button class="header-profile">
+            <img src="assets/icons/header_logo_40_40.png" alt="profile" />
+          </button>
         </div>
-        <div class="nav-item">
-          <img src="./assets/icons/header_live_default_34_34.png" alt="alive" /> &nbsp;실시간
-        </div>
-        <div class="nav-item">TV 프로그램</div>
-        <div class="nav-item">영화</div>
-        <div class="nav-item">파라마운트+</div>
       </nav>
-      <div class="header-nav-right">
-        <div class="header-search">
-          <img src="assets/icons/header_search_default_40_40.png" alt="search" />
-        </div>
-        <div class="header-profile">
-          <img src="assets/icons/header_logo_40_40.png" alt="profile" />
-        </div>
-      </div>
     </header>
     <main class="main">
       <section class="visual">
