@@ -1,5 +1,4 @@
 @import url("./theme.css");
-@import url("./normalize.css");
 
 .footer > div {
   display: flex;
@@ -43,13 +42,13 @@
   padding: 1.5rem 0;
 }
 
-.footer-nav > a {
+.footer-nav > li > a {
   margin-right: 1.5rem;
 }
 .footer-nav strong {
   font-weight: bold;
 }
-.footer-nav > a:hover {
+.footer-nav > li > a:hover {
   color: var(--white);
   transition: color 0.1s ease 0s;
 }
