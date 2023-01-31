@@ -41,3 +41,17 @@ video {
   width: 100%;
   height: auto;
 }
+
+/* focus */
+a:focus,
+input:focus,
+button:focus,
+textarea:focus,
+.swiper-button-prev:focus,
+.swiper-button-next:focus,
+.swiper-pagination-bullet:focus{
+  outline: none;
+  outline-offset: 0;
+  box-shadow: 0 0 1px 1px var(--red-1),
+    0 0 10px 3px rgba(255, 0, 64, 0.4);
+}
