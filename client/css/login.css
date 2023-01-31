@@ -1,0 +1,114 @@
+@import url(./theme.css);
+
+body {
+  display: inline-block;
+  width: 100%;
+  background-color: #000;
+}
+
+main {
+}
+
+.login-wrap {
+  width: 532px;
+  margin: 100px auto;
+  display: flex;
+  flex-flow: column nowrap;
+  color: white;
+}
+
+.login-title {
+  font-weight: 700;
+  font-size: min(4vw, var(--text-xxl));
+  margin: 0 auto;
+  margin-bottom: 27px;
+}
+
+.form-input {
+  width: 100%;
+}
+.form-input label {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-input label > input {
+  width: 100%;
+  padding: 20px 15px;
+  background-color: var(--silver800);
+  border-radius: 5px;
+  color: var(--silver600);
+  border: none;
+}
+
+.input-pw {
+  position: relative;
+}
+
+.pw-see {
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  background-color: transparent;
+  width: min(3vw, 30px);
+}
+
+/* .input-pw input {
+  background: url(../assets/icons/login_see_36_36.png) no-repeat right;
+  background-size: min(3vw, 30px);
+} */
+
+.auto-login-btn {
+  margin-bottom: 20px;
+}
+.auto-login {
+  color: var(--silver400);
+  font-size: min(3vw, var(--text-base));
+}
+
+.auto-login img {
+  transform: translateY(5px);
+  margin-right: 5px;
+}
+
+.btn-login {
+  padding: 25px 0;
+  background-color: #ff153c;
+  font-size: min(4vw, var(--text-base));
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.clicked span {
+  color: var(--silver100);
+}
+
+.user-container {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: min(3vw, var(--text-base));
+}
+
+.find-wrapper {
+  margin-bottom: 2rem;
+  color: var(--silver200);
+}
+
+.find-wrapper span {
+  padding: 0 15px;
+}
+
+.find-pw {
+  border-left: 1px solid var(--silver200);
+}
+
+.register-wrapper {
+  color: var(--silver400);
+}
+
+.register {
+  padding-left: 20px;
+  color: var(--silver200);
+}
