@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <!-- <link rel="stylesheet" href="./css/search.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
+    <title>Tving</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="search-container">
+        <div class="search-wrapper">
+          <h2 class="a11y-hidden">검색</h2>
+          <form method="GET" action="#" class="search-form">
+            <fieldset>
+              <legend>검색 폼</legend>
+              <div class="search-form-wrapper">
+                <div class="search-form-box">
+                  <label for="search" class="a11y-hidden">
+                    자료검색
+                  </label>
+                  <input
+                    type="search"
+                    id="search"
+                    class="serch-form-input"
+                    required
+                    placeholder="TV프로그램, 영화 제목 및 출연진으로 검색해보세요"
+                  />
+                </div>
+                <button type="submit" class="search-button">
+                  <img
+                    src="./assets/icons/search_searchBtn_50_50.png"
+                    alt="검색 버튼"
+                  />
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
