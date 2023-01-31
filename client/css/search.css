@@ -1,0 +1,80 @@
+.header {
+  /* width: 100px;
+  height: 100px; */
+  background-color: lightblue;
+  height: 100px;
+  position: relative;
+}
+
+.search-container {
+  background-color: lightgreen;
+  /* margin: auto; */
+  position: absolute;
+  width: 100%;
+  /* height: 0.02vw; */
+  top: 100%;
+}
+
+.search-wrapper {
+  background-color: navy;
+  margin: auto;
+  width: 77.083%;
+  height: auto;
+}
+
+/* 검색창 */
+.search-form {
+  /* background-color: lightslategray; */
+
+  margin: var(--spacing-xl) 0;
+  /* margin-bottom: var(--spacing-xl); */
+  position: relative;
+}
+
+.search-form-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  /* background-color: aqua; */
+  height: 5.5625rem;
+  /* height: 100%; */
+}
+
+.search-form-box {
+  /* background-color: brown; */
+  flex-grow: 1;
+  border-bottom: 2px solid var(--white);
+}
+
+.search-form-input {
+  all: unset;
+  font-weight: var(--weight-md);
+  font-size: min(var(--text-xl), 2vw);
+  width: 100%;
+  height: 100%;
+}
+
+.search-button {
+  all: unset;
+  width: 3.125rem;
+  position: absolute;
+  right: 0;
+  top: 1.25rem;
+}
+
+/* 컨텐츠 박스 */
+.search-content-box {
+  background-color: sandybrown;
+
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.search-current {
+  background-color: lightseagreen;
+  width: 50%;
+}
+
+.search-favorate {
+  background-color: lightpink;
+  width: 50%;
+}
