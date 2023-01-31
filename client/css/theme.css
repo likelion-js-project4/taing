@@ -20,7 +20,14 @@
 
   --skyblue: #61D4E6;
 
+  --spacing-sm: 0.75rem; /* 12px */
   --spacing-base: 1rem; /* 16px */
+  --spacing-md: 1.25rem; /* 20px */
+  --spacing-24: 1.5rem; /* 24px */
+  --spacing-34: 2.125rem; /* 34px */
+  --spacing-lg: 2.25rem; /* 36px */
+  --spacing-xl: 3.25rem; /* 52px */
+  --spacing-60: 3.75rem; /* 60px */
 
   --text-sm: 0.75rem; /* 12px */
   --text-base: 1rem; /* 16px */

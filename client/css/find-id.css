@@ -2,11 +2,8 @@
 
 body {
   display: inline-block;
-  width: 100%;
   background-color: #000;
-}
-
-main {
+  width: 100%;
 }
 
 .find-id-container{
@@ -19,7 +16,7 @@ main {
 .find-id-title{
   color: var(--white);
   text-align: center;
-  font-size: min(4vw, var(--text-xl));
+  font-size: var(--text-xxl);
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -59,8 +56,24 @@ main {
 
 .or-line{
   text-align: center;
-  margin: 40px auto;
   color: var(--silver600);
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  font-size: var(--text-base);
+  margin: 8px 0px;
+}
+
+.or-line::before,
+.or-line::after {
+  content: "";
+  flex-grow: 1;
+  background: rgba(179, 179, 179, 0.35);
+  color: var(--silver200);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 10px;
 }
 
 .individual-find-wrapper > p{
@@ -83,4 +96,22 @@ main {
 }
 
 
+/* 모바일 */
+@media (max-width: 768px) {
+  .login-title{
+    font-size: var(--text-base );
+  }
+}
+
+/* 태블릿 */
+@media (min-width: 769px) and (max-width: 1279px) {
+  .login-title{
+    font-size: var(--text-lg );
+  }
+}
+
+/* 데스크탑 */
+/* @media (min-width: 1280px) {
+
+} */
 
