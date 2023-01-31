@@ -90,7 +90,7 @@ button {
   font-size: var(--text-lg);
   font-weight: var(--weight-md);
   padding-bottom: var(--spacing-md);
-  padding-right: var(--spacing-24);
+  padding-right: var(--spacing-sm);
 }
 
 .list-item {
@@ -99,6 +99,7 @@ button {
 }
 
 .list-item a {
+  /* background-color: blue; */
   color: var(--silver300);
   font-size: var(--text-md);
   margin-right: var(--spacing-md);
@@ -110,7 +111,8 @@ button {
 
 .delete-btn {
   cursor: pointer;
-  /* background-color: black; */
+  /* background-color: aqua; */
+  padding: 0.5rem;
   width: 0.9375rem;
   height: 100%;
 }
@@ -118,7 +120,9 @@ button {
 .delete-all-btn {
   cursor: pointer;
   font-size: var(--text-md);
+  font-weight: var(--weight-md);
   color: var(--silver600);
+  padding: 0.5rem;
 }
 
 .list-item img {
