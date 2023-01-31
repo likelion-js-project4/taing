@@ -1,6 +1,22 @@
-@import url("./theme.css");
-@import url("./normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
 
+.footer {
+  position: relative;
+  padding: 7rem 4rem 10rem 4rem;
+  position: relative;
+  font-size: 1.25rem;
+  color: rgb(110, 110, 110);
+}
 .footer > div {
   display: flex;
   padding: 0 2rem;
@@ -11,125 +27,46 @@
   border-bottom: 0.083rem solid rgb(33, 33, 33);
   padding: 1rem 0;
 }
-.notice_title {
-  color: #c4c4c4;
-}
-.link-brand,
-.link-group {
-  color: #c4c4c4;
-  position: relative;
-  padding: 0px 0.5rem 0px 0.75rem;
-}
-.link-brand:hover,
-.link-group:hover {
-  color: var(--white);
-  transition: color 0.1s ease 0s;
-}
-.link-group::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0px;
-  width: 1px;
-  height: 0.75rem;
-  margin-top: -5px;
-  background-color: rgb(46, 46, 46);
-}
-
 .footer-nav {
-  display: flex;
-
-  color: #c4c4c4;
   padding: 1.5rem 0;
 }
 
 .footer-nav > a {
   margin-right: 1.5rem;
 }
-.footer-nav strong {
-  font-weight: bold;
-}
-.footer-nav > a:hover {
-  color: var(--white);
-  transition: color 0.1s ease 0s;
-}
 
-.business-infomation,
 .customer-service {
   cursor: pointer;
   color: gray;
   text-decoration: underline;
 }
-.business-infomation:hover,
 .customer-service:hover {
-  color: var(--white);
+  color: lightgray;
   transition: color 0.1s ease 0s;
 }
 .sns-link-logo {
   display: flex;
   padding: 2rem 0;
+  font-size: 1.25rem;
   cursor: pointer;
-  gap: 1.25rem;
 }
 .copyright-box {
-  color: #6b6b6b;
 }
 .copyright-box > p {
   margin-bottom: 0.5rem;
 }
-.copyright-box > p > span {
-  position: relative;
-  padding: 0px 0.5rem 0px 0.75rem;
+.copyright-box > p > span::before {
+  font: 1rem;
+  content: "|";
+  padding: 0 0.75rem;
 }
-.copyright-box > p > span::after {
+.copyright-box > p > span:first-child::before {
   content: "";
+  padding: 0;
   position: absolute;
   top: 50%;
   left: 0px;
-  width: 1px;
-  height: 0.75rem;
-  margin-top: -5px;
-  background-color: rgb(46, 46, 46);
-}
-.copyright-box > p > span:first-child::after {
-  background-color: var(--black);
 }
 .copyright {
   margin-top: 1.5rem;
-}
-
-@media (min-width: 1280px) {
-  .footer {
-    padding: 7rem 4.5rem 10rem 4.5rem;
-    font-size: var(--text-base);
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1279px) {
-  .footer {
-    padding: 4.375rem 2.5rem 6.25rem 2.5rem;
-    font-size: var(--text-sm);
-  }
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 3.25rem 1rem 5.125rem 1rem;
-    font-size: var(--text-sm);
-  }
-
-  .header-search,
-  .header-profile {
-    width: 1.125rem;
-  }
-
-  .copyright-box > p > span,
-  .link-brand,
-  .link-group {
-    display: none;
-  }
-  .footer-nav {
-    flex-direction: column;
-    gap: 1rem;
-  }
 }
