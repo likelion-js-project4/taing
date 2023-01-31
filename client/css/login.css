@@ -111,7 +111,17 @@ main {
   color: var(--silver400);
 }
 
+.register-wrapper > span{
+  margin-right: 20px;
+}
+
+.register-btn{
+  border: none;
+  padding: 5px 10px;
+}
+
 .register {
-  padding-left: 20px;
+  background: transparent;
   color: var(--silver200);
+
 }
