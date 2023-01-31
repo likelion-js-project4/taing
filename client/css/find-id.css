@@ -1,0 +1,82 @@
+@import url(./theme.css);
+
+body {
+  display: inline-block;
+  width: 100%;
+  background-color: #000;
+}
+
+main {
+}
+
+.find-id-container{
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+}
+
+.find-id-title{
+  color: var(--white);
+  text-align: center;
+  font-size: min(4vw, var(--text-xl));
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.find-wrapper-email{
+  color: var(--silver500);
+}
+
+.find-wrapper-email span{
+  font-weight: 700;
+  font-size: var(--text-md);
+  color: var(--silver200);
+  margin-bottom: 20px;
+}
+
+
+.form-input label > input {
+  width: 100%;
+  padding: 20px 15px;
+  margin-top: 20px;
+  background-color: var(--silver800);
+  border-radius: 5px;
+  color: var(--silver600);
+  border: none;
+}
+
+.email-input-btn{
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px 15px;
+  background-color: var(--silver500);
+  border-radius: 5px;
+  color: var(--silver200);
+  font-weight: 700;
+
+}
+
+.or-line{
+  text-align: center;
+  margin: 40px auto;
+  color: var(--silver600);
+}
+
+.individual-find-wrapper > p{
+  color: var(--silver400);
+  font-size: small;
+}
+
+.individual-btn{
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px 15px;
+  background-color: var(--silver100);
+  border-radius: 5px;
+  color: var(--silver900);
+  font-weight: 700;
+}
+
+
+
