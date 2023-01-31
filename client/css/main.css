@@ -1,3 +1,19 @@
+/* swiper common css */
+.swiper-pagination-bullet{
+  background: var(--white);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+  color:var(--white);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+  font-size: min(var(--text-lg), 2vw);
+}
+
+/* visual css */
 .visual{
   position: relative;
 }
@@ -50,22 +66,12 @@
   opacity: 1;
 }
 
-.visual .swiper-button-prev::after,
-.visual .swiper-button-next::after{
-  color:var(--white);
-  font-size: min(var(--text-lg), 2vw);
-}
-
 .visual .swiper-button-prev{
   left:5px;
 }
 
 .visual .swiper-button-next{
   right:5px;
-}
-
-.visual .swiper-pagination-bullet{
-  background: var(--white);
 }
 
 .visual .swiper-horizontal > .swiper-pagination-bullets,
@@ -75,7 +81,80 @@
   bottom: 10%;
 }
 
+/* program css */
+
+.program{
+  position: relative;
+  font-size: 0;
+}
+
+.program .swiper{
+  padding:0 4%;
+}
+
+.program h2{
+  padding:0 4%;
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
+  font-weight:var(--weight-lg);
+  margin-bottom: 0.75rem
+}
+
+.program .img-box{
+  margin-bottom: 0.5rem
+}
+
+.program .swiper-button-prev,
+.program .swiper-button-next{
+  top:auto;
+  bottom:2px;
+  height:calc(100% - 2px);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 44%, rgba(0, 0, 0, 0));
+  padding:0 2%;
+}
+
+.program .swiper-button-prev{
+  left:0
+}
+
+.program .swiper-button-next{
+  right:0
+}
+
+.program .swiper-button-prev:focus,
+.program .swiper-button-next:focus{
+  outline-offset: -1px;
+}
+
+.program .swiper-view-all{
+  position: absolute;
+  top:0;
+  right:4%;
+  font-size: clamp(var(--text-sm), 1vw ,var(--text-md));
+  color: var(--silver200);
+  line-height: var(--line-height-md);
+}
+
+.program .swiper-view-all:hover{
+  color:var(--white);
+}
+
+.program .swiper-pagination{
+  display: inline-block;
+  width:auto;
+  position: static;
+}
+
+.program .swiper-pagination-bullet{
+  background: var(--white);
+}
+
+.program .swiper-button-next.swiper-button-disabled,
+.program .swiper-button-prev.swiper-button-disabled{
+  opacity: 0;
+}
+
 @media (min-width: 1280px) {
+  /* visual desktop css */
   .visual-title{
     bottom:25%;
   }
@@ -84,16 +163,50 @@
   .visual .swiper-pagination-bullets.swiper-pagination-horizontal{
     bottom: 20%;
   }
+
+  .program .swiper-view-all{
+    display: none;
+  }
+
+  .program:hover .swiper-view-all{
+    display: block;
+  }
+
+  .program .swiper-button-prev,
+  .program .swiper-button-next{
+    opacity: 0;
+  }
+  
+  .program:hover .swiper-button-prev,
+  .program:hover .swiper-button-next{
+    opacity: 1;
+  }
+
+  .program .swiper-button-next.swiper-button-disabled,
+  .program .swiper-button-prev.swiper-button-disabled{
+    opacity: 0;
+  }
+
 }
 @media (min-width: 769px) and (max-width: 1279px){
   
 }
 @media (min-width: 320px) and (max-width: 768px) {
-  .visual .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-  .visual .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  
+  /* swiper common css */
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
     margin: 0 2px;
   }
+
+  /* visual moblie css */
   .visual-more{
     padding: 1.5%; 
+  }
+
+  /* program moblie */
+  .title-basic,
+  .program .swiper-pagination{
+    display: none;
   }
 }
