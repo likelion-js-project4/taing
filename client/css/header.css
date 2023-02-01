@@ -20,18 +20,22 @@ h1 {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.nav {
+
+.header > .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-left: 1rem;
+  margin-left: var(--spacing-base);
+}
+.nav-logo {
+  font-size: 0;
 }
 .header-nav-left,
 .header-nav-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--spacing-base);
 }
 .nav-item {
   cursor: pointer;
@@ -51,29 +55,30 @@ h1 {
 .header-profile {
   all: unset;
   cursor: pointer;
+  font-size: 0;
 }
 
 @media (min-width: 1280px) {
   .header {
-    padding: 1rem 4.375rem;
+    padding: var(--spacing-base) var(--spacing-7xl);
   }
 
   .header-search,
   .header-profile {
-    width: 2.5rem;
+    width: var(--spacing-3xl);
   }
 }
 
 @media (min-width: 769px) and (max-width: 1279px) {
   .header {
-    padding: 0.875rem 2.5rem;
+    padding: 0.875rem var(--spacing-3xl);
   }
   .nav-logo {
     width: 4.625rem;
   }
+
   .nav-item {
     display: flex;
-    align-items: center;
   }
 
   .header-search,
@@ -84,13 +89,13 @@ h1 {
 
 @media (max-width: 768px) {
   .header {
-    padding: 0.5rem 1rem;
+    padding: var(--spacing-xs) var(--spacing-base);
   }
   .nav-logo {
     width: 3rem;
   }
   .footer {
-    padding: 4rem 1rem 5rem 1rem;
+    padding: 4rem var(--spacing-base) 5rem var(--spacing-base);
     font-size: var(--text-sm);
   }
 
