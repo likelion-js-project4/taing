@@ -1,7 +1,3 @@
-button {
-  all: unset;
-}
-
 /* 모든 디바이스 (All Device) */
 /* 공통 헤더 */
 .header {
@@ -72,15 +68,16 @@ button {
 
 /* 공통 최근 검색어 */
 .search-current {
-  /* background-color: lightseagreen; */
+  position: relative;
+  background-color: blueviolet;
   width: 50%;
 }
 
 .search-current h2 {
-  /* background-color: darkgreen; */
+  background-color: darkgreen;
   color: var(--silver200);
   cursor: default;
-  display: inline-block;
+  /* display: inline-block; */
   font-size: var(--text-lg);
   font-weight: var(--weight-md);
   padding-bottom: var(--spacing-md);
@@ -112,8 +109,10 @@ button {
 }
 
 .delete-all-btn {
+  background-color: aqua;
+  position: absolute;
+  top: 0;
   cursor: pointer;
-
   font-size: var(--text-md);
   font-weight: var(--weight-md);
   color: var(--silver600);
@@ -126,14 +125,14 @@ button {
 }
 
 /* 공통 인기 검색어 */
-.search-favorate {
+.search-favorite {
   border-left: 1px solid var(--silver800);
   /* background-color: lightpink; */
   padding-left: var(--spacing-6xl);
   width: 50%;
 }
 
-.search-favorate h2 {
+.search-favorite h2 {
   /* background-color: deeppink; */
   cursor: default;
   color: var(--silver200);
@@ -142,12 +141,13 @@ button {
   padding-bottom: var(--spacing-2xl);
 }
 
-.favorate-list {
+.favorite-list {
   /* 스크린 리더가 번호 읽어주도록 */
   overflow: hidden;
+  padding-top: var(--spacing-2xs);
 }
 
-.favorate-list li {
+.favorite-list li {
   /* background-color: coral; */
   color: var(--silver300);
   font-size: var(--text-md);
@@ -156,11 +156,11 @@ button {
   counter-increment: number;
 }
 
-.favorate-list li:hover {
+.favorite-list li:hover {
   color: var(--silver100);
 }
 
-.favorate-list li::before {
+.favorite-list li::before {
   color: var(--red-1);
   font-weight: var(--weight-md);
   content: counter(number);
@@ -169,7 +169,7 @@ button {
   /* background-color: aqua; */
 }
 
-.search-favorate > time {
+.search-favorite > time {
   font-size: var(--text-md);
   font-weight: var(--weight-sm);
   cursor: default;
@@ -214,28 +214,28 @@ button {
   }
 
   /* 모바일 인기 검색어 */
-  .search-favorate {
+  .search-favorite {
     border-left: none;
     padding-left: var(--spacing-xs);
     width: 100%;
   }
 
-  .search-favorate h2 {
+  .search-favorite h2 {
     font-size: var(--text-base);
     padding-bottom: var(--spacing-md);
   }
 
-  .favorate-list li {
+  .favorite-list li {
     font-size: var(--text-sm);
     font-weight: var(--weight-md);
     padding-bottom: var(--spacing-xs);
   }
 
-  .favorate-list li::before {
+  .favorite-list li::before {
     width: var(--spacing-base);
   }
 
-  .search-favorate > time {
+  .search-favorite > time {
     font-size: var(--text-sm);
     padding: 0.1rem 0;
   }
@@ -300,28 +300,28 @@ button {
   }
 
   /* 태블릿 인기 검색어 */
-  .search-favorate {
+  .search-favorite {
     padding-left: var(--spacing-2xl);
     width: 50%;
   }
 
-  .search-favorate h2 {
+  .search-favorite h2 {
     font-size: var(--text-base);
     padding-bottom: var(--spacing-md);
   }
 
-  .favorate-list li {
+  .favorite-list li {
     font-size: var(--text-sm);
     font-weight: var(--weight-sm);
     padding-bottom: var(--spacing-xs);
   }
 
-  .favorate-list li::before {
+  .favorite-list li::before {
     font-weight: var(--weight-md);
     width: var(--spacing-lg);
   }
 
-  .search-favorate > time {
+  .search-favorite > time {
     font-size: var(--text-sm);
     padding: 0.6875rem 0;
   }
