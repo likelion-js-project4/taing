@@ -91,7 +91,7 @@ body {
 
 .btn-login {
   text-align: center;
-  background-color: #ff153c;
+  background-color: var(--red-1);
   font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
   color: white;
   font-weight: var(--weight-md);
