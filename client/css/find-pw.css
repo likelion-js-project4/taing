@@ -1,40 +1,85 @@
 @import url(./theme.css);
 
+body {
+  display: inline-block;
+  width: 100%;
+}
+
+.nav-logo{
+  margin: var(--spacing-base) var(--spacing-lg);
+}
+
 .find-pw-container{
-  width: 500px;
-  margin: 50px auto;
+  margin: 0 auto;
+  margin-top: var(--spacing-7xl);
 }
 
 .find-pw-title{
   text-align: center;
-  font-size: min(3vw, var(--text-md));
-  font-weight: 700;
-  margin-bottom: 30px;
+  font-size: clamp(var(--text-base), 4vw ,var(--text-xl));
+  font-weight: var(--weight-lg);
+  margin-bottom: var(--spacing-6xl);
 }
 
 .sub-title{
   white-space: normal;
   color: var(--silver600);
+  font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
 }
 
 
 
 .form-input input{
-  margin-top: 20px;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
   width: 100%;
   padding: 20px 15px;
   background-color: var(--silver800);
   border-radius: 5px;
-  color: var(--silver700);
+  color: var(--silvervar(--weight-lg));
   border: none;
+  font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
 }
 
 .id-input-btn{
-  margin-top: 20px;
+  margin-bottom: var(--spacing-8xl);
   width: 100%;
   padding: 20px 15px;
   background-color: var(--silver500);
   border-radius: 5px;
   color: var(--silver400);
-  font-weight: 700;
+  font-weight: var(--weight-lg);
+  font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
+
+}
+
+
+/* 모바일 */
+@media (max-width: 768px) {
+  body{
+    padding: 0 var(--spacing-base);
+  }
+
+  .find-pw-container{
+    max-width: 500px;
+    width: min(80vw, 50rem);
+  }
+}
+
+
+/* 태블릿 */
+@media (min-width: 769px) and (max-width: 1279px) {
+
+  .find-pw-container{
+    max-width: 600px;
+    font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
+  }
+  
+}
+
+/* 데스크탑 */
+@media (min-width: 1280px) {
+  .find-pw-container{
+    max-width: 768px;
+  }
 }
