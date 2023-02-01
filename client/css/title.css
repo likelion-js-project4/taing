@@ -1,0 +1,5 @@
+.title-basic {
+  font-size: clamp(var(--text-sm), 1vw ,var(--text-md));
+  color: var(--silver200);
+  line-height: var(--line-height-md);
+}
