@@ -16,7 +16,7 @@ body {
 
 .find-pw-title{
   text-align: center;
-  font-size: clamp(var(--text-base), 4vw ,var(--text-xl));
+  font-size: clamp(var(--text-base), 5vw ,var(--text-xl));
   font-weight: var(--weight-lg);
   margin-bottom: var(--spacing-6xl);
 }
@@ -24,7 +24,7 @@ body {
 .sub-title{
   white-space: normal;
   color: var(--silver600);
-  font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
 }
 
 
@@ -38,41 +38,60 @@ body {
   border-radius: 5px;
   color: var(--silvervar(--weight-lg));
   border: none;
-  font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
+  font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
 }
 
 .id-input-btn{
-  margin-bottom: var(--spacing-8xl);
   width: 100%;
-  padding: 20px 15px;
-  background-color: var(--silver500);
+  background-color: var(--silver700);
   border-radius: 5px;
+  text-align: center;
   color: var(--silver400);
   font-weight: var(--weight-lg);
-  font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
-
+  font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
 }
 
 
 /* 모바일 */
 @media (max-width: 768px) {
-  body{
-    padding: 0 var(--spacing-base);
+  .nav-logo > a > img{
+    height: var(--spacing-base);
   }
 
   .find-pw-container{
     max-width: 500px;
     width: min(80vw, 50rem);
   }
+
+  .form-input input{
+    margin-bottom:var(--spacing-md);
+  }
+
+  .form-input input,
+  .id-input-btn{
+    height: var(--spacing-4xl);
+  }
 }
 
 
 /* 태블릿 */
 @media (min-width: 769px) and (max-width: 1279px) {
+  .nav-logo > a > img{
+    height: var(--spacing-lg);
+  }
 
   .find-pw-container{
     max-width: 600px;
     font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
+  }
+
+  .form-input input{
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .form-input input,
+  .id-input-btn{
+    height: var(--spacing-5xl);
   }
   
 }
@@ -81,5 +100,14 @@ body {
 @media (min-width: 1280px) {
   .find-pw-container{
     max-width: 768px;
+  }
+
+  .form-input input{
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .form-input input,
+  .id-input-btn{
+    height: 5rem;
   }
 }

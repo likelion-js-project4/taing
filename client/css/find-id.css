@@ -53,7 +53,7 @@ body {
 .email-input-btn{
   margin-top: var(--spacing-md);
   width: 100%;
-  line-height: 1.6;
+  text-align: center;
   background-color: var(--silver500);
   border-radius: var(--spacing-2xs);
   color: var(--silver200);
@@ -96,6 +96,7 @@ body {
 .individual-btn{
   margin-top: var(--spacing-md);
   width: 100%;
+  text-align: center;
   background-color: var(--silver100);
   border-radius: var(--spacing-2xs);
   color: var(--silver900);
@@ -108,6 +109,10 @@ body {
 @media (max-width: 768px) {
   body{
     padding: 0 var(--spacing-base);
+  }
+
+  .nav-logo > a > img{
+    height: var(--spacing-base);
   }
 
   .find-id-title{
@@ -135,6 +140,9 @@ body {
 
 /* 태블릿 */
 @media (min-width: 769px) and (max-width: 1279px) {
+  .nav-logo > a > img{
+    height: var(--spacing-lg);
+  }
 
   .find-id-container{
     max-width: 600px;
@@ -143,12 +151,8 @@ body {
   .find-id-title{
     margin-bottom: var(--spacing-lg);
   }
-  .form-input input {
-    height: var(--spacing-5xl);
-  }
-  .email-input-btn{
-    height: var(--spacing-5xl);
-  }
+  .form-input input,
+  .email-input-btn,
   .individual-btn{
     height: var(--spacing-5xl);
   }
