@@ -1,0 +1,64 @@
+/* 스크롤바 제거  */
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+body {
+  background: var(--black) url(../assets/image/randing_background_1920_1308.png)
+    no-repeat 0 -17.49694376%/100%;
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* 공통 헤더 */
+.landing-header {
+  /* background-color: aqua; */
+  padding: 1.5104% 0 1.5104% 3.64583%;
+  height: 5.2083vw;
+  margin-bottom: 8.3vw;
+}
+
+.landing-header img {
+  background-color: burlywood;
+}
+
+/* 타잉 소개 */
+.landing-visual {
+  padding: 0 35.80729% 21.03125%;
+  margin-bottom: 8.3%;
+  background-color: blueviolet;
+}
+
+.taing-intro-container {
+  background-color: deeppink;
+}
+
+.taing-intro-container > p:nth-child(1) {
+  color: var(--white);
+  font-size: var(--text-xxl);
+  font-weight: var(--weight-lg);
+  text-align: center;
+  line-height: var(--line-height-sm);
+  white-space: pre-line; /*마크업에서 한 줄바꿈 적용*/
+  background-color: brown;
+  margin-bottom: 1.0416vw;
+}
+
+.taing-intro-container > p:nth-child(2) {
+  background-color: darkblue;
+  color: var(--silver400);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-md);
+  margin: 0 0.5729vw 3.125vw;
+}
+
+.start-taing-btn {
+  font-size: 0;
+  margin: 0 1.015625vw;
+  background-color: coral;
+}
+
+/* 타잉에만 있는 재미 */
+.taing-only-contents {
+  background-color: aqua;
+}
