@@ -16,7 +16,8 @@ legend {
 }
 
 /* 스타일 초기화 */
-button {
+button,
+input {
   all: unset;
 }
 
