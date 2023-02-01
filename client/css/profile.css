@@ -28,7 +28,6 @@
 .profile-title {
   text-align: center;
   color: var(--white);
-
 }
 
 /* 선택해주세요 */
@@ -77,8 +76,9 @@
 
 /* 맨위 공간 */
 .profile-header {
-  padding: 1.8125rem 4.375rem; /* 29px 70px */
+  padding: 1.8125rem var(--spacing-7xl); /* 29px 70px */
 }
+
 
 /* 로고 아이콘 이미지 */
 .profile-logo {
@@ -86,10 +86,13 @@
   height: 2.625rem; /* 42px */
 }
 
+
+/* 로고아이콘 a태그 영역 */
 .profile-logo a{
   display: inline-block;
   padding: 0.5625rem 0.6875rem 0.4375rem 0.6875rem; /* 9px 11px 7px 11px; */ 
 }
+
 
 /* 프로필선택~프로필편집 전체 박스 영역 */
 .profile-container {
@@ -97,28 +100,29 @@
 }
 
 
-
 /* 프로필 선택 */
 .profile-title {
   font-size: var(--text-xxl);
   font-weight: var(--weight-lg);
-  margin-top: 8.125rem; /* 130px */
-  margin-bottom: 1.25rem; /* 20px */
+  margin-top: var(--spacing-8xl); /* 130px */
+  margin-bottom: var(--spacing-md); /* 20px */
 }
+
 
 /* 선택해주세요 */
 .profile-subtitle {
   font-size: var(--text-lg);
   font-weight: var(--weight-md);
-  margin-bottom: 2.75rem; /* 44px */
+  margin-bottom: var(--spacing-4xl); /* 44px */
 }
 
 
 /* li 4개 (이미지+텍스트) 합친거 ul */
 .profile-photo {
   margin-bottom: 4.125rem; /* 66px */
-  gap: 3.2rem; /* 51.2px */
+  gap: var(--spacing-5xl); /* 52px */
 }
+
 
 /* 이미지+텍스트 개별 li */
 .profile-item {
@@ -127,16 +131,15 @@
    height: 14.625rem; */
 }
 
+
 /* 4개 이미지(버튼) */
 .user-btn {
   margin-bottom: 1rem;
   margin-top: 0.1875rem; /* 1px */
-  margin-left: 0.125rem;  /* 2px */
+  margin-left: var(--spacing-2xs);  /* 2px */
+  margin-right: 0.1875rem; /* 1px */
   font-size: 0;
 }
-
-
-
 
 
 /* p태그 */
@@ -148,10 +151,10 @@
 
 /* 프로필 편집 버튼 */
 .profile-edit-btn {
-  margin-bottom: 8.125rem; /* 130px */
+  margin-bottom: var(--spacing-8xl); /* 130px */
   font-weight: var(--weight-md);
   font-size: var(--text-lg);
-  padding: 1rem 3.1563rem; /* 16px 50.5px */
+  padding: var(--spacing-base) 3.1563rem; /* 16px 50.5px */
 }
 
 
@@ -165,13 +168,13 @@
 
 /* 맨위 공간 */
 .profile-header {
-  padding: 1rem 2.5rem; /* 16px 40px */
+  padding: var(--spacing-base) var(--spacing-3xl); /* 16px 40px */
 }
 
 /* 로고 아이콘 이미지 */
 .profile-logo {
   width: 4.8125rem;  /* 77px */
-  height: 1.5rem; /* 24px */
+  height: var(--spacing-lg); /* 24px */
 }
 
 .profile-logo a{
@@ -189,7 +192,7 @@
 .profile-title {
   font-size: var(--text-lg); 
   font-weight: var(--weight-lg);
-  margin-bottom: 0.5rem; /* 8px */
+  margin-bottom: var(--spacing-xs); /* 8px */
 }
 
 /* 선택해주세요 */
@@ -203,7 +206,7 @@
 /* li 4개 (이미지+텍스트) 합친거 ul */
 .profile-photo {
   margin-bottom: 2.75rem; /* 44px */
-  gap: 2.75rem; /* 32px */
+  gap: var(--spacing-xl); /* 32px */
 
 }
 
@@ -219,7 +222,7 @@
 
 /* 4개 이미지(버튼) */
 .user-btn {
-  margin-bottom: 0.75rem; /* 12px */
+  margin-bottom: var(--spacing-s); /* 12px */
   margin-top: 0.1875rem; /* 3px */
   margin-right: 0.0625rem; /* 1px */
   margin-left: 0.0625rem; /* 1px */
@@ -236,10 +239,10 @@
 
 /* 프로필 편집 버튼 */
 .profile-edit-btn {
-  margin-bottom: 4.375rem; /* 70px */
+  margin-bottom: var(--spacing-7xl); /* 70px */
   font-weight: var(--weight-md); 
   font-size: var(--text-sm); /* 12px */
-  padding: 1rem 3.1563rem; /* 16px 50.5px */
+  padding: var(--spacing-base) 3.1563rem; /* 16px 50.5px */
 }
 
 }
@@ -252,7 +255,7 @@
 
 /* 맨위 공간 */
 .profile-header {
-  padding: 0.7188rem 1rem; /* 11.5px 16px */
+  padding: 0.7188rem var(--spacing-base); /* 11.5px 16px */
 }
 
 /* 로고 아이콘 이미지 */
@@ -282,14 +285,14 @@
 .profile-title {
   font-size: var(--text-base);
   font-weight: var(--weight-lg);
-  margin-bottom: 1rem; /* 16px */
+  margin-bottom: var(--spacing-base); /* 16px */
 }
 
 /* 선택해주세요 */
 .profile-subtitle {
   font-size: var(--text-sm);
   font-weight: var(--weight-md);
-  margin-bottom: 2rem; /* 32px */
+  margin-bottom: var(--spacing-xl); /* 32px */
 }
 
 
@@ -298,8 +301,8 @@
   width: 15.75rem; /* 252px */
   height: 19.625rem; /* 314px */
   flex-wrap: wrap;
-  margin-bottom: 2rem; /* 32px */
-  gap: 1.5rem; /* 24px */
+  margin-bottom: var(--spacing-xl); /* 32px */
+  gap: var(--spacing-lg); /* 24px */
 }
 
 
@@ -313,10 +316,10 @@
 
 /* 4개 이미지(버튼) */
 .user-btn {
-  margin-bottom: 0.75rem; /* 12px */
-  margin-left: 0.125rem;  /* 2px */
-  margin-top: 0.125rem;  /* 2px */
-  margin-right: 0.125rem;  /* 2px */
+  margin-bottom: var(--spacing-s); /* 12px */
+  margin-left: var(--spacing-2xs);  /* 2px */
+  margin-top: var(--spacing-2xs);  /* 2px */
+  margin-right: var(--spacing-2xs);  /* 2px */
   font-size: 0;
 }
 
@@ -330,10 +333,10 @@
 
 /* 프로필 편집 버튼 */
 .profile-edit-btn {
-  margin-bottom: 3.25rem; /* 52px */
+  margin-bottom: var(--spacing-5xl); /* 52px */
   font-weight: var(--weight-md);
   font-size: var(--text-sm);
-  padding: 0.75rem 2.5rem; /* 12px 40px */
+  padding: var(--spacing-s) var(--spacing-3xl); /* 12px 40px */
 }
 
 }
