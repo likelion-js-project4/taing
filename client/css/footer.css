@@ -79,6 +79,11 @@
   cursor: pointer;
   gap: var(--spacing-md);
 }
+.sns-link-logo > li > a {
+  display: block;
+  border-radius: 50%;
+  font-size: 0;
+}
 
 .copyright-box {
   color: var(--silber500);
