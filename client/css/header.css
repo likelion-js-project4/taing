@@ -1,0 +1,110 @@
+@import url("./theme.css");
+
+body {
+  position: relative;
+}
+h1 {
+  margin: 0;
+  display: inline-block;
+}
+
+.header {
+  background-color: var(--black);
+  color: rgb(110, 110, 110);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header > .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: var(--spacing-base);
+}
+.nav-logo {
+  font-size: 0;
+}
+.header-nav-left,
+.header-nav-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+}
+.nav-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.nav-item:hover {
+  color: var(--white);
+  transition: color 0.1s ease 0s;
+}
+.header-alive {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.header-search,
+.header-profile {
+  all: unset;
+  cursor: pointer;
+  font-size: 0;
+}
+
+@media (min-width: 1280px) {
+  .header {
+    padding: var(--spacing-base) var(--spacing-7xl);
+  }
+
+  .header-search,
+  .header-profile {
+    width: var(--spacing-3xl);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1279px) {
+  .header {
+    padding: 0.875rem var(--spacing-3xl);
+  }
+  .nav-logo {
+    width: 4.625rem;
+  }
+
+  .nav-item {
+    display: flex;
+  }
+
+  .header-search,
+  .header-profile {
+    width: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: var(--spacing-xs) var(--spacing-base);
+  }
+  .nav-logo {
+    width: 3rem;
+  }
+  .footer {
+    padding: 4rem var(--spacing-base) 5rem var(--spacing-base);
+    font-size: var(--text-sm);
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .header-search,
+  .header-profile {
+    width: 1.125rem;
+  }
+}

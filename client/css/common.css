@@ -15,6 +15,11 @@ legend {
   box-sizing: border-box;
 }
 
+/* 스타일 초기화 */
+button {
+  all: unset;
+}
+
 /* 링크 스타일 */
 a {
   color: inherit;
@@ -50,9 +55,8 @@ button:focus,
 textarea:focus,
 .swiper-button-prev:focus,
 .swiper-button-next:focus,
-.swiper-pagination-bullet:focus{
+.swiper-pagination-bullet:focus {
   outline: 1px solid var(--red-1);
   outline-offset: 0;
   box-shadow: 0 0 10px 3px rgba(255, 0, 64, 0.4);
 }
-
