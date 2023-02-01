@@ -27,7 +27,7 @@ button {
 /* 공통 검색 폼 */
 .search-form {
   /* background-color: lightslategray; */
-  margin: var(--spacing-xl) 0;
+  margin: var(--spacing-5xl) 0;
   position: relative;
 }
 
@@ -61,7 +61,7 @@ button {
   width: 3.125rem;
   position: absolute;
   right: 0;
-  top: 1.25rem;
+  top: var(--spacing-md);
 }
 
 /* 공통 컨텐츠 박스 */
@@ -85,7 +85,7 @@ button {
   font-size: var(--text-lg);
   font-weight: var(--weight-md);
   padding-bottom: var(--spacing-md);
-  padding-right: var(--spacing-sm);
+  padding-right: var(--spacing-s);
 }
 
 .list-item {
@@ -107,7 +107,7 @@ button {
 .delete-btn {
   cursor: pointer;
   /* background-color: aqua; */
-  padding: 0.5rem;
+  padding: var(--spacing-xs);
   width: 0.9375rem;
   height: 100%;
 }
@@ -118,7 +118,7 @@ button {
   font-size: var(--text-md);
   font-weight: var(--weight-md);
   color: var(--silver600);
-  padding: 0.5rem;
+  padding: var(--spacing-xs);
 }
 
 .list-item img {
@@ -130,7 +130,7 @@ button {
 .search-favorate {
   border-left: 1px solid var(--silver800);
   /* background-color: lightpink; */
-  padding-left: var(--spacing-60);
+  padding-left: var(--spacing-6xl);
   width: 50%;
 }
 
@@ -140,7 +140,7 @@ button {
   color: var(--silver200);
   font-size: var(--text-lg);
   font-weight: var(--weight-md);
-  padding-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-2xl);
 }
 
 .favorate-list {
@@ -190,7 +190,7 @@ button {
 
   /* 공통 검색 폼 */
   .search-form {
-    margin: 1.25rem 0 2.5rem 0;
+    margin: var(--spacing-md) 0 var(--spacing-3xl) 0;
   }
 
   .search-current {
@@ -198,7 +198,7 @@ button {
   }
 
   .search-form-wrapper {
-    height: 2.5rem;
+    height: var(--spacing-3xl);
   }
 
   .search-form-box {
@@ -239,7 +239,7 @@ button {
     color: var(--silver200);
     font-size: var(--text-lg);
     font-weight: var(--weight-md);
-    padding-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-2xl);
   }
 
   .favorate-list {
@@ -265,7 +265,7 @@ button {
     font-weight: var(--weight-md);
     content: counter(number);
     display: inline-block;
-    width: 2.75rem;
+    width: var(--spacing-4xl);
     /* background-color: aqua; */
   }
 
@@ -310,12 +310,12 @@ button {
   .search-current h2 {
     font-size: var(--text-base);
     font-weight: var(--weight-md);
-    padding-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-s);
     padding-right: 0;
   }
 
   .list-item {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-xs);
   }
 
   .list-item a {
@@ -324,7 +324,7 @@ button {
   }
 
   .delete-btn {
-    width: 0.75rem;
+    width: var(--spacing-s);
     height: 100%;
   }
 
@@ -339,7 +339,7 @@ button {
 
   /* 태블릿 인기 검색어 */
   .search-favorate {
-    padding-left: var(--spacing-lg);
+    padding-left: var(--spacing-2xl);
     width: 50%;
   }
 
@@ -351,12 +351,12 @@ button {
   .favorate-list li {
     font-size: var(--text-sm);
     font-weight: var(--weight-sm);
-    padding-bottom: 0.5rem;
+    padding-bottom: var(--spacing-xs);
   }
 
   .favorate-list li::before {
     font-weight: var(--weight-md);
-    width: 1.5rem;
+    width: var(--spacing-lg);
   }
 
   .search-favorate > time {
