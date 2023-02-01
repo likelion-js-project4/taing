@@ -20,8 +20,20 @@
 
   --skyblue: #61d4e6;
 
+  --spacing-2xs: 0.125rem; /* 2px*/
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-s: 0.75rem; /* 12px */
   --spacing-base: 1rem; /* 16px */
-  --spacing-xl: 3.25rem; /* 52px */
+  --spacing-md: 1.25rem; /* 20px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 2.25rem; /* 36px */
+  --spacing-3xl: 2.5rem; /* 40px */
+  --spacing-4xl: 2.75rem; /* 44px */
+  --spacing-5xl: 3.25rem; /* 52px */
+  --spacing-6xl: 3.75rem; /* 60px */
+  --spacing-7xl: 4.375rem; /* 70px */
+  --spacing-8xl: 8.125rem; /* 130px */
 
   --text-sm: 0.75rem; /* 12px */
   --text-base: 1rem; /* 16px */

@@ -5,7 +5,7 @@ button {
 /* 모든 디바이스 (All Device) */
 /* 공통 헤더 */
 .header {
-  /* background-color: lightblue; */
+  background-color: lightblue;
   height: 100px;
   position: relative;
 }
@@ -181,8 +181,101 @@ button {
 
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
+  /* 공통 검색 */
+  .search-wrapper {
+    /* background-color: navy; */
+    padding: 0 11.4583% 4.84375% 11.4583%;
+    height: auto;
+  }
+
+  /* 공통 검색 폼 */
+  .search-form {
+    margin: 1.25rem 0 2.5rem 0;
+  }
+
   .search-current {
     display: none;
+  }
+
+  .search-form-wrapper {
+    height: 2.5rem;
+  }
+
+  .search-form-box {
+    border-bottom: 2px solid var(--white);
+  }
+
+  .search-form-input {
+    font-size: var(--text-base);
+  }
+
+  .search-button {
+    all: unset;
+    cursor: pointer;
+    width: 3.125rem;
+    position: absolute;
+    right: 0;
+    top: 1.25rem;
+  }
+
+  /* 공통 컨텐츠 박스 */
+  .search-content-box {
+    /* background-color: sandybrown; */
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  /* 공통 인기 검색어 */
+  .search-favorate {
+    border-left: 1px solid var(--silver800);
+    /* background-color: lightpink; */
+    padding-left: var(--spacing-60);
+    width: 50%;
+  }
+
+  .search-favorate h2 {
+    /* background-color: deeppink; */
+    cursor: default;
+    color: var(--silver200);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-md);
+    padding-bottom: var(--spacing-lg);
+  }
+
+  .favorate-list {
+    /* 스크린 리더가 번호 읽어주도록 */
+    overflow: hidden;
+  }
+
+  .favorate-list li {
+    /* background-color: coral; */
+    color: var(--silver300);
+    font-size: var(--text-md);
+    font-weight: var(--weight-sm);
+    padding-bottom: var(--spacing-base);
+    counter-increment: number;
+  }
+
+  .favorate-list li:hover {
+    color: var(--silver100);
+  }
+
+  .favorate-list li::before {
+    color: var(--red-1);
+    font-weight: var(--weight-md);
+    content: counter(number);
+    display: inline-block;
+    width: 2.75rem;
+    /* background-color: aqua; */
+  }
+
+  .search-favorate > time {
+    font-size: var(--text-md);
+    font-weight: var(--weight-sm);
+    cursor: default;
+    color: var(--silver500);
+    display: inline-block;
+    padding: 0.3rem 0;
   }
 }
 
@@ -205,7 +298,6 @@ button {
   }
 
   .search-form-input {
-    font-weight: var(--weight-md);
     font-size: var(--text-md);
   }
 
