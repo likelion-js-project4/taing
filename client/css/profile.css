@@ -127,8 +127,6 @@
 /* 이미지+텍스트 개별 li */
 .profile-item {
   width: 50%;
-  /* width: 14.625rem;
-   height: 14.625rem; */
 }
 
 
@@ -214,8 +212,6 @@
 /* 이미지+텍스트 개별 li */
 .profile-item {
   width: 50%;
-  /* width: 14.625rem;
-   height: 14.625rem; */
 }
 
 
@@ -299,9 +295,7 @@
 /* li 4개 (이미지+텍스트) 합친거 ul */
 .profile-photo {
   width: 15.75rem; /* 252px */
-  /* height: 19.625rem; 314px */
   flex-wrap: wrap;
-  /* margin-bottom:  32px */
   gap: var(--spacing-lg); /* 24px */
   justify-content:center;
   margin: 0 auto var(--spacing-xl);;
@@ -312,7 +306,6 @@
 .profile-item {
   /* width: 50%; */
   width: 7.125rem; 
-
   height: 9.0625rem; 
 }
 
