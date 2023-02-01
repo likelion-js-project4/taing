@@ -8,7 +8,6 @@ button{
 }
 
 .register-container{
-  width: 500px;
   margin: 0 auto;
   margin-top: var(--spacing-7xl);
 }
@@ -22,7 +21,7 @@ button{
 .sub-title{
   text-align: center;
   color: var(--silver400);
-  font-size: min(3vw, var(--text-base));
+  font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
   margin: var(--spacing-lg) 0 var(--spacing-6xl);
 }
 
@@ -38,12 +37,12 @@ button{
 
 .register-wrapper input{
   width: 100%;
-  padding: 20px 15px;
+  padding: var(--spacing-md) var(--spacing-base);
   background-color: var(--silver800);
-  border-radius: 5px;
+  border-radius: var(--spacing-2xs);
   color: var(--silver600);
   border: none;
-  margin-top: 30px;
+  margin-top: var(--spacing-xl);
   font-size: min(3vw, var(--text-base));
 }
 
@@ -51,22 +50,33 @@ button{
   position: relative;
 }
 
-.register-pw-wrap img{
-  width: 25px;
+.pw-see {
   position: absolute;
-  right: 15px;
+  right: var(--spacing-md);
   top: 50%;
-  background: transparent;
+  background-color: transparent;
+  min-width: var(--spacing-md);
+  min-height: var(--spacing-md);
+  max-width: var(--spacing-xl);
+  width: min(3vw, var(--spacing-xl));
 }
 
 .btn-register{
   margin-top: var(--spacing-2xl);
   width: 100%;
+  height: 5rem;
   text-align: center;
   background-color: var(--silver700);
-  border-radius: 5px;
+  border-radius: var(--spacing-2xs);
   color: var(--silver400);
   font-weight: var(--weight-lg);
+}
+
+#register-id,
+#register-pw,
+#register-pw-check,
+#register-email{
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
 }
 
 
@@ -86,8 +96,12 @@ button{
 }
 
 .all-check-btn img{
-  
   transform: translateY(3px);
+}
+
+.all-check-btn,
+.content-item-check{
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-md));
 }
 
 /* 동의하기 아이템들 */
@@ -106,7 +120,7 @@ button{
 .register-content-item img{
   background: transparent;
   transform: translateY(25%);
-  padding-right: 5px;
+  padding-right: var(--spacing-2xs);
 }
 .content-item-check{
   background: transparent;
@@ -115,5 +129,90 @@ button{
 }
 
 .item-space{
-  padding-left: 20px;
+  padding-left: var(--spacing-md);
+}
+
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .nav-logo > a > img{
+    height: var(--spacing-base);
+  }
+
+  body{
+    padding: 0 var(--spacing-base);
+  }
+
+  .register-container{
+    max-width: 500px;
+  }
+
+  .pw-see{
+    top: 45%;
+  }
+
+  .register-wrapper input{
+    margin-top: var(--spacing-base);
+  }
+
+  #register-id,
+  #register-pw,
+  #register-pw-check,
+  #register-email,
+  .btn-register{
+    height: var(--spacing-4xl);
+  }
+
+
+
+}
+
+
+/* 태블릿 */
+@media (min-width: 769px) and (max-width: 1279px) {
+  .nav-logo > a > img{
+    height: var(--spacing-lg);
+  }
+
+  .register-container{
+    max-width: 600px;
+  }
+
+  .pw-see{
+    top: 40%;
+  }
+
+  .register-wrapper input{
+    margin-top: var(--spacing-base);
+  }
+
+  #register-id,
+  #register-pw,
+  #register-pw-check,
+  #register-email,
+  .btn-register{
+    height: var(--spacing-5xl);
+  }
+
+ 
+  
+}
+
+/* 데스크탑 */
+@media (min-width: 1280px) {
+  .register-container{
+    max-width: 768px;
+  }
+
+
+  #register-id,
+  #register-pw,
+  #register-pw-check,
+  #register-email,
+  .btn-register{
+    height: 5rem;
+  }
+
+
+
 }
