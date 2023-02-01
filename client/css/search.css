@@ -152,6 +152,7 @@
   /* 스크린 리더가 번호 읽어주도록 */
   overflow: hidden;
   padding-top: var(--spacing-2xs);
+  counter-reset: number;
 }
 
 .favorite-list li {
