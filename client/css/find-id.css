@@ -2,7 +2,7 @@
 
 body {
   display: inline-block;
-  background-color: #000;
+  background-color: #191919;
   width: 100%;
 }
 
@@ -15,7 +15,7 @@ body {
   color: var(--white);
   text-align: center;
   font-size: clamp(var(--text-base), 4vw ,var(--text-xl));
-  font-weight: 700;
+  font-weight: var(--weight-lg);
   margin-bottom: var(--spacing-md);
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 .find-wrapper-email span{
-  font-weight: 700;
+  font-weight: var(--weight-lg);
   color: var(--silver200);
   margin-bottom: var(--spacing-md);
 }
@@ -52,7 +52,7 @@ body {
   background-color: var(--silver500);
   border-radius: var(--spacing-2xs);
   color: var(--silver200);
-  font-weight: 700;
+  font-weight: var(--weight-lg);
   font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
 }
 
@@ -100,7 +100,7 @@ body {
   background-color: var(--silver100);
   border-radius: var(--spacing-2xs);
   color: var(--silver900);
-  font-weight: 700;
+  font-weight: var(--weight-lg);
   font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
 }
 
