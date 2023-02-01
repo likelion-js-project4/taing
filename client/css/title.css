@@ -1,8 +1,23 @@
 .title-simple {
+  display: inline-block;
   font-size: clamp(var(--text-sm), 1vw ,var(--text-md));
   color: var(--silver200);
   line-height: var(--line-height-md);
   font-weight: var(--weight-md);
+}
+
+.title-simple.update{
+  position: relative;
+}
+
+.title-simple.update::after{
+  content: "";
+  position: absolute;
+  top:0;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--red-2);
+  
 }
 
 .title-basic {
@@ -25,4 +40,32 @@
 
 .label-title-simple{
 
+}
+
+@media (min-width: 1280px) {
+
+  .title-simple.update::after{
+    right: -14px;
+    width:8px;
+    height:8px;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1279px){
+
+  .title-simple.update::after{
+    right: -10px;
+    width:6px;
+    height:6px;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .title-simple.update::after{
+    right:-7px;
+    width:4px;
+    height:4px;
+  }
 }
