@@ -191,10 +191,15 @@
   .program .swiper-button-prev.swiper-button-disabled{
     opacity: 0;
   }
-
+  .broadcasting {
+    padding: var(--spacing-2xl) 0;
+  }
 }
 @media (min-width: 769px) and (max-width: 1279px){
   
+  .broadcasting {
+    padding: 1.75rem 0;
+  }
 }
 @media (min-width: 320px) and (max-width: 768px) {
   
@@ -219,4 +224,7 @@
     top: 2px;
   }
 
+  .broadcasting {
+    padding: var(--spacing-base) 0;
+  }
 }
