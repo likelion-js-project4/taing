@@ -35,3 +35,28 @@ const taingRecommendSwiper = new Swiper(".taing-recommend .swiper", {
     clickable: true,
   },
 });
+
+const QuickVodSwiper = new Swiper(".quick-vod .swiper", {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 8,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    1280: {
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+      spaceBetween: 16,
+    },
+  },
+  navigation: {
+    nextEl: ".quick-vod .swiper-button-next",
+    prevEl: ".quick-vod .swiper-button-prev",
+  },
+  pagination: {
+    el: ".quick-vod .swiper-pagination",
+    clickable: true,
+  },
+});
