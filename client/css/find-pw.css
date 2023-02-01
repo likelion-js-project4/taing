@@ -1,0 +1,40 @@
+@import url(./theme.css);
+
+.find-pw-container{
+  width: 500px;
+  margin: 50px auto;
+}
+
+.find-pw-title{
+  text-align: center;
+  font-size: min(3vw, var(--text-md));
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.sub-title{
+  white-space: normal;
+  color: var(--silver600);
+}
+
+
+
+.form-input label input{
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px 15px;
+  background-color: var(--silver800);
+  border-radius: 5px;
+  color: var(--silver700);
+  border: none;
+}
+
+.id-input-btn{
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px 15px;
+  background-color: var(--silver500);
+  border-radius: 5px;
+  color: var(--silver400);
+  font-weight: 700;
+}

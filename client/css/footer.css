@@ -70,6 +70,7 @@
   cursor: pointer;
   gap: 1.25rem;
 }
+
 .copyright-box {
   color: #6b6b6b;
 }
@@ -82,6 +83,7 @@
 }
 .copyright-box > p > span::after {
   content: "";
+
   position: absolute;
   top: 50%;
   left: 0px;
