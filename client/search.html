@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/theme.css" />
     <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/search.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
@@ -25,6 +26,44 @@
   </head>
   <body>
     <header class="header">
+      <h1 class="nav-logo">
+        <span class="a11y-hidden">TAING</span>
+        <a href="./index.html">
+          <img src="./assets/icons/header_logo_132_42.png" alt="TAING" />
+        </a>
+      </h1>
+      <nav class="nav">
+        <h2 class="a11y-hidden">메인 메뉴</h2>
+        <ul class="header-nav-left">
+          <li class="nav-item">
+            <a href="" class="header-alive">
+              <img src="./assets/icons/header_live_default_34_34.png" />
+              &nbsp;실시간
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="">TV 프로그램</a>
+          </li>
+          <li class="nav-item">
+            <a href="">영화</a>
+          </li>
+          <li class="nav-item">
+            <a href="">파라마운트+</a>
+          </li>
+        </ul>
+
+        <div class="header-nav-right">
+          <button type="button" class="header-search">
+            <img
+              src="assets/icons/header_search_default_40_40.png"
+              alt="search"
+            />
+          </button>
+          <button class="header-profile">
+            <img src="assets/icons/header_logo_40_40.png" alt="profile" />
+          </button>
+        </div>
+      </nav>
       <div class="search-container">
         <div class="search-wrapper">
           <h2 class="a11y-hidden">검색</h2>

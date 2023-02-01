@@ -5,9 +5,7 @@ button {
 /* 모든 디바이스 (All Device) */
 /* 공통 헤더 */
 .header {
-  background-color: lightblue;
-  height: 100px;
-  position: relative;
+  background-color: var(--dark-bg-1) !important;
 }
 
 /* 공통 검색 */
@@ -16,6 +14,7 @@ button {
   position: absolute;
   width: 100%;
   top: 100%;
+  left: 0;
 }
 
 .search-wrapper {
