@@ -48,7 +48,7 @@
 
 
 /* p태그 */
-.item>p {
+.profile-item>p {
   text-align: center;
   color: var(--silver300);
 }
@@ -76,16 +76,20 @@
 @media (min-width: 1280px) {
 
 /* 맨위 공간 */
-.header {
+.profile-header {
   padding: 1.8125rem 4.375rem; /* 29px 70px */
 }
 
 /* 로고 아이콘 이미지 */
-.logo {
+.profile-logo {
   width: 8.25rem;  /* 132px */
   height: 2.625rem; /* 42px */
 }
 
+.profile-logo a{
+  display: inline-block;
+  padding: 0.5625rem 0.6875rem 0.4375rem 0.6875rem; /* 9px 11px 7px 11px; */ 
+}
 
 /* 프로필선택~프로필편집 전체 박스 영역 */
 .profile-container {
@@ -117,20 +121,26 @@
 }
 
 /* 이미지+텍스트 개별 li */
-.item {
+.profile-item {
   width: 50%;
   /* width: 14.625rem;
    height: 14.625rem; */
 }
 
 /* 4개 이미지(버튼) */
-.user {
+.user-btn {
   margin-bottom: 1rem;
+  margin-top: 0.1875rem; /* 1px */
+  margin-left: 0.125rem;  /* 2px */
+  font-size: 0;
 }
 
 
+
+
+
 /* p태그 */
-.item>p {
+.profile-item>p {
   font-size: var(--text-lg);
   font-weight: var(--weight-sm);
 }
@@ -154,18 +164,23 @@
 @media (min-width: 769px) and (max-width: 1279px) {
 
 /* 맨위 공간 */
-.header {
+.profile-header {
   padding: 1rem 2.5rem; /* 16px 40px */
 }
 
 /* 로고 아이콘 이미지 */
-.logo {
+.profile-logo {
   width: 4.8125rem;  /* 77px */
   height: 1.5rem; /* 24px */
 }
 
+.profile-logo a{
+  display: inline-block;
+  padding:  0.5625rem 0.6875rem 0.4375rem 0.6875rem; /* 9px 11px 7px 11px; */
+ 
+}
 
-.main{
+.profile-main{
   padding: 4.625rem 4.5rem 3.125rem 72px; /* 74px 72px 50px 72px */
 }
 
@@ -194,7 +209,7 @@
 
 
 /* 이미지+텍스트 개별 li */
-.item {
+.profile-item {
   width: 25%;
   /* width: 14.625rem;
    height: 14.625rem; */
@@ -203,13 +218,17 @@
 
 
 /* 4개 이미지(버튼) */
-.user {
+.user-btn {
   margin-bottom: 0.75rem; /* 12px */
+  margin-top: 0.1875rem; /* 3px */
+  margin-right: 0.0625rem; /* 1px */
+  margin-left: 0.0625rem; /* 1px */
+  font-size: 0;
 }
 
 
 /* p태그 */
-.item>p {
+.profile-item>p {
   font-size: var(--text-sm); /* 12px */
   font-weight: var(--weight-sm);
 }
@@ -232,22 +251,29 @@
 @media (min-width: 320px) and (max-width: 768px) {
 
 /* 맨위 공간 */
-.header {
+.profile-header {
   padding: 0.7188rem 1rem; /* 11.5px 16px */
 }
 
 /* 로고 아이콘 이미지 */
-.logo {
+.profile-logo {
   width: 2.875rem;  /* 46px */
   height: 0.9375rem; /* 15px */
 }
+
+.profile-logo a{
+  display: inline-block;
+  padding:  0.4375rem 0.5625rem 0.3125rem 0.5625rem; /* 7px 9px 5px 9px; */
+ 
+}
+
 
 /* 프로필선택~프로필편집 전체 박스 영역 */
 .profile-container {
   max-width: 320px;
 }
 
-.main{
+.profile-main{
   padding: 4.5rem 2.125rem 3.25rem 2.125rem; /* 72px 34px 52x 34px */
 }
 
@@ -278,7 +304,7 @@
 
 
 /* 이미지+텍스트 개별 li */
-.item {
+.profile-item {
   width: 7.125rem; /* 114px */
   height: 9.0625rem; /* 145px */
 }
@@ -286,13 +312,17 @@
 
 
 /* 4개 이미지(버튼) */
-.user {
+.user-btn {
   margin-bottom: 0.75rem; /* 12px */
+  margin-left: 0.125rem;  /* 2px */
+  margin-top: 0.125rem;  /* 2px */
+  margin-right: 0.125rem;  /* 2px */
+  font-size: 0;
 }
 
 
 /* p태그 */
-.item>p {
+.profile-item>p {
   font-size: var(--text-sm);
   font-weight: var(--weight-sm);
 }
