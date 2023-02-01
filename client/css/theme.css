@@ -1,33 +1,40 @@
 :root {
-  --white: #FFFFFF;
+  --white: #ffffff;
   --black: #000000;
 
-  --silver100:#E1E1E1;
+  --silver100: #e1e1e1;
   --silver200: #c4c4c4;
-  --silver300: #A6A6A6;
+  --silver300: #a6a6a6;
   --silver400: #898989;
-  --silver500: #6B6B6B;
+  --silver500: #6b6b6b;
   --silver600: #565656;
   --silver700: #404040;
-  --silver800: #2B2B2B;
+  --silver800: #2b2b2b;
   --silver900: #151515;
- 
-  --red-1: #FF153C;
-  --red-2: #E93945;
+
+  --red-1: #ff153c;
+  --red-2: #e93945;
 
   --dark-bg-1: #191919;
   --dark-bg-2: #212121;
 
-  --skyblue: #61D4E6;
+  --skyblue: #61d4e6;
 
-  --spacing-sm: 0.75rem; /* 12px */
+  --spacing-3xs: 0.125rem; /* 2px*/
+  --spacing-2xs: 0.25rem; /* 4px*/
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-s: 0.75rem; /* 12px */
   --spacing-base: 1rem; /* 16px */
   --spacing-md: 1.25rem; /* 20px */
-  --spacing-24: 1.5rem; /* 24px */
-  --spacing-34: 2.125rem; /* 34px */
-  --spacing-lg: 2.25rem; /* 36px */
-  --spacing-xl: 3.25rem; /* 52px */
-  --spacing-60: 3.75rem; /* 60px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 2.25rem; /* 36px */
+  --spacing-3xl: 2.5rem; /* 40px */
+  --spacing-4xl: 2.75rem; /* 44px */
+  --spacing-5xl: 3.25rem; /* 52px */
+  --spacing-6xl: 3.75rem; /* 60px */
+  --spacing-7xl: 4.375rem; /* 70px */
+  --spacing-8xl: 8.125rem; /* 130px */
 
   --text-sm: 0.75rem; /* 12px */
   --text-base: 1rem; /* 16px */
@@ -35,7 +42,6 @@
   --text-lg: 1.7769rem; /* 28.43px */
   --text-xl: 2.3686rem; /* 37.897px */
   --text-xxl: 3.1573rem; /* 50.517px */
- 
 
   /* line-height와 weight는 필요한 사람 알아서 쓸것 */
 
@@ -46,8 +52,6 @@
   --weight-sm: 400;
   --weight-md: 600;
   --weight-lg: 700;
-
-
 
   --container-width: 64rem; /* 1024px */
 }
