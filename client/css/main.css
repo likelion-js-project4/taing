@@ -112,6 +112,10 @@
   top:5px;
 }
 
+.quick-vod-icon > img{
+  max-height:18px;
+}
+
 .program .swiper-button-prev,
 .program .swiper-button-next{
   top:auto;
@@ -200,9 +204,11 @@
     opacity: 0;
   }
 
+  .quick-vod-icon > img{
+    max-height: 30px;
+  }
 }
 @media (min-width: 769px) and (max-width: 1279px){
-  
 }
 @media (min-width: 320px) and (max-width: 768px) {
   
@@ -226,5 +232,5 @@
   .program .swiper-view-all{
     top: 2px;
   }
-  
+
 }
