@@ -39,7 +39,6 @@
 }
 
 .search-form-input {
-  all: unset;
   font-weight: var(--weight-md);
   font-size: var(--text-xl);
   width: 100%;
@@ -51,7 +50,6 @@
 }
 
 .search-button {
-  all: unset;
   cursor: pointer;
   width: 3.125rem;
   position: absolute;
@@ -76,7 +74,6 @@
 .search-current h2 {
   /* background-color: darkgreen; */
   color: var(--silver200);
-  cursor: default;
   font-size: var(--text-lg);
   font-weight: var(--weight-md);
   padding: var(--spacing-2xs) var(--spacing-s) var(--spacing-md) 0;
