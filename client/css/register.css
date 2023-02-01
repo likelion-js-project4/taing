@@ -3,22 +3,27 @@ button{
   border: none;
 }
 
+.nav-logo{
+  margin: var(--spacing-base) var(--spacing-lg);
+}
+
 .register-container{
   width: 500px;
-  margin: 50px auto;
+  margin: 0 auto;
+  margin-top: var(--spacing-7xl);
 }
 
 .register-title{
   text-align: center;
-  font-size: min(3vw, var(--text-md));
-  font-weight: 700;
+  font-size: clamp(var(--text-base), 5vw ,var(--text-xl));
+  font-weight: var(--weight-lg);
 }
 
 .sub-title{
   text-align: center;
   color: var(--silver400);
   font-size: min(3vw, var(--text-base));
-  margin: 15px 0;
+  margin: var(--spacing-lg) 0 var(--spacing-6xl);
 }
 
 .register-wrapper{
@@ -55,13 +60,13 @@ button{
 }
 
 .btn-register{
-  margin-top: 20px;
+  margin-top: var(--spacing-2xl);
   width: 100%;
-  padding: 20px 15px;
-  background-color: var(--silver500);
+  text-align: center;
+  background-color: var(--silver700);
   border-radius: 5px;
   color: var(--silver400);
-  font-weight: 700;
+  font-weight: var(--weight-lg);
 }
 
 
