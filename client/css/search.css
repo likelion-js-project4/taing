@@ -12,6 +12,7 @@ button {
 
 /* 공통 검색 */
 .search-container {
+  background-color: var(--dark-bg-1);
   position: absolute;
   width: 100%;
   top: 100%;
