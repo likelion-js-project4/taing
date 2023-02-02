@@ -71,13 +71,21 @@ input{
 .id-input-btn{
   box-sizing: border-box;
   width: 100%;
-  background-color: var(--silver700);
   padding: var(--spacing-lg) var(--spacing-base);
   border-radius: 5px;
   text-align: center;
-  color: var(--silver400);
+  color: var(--black);
+  background-color: var(--silver100);
   font-weight: var(--weight-md);
   font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
+}
+.id-input-btn:disabled{
+  background-color: var(--silver700);
+  color: var(--silver400);
+}
+.id-input-btn:hover{
+    background-color: var(--white);
+    color: var(--black);
 }
 
 
@@ -89,12 +97,21 @@ input{
 
   .find-pw-container{
     max-width: 500px;
+    margin-top: var(--spacing-lg);
     width: min(80vw, 50rem);
+  }
+
+  .find-pw-title{
+
+    margin-bottom: var(--spacing-lg);
   }
 
   .id-cancel-btn{
     width: var(--spacing-lg);
-    padding: var(--spacing-xs) var(--spacing-lg);
+  }
+
+  .pw-id-wrapper{
+    margin-bottom: var(--spacing-md);
   }
 
   .id-input-btn,
@@ -120,6 +137,10 @@ input{
   .find-pw-container{
     max-width: 600px;
     font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
+  }
+
+  .pw-id-wrapper{
+    margin-bottom: var(--spacing-lg);
   }
 
 

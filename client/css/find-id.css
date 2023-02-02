@@ -85,12 +85,20 @@ input, h3{
   margin-top: var(--spacing-md);
   width: 100%;
   text-align: center;
-  background-color: var(--silver700);
   padding: var(--spacing-md) var(--spacing-base);
   border-radius: var(--spacing-2xs);
-  color: var(--silver400);
+  color: var(--black);
+  background-color: var(--silver100);
   font-weight: var(--weight-md);
   font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
+}
+.email-input-btn:disabled{
+  background-color: var(--silver700);
+  color: var(--silver400);
+}
+.email-input-btn:hover{
+  background-color: var(--white);
+  color: var(--black);
 }
 
 .or-line{
@@ -133,14 +141,19 @@ input, h3{
   margin-top: var(--spacing-md);
   width: 100%;
   text-align: center;
-  background-color: var(--silver100);
   border-radius: var(--spacing-2xs);
   color: var(--black);
+  background-color: var(--silver100);
   font-weight: var(--weight-lg);
   font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
 }
+.individual-btn:disabled{
+  background-color: var(--silver700);
+  color: var(--silver400);
+}
 .individual-btn:hover{
   background-color: var(--white);
+  color: var(--black);
 }
 
 
