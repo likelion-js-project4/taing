@@ -121,6 +121,7 @@ body {
 .taing-finding-contents {
   padding: 0 34.296875%;
   background-color: aqua;
+  margin-bottom: 15.078125%;
 }
 
 .taing-finding-title-description {
@@ -143,3 +144,14 @@ body {
 }
 
 /* 타잉 재소개 */
+.landing-bottom {
+  background-color: aqua;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.landing-bottom > p > img {
+  background-color: coral;
+  width: 17.4375rem;
+}
