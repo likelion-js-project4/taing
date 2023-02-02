@@ -39,6 +39,19 @@
   position: relative;
 }
 
+/* 연필 아이콘 */
+.user-btn-edit::before
+{
+  background:  rgba(0, 0, 0, 0.5) url("../assets/icons/profile_pencil_60_60.png") no-repeat ; 
+  content: "";
+  display: block;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  z-index: 1;
+  background-position: 50%;
+}
+
 
 
 /* 4개 이미지(버튼) */
@@ -59,7 +72,6 @@
   border: 1px solid var(--white);
   color: var(--white);
   cursor: pointer;
-  transform: scale(1.3);
 }
 
 
@@ -139,18 +151,9 @@
 /* 연필 아이콘 */
 .user-btn-edit::before
 {
-  background:  rgba(0, 0, 0, 0.5) url("../assets/icons/profile_pencil_60_60.png") no-repeat ; 
-  content: "";
-  display: block;
-  position: absolute;
-  top: 43%;
-  left: 50%;
-  z-index: 1;
   transform: translate(-50%, -52%);
   width: 99%;
   height: 82%;
-  background-size: 40%;
-  background-position: 50%;
 }
 
 
@@ -177,7 +180,9 @@
   margin-bottom: var(--spacing-8xl); /* 130px */
   font-weight: var(--weight-md);
   font-size: var(--text-lg);
-  padding: var(--spacing-base) 3.1563rem; /* 16px 50.5px */
+  width: 17rem;
+  height: 5.375rem;
+  justify-content: center;
 }
 }
 
@@ -239,18 +244,9 @@
 /* 연필 아이콘 */
 .user-btn-edit::before
 {
-  background:  rgba(0, 0, 0, 0.5) url("../assets/icons/profile_pencil_60_60.png") no-repeat ; 
-  content: "";
-  display: block;
-  position: absolute;
-  top: 43%;
-  left: 50%;
-  z-index: 1;
   transform: translate(-50%, -48%);
   width: 100%;
   height: 90%;
-  background-size: 40%;
-  background-position: 50%;
 }
 
 /* 4개 이미지(버튼) */
@@ -275,7 +271,9 @@
   margin-bottom: var(--spacing-7xl); /* 70px */
   font-weight: var(--weight-md); 
   font-size: var(--text-sm); /* 12px */
-  padding: var(--spacing-base) 3.1563rem; /* 16px 50.5px */
+  width: 11.8rem;
+  height: 3.8rem;
+  justify-content: center;
 }
 
 }
@@ -296,7 +294,6 @@
   width: 2.875rem;  /* 46px */
   height: 0.9375rem; /* 15px */
 }
-
 
 
 .profile-logo a:focus{
@@ -340,18 +337,9 @@
 /* 연필 아이콘 */
 .user-btn-edit::before
 {
-  background:  rgba(0, 0, 0, 0.5) url("../assets/icons/profile_pencil_60_60.png") no-repeat ; 
-  content: "";
-  display: block;
-  position: absolute;
-  top: 43%;
-  left: 50%;
-  z-index: 1;
   transform: translate(-50%, -55%);
   width: 100%;
   height: 79%;
-  background-size: 40%;
-  background-position: 50%;
 }
 
 /* 이미지+텍스트 개별 li */
@@ -385,7 +373,9 @@
   margin-bottom: var(--spacing-5xl); /* 52px */
   font-weight: var(--weight-md);
   font-size: var(--text-sm);
-  padding: var(--spacing-s) var(--spacing-3xl); /* 12px 40px */
+  width: 8.4375rem;
+  height: 2.625rem;
+  justify-content: center;
 }
 
 }
