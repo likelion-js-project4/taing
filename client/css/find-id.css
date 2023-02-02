@@ -1,11 +1,17 @@
 @import url(./theme.css);
-button{
-  cursor: pointer;
-}
 body {
   display: inline-block;
   width: 100%;
 }
+
+button{
+  cursor: pointer;
+}
+
+input{
+  cursor: text;
+}
+
 
 .nav-logo{
   margin: var(--spacing-base) var(--spacing-lg);
@@ -65,6 +71,7 @@ body {
   position: absolute;
   right: var(--spacing-base);
   top: 48%;
+  cursor: pointer;
 }
 
 
@@ -147,6 +154,7 @@ body {
   }
 
   .id-email-wrapper > img{
+    width: var(--spacing-md);
     top: 45%;
   }
 

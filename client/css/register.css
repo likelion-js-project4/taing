@@ -3,6 +3,11 @@ button{
   cursor: pointer;
 }
 
+input{
+  cursor: text;
+}
+
+
 .nav-logo{
   margin: var(--spacing-base) var(--spacing-lg);
 }
@@ -31,7 +36,7 @@ button{
   flex-flow: column nowrap;
 }
 
-.register-wrapper > p{
+.register-wrapper p{
   color: var(--silver400);
   font-size: clamp(var(--text-sm), 2vw, var(--text-md))
 }
@@ -46,19 +51,26 @@ button{
   font-size: min(3vw, var(--text-base));
 }
 
-.register-pw-wrap{
+.register-input-wrap{
   position: relative;
 }
 
 .pw-see {
   position: absolute;
   right: var(--spacing-md);
-  top: 50%;
+  top: 40%;
   background-color: transparent;
-  min-width: var(--spacing-md);
-  min-height: var(--spacing-md);
-  max-width: var(--spacing-xl);
   width: min(3vw, var(--spacing-xl));
+  cursor: pointer;
+}
+
+.pw-see2{
+  position: absolute;
+  top: 48%;
+  right: var(--spacing-md);
+  background-color: transparent;
+  width: min(3vw, var(--spacing-xl));
+  cursor: pointer;
 }
 
 .btn-register{
@@ -69,7 +81,7 @@ button{
   background-color: var(--silver700);
   border-radius: var(--spacing-2xs);
   color: var(--silver400);
-  font-size: clamp(var(--text-sm), 2vw ,var(--text-md));
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
   font-weight: var(--weight-lg);
 }
 
@@ -103,7 +115,7 @@ button{
 }
 
 .all-check-btn,
-.content-item-check{
+.register-content-item label{
   font-size: clamp(var(--text-sm), 2vw ,var(--text-md));
 }
 
@@ -119,13 +131,13 @@ button{
   display: flex;
 }
 
-.content-item-check img{
+.register-content-item img{
   background: transparent;
   padding-right: var(--spacing-2xs);
   justify-content: center;
 }
 
-.content-item-check{
+.register-content-item > label{
   background: transparent;
   margin-top: var(--spacing-s);
   color: var(--silver400);
@@ -150,10 +162,10 @@ button{
   }
 
   .pw-see{
-    top: 45%;
+    top: 35%;
   }
 
-  .content-item-check{
+  .register-content-item label{
     height: var(--spacing-base);
     margin-top: var(--spacing-xs);
   }
@@ -162,7 +174,7 @@ button{
     margin-top: var(--spacing-base);
   }
 
-  .content-item-check img{
+  .register-content-item img{
     min-width: 16px;
   }
 
@@ -195,11 +207,14 @@ button{
   }
 
   .pw-see{
+    top: 30%;
+  }
+
+  .pw-see2{
     top: 40%;
   }
 
-  .content-item-check{
-
+  .register-content-item label{
     height: 1.125rem;
   }
 
@@ -207,7 +222,7 @@ button{
     margin-top: var(--spacing-base);
   }
 
-  .content-item-check img{
+  .register-content-item img{
     min-width: var(--spacing-base);
   }
 

@@ -9,6 +9,11 @@ button{
   cursor: pointer;
 }
 
+input{
+  cursor: text;
+}
+
+
 .nav-logo{
   margin: var(--spacing-base) var(--spacing-lg);
 }
@@ -46,6 +51,9 @@ button{
   margin-top: var(--spacing-base);
 }
 
+.input-wrapper{
+  position: relative;
+}
 
 .input-wrapper input {
   width: 100%;
@@ -56,20 +64,25 @@ button{
   border: none;
 }
 
-.pw-wrap{
-  position: relative;
+.pw-see-btn{
+  position: absolute;
+  bottom: 30%;
+  right: 0;
 }
 
 .pw-see {
   position: absolute;
+  cursor: pointer;
   right: var(--spacing-base);
-  top: 40%;
+  top: 35%;
   background-color: transparent;
   min-width: var(--spacing-md);
   min-height: var(--spacing-md);
   max-width: var(--spacing-xl);
   width: min(3vw, var(--spacing-xl));
 }
+
+
 
 /* .input-pw input {
   background: url(../assets/icons/login_see_36_36.png) no-repeat right;
@@ -90,6 +103,7 @@ button{
 }
 
 .auto-login-btn img {
+  width: var(--spacing-md);
   transform: translateY(var(--spacing-2xs));
   margin-right: var(--spacing-2xs);
 }
@@ -115,7 +129,7 @@ button{
 
 .user-find-wrapper {
   margin-bottom: 2rem;
-  color: var(--silver200);
+  color: var(--silver300);
 }
 
 .user-find-wrapper span {
@@ -128,11 +142,11 @@ button{
 
 .find-pw-btn {
   padding: 0 var(--spacing-2xl);
-  border-left: 1px solid var(--silver200);
+  border-left: 1px solid var(--silver300);
 }
 
 .register-wrapper {
-  color: var(--silver400);
+  color: var(--silver500);
 }
 
 .register-wrapper > span{
@@ -143,7 +157,7 @@ button{
   border: none;
   padding: var(--spacing-2xs) var(--spacing-xs);
   background: transparent;
-  color: var(--silver200);
+  color: var(--silver300);
 }
 
 /* 모바일 */
@@ -167,7 +181,7 @@ button{
   }
 
   .pw-see{
-    top: 45%;
+    top: 35%;
   }
 
   .btn-login,
@@ -192,8 +206,11 @@ button{
     margin-bottom: var(--spacing-lg);
   }
 
+  .pw-see-btn{
+    bottom: 35%;
+    right: 0;
+  }
  
-
   .btn-login,
   .id-type,
   .pw-type{
