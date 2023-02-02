@@ -155,3 +155,7 @@ body {
   background-color: coral;
   width: 17.4375rem;
 }
+
+.landing-bottom > a > img {
+  width: 31.625rem;
+}
