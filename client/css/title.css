@@ -93,10 +93,6 @@
   vertical-align: middle;
 }
 
-.label-basic > p{
-  
-}
-
 .label-basic .viewer{
   font-size: clamp(var(--text-sm), 0.85vw ,var(--text-base));
   color: var(--silver500);
