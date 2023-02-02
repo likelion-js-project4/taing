@@ -1,5 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+.title-simple {
+  display: inline-block;
+  font-size: clamp(var(--text-sm), 1vw ,var(--text-md));
+  color: var(--silver200);
+  line-height: var(--line-height-md);
+  font-weight: var(--weight-md);
+  max-width:100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+.update{
+  position: relative;
+  line-height: var(--line-height-md);
+}
+
+.update::after{
+  content: "";
+  position: absolute;
+  top:0;
+  right:0;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--red-2);
+  
+}
+
 .title-basic {
   font-size: clamp(var(--text-sm), 1vw ,var(--text-md));
   color: var(--silver200);
   line-height: var(--line-height-md);
+  font-weight: var(--weight-md);
+}
+
+.title-basic .sub{
+  font-size: clamp(var(--text-sm), 0.85vw ,var(--text-base));
+  color: var(--silver300);
+  line-height: var(--line-height-lg);
+  font-weight: var(--weight-sm);
+}
+
+.label-simple{
+  position: relative;
+  top: -20px;
+  display: flex;
+  align-items: center;
+}
+
+.label-simple > span{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.label-simple::before{
+  content: counter(section);
+  position: relative;
+  top: -10px;
+  color:var(--white);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: var(--text-xxl);
+  font-size: 4.375rem;
+  line-height: 1;
+  margin-right: 0.625rem;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+.label-basic::before{
+  content: counter(section);
+  color:var(--white);
+}
+
+@media (min-width: 1280px) {
+
+  .update{
+    padding-right: 0.875rem;
+  }
+
+  .update::after{
+    width:8px;
+    height:8px;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1279px){
+
+  .update{
+    padding-right:10px;
+  }
+
+  .update::after{
+    width:6px;
+    height:6px;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  
+  .update{
+    padding-right:8px;
+  }
+
+  .update::after{
+    width:4px;
+    height:4px;
+  }
 }
