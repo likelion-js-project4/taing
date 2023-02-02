@@ -1,16 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
-
-* {
-  text-decoration: none;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #000;
-  font-family: "Noto Sans KR", sans-serif;
-  box-sizing: border-box;
-  white-space: nowrap;
-}
-
 
 /* -------------------------------------------------------------------------- */
 /*                                     공통                                     */
@@ -23,6 +10,9 @@
   margin-right: auto;
 }
 
+.profile-logo a{
+  display: inline-block;
+}
 
 /* 프로필 선택 */
 .profile-title {
@@ -45,11 +35,31 @@
   overflow: hidden;
 }
 
+.profile-item{
+  position: relative;
+}
+
+
+
+/* 4개 이미지(버튼) */
+.user-btn:hover{
+  cursor: pointer;
+} 
+
 
 /* p태그 */
 .profile-item>p {
   text-align: center;
   color: var(--silver300);
+}
+
+
+.profile-edit-btn:hover {
+  /* 버튼 위에 */
+  border: 1px solid var(--white);
+  color: var(--white);
+  cursor: pointer;
+  transform: scale(1.3);
 }
 
 
@@ -87,12 +97,9 @@
 }
 
 
-/* 로고아이콘 a태그 영역 */
-.profile-logo a{
-  display: inline-block;
-  padding: 0.5625rem 0.6875rem 0.4375rem 0.6875rem; /* 9px 11px 7px 11px; */ 
+.profile-logo a:focus{
+  outline-offset: 0.9375rem;
 }
-
 
 /* 프로필선택~프로필편집 전체 박스 영역 */
 .profile-container {
@@ -129,6 +136,24 @@
   width: 50%;
 }
 
+/* 연필 아이콘 */
+.user-btn-edit::before
+{
+  background:  rgba(0, 0, 0, 0.5) url("../assets/icons/profile_pencil_60_60.png") no-repeat ; 
+  content: "";
+  display: block;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -52%);
+  width: 99%;
+  height: 82%;
+  background-size: 40%;
+  background-position: 50%;
+}
+
+
 
 /* 4개 이미지(버튼) */
 .user-btn {
@@ -154,8 +179,6 @@
   font-size: var(--text-lg);
   padding: var(--spacing-base) 3.1563rem; /* 16px 50.5px */
 }
-
-
 }
 
 
@@ -175,10 +198,9 @@
   height: var(--spacing-lg); /* 24px */
 }
 
-.profile-logo a{
-  display: inline-block;
-  padding:  0.5625rem 0.6875rem 0.4375rem 0.6875rem; /* 9px 11px 7px 11px; */
- 
+
+.profile-logo a:focus{
+  outline-offset: 0.8125rem;
 }
 
 .profile-main{
@@ -214,7 +236,22 @@
   width: 50%;
 }
 
-
+/* 연필 아이콘 */
+.user-btn-edit::before
+{
+  background:  rgba(0, 0, 0, 0.5) url("../assets/icons/profile_pencil_60_60.png") no-repeat ; 
+  content: "";
+  display: block;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -48%);
+  width: 100%;
+  height: 89%;
+  background-size: 40%;
+  background-position: 50%;
+}
 
 /* 4개 이미지(버튼) */
 .user-btn {
@@ -260,12 +297,11 @@
   height: 0.9375rem; /* 15px */
 }
 
-.profile-logo a{
-  display: inline-block;
-  padding:  0.4375rem 0.5625rem 0.3125rem 0.5625rem; /* 7px 9px 5px 9px; */
- 
-}
 
+
+.profile-logo a:focus{
+  outline-offset: 0.8125rem;
+}
 
 /* 프로필선택~프로필편집 전체 박스 영역 */
 .profile-container {
@@ -301,6 +337,22 @@
   margin: 0 auto var(--spacing-xl);;
 }
 
+/* 연필 아이콘 */
+.user-btn-edit::before
+{
+  background:  rgba(0, 0, 0, 0.5) url("../assets/icons/profile_pencil_60_60.png") no-repeat ; 
+  content: "";
+  display: block;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -55%);
+  width: 100%;
+  height: 79%;
+  background-size: 40%;
+  background-position: 50%;
+}
 
 /* 이미지+텍스트 개별 li */
 .profile-item {
