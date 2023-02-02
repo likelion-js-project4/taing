@@ -1,5 +1,7 @@
 @import url(./theme.css);
-
+button{
+  cursor: pointer;
+}
 body {
   display: inline-block;
   width: 100%;
@@ -26,35 +28,55 @@ body {
   color: var(--silver500);
 }
 
-.find-wrapper-email{
-  font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
-}
 
-.find-wrapper-email span{
+
+.find-wrapper-email h3{
   font-weight: var(--weight-md);
   color: var(--white);
   margin-bottom: var(--spacing-md);
+  font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
 }
 
+.find-wrapper-email p{
+  color: var(--silver400);
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
+}
 
-.form-input input {
+.id-email-wrapper{
+  position: relative;
+}
+
+#id-email {
+  box-sizing: border-box;
   width: 100%;
   min-height: 46px;
   max-height: 96px;
   padding: var(--spacing-md) var(--spacing-base);
   margin-top: var(--spacing-md);
-  background-color: var(--silver800);
+  background-color: var(--dark-bg-2);
   font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
   border-radius: var(--spacing-2xs);
-  color: var(--silver600);
+  color: var(--white);
   border: none;
+}
+
+.id-email-wrapper > img{
+  width: var(--spacing-lg);
+  position: absolute;
+  right: var(--spacing-base);
+  top: 48%;
+}
+
+
+#id-email::placeholder{
+  color: var(--silver600);;
 }
 
 .email-input-btn{
   margin-top: var(--spacing-md);
   width: 100%;
   text-align: center;
-  background-color: var(--silver500);
+  background-color: var(--silver700);
   border-radius: var(--spacing-2xs);
   color: var(--silver200);
   font-weight: var(--weight-md);
@@ -83,13 +105,13 @@ body {
   margin: 0px var(--spacing-s);
 }
 
-.individual-find-wrapper > span{
+.individual-find-wrapper > h3{
   font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
 }
 
 .individual-find-wrapper > p{
   color: var(--silver400);
-  font-size: clamp(var(--text-sm), 2.3vw ,var(--text-md));
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-md));
   white-space: normal;
 }
 
@@ -122,6 +144,10 @@ body {
   .find-id-container{
     max-width: 500px;
     width: min(80vw, 50rem);
+  }
+
+  .id-email-wrapper > img{
+    top: 45%;
   }
 
   .form-input input {

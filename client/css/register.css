@@ -1,6 +1,6 @@
 @import url(./theme.css);
 button{
-  border: none;
+  cursor: pointer;
 }
 
 .nav-logo{
@@ -33,7 +33,7 @@ button{
 
 .register-wrapper > p{
   color: var(--silver400);
-  font-size: min(3vw, var(--text-base));
+  font-size: clamp(var(--text-sm), 2vw, var(--text-md))
 }
 
 .register-wrapper input{
@@ -164,6 +164,10 @@ button{
 
   .content-item-check img{
     min-width: 16px;
+  }
+
+  .item-space{
+    padding-left: var(--spacing-base);
   }
 
 

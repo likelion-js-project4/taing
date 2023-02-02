@@ -5,6 +5,10 @@ body {
   width: 100%;
 }
 
+button{
+  cursor: pointer;
+}
+
 .nav-logo{
   margin: var(--spacing-base) var(--spacing-lg);
 }
@@ -46,7 +50,7 @@ body {
 .input-wrapper input {
   width: 100%;
   padding: var(--spacing-md) var(--spacing-2xs);
-  background-color: var(--silver800);
+  background-color: var(--dark-bg-2);
   border-radius: var(--spacing-2xs);
   color: var(--silver600);
   border: none;
@@ -118,12 +122,12 @@ body {
   padding: 0 var(--spacing-2xl);
 }
 
-.find-id{
-  padding-right: var(--spacing-2xl);
+.find-id-btn{
+  padding: 0 var(--spacing-2xl);
 }
 
-.find-pw {
-  padding-left: var(--spacing-2xl);
+.find-pw-btn {
+  padding: 0 var(--spacing-2xl);
   border-left: 1px solid var(--silver200);
 }
 
@@ -138,12 +142,8 @@ body {
 .register-btn{
   border: none;
   padding: var(--spacing-2xs) var(--spacing-xs);
-}
-
-.register {
   background: transparent;
   color: var(--silver200);
-
 }
 
 /* 모바일 */
@@ -164,6 +164,10 @@ body {
   .auto-login-btn{
     white-space: nowrap;
     min-width: var(--spacing-7xl);
+  }
+
+  .pw-see{
+    top: 45%;
   }
 
   .btn-login,
@@ -187,6 +191,8 @@ body {
   .login-title{
     margin-bottom: var(--spacing-lg);
   }
+
+ 
 
   .btn-login,
   .id-type,
