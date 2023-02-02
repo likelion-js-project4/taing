@@ -95,8 +95,8 @@ const OnlyTaingSwiper = new Swiper(".only-taing .swiper", {
       slidesPerGroup: 3,
     },
     1280: {
-      slidesPerView: 5,
-      slidesPerGroup: 5,
+      slidesPerView: 6,
+      slidesPerGroup: 6,
       spaceBetween: 16,
     },
   },
