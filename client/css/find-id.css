@@ -40,7 +40,7 @@ input, h3{
 .find-wrapper-email h3{
   font-weight: var(--weight-md);
   color: var(--white);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
   font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
 }
 
@@ -50,16 +50,14 @@ input, h3{
 }
 
 .id-email-wrapper{
+  margin-top: var(--spacing-md);
   position: relative;
 }
 
 #id-email {
   box-sizing: border-box;
   width: 100%;
-  min-height: 46px;
-  max-height: 96px;
   padding: var(--spacing-md) var(--spacing-base);
-  margin-top: var(--spacing-md);
   background-color: var(--dark-bg-2);
   font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
   border-radius: var(--spacing-2xs);
@@ -70,9 +68,11 @@ input, h3{
 .email-cancel-btn{
   width: var(--spacing-xl);
   position: absolute;
-  right: var(--spacing-base);
-  top: 43%;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
+  font-size: 0;
 }
 
 
@@ -81,10 +81,12 @@ input, h3{
 }
 
 .email-input-btn{
+  box-sizing: border-box;
   margin-top: var(--spacing-md);
   width: 100%;
   text-align: center;
   background-color: var(--silver700);
+  padding: var(--spacing-md) var(--spacing-base);
   border-radius: var(--spacing-2xs);
   color: var(--silver400);
   font-weight: var(--weight-md);
@@ -115,6 +117,7 @@ input, h3{
 
 .individual-find-wrapper > h3{
   font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
+  margin-bottom: var(--spacing-xs);
 }
 
 .individual-find-wrapper > p{
@@ -125,6 +128,8 @@ input, h3{
 }
 
 .individual-btn{
+  box-sizing: border-box;
+  padding: var(--spacing-md) var(--spacing-base);
   margin-top: var(--spacing-md);
   width: 100%;
   text-align: center;
@@ -133,6 +138,9 @@ input, h3{
   color: var(--black);
   font-weight: var(--weight-lg);
   font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
+}
+.individual-btn:hover{
+  background-color: var(--white);
 }
 
 
@@ -156,21 +164,17 @@ input, h3{
   }
 
   .email-cancel-btn{
-    width: var(--spacing-md);
-    top: 50%;
+    width: var(--spacing-lg);
   }
 
-  .form-input input {
-    height: var(--spacing-4xl);
-  }
-
-  .email-input-btn{
-    height: var(--spacing-4xl);
-  }
-
+  #id-email,
+  .email-input-btn,
   .individual-btn{
-    height: var(--spacing-4xl);
+    padding-top: var(--spacing-base);
+    padding-bottom: var(--spacing-base);
   }
+
+
 }
 
 
@@ -184,18 +188,7 @@ input, h3{
     max-width: 600px;
     font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
   }
-  .find-id-title{
-    margin-bottom: var(--spacing-lg);
-  }
-  .form-input input,
-  .email-input-btn,
-  .individual-btn{
-    height: var(--spacing-5xl);
-  }
-  .email-cancel-btn{
-    width: var(--spacing-lg);
-    top: 47%;
-  }
+
 }
 
 /* 데스크탑 */
@@ -203,17 +196,6 @@ input, h3{
   .find-id-container{
     max-width: 768px;
   }
-  .find-id-title{
-    margin-bottom: var(--spacing-6xl);
-  }
-  .form-input input {
-    height: 5rem;
-  }
-  .email-input-btn{
-    height: 5rem;
-  }
-  .individual-btn{
-    height: 5rem;
-  }
+
 }
 

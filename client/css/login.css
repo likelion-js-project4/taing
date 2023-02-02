@@ -37,6 +37,7 @@ input{
   font-weight: var(--weight-lg);
   font-size: clamp(var(--text-base), 5vw ,var(--text-xl));
   margin: 0 auto;
+  margin-bottom: var(--spacing-6xl);
 }
 
 .input-wrapper {
@@ -54,16 +55,19 @@ input{
   border: none;
 }
 
+#login-id{
+  margin-bottom: var(--spacing-base);
+}
+
 #login-id,
 #login-pw{
   box-sizing: border-box;
-  padding: 0 var(--spacing-base);
+  padding: var(--spacing-md) var(--spacing-base);
   font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
 }
 
 #login-pw{
   position: relative;
-  margin-top: var(--spacing-base);
 }
 
 .input-wrapper{
@@ -74,7 +78,8 @@ input{
   position: absolute;
   cursor: pointer;
   right: var(--spacing-base);
-  top: 40%;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: transparent;
 }
 
@@ -110,6 +115,7 @@ input{
 .btn-login {
   text-align: center;
   background-color: var(--red-1);
+  padding: var(--spacing-md) var(--spacing-base);
   font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
   color: white;
   font-weight: var(--weight-md);
@@ -176,32 +182,16 @@ input{
     height: var(--spacing-base);
   }
 
-  .login-title{
-    margin-bottom: var(--spacing-lg);
-  }
-
   .login-container{
     max-width: 500px;
     width: min(80vw, 50rem);
   }
 
-  .auto-login-btn{
-    white-space: nowrap;
-    min-width: var(--spacing-7xl);
-  }
-  .auto-login-btn > img{
-    width: var(--spacing-base);
-  }
-
-  .pw-see-btn > img{
-    width: var(--spacing-lg);
-    top: 40%;
-  }
-
-  .btn-login,
-  .id-type,
-  .pw-type{
-    height: var(--spacing-4xl);
+  #login-id,
+  #login-pw,
+  .btn-login{
+    padding-top: var(--spacing-base);
+    padding-bottom: var(--spacing-base);
   }
 
 }
@@ -216,20 +206,7 @@ input{
     max-width: 600px;
   }
 
-  .login-title{
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .pw-see-btn > img{
-    width: var(--spacing-xl);
-    top: 40%;
-  }
  
-  .btn-login,
-  .id-type,
-  .pw-type{
-    height: var(--spacing-5xl);
-  }
 }
 
 /* 데스크탑 */
@@ -238,15 +215,7 @@ input{
     max-width: 768px;
   }
 
-  .login-title{
-    margin-bottom: var(--spacing-2xl);
-  }
 
-  .btn-login,
-  .id-type,
-  .pw-type{
-    height: 5rem;
-  }
   
 }
 

@@ -39,32 +39,40 @@ input{
 
 .pw-id-wrapper{
   position: relative;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
 }
 
 #pw-id{
   box-sizing: border-box;
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-2xl);
   width: 100%;
-  padding: 20px 15px;
+  padding: var(--spacing-lg) var(--spacing-base);
   background-color: var(--dark-bg-2);
-  border-radius: 5px;
-  color: var(--silver600);
+  border-radius: var(--spacing-2xs);
+  color: var(--white);
   border: none;
   font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
+}
+
+#pw-id::placeholder{
+  color: var(--silver600);
 }
 
 .id-cancel-btn{
   width: var(--spacing-xl);
   position: absolute;
-  right: var(--spacing-base);
-  top: 35%;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
   cursor: pointer;
+  font-size: 0;
 }
 
 .id-input-btn{
+  box-sizing: border-box;
   width: 100%;
   background-color: var(--silver700);
+  padding: var(--spacing-lg) var(--spacing-base);
   border-radius: 5px;
   text-align: center;
   color: var(--silver400);
@@ -84,18 +92,18 @@ input{
     width: min(80vw, 50rem);
   }
 
-  .form-input input{
-    margin-bottom:var(--spacing-md);
+  .id-cancel-btn{
+    width: var(--spacing-lg);
+    padding: var(--spacing-xs) var(--spacing-lg);
   }
 
-  .form-input input,
-  .id-input-btn{
-    height: var(--spacing-4xl);
+  .id-input-btn,
+  #pw-id{
+    padding-top: var(--spacing-base);
+    padding-bottom: var(--spacing-base);
   }
-  .id-cancel-btn{
-    width: var(--spacing-md);
-    top: 33%;
-  }
+
+
 
 }
 
@@ -111,18 +119,7 @@ input{
     font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
   }
 
-  .form-input input{
-    margin-bottom: var(--spacing-lg);
-  }
 
-  .form-input input,
-  .id-input-btn{
-    height: var(--spacing-5xl);
-  }
-  .id-cancel-btn{
-    width: var(--spacing-lg);
-    top: 35%;
-  }
 }
 
 /* 데스크탑 */
@@ -131,12 +128,5 @@ input{
     max-width: 768px;
   }
 
-  .form-input input{
-    margin-bottom: var(--spacing-2xl);
-  }
 
-  .form-input input,
-  .id-input-btn{
-    height: 5rem;
-  }
 }
