@@ -22,7 +22,7 @@ body {
 .intro-wrapper > p:nth-child(1),
 .taing-only-title,
 .taing-finding-title {
-  background-color: brown;
+  /* background-color: brown; */
   color: var(--white);
   font-size: var(--text-xxl);
   font-weight: var(--weight-lg);
@@ -34,7 +34,7 @@ body {
 .intro-wrapper > p:nth-child(2),
 .taing-only-title-description,
 .taing-finding-title-description {
-  background-color: darkblue;
+  /* background-color: darkblue; */
   font-size: var(--text-lg);
   font-weight: var(--weight-lg);
   line-height: var(--line-height-md);
@@ -42,7 +42,8 @@ body {
 
 .intro-wrapper,
 .taing-finding-wrapper,
-.taing-only-wrapper {
+.taing-only-wrapper,
+.taing-reintro-wrapper {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -50,19 +51,24 @@ body {
 
 .taing-only-wrapper > h3,
 .taing-finding-wrapper > h3 {
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   color: var(--silver200);
   font-size: var(--text-md);
   font-weight: var(--weight-sm);
   line-height: var(--line-height-lg);
 }
 
+.landing-visual,
+.taing-only-contents,
+.landing-bottom {
+  margin-bottom: 8.3%;
+}
+
 /* 타잉 소개 */
 .landing-visual {
   /* padding: 0 35.80729% 21.03125%; */
 
-  background-color: blueviolet;
-  margin-bottom: 8.3%;
+  /* background-color: blueviolet; */
 }
 
 .intro-wrapper > p:nth-child(1) {
@@ -85,13 +91,12 @@ body {
 
 /* 타잉에만 있는 재미 */
 .taing-only-contents {
-  background-color: aqua;
-  margin-bottom: 8.3%;
+  /* background-color: aqua; */
+  padding-bottom: 1.375rem;
 }
 
 .taing-only-wrapper {
-  background-color: green;
-  margin-bottom: 1.375rem;
+  /* background-color: green; */
 }
 
 .taing-only-title {
@@ -109,18 +114,14 @@ body {
 }
 
 .swiper {
-  background-color: darkorange;
+  /* background-color: darkorange; */
   height: 31.875rem;
 }
 
 /* 내가 찾던 재미 */
 .taing-finding-contents {
-  background-color: aqua;
+  /* background-color: aqua; */
   margin-bottom: 15.078125%;
-}
-
-.taing-finding-wrapper {
-  background-color: green;
 }
 
 .taing-finding-title-description {
@@ -139,17 +140,27 @@ body {
 
 /* 타잉 재소개 */
 .landing-bottom {
-  background-color: aqua;
+  /* background-color: aqua; */
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
 
-.landing-bottom > p > img {
-  background-color: coral;
+.taing-reintro-wrapper > p > img,
+.taing-reintro-description {
+  margin-bottom: var(--spacing-xl);
+}
+
+.taing-reintro-wrapper > p > img {
+  /* background-color: coral; */
   width: 17.4375rem;
 }
 
-.landing-bottom > a > img {
+.start-taing-btn > img {
   width: 31.625rem;
+}
+
+.taing-reintro-description {
+  font-size: var(--text-xxl);
+  font-weight: var(--weight-lg);
 }
