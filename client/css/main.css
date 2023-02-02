@@ -13,6 +13,19 @@
   font-size: min(var(--text-lg), 2vw);
 }
 
+.swiper-slide {
+  padding-top: var(--spacing-s);
+  transition: transform 0.5s;
+}
+
+/* over 효과 */
+.swiper-slide:hover {
+  transform: translateY(-12px);
+}
+.swiper-slide:hover .label-basic dd {
+  color: var(--silver100);
+}
+
 .main-event-modal {
   position: fixed;
   z-index: 2;
@@ -165,7 +178,6 @@
   font-size: clamp(var(--text-sm), 2vw, var(--text-lg));
   font-weight: var(--weight-lg);
   line-height: var(--line-height-sm);
-  margin-bottom: var(--spacing-s);
 }
 
 .program .img-box {
@@ -278,6 +290,11 @@
   .visual .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
+  }
+
+  /* program desktop css */
+  .program .img-box {
+    margin-bottom: var(--spacing-s);
   }
 
   .program .swiper-view-all {
@@ -400,9 +417,5 @@
 
   .program .swiper-view-all {
     top: 2px;
-  }
-
-  .broadcasting {
-    padding: var(--spacing-base) 0;
   }
 }
