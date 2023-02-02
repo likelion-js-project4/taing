@@ -27,7 +27,7 @@ body {
 .taing-only-title,
 .taing-finding-title {
   color: var(--white);
-  font-size: var(--text-xxl);
+  font-size: clamp(var(--text-base), 2vw, var(--text-xxl));
   font-weight: var(--weight-lg);
   text-align: center;
   line-height: var(--line-height-sm);
@@ -36,8 +36,8 @@ body {
 .intro-container > p:nth-child(2),
 .taing-only-title-description,
 .taing-finding-title-description {
-  font-size: var(--text-lg);
-  font-weight: var(--weight-md);
+  font-size: clamp(var(--text-sm), 1vw, var(--text-lg));
+  font-weight: var(--weight-sm);
   line-height: var(--line-height-md);
 }
 
@@ -51,7 +51,7 @@ body {
 .taing-only-contents > h3,
 .taing-finding-contents > h3 {
   color: var(--silver200);
-  font-size: var(--text-md);
+  font-size: clamp(var(--text-sm), 1vw, var(--text-md));
   font-weight: var(--weight-sm);
   line-height: var(--line-height-lg);
 }
@@ -117,11 +117,29 @@ body {
   height: 31.875rem;
 }
 
+/* 내가 찾던 재미 */
 .taing-finding-contents {
   padding: 0 34.296875%;
   background-color: aqua;
 }
 
 .taing-finding-title-description {
+  background-color: brown;
   color: var(--silver200);
+  margin-bottom: var(--spacing-xs);
 }
+
+.taing-finding-contents > h3,
+.swiper2 {
+  margin-bottom: var(--spacing-7xl);
+}
+
+.taing-finding-contents > h3 {
+  background-color: darkblue;
+}
+
+.swiper2 {
+  height: 28.3333%;
+}
+
+/* 타잉 재소개 */
