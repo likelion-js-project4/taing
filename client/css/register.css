@@ -16,6 +16,7 @@ button{
   text-align: center;
   font-size: clamp(var(--text-base), 5vw ,var(--text-xl));
   font-weight: var(--weight-lg);
+  padding: 0 var(--spacing-base);
 }
 
 .sub-title{
@@ -37,7 +38,6 @@ button{
 
 .register-wrapper input{
   width: 100%;
-  padding: var(--spacing-md) var(--spacing-base);
   background-color: var(--silver800);
   border-radius: var(--spacing-2xs);
   color: var(--silver600);
@@ -77,6 +77,8 @@ button{
 #register-pw,
 #register-pw-check,
 #register-email{
+  box-sizing: border-box;
+  padding: 0 var(--spacing-base) ;
   font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
 }
 
@@ -142,12 +144,9 @@ button{
     height: var(--spacing-base);
   }
 
-  body{
-    padding: 0 var(--spacing-base);
-  }
-
   .register-container{
     max-width: 500px;
+    padding: 0 var(--spacing-base);
   }
 
   .pw-see{
@@ -205,7 +204,7 @@ button{
   }
 
   .content-item-check img{
-    min-width: 16px;
+    min-width: var(--spacing-base);
   }
 
   #register-id,
