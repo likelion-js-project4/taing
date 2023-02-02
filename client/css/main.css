@@ -47,12 +47,17 @@
 .visual-more{
   position: absolute;
   right: 4%;
-  bottom: 20%;
-  padding: var(--spacing-base) var(--spacing-2xl);
-  border:1px solid var(--silver100);
+  bottom: 18.5%;
+  padding: 1.5% 4%;
+  font-size: clamp(var(--text-sm), 1.8vw ,var(--text-md));
+  border:1px solid var(--silver300);
   backdrop-filter: blur(30px);
   border-radius: 4px;
   z-index: 2;
+}
+
+.visual-more:hover{
+  border-color: var(--white);
 }
 
 .visual .swiper-button-prev,
@@ -104,6 +109,10 @@
 .program .img-box{
   position: relative;
   margin-bottom: var(--spacing-xs);
+}
+
+.program .img-box > img{
+  width:100%;
 }
 
 .program .quick-vod-icon{
@@ -181,6 +190,11 @@
     bottom: 20%;
   }
 
+  .visual .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+  }
+
   .program .swiper-view-all{
     display: none;
   }
@@ -209,6 +223,13 @@
   }
 }
 @media (min-width: 769px) and (max-width: 1279px){
+  .visual-more{
+    bottom:17%;
+  }
+  .visual .swiper-horizontal > .swiper-pagination-bullets,
+  .visual .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom:16%;
+  }
 }
 @media (min-width: 320px) and (max-width: 768px) {
   
@@ -221,6 +242,12 @@
   /* visual moblie css */
   .visual-more{
     padding: 1.5%; 
+    bottom: 12%;
+  }
+
+  .visual .swiper-pagination-bullet{
+    width: 6px;
+    height: 6px;
   }
 
   /* program moblie */
