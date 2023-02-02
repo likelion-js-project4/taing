@@ -101,11 +101,11 @@ const OnlyTaingSwiper = new Swiper(".only-taing .swiper", {
     },
   },
   navigation: {
-    nextEl: ".main-event .swiper-button-next",
-    prevEl: ".main-event .swiper-button-prev",
+    nextEl: ".only-taing .swiper-button-next",
+    prevEl: ".only-taing .swiper-button-prev",
   },
   pagination: {
-    el: ".main-event .swiper-pagination",
+    el: ".only-taing .swiper-pagination",
     clickable: true,
   },
 });
