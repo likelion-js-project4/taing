@@ -19,46 +19,89 @@ body {
 }
 
 .landing-header img {
-  background-color: burlywood;
+  /* background-color: burlywood; */
 }
 
 /* 타잉 소개 */
 .landing-visual {
   padding: 0 35.80729% 21.03125%;
   margin-bottom: 8.3%;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
 }
 
 .taing-intro-container {
-  background-color: deeppink;
+  /* background-color: deeppink; */
 }
 
-.taing-intro-container > p:nth-child(1) {
+.intro-container > p:nth-child(1),
+.taing-only-title {
   color: var(--white);
   font-size: var(--text-xxl);
   font-weight: var(--weight-lg);
   text-align: center;
   line-height: var(--line-height-sm);
+}
+
+.intro-container > p:nth-child(2),
+.taing-only-title-description {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-md);
+  line-height: var(--line-height-md);
+}
+
+.intro-container > p:nth-child(1) {
+  /* background-color: brown; */
   white-space: pre-line; /*마크업에서 한 줄바꿈 적용*/
-  background-color: brown;
   margin-bottom: 1.0416vw;
 }
 
-.taing-intro-container > p:nth-child(2) {
-  background-color: darkblue;
+.intro-container > p:nth-child(2) {
+  /* background-color: darkblue; */
   color: var(--silver400);
-  font-size: var(--text-lg);
-  font-weight: var(--weight-md);
   margin: 0 0.5729vw 3.125vw;
 }
 
-.start-taing-btn {
+.start-taing {
   font-size: 0;
   margin: 0 1.015625vw;
-  background-color: coral;
+  /* background-color: coral; */
 }
 
 /* 타잉에만 있는 재미 */
 .taing-only-contents {
   background-color: aqua;
+  padding: 0 40.286458% 1.375rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 8.3%;
 }
+
+.taing-only-title {
+  background-color: brown;
+  margin-bottom: var(--spacing-md);
+}
+
+.taing-only-title-description {
+  background-color: darkblue;
+  color: var(--silver200);
+  margin-bottom: var(--spacing-xs);
+}
+
+.taing-only-contents > h3 {
+  background-color: blueviolet;
+  color: var(--silver200);
+  font-size: var(--text-md);
+  font-weight: var(--weight-sm);
+  line-height: var(--line-height-lg);
+  margin-bottom: var(--spacing-5xl);
+}
+
+.swiper {
+  background-color: darkorange;
+  height: 31.875rem;
+}
+
+/* .taing-finding-contents {
+  background-color: chartreuse;
+} */
