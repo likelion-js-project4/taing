@@ -65,7 +65,7 @@
   font-weight: var(--text-xxl);
   font-size: 4.375rem;
   line-height: 1;
-  margin-right: 10px;
+  margin-right: 0.625rem;
   font-style: italic;
   vertical-align: middle;
 }
@@ -78,7 +78,7 @@
 @media (min-width: 1280px) {
 
   .update{
-    padding-right:14px;
+    padding-right: 0.875rem;
   }
 
   .update::after{
