@@ -63,16 +63,45 @@
   color:var(--white);
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: var(--text-xxl);
-  font-size: 4.375rem;
-  line-height: 1;
-  margin-right: 0.625rem;
+  font-size: clamp(2.125rem, 10vw ,4.375rem);
   font-style: italic;
+  line-height: 1;
+  margin-right: var(--spacing-base);
   vertical-align: middle;
+}
+
+.label-basic{
+  display: flex;
+}
+
+.label-basic > dl{
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .label-basic::before{
   content: counter(section);
-  color:var(--white);
+  position: relative;
+  top: -10px;
+  color: var(--white);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: var(--text-xxl);
+  font-size: clamp(2.125rem, 10vw ,4.375rem);
+  font-style: italic;
+  line-height: 1;
+  margin-right: var(--spacing-base);
+  vertical-align: middle;
+}
+
+.label-basic > p{
+  
+}
+
+.label-basic .viewer{
+  font-size: clamp(var(--text-sm), 0.85vw ,var(--text-base));
+  color: var(--silver500);
+  line-height: var(--line-height-lg);
+  font-weight: var(--weight-sm);
 }
 
 @media (min-width: 1280px) {
@@ -103,6 +132,11 @@
 
 @media (min-width: 320px) and (max-width: 768px) {
   
+  .label-simple::before,
+  .label-basic::before{
+    top:-5px;
+  }
+
   .update{
     padding-right:8px;
   }
@@ -111,4 +145,5 @@
     width:4px;
     height:4px;
   }
+
 }

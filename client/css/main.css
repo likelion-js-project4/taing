@@ -204,6 +204,12 @@
     height: 12px;
   }
 
+
+  /* program desktop css */
+  .program .img-box{
+    margin-bottom:var(--spacing-s)
+  }
+
   .program .swiper-view-all{
     display: none;
   }
@@ -260,7 +266,7 @@
   }
 
   /* program moblie */
-  .title-simple,
+  .taing-recommend .title-simple,
   .program .swiper-pagination{
     display: none;
   }
