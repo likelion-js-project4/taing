@@ -60,3 +60,103 @@ const QuickVodSwiper = new Swiper(".quick-vod .swiper", {
     clickable: true,
   },
 });
+
+const realTimeSwiper = new Swiper(".real-time .swiper", {
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  spaceBetween: 8,
+  breakpoints: {
+    768: {
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+    },
+    1280: {
+      slidesPerView: 7,
+      slidesPerGroup: 7,
+      spaceBetween: 16,
+    },
+  },
+  navigation: {
+    nextEl: ".real-time .swiper-button-next",
+    prevEl: ".real-time .swiper-button-prev",
+  },
+  pagination: {
+    el: ".real-time .swiper-pagination",
+    clickable: true,
+  },
+});
+
+const liveTimeSwiper = new Swiper(".live-time .swiper", {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 8,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    1280: {
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+      spaceBetween: 16,
+    },
+  },
+  navigation: {
+    nextEl: ".live-time .swiper-button-next",
+    prevEl: ".live-time .swiper-button-prev",
+  },
+  pagination: {
+    el: ".live-time .swiper-pagination",
+    clickable: true,
+  },
+});
+
+const OnlyTaingSwiper = new Swiper(".only-taing .swiper", {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 8,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    1280: {
+      slidesPerView: 6,
+      slidesPerGroup: 6,
+      spaceBetween: 16,
+    },
+  },
+  navigation: {
+    nextEl: ".only-taing .swiper-button-next",
+    prevEl: ".only-taing .swiper-button-prev",
+  },
+  pagination: {
+    el: ".only-taing .swiper-pagination",
+    clickable: true,
+  },
+});
+const EventSwiper = new Swiper(".main-event .swiper", {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 8,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    1280: {
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+
+      spaceBetween: 16,
+    },
+  },
+  navigation: {
+    nextEl: ".main-event .swiper-button-next",
+    prevEl: ".main-event .swiper-button-prev",
+  },
+  pagination: {
+    el: ".main-event .swiper-pagination",
+    clickable: true,
+  },
+});
