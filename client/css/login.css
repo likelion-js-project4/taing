@@ -27,6 +27,7 @@ input{
 }
 
 .login-title {
+  cursor: text;
   font-size: var(--text-base);
   font-weight: var(--weight-lg);
   font-size: clamp(var(--text-base), 5vw ,var(--text-xl));
@@ -37,6 +38,15 @@ input{
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-2xs);
+  background-color: var(--dark-bg-2);
+  border-radius: var(--spacing-2xs);
+  color: var(--silver600);
+  border: none;
 }
 
 #login-id,
@@ -55,14 +65,6 @@ input{
   position: relative;
 }
 
-.input-wrapper input {
-  width: 100%;
-  padding: var(--spacing-md) var(--spacing-2xs);
-  background-color: var(--dark-bg-2);
-  border-radius: var(--spacing-2xs);
-  color: var(--silver600);
-  border: none;
-}
 
 .pw-see-btn{
   position: absolute;
@@ -98,7 +100,7 @@ input{
   background: transparent;
   text-align: left;
   padding: var(--spacing-3xs) var(--spacing-xs) var(--spacing-xs);
-  color: var(--silver400);
+  color: var(--silver500);
   font-size: min(3vw, var(--text-base));
 }
 
@@ -139,17 +141,25 @@ input{
 .find-id-btn{
   padding: 0 var(--spacing-2xl);
 }
+.find-id-btn:hover{
+  color: var(--white);
+}
 
 .find-pw-btn {
   padding: 0 var(--spacing-2xl);
-  border-left: 1px solid var(--silver300);
+  border-left: 1px solid var(--silver800);
 }
+.find-pw-btn:hover{
+  color: var(--white);
+}
+
 
 .register-wrapper {
   color: var(--silver500);
 }
 
 .register-wrapper > span{
+  cursor: text;
   margin-right: var(--spacing-md);
 }
 
@@ -158,6 +168,9 @@ input{
   padding: var(--spacing-2xs) var(--spacing-xs);
   background: transparent;
   color: var(--silver300);
+}
+.register-btn:hover{
+  color: var(--white);
 }
 
 /* 모바일 */

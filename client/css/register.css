@@ -18,6 +18,7 @@ input{
 }
 
 .register-title{
+  cursor: text;
   text-align: center;
   font-size: clamp(var(--text-base), 5vw ,var(--text-xl));
   font-weight: var(--weight-lg);
@@ -25,6 +26,7 @@ input{
 }
 
 .sub-title{
+  cursor: text;
   text-align: center;
   color: var(--silver400);
   font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
@@ -37,13 +39,13 @@ input{
 }
 
 .register-wrapper p{
-  color: var(--silver400);
+  color: var(--silver500);
   font-size: clamp(var(--text-sm), 2vw, var(--text-md))
 }
 
 .register-wrapper input{
   width: 100%;
-  background-color: var(--silver800);
+  background-color: var(--dark-bg-2);
   border-radius: var(--spacing-2xs);
   color: var(--silver600);
   border: none;
@@ -105,7 +107,7 @@ input{
 }
 
 .all-check-btn{
-  color: var(--silver400);
+  color: var(--silver300);
   background: transparent;
 
 }
@@ -140,9 +142,8 @@ input{
 .register-content-item > label{
   background: transparent;
   margin-top: var(--spacing-s);
-  color: var(--silver400);
+  color: var(--silver500);
   align-items: center;
-  display: flex;
 }
 
 .item-space{
