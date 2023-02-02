@@ -51,7 +51,6 @@ input{
   padding: var(--spacing-md) var(--spacing-2xs);
   background-color: var(--dark-bg-2);
   border-radius: var(--spacing-2xs);
-  color: var(--silver600);
   border: none;
 }
 
@@ -64,6 +63,11 @@ input{
   box-sizing: border-box;
   padding: var(--spacing-md) var(--spacing-base);
   font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
+}
+
+#login-id:placeholder,
+#login-pw:placeholder{
+  color: var(--silver600);
 }
 
 #login-pw{
@@ -194,12 +198,22 @@ input{
     padding-bottom: var(--spacing-base);
   }
 
+  .pw-see-btn{
+    width: var(--spacing-lg);
+  }
+  .auto-login-btn{
+    width: 40%;
+  }
+
 }
 
 /* 태블릿 */
 @media (min-width: 769px) and (max-width: 1279px) {
   .nav-logo > a > img{
     height: var(--spacing-lg);
+    margin-left: var(--spacing-3xl);
+    margin-top: var(--spacing-base);
+
   }
 
   .login-container{
@@ -207,12 +221,17 @@ input{
   }
 
  
+ 
 }
 
 /* 데스크탑 */
 @media (min-width: 1280px) {
   .login-container{
     max-width: 768px;
+  }
+  .nav-logo > a > img{
+    margin-left: var(--spacing-7xl);
+    margin-top: var(--spacing-lg);
   }
 
 

@@ -198,6 +198,7 @@ label:focus{
 @media (max-width: 768px) {
   .nav-logo > a > img{
     height: var(--spacing-base);
+
   }
 
   .register-container{
@@ -259,6 +260,8 @@ label:focus{
 @media (min-width: 769px) and (max-width: 1279px) {
   .nav-logo > a > img{
     height: var(--spacing-lg);
+    margin-left: var(--spacing-3xl);
+    margin-top: var(--spacing-base);
   }
 
   .register-container{
@@ -284,6 +287,10 @@ label:focus{
 @media (min-width: 1280px) {
   .register-container{
     max-width: 768px;
+  }
+  .nav-logo > a > img{
+    margin-left: var(--spacing-7xl);
+    margin-top: var(--spacing-lg);
   }
 
 
