@@ -7,6 +7,7 @@ body {
 
 button{
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 input{
@@ -24,6 +25,10 @@ input{
   display: flex;
   flex-flow: column nowrap;
   color: white;
+}
+
+.login-input-wrap{
+  position: relative;
 }
 
 .login-title {
@@ -65,25 +70,17 @@ input{
   position: relative;
 }
 
-
 .pw-see-btn{
-  position: absolute;
-  bottom: 30%;
-  right: 0;
-}
-
-.pw-see {
   position: absolute;
   cursor: pointer;
   right: var(--spacing-base);
-  top: 35%;
+  top: 40%;
   background-color: transparent;
-  min-width: var(--spacing-md);
-  min-height: var(--spacing-md);
-  max-width: var(--spacing-xl);
-  width: min(3vw, var(--spacing-xl));
 }
 
+.pw-see-btn > img{
+  width: var(--spacing-xl);
+}
 
 
 /* .input-pw input {
@@ -92,7 +89,7 @@ input{
 } */
 
 .auto-login-btn {
-  width: 25%;
+  width: 20%;
   display: inline-block;
   border: none;
   margin-top: var(--spacing-xs);
@@ -192,9 +189,13 @@ input{
     white-space: nowrap;
     min-width: var(--spacing-7xl);
   }
+  .auto-login-btn > img{
+    width: var(--spacing-base);
+  }
 
-  .pw-see{
-    top: 35%;
+  .pw-see-btn > img{
+    width: var(--spacing-lg);
+    top: 40%;
   }
 
   .btn-login,
@@ -219,9 +220,9 @@ input{
     margin-bottom: var(--spacing-lg);
   }
 
-  .pw-see-btn{
-    bottom: 35%;
-    right: 0;
+  .pw-see-btn > img{
+    width: var(--spacing-xl);
+    top: 40%;
   }
  
   .btn-login,

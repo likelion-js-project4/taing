@@ -54,11 +54,11 @@ input{
   font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
 }
 
-.pw-id-wrapper > img{
-  width: var(--spacing-lg);
+.id-cancel-btn{
+  width: var(--spacing-xl);
   position: absolute;
   right: var(--spacing-base);
-  top: 40%;
+  top: 35%;
   cursor: pointer;
 }
 
@@ -92,7 +92,7 @@ input{
   .id-input-btn{
     height: var(--spacing-4xl);
   }
-  .pw-id-wrapper > img{
+  .id-cancel-btn{
     width: var(--spacing-md);
     top: 33%;
   }
@@ -119,7 +119,8 @@ input{
   .id-input-btn{
     height: var(--spacing-5xl);
   }
-  .pw-id-wrapper > img{
+  .id-cancel-btn{
+    width: var(--spacing-lg);
     top: 35%;
   }
 }

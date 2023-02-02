@@ -63,21 +63,23 @@ label:focus{
   position: relative;
 }
 
-.pw-see {
+#register-pw-check{
+  position: relative;
+}
+
+.pw-see-btn {
   position: absolute;
   right: var(--spacing-md);
-  top: 40%;
+  top: 48%;
   background-color: transparent;
-  width: min(3vw, var(--spacing-xl));
   cursor: pointer;
 }
 
-.pw-see2{
+.pw-see2-btn{
   position: absolute;
   top: 48%;
   right: var(--spacing-md);
   background-color: transparent;
-  width: min(3vw, var(--spacing-xl));
   cursor: pointer;
 }
 
@@ -115,7 +117,6 @@ label:focus{
 .all-check-btn{
   color: var(--silver300);
   background: transparent;
-
 }
 
 .all-check-btn img{
@@ -148,9 +149,14 @@ label:focus{
   justify-content: center;
 }
 
+.register-content-item > input{
+  display: none;
+}
+
 .register-content-item > label{
   cursor: pointer;
   background: url(../assets/icons/login_bincheck_26_26.png) no-repeat 0 0;
+  padding: var(--spacing-3xs) var(--spacing-xs) var(--spacing-2xs);
   padding-left: var(--spacing-2xl);
   color: var(--silver500);
   align-items: center;
@@ -182,8 +188,16 @@ label:focus{
     padding: 0 var(--spacing-base);
   }
 
-  .pw-see{
-    top: 40%;
+  .pw-see-btn{
+    width: var(--spacing-md);
+    top: 46%;
+    right: var(--spacing-s);
+  }
+
+  .pw-see2-btn{
+    width: var(--spacing-md);
+    top: 46%;
+    right: var(--spacing-s);
   }
 
   .register-content-item{
@@ -191,8 +205,8 @@ label:focus{
   }
 
   .register-content-item label{
-    background-size: var(--spacing-s);
-    height: var(--spacing-base);
+    padding-left: var(--spacing-md);
+    background-size: var(--spacing-base);
     margin-top: var(--spacing-xs);
   }
  
@@ -244,12 +258,14 @@ label:focus{
     max-width: 600px;
   }
 
-  .pw-see{
-    top: 30%;
+  .pw-see-btn{
+    width: var(--spacing-lg);
+    top: 46%;
   }
 
-  .pw-see2{
-    top: 37%;
+  .pw-see2-btn{
+    width: var(--spacing-lg);
+    top: 46%;
   }
 
   .register-content-item{
@@ -257,6 +273,7 @@ label:focus{
   }
 
   .register-content-item label{
+    padding-left: var(--spacing-xl);
     height: 1.125rem;
   }
 

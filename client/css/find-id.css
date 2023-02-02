@@ -67,11 +67,11 @@ input, h3{
   border: none;
 }
 
-.id-email-wrapper > img{
-  width: var(--spacing-lg);
+.email-cancel-btn{
+  width: var(--spacing-xl);
   position: absolute;
   right: var(--spacing-base);
-  top: 48%;
+  top: 43%;
   cursor: pointer;
 }
 
@@ -155,9 +155,9 @@ input, h3{
     width: min(80vw, 50rem);
   }
 
-  .id-email-wrapper > img{
+  .email-cancel-btn{
     width: var(--spacing-md);
-    top: 45%;
+    top: 50%;
   }
 
   .form-input input {
@@ -192,7 +192,10 @@ input, h3{
   .individual-btn{
     height: var(--spacing-5xl);
   }
-
+  .email-cancel-btn{
+    width: var(--spacing-lg);
+    top: 47%;
+  }
 }
 
 /* 데스크탑 */
