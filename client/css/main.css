@@ -229,6 +229,27 @@
 .only-taing img {
   width: 100%;
 }
+/* badge */
+
+.program .img-box .main-allow-18-badge,
+.program .img-box .main-allow-19-badge,
+.program .img-box .main-free-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.program .img-box .main-allow-18-badge,
+.program .img-box .main-allow-19-badge {
+  width: var(--spacing-xl);
+  height: var(--spacing-xl);
+}
+
+.program .img-box .main-free-badge {
+  width: var(--spacing-4xl);
+  height: var(--spacing-xl);
+}
+
 @media (min-width: 1280px) {
   /* visual desktop css */
   .visual-title {
