@@ -196,7 +196,9 @@
 .program .swiper-button-prev.swiper-button-disabled{
   opacity: 0;
 }
-
+.only-taing img {
+  width: 100%;
+}
 @media (min-width: 1280px) {
   /* visual desktop css */
   .visual-title{
