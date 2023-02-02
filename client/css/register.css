@@ -7,6 +7,12 @@ input{
   cursor: text;
 }
 
+label:focus{
+  outline: 1px solid var(--red-1);
+  outline-offset: 0;
+  box-shadow: 0 0 10px 3px rgba(255, 0, 64, 0.4);
+}
+
 
 .nav-logo{
   margin: var(--spacing-base) var(--spacing-lg);
@@ -143,10 +149,17 @@ input{
 }
 
 .register-content-item > label{
+  cursor: pointer;
   background: url(../assets/icons/login_bincheck_26_26.png) no-repeat 0 0;
   padding-left: var(--spacing-2xl);
   color: var(--silver500);
   align-items: center;
+}
+
+.register-content-item > input:focus{
+  outline: none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0 0;
 }
 
 .register-content-item > label > img {
@@ -178,6 +191,7 @@ input{
   }
 
   .register-content-item label{
+    background-size: var(--spacing-s);
     height: var(--spacing-base);
     margin-top: var(--spacing-xs);
   }
@@ -231,17 +245,17 @@ input{
   }
 
   .pw-see{
-    top: 35%;
+    top: 30%;
   }
 
   .pw-see2{
-    top: 40%;
+    top: 37%;
   }
 
   .register-content-item{
     margin-top: var(--spacing-xs);
   }
-  
+
   .register-content-item label{
     height: 1.125rem;
   }
