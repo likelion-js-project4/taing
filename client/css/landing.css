@@ -237,6 +237,7 @@ body {
 }
 
 .start-taing-btn > img {
+  display: block;
   width: 31.625rem;
 }
 
