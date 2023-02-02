@@ -1,5 +1,86 @@
+.title-simple {
+  display: inline-block;
+  font-size: clamp(var(--text-sm), 1vw ,var(--text-md));
+  color: var(--silver200);
+  line-height: var(--line-height-md);
+  font-weight: var(--weight-md);
+  max-width:100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title-simple.update{
+  position: relative;
+}
+
+.title-simple.update::after{
+  content: "";
+  position: absolute;
+  top:0;
+  right:0;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--red-2);
+  
+}
+
 .title-basic {
   font-size: clamp(var(--text-sm), 1vw ,var(--text-md));
   color: var(--silver200);
   line-height: var(--line-height-md);
+  font-weight: var(--weight-md);
+}
+
+.title-basic .sub{
+  font-size: clamp(var(--text-sm), 0.85vw ,var(--text-base));
+  color: var(--silver300);
+  line-height: var(--line-height-lg);
+  font-weight: var(--weight-sm);
+}
+
+.label-title-basic{
+
+}
+
+.label-title-simple{
+
+}
+
+@media (min-width: 1280px) {
+
+  .title-simple{
+    padding-right:14px;
+  }
+
+  .title-simple.update::after{
+    width:8px;
+    height:8px;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1279px){
+
+  .title-simple{
+    padding-right:10px;
+  }
+
+  .title-simple.update::after{
+    width:6px;
+    height:6px;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  
+  .title-simple{
+    padding-right:6px;
+  }
+
+  .title-simple.update::after{
+    width:4px;
+    height:4px;
+  }
 }
