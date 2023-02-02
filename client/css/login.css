@@ -32,6 +32,7 @@ body {
 
 #login-id,
 #login-pw{
+  box-sizing: border-box;
   padding: 0 var(--spacing-base);
   font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
 }
@@ -57,7 +58,7 @@ body {
 
 .pw-see {
   position: absolute;
-  right: var(--spacing-md);
+  right: var(--spacing-base);
   top: 40%;
   background-color: transparent;
   min-width: var(--spacing-md);
@@ -108,21 +109,21 @@ body {
   font-size: min(3vw, var(--text-base));
 }
 
-.find-wrapper {
+.user-find-wrapper {
   margin-bottom: 2rem;
   color: var(--silver200);
 }
 
-.find-wrapper span {
-  padding: 0 var(--spacing-2xs);
+.user-find-wrapper span {
+  padding: 0 var(--spacing-2xl);
 }
 
 .find-id{
-  padding-right: var(--spacing-base);
+  padding-right: var(--spacing-2xl);
 }
 
 .find-pw {
-  padding-left: var(--spacing-base);
+  padding-left: var(--spacing-2xl);
   border-left: 1px solid var(--silver200);
 }
 
@@ -158,6 +159,11 @@ body {
   .login-container{
     max-width: 500px;
     width: min(80vw, 50rem);
+  }
+
+  .auto-login-btn{
+    white-space: nowrap;
+    min-width: var(--spacing-7xl);
   }
 
   .btn-login,
