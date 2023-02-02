@@ -100,8 +100,7 @@ input{
 
 /* 모두 동의합니다 */
 .register-content-wrapper{
-
-  margin-top: 30px;
+  margin-top: var(--spacing-xl);
 }
 .all-register-check{
   border: none;
@@ -115,6 +114,7 @@ input{
 
 .all-check-btn img{
   transform: translateY(3px);
+  margin-right: var(--spacing-s);
 }
 
 .all-check-btn,
@@ -125,13 +125,15 @@ input{
 /* 동의하기 아이템들 */
 .register-content-wrap{
   margin-top: 10px;
-
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .register-content-item{
   background: transparent;
   font-size: clamp(var(--spacing-s) , 4vw, var(--spacing-md));
-  display: flex;
+  justify-items: center;
+  margin-top: var(--spacing-s);
 }
 
 .register-content-item img{
@@ -141,10 +143,14 @@ input{
 }
 
 .register-content-item > label{
-  background: transparent;
-  margin-top: var(--spacing-s);
+  background: url(../assets/icons/login_bincheck_26_26.png) no-repeat 0 0;
+  padding-left: var(--spacing-2xl);
   color: var(--silver500);
   align-items: center;
+}
+
+.register-content-item > label > img {
+  transform: translateY(8px);
 }
 
 .item-space{
@@ -164,7 +170,11 @@ input{
   }
 
   .pw-see{
-    top: 35%;
+    top: 40%;
+  }
+
+  .register-content-item{
+    margin-top: var(--spacing-xs);
   }
 
   .register-content-item label{
@@ -180,6 +190,14 @@ input{
     min-width: 16px;
   }
 
+  .all-check-btn img{
+    margin-right: var(--spacing-2xs);
+  }
+
+  .register-content-wrapper{
+    margin-top: var(--spacing-base);
+  }
+
   .item-space{
     padding-left: var(--spacing-base);
   }
@@ -191,6 +209,10 @@ input{
   #register-email,
   .btn-register{
     height: var(--spacing-4xl);
+  }
+
+  .btn-register{
+    margin-bottom: var(--spacing-sm);
   }
 
 
@@ -209,13 +231,17 @@ input{
   }
 
   .pw-see{
-    top: 30%;
+    top: 35%;
   }
 
   .pw-see2{
     top: 40%;
   }
 
+  .register-content-item{
+    margin-top: var(--spacing-xs);
+  }
+  
   .register-content-item label{
     height: 1.125rem;
   }
@@ -228,6 +254,16 @@ input{
     min-width: var(--spacing-base);
   }
 
+  .all-check-btn img{
+    margin-right: var(--spacing-2xs);
+  }
+
+  .register-content-wrapper{
+    margin-top: var(--spacing-base);
+  }
+
+
+
   #register-id,
   #register-pw,
   #register-pw-check,
@@ -235,7 +271,9 @@ input{
   .btn-register{
     height: var(--spacing-5xl);
   }
-
+  .btn-register{
+    margin-bottom: var(--spacing-md);
+  }
  
   
 }
