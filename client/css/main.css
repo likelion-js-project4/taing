@@ -26,14 +26,14 @@
   justify-content: space-around;
   text-align: center;
 }
-.main-evnent-modal-close div:first-child {
+.main-evnent-modal-close li:first-child {
   width: 20.375rem;
   position: relative;
 }
-.main-evnent-modal-close div:last-child {
+.main-evnent-modal-close li:last-child {
   width: 11.875rem;
 }
-.main-evnent-modal-close div:first-child::after {
+.main-evnent-modal-close li:first-child::after {
   content: "";
   position: absolute;
   left: 100%;
