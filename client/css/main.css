@@ -13,6 +13,59 @@
   font-size: min(var(--text-lg), 2vw);
 }
 
+.main-event-modal {
+  position: fixed;
+  z-index: 2;
+  font-size: var(--text-md);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+/* 임시 처리  */
+.main-event-modal {
+  display: none;
+}
+.main-event-modal > a {
+  display: block;
+  font-size: 0;
+}
+.main-evnent-modal-close {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 0.75rem;
+}
+.main-evnent-modal-close li:first-child {
+  width: 20.375rem;
+  position: relative;
+}
+.main-evnent-modal-close li:last-child {
+  width: 11.875rem;
+}
+.main-evnent-modal-close li:first-child::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 1px;
+  height: 60%;
+  margin-top: 3%;
+  background-color: var(--white);
+}
+
+.main-evnent-modal-close button {
+  position: relative;
+  padding: var(--spacing-xs);
+}
+.main-evnent-modal-close button {
+  cursor: pointer;
+}
+
 /* visual css */
 .visual {
   position: relative;
@@ -187,6 +240,29 @@
 .program .swiper-button-prev.swiper-button-disabled {
   opacity: 0;
 }
+.only-taing img {
+  width: 100%;
+}
+/* badge */
+
+.program .img-box .main-allow-18-badge,
+.program .img-box .main-allow-19-badge,
+.program .img-box .main-free-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.program .img-box .main-allow-18-badge,
+.program .img-box .main-allow-19-badge {
+  width: var(--spacing-xl);
+  height: var(--spacing-xl);
+}
+
+.program .img-box .main-free-badge {
+  width: var(--spacing-4xl);
+  height: var(--spacing-xl);
+}
 
 @media (min-width: 1280px) {
   /* visual desktop css */
@@ -229,49 +305,104 @@
   .quick-vod-icon > img {
     max-height: 30px;
   }
-
-  @media (min-width: 769px) and (max-width: 1279px) {
-    .broadcasting {
-      padding: 1.75rem 0;
-    }
-    .visual-more {
-      bottom: 17%;
-    }
-    .visual .swiper-horizontal > .swiper-pagination-bullets,
-    .visual .swiper-pagination-bullets.swiper-pagination-horizontal {
-      bottom: 16%;
-    }
+  .broadcasting {
+    padding: var(--spacing-2xl) 0;
   }
-  @media (min-width: 320px) and (max-width: 768px) {
-    /* swiper common css */
-    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-      margin: 0 var(--spacing-2xs);
-    }
+}
+@media (min-width: 769px) and (max-width: 1279px) {
+  .main-event-modal {
+    font-size: var(--text-sm);
+  }
+  .main-event-modal img {
+    width: 20.5rem;
+  }
+  .main-evnent-modal-close {
+    margin-top: 0.25rem;
+  }
+  .main-evnent-modal-close li:first-child {
+    width: 11.5rem;
+  }
+  .main-evnent-modal-close li:last-child {
+    width: 6.75rem;
+  }
+  .broadcasting {
+    padding: 1.75rem 0;
+  }
+  .visual-more {
+    bottom: 17%;
+  }
+  .visual .swiper-horizontal > .swiper-pagination-bullets,
+  .visual .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 16%;
+  }
+  .only-taing .swiper-view-all {
+    top: 2%;
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  /* swiper common css */
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--spacing-2xs);
+  }
 
-    /* visual moblie css */
-    .visual-more {
-      padding: 1.5%;
-      bottom: 12%;
-    }
+  /* visual moblie css */
+  .visual-more {
+    padding: 1.5%;
+    bottom: 12%;
+  }
 
-    .visual .swiper-pagination-bullet {
-      width: 6px;
-      height: 6px;
-    }
+  .visual .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
 
-    /* program moblie */
-    .title-simple,
-    .program .swiper-pagination {
-      display: none;
-    }
+  /* program moblie */
+  .title-simple,
+  .program .swiper-pagination {
+    display: none;
+  }
 
-    .program .swiper-view-all {
-      top: 2px;
-    }
+  .program .swiper-view-all {
+    top: 2px;
+  }
 
-    .broadcasting {
-      padding: var(--spacing-base) 0;
-    }
+  .broadcasting {
+    padding: var(--spacing-base) 0;
+  }
+
+  .main-event-modal {
+    font-size: var(--text-sm);
+  }
+  .main-event-modal img {
+    width: 15.75rem;
+  }
+  .main-evnent-modal-close {
+    margin-top: 0.25rem;
+  }
+  .main-evnent-modal-close li:first-child {
+    width: 9rem;
+  }
+  .main-evnent-modal-close li:last-child {
+    width: 4.5rem;
+  }
+
+  /* visual moblie css */
+  .visual-more {
+    padding: 1.5%;
+  }
+
+  /* program moblie */
+  .title-basic,
+  .program .swiper-pagination {
+    display: none;
+  }
+
+  .program .swiper-view-all {
+    top: 2px;
+  }
+
+  .broadcasting {
+    padding: var(--spacing-base) 0;
   }
 }

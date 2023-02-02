@@ -85,7 +85,30 @@ const realTimeSwiper = new Swiper(".real-time .swiper", {
     clickable: true,
   },
 });
-
+const OnlyTaingSwiper = new Swiper(".only-taing .swiper", {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 8,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    1280: {
+      slidesPerView: 6,
+      slidesPerGroup: 6,
+      spaceBetween: 16,
+    },
+  },
+  navigation: {
+    nextEl: ".only-taing .swiper-button-next",
+    prevEl: ".only-taing .swiper-button-prev",
+  },
+  pagination: {
+    el: ".only-taing .swiper-pagination",
+    clickable: true,
+  },
+});
 const EventSwiper = new Swiper(".main-event .swiper", {
   slidesPerView: 2,
   slidesPerGroup: 2,
