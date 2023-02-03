@@ -26,8 +26,10 @@ function pw_see() {
 
   if (password.src.includes('no')) {
     password.src = './assets/icons/login_see_36_36.svg';
+    password.alt="비밀번호 복호화";
   } else {
     password.src = './assets/icons/login_nosee_36_36.png';
+    password.alt="비밀번호 암호화";
   }
 }
 

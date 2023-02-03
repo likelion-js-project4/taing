@@ -1,0 +1,336 @@
+/* -------------------------------------------------------------------------- */
+/*                                     공통                                     */
+/* -------------------------------------------------------------------------- */
+
+
+/* 프로필선택~프로필편집 전체 박스 영역 */
+.profile-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-logo a{
+  display: inline-block;
+}
+
+/* 프로필 선택 */
+.profile-title {
+  text-align: center;
+  color: var(--white);
+}
+
+/* 선택해주세요 */
+.profile-subtitle {
+  text-align: center;
+  color: var(--silver200);
+}
+
+
+/* li 4개 (이미지+텍스트) 합친거 ul */
+.profile-photo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding: 5px;
+}
+
+
+/* 연필 아이콘 */
+.user-btn-edit::before
+{
+  content: "";
+  background: url(../assets/image/profile_resource5_234_234.png) no-repeat ; 
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-position: 50%;
+  background-size: 100;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.user-btn:focus {
+  outline-offset: -2px;
+}
+
+/* 4개 이미지(버튼) */
+.user-btn {
+  font-size: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+
+
+/* p태그 */
+.profile-item>p {
+  text-align: center;
+  color: var(--silver300);
+}
+
+
+.profile-edit-btn:hover {
+  /* 버튼 위에 */
+  border: 1px solid var(--white);
+  color: var(--white);
+  cursor: pointer;
+}
+
+
+/* 프로필 편집 버튼 */
+.profile-edit-btn {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--silver300);
+  border: 1px solid #565656;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    데스크탑                                    */
+/* -------------------------------------------------------------------------- */
+@media (min-width: 1280px) {
+
+/* 맨위 공간 */
+.profile-header {
+  padding: 1.8125rem var(--spacing-7xl); /* 29px 70px */
+}
+
+
+/* 로고 아이콘 이미지 */
+.profile-logo {
+  width: 8.25rem;  /* 132px */
+  height: 2.625rem; /* 42px */
+}
+
+
+.profile-logo a:focus{
+  outline-offset: 0.9375rem;
+}
+
+/* 프로필선택~프로필편집 전체 박스 영역 */
+.profile-container {
+  max-width: var(--container-width);
+}
+
+
+/* 프로필 선택 */
+.profile-title {
+  font-size: var(--text-xxl);
+  font-weight: var(--weight-lg);
+  margin-top: var(--spacing-8xl); /* 130px */
+  margin-bottom: var(--spacing-md); /* 20px */
+}
+
+
+/* 선택해주세요 */
+.profile-subtitle {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-md);
+  margin-bottom: var(--spacing-4xl); /* 44px */
+}
+
+
+/* li 4개 (이미지+텍스트) 합친거 ul */
+.profile-photo {
+  margin-bottom: 4.125rem; /* 66px */
+  gap: var(--spacing-5xl); /* 52px */
+}
+
+
+/* 이미지+텍스트 개별 li */
+.profile-item {
+  width: 50%;
+}
+
+
+/* p태그 */
+.profile-item>p {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-sm);
+  margin-top: var(--spacing-base);
+}
+
+
+/* 프로필 편집 버튼 */
+.profile-edit-btn {
+  margin-bottom: var(--spacing-8xl); /* 130px */
+  font-weight: var(--weight-md);
+  font-size: var(--text-lg);
+  width: 17rem;
+  height: 5.375rem;
+  justify-content: center;
+}
+
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                     테블릿                                    */
+/* -------------------------------------------------------------------------- */
+@media (min-width: 769px) and (max-width: 1279px) {
+
+/* 맨위 공간 */
+.profile-header {
+  padding: var(--spacing-base) var(--spacing-3xl); /* 16px 40px */
+}
+
+/* 로고 아이콘 이미지 */
+.profile-logo {
+  width: 4.8125rem;  /* 77px */
+  height: var(--spacing-lg); /* 24px */
+}
+
+
+.profile-logo a:focus{
+  outline-offset: 0.8125rem;
+}
+
+.profile-main{
+  padding: 4.625rem 4.5rem 3.125rem 72px; /* 74px 72px 50px 72px */
+}
+
+
+/* 프로필 선택 */
+.profile-title {
+  font-size: var(--text-lg); 
+  font-weight: var(--weight-lg);
+  margin-bottom: var(--spacing-xs); /* 8px */
+}
+
+/* 선택해주세요 */
+.profile-subtitle {
+  font-size: var(--text-base);
+  font-weight: var(--weight-md);
+  margin-bottom: 1.75rem; /* 28px */
+}
+
+
+/* li 4개 (이미지+텍스트) 합친거 ul */
+.profile-photo {
+  margin-bottom: 2.75rem; /* 44px */
+  gap: var(--spacing-xl); /* 32px */
+}
+
+
+/* 이미지+텍스트 개별 li */
+.profile-item {
+  width: 50%;
+}
+
+
+/* p태그 */
+.profile-item>p {
+  font-size: var(--text-sm); /* 12px */
+  font-weight: var(--weight-sm);
+  margin-top: var(--spacing-s);
+}
+
+
+/* 프로필 편집 버튼 */
+.profile-edit-btn {
+  margin-bottom: var(--spacing-7xl); /* 70px */
+  font-weight: var(--weight-md); 
+  font-size: var(--text-sm); /* 12px */
+  width: 11.8rem;
+  height: 3.8rem;
+  justify-content: center;
+}
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                     모바일                                    */
+/* -------------------------------------------------------------------------- */
+@media (min-width: 320px) and (max-width: 768px) {
+
+/* 맨위 공간 */
+.profile-header {
+  padding: 0.7188rem var(--spacing-base); /* 11.5px 16px */
+}
+
+/* 로고 아이콘 이미지 */
+.profile-logo {
+  width: 2.875rem;  /* 46px */
+  height: 0.9375rem; /* 15px */
+}
+
+
+.profile-logo a:focus{
+  outline-offset: 0.8125rem;
+}
+
+/* 프로필선택~프로필편집 전체 박스 영역 */
+.profile-container {
+  max-width: 320px;
+}
+
+.profile-main{
+  padding: 4.5rem 2.125rem 3.25rem 2.125rem; /* 72px 34px 52x 34px */
+}
+
+
+/* 프로필 선택 */
+.profile-title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-lg);
+  margin-bottom: var(--spacing-base); /* 16px */
+}
+
+/* 선택해주세요 */
+.profile-subtitle {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-md);
+  margin-bottom: var(--spacing-xl); /* 32px */
+}
+
+
+/* li 4개 (이미지+텍스트) 합친거 ul */
+.profile-photo {
+  width: 15.75rem; /* 252px */
+  flex-wrap: wrap;
+  gap: var(--spacing-lg); /* 24px */
+  justify-content:center;
+  margin: 0 auto var(--spacing-xl);;
+}
+
+
+
+/* 이미지+텍스트 개별 li */
+.profile-item {
+  width: 7.125rem; 
+  height: 9.0625rem; 
+}
+
+
+
+/* p태그 */
+.profile-item>p {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-sm);
+  margin-top: var(--spacing-s);
+}
+
+
+/* 프로필 편집 버튼 */
+.profile-edit-btn {
+  margin-bottom: var(--spacing-5xl); /* 52px */
+  font-weight: var(--weight-md);
+  font-size: var(--text-sm);
+  width: 8.4375rem;
+  height: 2.625rem;
+  justify-content: center;
+}
+
+}
