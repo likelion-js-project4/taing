@@ -1,6 +1,11 @@
+import { getNode, insertFirst, addClass, removeClass } from '../lib/index.js';
+
 const visualSwiper = new Swiper(".visual .swiper", {
-  loop: true,
+
   effect: "fade",
+  autoplay:{
+    delay: 1000,
+  },
   navigation: {
     nextEl: ".visual .swiper-button-next",
     prevEl: ".visual .swiper-button-prev",
@@ -10,6 +15,30 @@ const visualSwiper = new Swiper(".visual .swiper", {
     clickable: true,
   },
 });
+
+const visualPagination = getNode('.visual .swiper-pagination-wrapper');
+insertFirst(visualPagination, `<button class="swiper-button-autoplay" type="button"></button>`);
+
+const autoPlayButton = getNode('.swiper-button-autoplay');
+autoPlayButton.addEventListener('click', autoPlayHandler);
+
+let pause;
+
+const toggle = {
+  pause : true,
+}
+
+function autoPlayHandler(){
+  if(pause !== 1){
+    visualSwiper.autoplay.stop();
+    addClass(autoPlayButton, 'is-play');
+    pause = 1;
+  }else{
+    visualSwiper.autoplay.start();
+    removeClass(autoPlayButton, 'is-play');
+    pause = 0;
+  }
+}
 
 const taingRecommendSwiper = new Swiper(".taing-recommend .swiper", {
   slidesPerView: 3,
