@@ -21,3 +21,7 @@ mainModalCloseTodayButton.addEventListener("click", () => {
   saveStorage("close_today", "true");
   main.removeChild(mainModal);
 });
+
+mainModal.addEventListener("click", () => {
+  mainModal.style.display = "none";
+});
