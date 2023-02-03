@@ -39,10 +39,7 @@
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
 }
-/* 임시 처리  */
-.main-event-modal {
-  display: none;
-}
+
 .main-event-modal > a {
   display: block;
   font-size: 0;
