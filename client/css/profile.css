@@ -32,6 +32,7 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  padding: 5px;
 }
 
 
@@ -51,12 +52,17 @@
   height: 100%;
 }
 
+.user-btn:focus {
+  outline-offset: -2px;
+}
+
 /* 4개 이미지(버튼) */
 .user-btn {
   font-size: 0;
   cursor: pointer;
   position: relative;
 }
+
 
 
 /* p태그 */
