@@ -119,6 +119,7 @@ body {
 }
 
 /* 내가 찾던 재미 롤링 배너 */
+
 .rollingbanner > .wrap {
   display: flex;
   flex-flow: row nowrap;
@@ -357,6 +358,26 @@ body {
 
   .swiper {
     height: 25rem;
+  }
+
+  /* 롤링 배너 */
+  .rolling-img-box {
+    width: 56.5625vw;
+  }
+
+  .rollingbanner > .wrap,
+  .rolling-wrapper {
+    gap: 3.75vw;
+  }
+
+  .first-container {
+    margin-bottom: 4.0625vw;
+  }
+
+  .rolling-img-box img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
   }
 
   /* 타잉 재소개 */
