@@ -77,12 +77,15 @@
   display: flex;
   padding: var(--spacing-xl) 0;
   cursor: pointer;
-  gap: var(--spacing-md);
+  gap: var(--spacing-xs);
 }
 .sns-link-logo > li > a {
   display: block;
   border-radius: 50%;
   font-size: 0;
+}
+.sns-link-logo img {
+  width: 3.25rem;
 }
 
 .copyright-box {
@@ -117,12 +120,19 @@
     padding: 7rem 4.5rem 10rem 4.5rem;
     font-size: var(--text-base);
   }
+  .sns-link-logo {
+    gap: var(--spacing-md);
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1279px) {
   .footer {
     padding: var(--spacing-7xl) var(--spacing-2xl) 6.25rem var(--spacing-2xl);
     font-size: var(--text-sm);
+  }
+
+  .sns-link-logo img {
+    width: 1.875rem;
   }
 }
 
@@ -145,5 +155,9 @@
   .footer-nav {
     flex-direction: column;
     gap: var(--spacing-base);
+  }
+
+  .sns-link-logo img {
+    width: 1.5rem;
   }
 }

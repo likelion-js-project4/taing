@@ -1,0 +1,306 @@
+@import url(./theme.css);
+button{
+  cursor: pointer;
+}
+
+input{
+  cursor: text;
+}
+
+label:focus{
+  outline: 1px solid var(--red-1);
+  outline-offset: 0;
+  box-shadow: 0 0 10px 3px rgba(255, 0, 64, 0.4);
+}
+
+
+.nav-logo{
+  margin: var(--spacing-base) var(--spacing-lg);
+}
+
+.register-container{
+  margin: 0 auto;
+  margin-top: var(--spacing-7xl);
+}
+
+.register-title{
+  cursor: text;
+  text-align: center;
+  font-size: clamp(var(--text-base), 5vw ,var(--text-xl));
+  font-weight: var(--weight-lg);
+  padding: 0 var(--spacing-base);
+}
+
+.sub-title{
+  cursor: text;
+  text-align: center;
+  color: var(--silver400);
+  font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
+  margin: var(--spacing-lg) 0 var(--spacing-6xl);
+}
+
+.register-wrapper{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.register-wrapper p{
+  color: var(--silver500);
+  font-size: clamp(var(--text-sm), 2vw, var(--text-md))
+}
+
+.register-wrapper input{
+  width: 100%;
+  background-color: var(--dark-bg-2);
+  border-radius: var(--spacing-2xs);
+  color: var(--white);
+  border: none;
+
+  font-size: min(3vw, var(--text-base));
+}
+
+.register-input-wrap{
+  margin-top: var(--spacing-xl);
+  position: relative;
+}
+
+.register-input-wrap-inner{
+  position: relative;
+}
+
+
+
+#register-pw-check{
+  position: relative;
+}
+
+.pw-see-btn {
+  position: absolute;
+  right: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.pw-see2-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: var(--spacing-md);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-register{
+  box-sizing: border-box;
+  margin-top: var(--spacing-2xl);
+  width: 100%;
+  text-align: center;
+  border-radius: var(--spacing-2xs);
+  color: var(--black);
+  background-color: var(--silver100);
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
+  font-weight: var(--weight-lg);
+  padding: var(--spacing-md) var(--spacing-base) ;
+}
+.btn-register:disabled{
+  background-color: var(--silver700);
+  color: var(--silver400);
+}
+.btn-register:hover{
+  background-color: var(--white);
+  color: var(--black);
+}
+
+#register-id,
+#register-pw,
+#register-pw-check,
+#register-email{
+  box-sizing: border-box;
+  margin-bottom: 2px;
+  padding: var(--spacing-md) var(--spacing-base) ;
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
+}
+
+#register-id:placeholder,
+#register-pw:placeholder,
+#register-pw-check:placeholder,
+#register-email:placeholder{
+  color: var(--silver600);
+}
+
+
+/* 모두 동의합니다 */
+.register-content-wrapper{
+  margin-top: var(--spacing-xl);
+}
+.all-register-check{
+  border: none;
+}
+
+.all-check-btn{
+  color: var(--silver300);
+  background: transparent;
+}
+
+.all-check-btn img{
+  transform: translateY(3px);
+  margin-right: var(--spacing-s);
+}
+
+.all-check-btn,
+.register-content-item label{
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-md));
+}
+
+/* 동의하기 아이템들 */
+.register-content-wrap{
+  margin-top: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.register-content-item{
+  background: transparent;
+  font-size: clamp(var(--spacing-s) , 4vw, var(--spacing-md));
+  justify-items: center;
+  margin-top: var(--spacing-s);
+}
+
+.register-content-item img{
+  background: transparent;
+  padding-right: var(--spacing-2xs);
+  justify-content: center;
+}
+
+.register-content-item > input{
+  display: none;
+}
+
+.register-content-item > label{
+  cursor: pointer;
+  background: url(../assets/icons/login_bincheck_26_26.png) no-repeat 0 0;
+  padding: var(--spacing-3xs) var(--spacing-xs) var(--spacing-2xs);
+  padding-left: var(--spacing-2xl);
+  color: var(--silver500);
+  align-items: center;
+}
+
+.register-content-item > input:focus{
+  outline: none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0 0;
+}
+
+.register-content-item > label > img {
+  transform: translateY(8px);
+}
+
+.item-space{
+  padding-left: var(--spacing-2xl);
+}
+
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .nav-logo > a > img{
+    height: var(--spacing-base);
+
+  }
+
+  .register-container{
+    max-width: 550px;
+    padding: 0 var(--spacing-base);
+    margin-top: var(--spacing-lg);
+  }
+
+  .sub-title{
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .register-content-item{
+    margin-top: var(--spacing-xs);
+  }
+
+  .register-content-item label{
+    padding-left: var(--spacing-md);
+    background-size: var(--spacing-base);
+    margin-top: var(--spacing-xs);
+  }
+  .register-content-item img{
+    min-width: 16px;
+  }
+
+  .all-check-btn img{
+    margin-right: var(--spacing-2xs);
+  }
+
+  .register-content-wrapper{
+    margin-top: var(--spacing-base);
+  }
+
+  .item-space{
+    padding-left: var(--spacing-base);
+  }
+
+  .register-input-wrap{
+    margin-top: var(--spacing-base);
+  }
+
+  #register-id,
+  #register-pw,
+  #register-pw-check,
+  #register-email{
+    padding-top: var(--spacing-base);
+    padding-bottom: var(--spacing-base);
+  }
+
+  .pw-see-btn,
+  .pw-see2-btn{
+    width: var(--spacing-lg);
+  }
+
+}
+
+
+/* 태블릿 */
+@media (min-width: 769px) and (max-width: 1279px) {
+  .nav-logo > a > img{
+    height: var(--spacing-lg);
+    margin-left: var(--spacing-3xl);
+    margin-top: var(--spacing-base);
+  }
+
+  .register-container{
+    max-width: 600px;
+  }
+
+  .register-content-item{
+    margin-top: var(--spacing-xs);
+  }
+
+  .register-content-item label{
+    padding-left: var(--spacing-xl);
+    height: 1.125rem;
+  }
+
+
+
+
+  
+}
+
+/* 데스크탑 */
+@media (min-width: 1280px) {
+  .register-container{
+    max-width: 768px;
+  }
+  .nav-logo > a > img{
+    margin-left: var(--spacing-7xl);
+    margin-top: var(--spacing-lg);
+  }
+
+
+
+}

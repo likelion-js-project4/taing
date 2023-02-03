@@ -14,13 +14,15 @@
 
   --red-1: #ff153c;
   --red-2: #e93945;
+  --red-3: #CC1030;
 
   --dark-bg-1: #191919;
   --dark-bg-2: #212121;
 
   --skyblue: #61d4e6;
 
-  --spacing-2xs: 0.125rem; /* 2px*/
+  --spacing-3xs: 0.125rem; /* 2px*/
+  --spacing-2xs: 0.25rem; /* 4px*/
   --spacing-xs: 0.5rem; /* 8px */
   --spacing-s: 0.75rem; /* 12px */
   --spacing-base: 1rem; /* 16px */
