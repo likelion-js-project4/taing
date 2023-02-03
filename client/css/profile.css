@@ -1,6 +1,6 @@
 /* -------------------------------------------------------------------------- */
 /*                                     공통                                     */
-/* -------------------------------------------------------------------------- *통
+/* -------------------------------------------------------------------------- */
 
 
 /* 프로필선택~프로필편집 전체 박스 영역 */
@@ -34,30 +34,29 @@
   overflow: hidden;
 }
 
-/* 이미지+텍스트 개별 li */
-.profile-item{
-  position: relative;
-}
 
 /* 연필 아이콘 */
 .user-btn-edit::before
 {
-  background: url(../assets/image/profile_resource5_234_234.png) no-repeat ; 
   content: "";
+  background: url(../assets/image/profile_resource5_234_234.png) no-repeat ; 
   display: block;
   position: absolute;
-  object-fit: cover;
-  z-index: 1;
   transform: translate(-50%, -50%);
-  background-position: 100%;
+  background-position: 50%;
+  background-size: 100;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
 }
 
-
-
 /* 4개 이미지(버튼) */
-.user-btn:hover{
+.user-btn {
+  font-size: 0;
   cursor: pointer;
-} 
+  position: relative;
+}
 
 
 /* p태그 */
@@ -148,35 +147,12 @@
   width: 50%;
 }
 
-/* 연필 아이콘 */
-.user-btn-edit::before
-{
-  top: 40%;
-  left: 50%;
-  width: 100%;
-  height: 85%;
-}
-
-
-
-
-/* 4개 이미지(버튼) */
-.user-btn {
-  margin-bottom: 1rem;
-  margin-top: 0.1875rem; /* 1px */
-  margin-left: var(--spacing-2xs);  /* 2px */
-  margin-right: 0.1875rem; /* 1px */
-  font-size: 0;
-  max-width: 14.625rem;  
-  max-height: 14.625rem;
- 
-}
-
 
 /* p태그 */
 .profile-item>p {
   font-size: var(--text-lg);
   font-weight: var(--weight-sm);
+  margin-top: var(--spacing-base);
 }
 
 
@@ -189,6 +165,7 @@
   height: 5.375rem;
   justify-content: center;
 }
+
 }
 
 
@@ -237,7 +214,6 @@
 .profile-photo {
   margin-bottom: 2.75rem; /* 44px */
   gap: var(--spacing-xl); /* 32px */
-
 }
 
 
@@ -246,32 +222,12 @@
   width: 50%;
 }
 
-/* 연필 아이콘 */
-.user-btn-edit::before
-{
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-/* 4개 이미지(버튼) */
-.user-btn {
-  margin-bottom: var(--spacing-s); /* 12px */
-  margin-top: 0.1875rem; /* 3px */
-  margin-right: 0.0625rem; /* 1px */
-  margin-left: 0.0625rem; /* 1px */
-  font-size: 0;
-  position: relative;
-
-}
-
 
 /* p태그 */
 .profile-item>p {
   font-size: var(--text-sm); /* 12px */
   font-weight: var(--weight-sm);
+  margin-top: var(--spacing-s);
 }
 
 
@@ -284,8 +240,8 @@
   height: 3.8rem;
   justify-content: center;
 }
-
 }
+
 
 
 /* -------------------------------------------------------------------------- */
@@ -343,38 +299,21 @@
   margin: 0 auto var(--spacing-xl);;
 }
 
-/* 연필 아이콘 */
-.user-btn-edit::before
-{
-  top: 45%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-}
+
 
 /* 이미지+텍스트 개별 li */
 .profile-item {
-  /* width: 50%; */
   width: 7.125rem; 
   height: 9.0625rem; 
 }
 
 
 
-/* 4개 이미지(버튼) */
-.user-btn {
-  margin-bottom: var(--spacing-s); /* 12px */
-  margin-left: var(--spacing-2xs);  /* 2px */
-  margin-top: var(--spacing-2xs);  /* 2px */
-  margin-right: var(--spacing-2xs);  /* 2px */
-  font-size: 0;
-}
-
-
 /* p태그 */
 .profile-item>p {
   font-size: var(--text-sm);
   font-weight: var(--weight-sm);
+  margin-top: var(--spacing-s);
 }
 
 
