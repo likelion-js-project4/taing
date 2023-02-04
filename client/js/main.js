@@ -2,12 +2,8 @@ import createSwiper from "./createSwiper.js";
 
 import { 
   getNode as $,
-  insertLast,
   tiger,
-  delayP,
-  renderVisualList,
-  attr,
-  clearContents
+  renderVisualList
 } from "../lib/index.js";
 
 const visualContainer = $('.visual .swiper-wrapper')
@@ -33,7 +29,3 @@ async function visualList(){
 
 visualList();
 createSwiper();
-
-// postTest();
-// putTest();
-// delteTest();
