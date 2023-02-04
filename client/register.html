@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/register.css" />
 
-    <script src="./js/login.js" type="module"></script>
+    <script src="./js/register.js" type="module"></script>
     <title>회원가입</title>
   </head>
   <body>
@@ -36,8 +36,12 @@
               아이디입력
             </label>
             <input type="text" id="register-id" placeholder="아이디" />
-            <p class="register-id-content">영문 소문자 또는 영문 소문자, 숫자 조합 6~12 자리</p>
+            <button type="button" class="id-cancel-btn">
+              <img src="./assets/icons/login_cancel_36_36.png" alt="취소"/>
+            </button>
+            
           </div>
+          <p class="register-id-content">영문 소문자 또는 영문 소문자, 숫자 조합 6~12 자리</p>
        
           <div class="register-input-wrap">
             <label for="register-pw" class="a11y-hidden">
@@ -46,6 +50,9 @@
           
             <div class="register-input-wrap-inner">
               <input type="password" id="register-pw" placeholder="비밀번호" class="pw-type" />
+              <button type="button" class="pw-cancel-btn">
+                <img src="./assets/icons/login_cancel_36_36.png" alt="취소"/>
+              </button>
               <button type="button" class="pw-see-btn">
                 <img
                 src="./assets/icons/login_nosee_36_36.png"
@@ -64,6 +71,9 @@
             </label>
             <div class="register-input-wrap-inner">
               <input type="password" id="register-pw-check" placeholder="비밀번호 확인" class="pw-type" />
+              <button type="button" class="pw-cancel-btn">
+                <img src="./assets/icons/login_cancel_36_36.png" alt="취소"/>
+              </button>
               <button type="button" class="pw-see2-btn">
                 <img
                 src="./assets/icons/login_nosee_36_36.png"
@@ -79,6 +89,9 @@
               이메일입력
             </label>
             <input type="text" id="register-email" placeholder="이메일" />
+            <button type="button" class="email-cancel-btn">
+              <img src="./assets/icons/login_cancel_36_36.png" alt="취소"/>
+            </button>
           </div>
         
         </form>

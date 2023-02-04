@@ -64,6 +64,29 @@ label:focus{
   position: relative;
 }
 
+.id-cancel-btn,
+.email-cancel-btn{
+  display: none;
+  width: var(--spacing-xl);
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 0;
+}
+
+.pw-cancel-btn{
+  display: none;
+  width: var(--spacing-xl);
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 0;
+}
+
 .register-input-wrap-inner{
   position: relative;
 }
@@ -74,20 +97,12 @@ label:focus{
   position: relative;
 }
 
-.pw-see-btn {
+.pw-see-btn,
+.pw-see2-btn {
   position: absolute;
   right: var(--spacing-md);
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.pw-see2-btn{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: var(--spacing-md);
   background-color: transparent;
   cursor: pointer;
 }
@@ -217,6 +232,16 @@ label:focus{
 
   .sub-title{
     margin-bottom: var(--spacing-lg);
+  }
+
+  .id-cancel-btn,
+  .email-cancel-btn,
+  .pw-cancel-btn{
+    width: var(--spacing-lg);
+  }
+
+  .pw-cancel-btn{
+    right: min(16vw, var(--spacing-5xl));
   }
 
   .register-content-item{
