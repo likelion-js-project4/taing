@@ -1,40 +1,160 @@
 @import url(./theme.css);
 
+body {
+  display: inline-block;
+  width: 100%;
+}
+
+button{
+  cursor: pointer;
+}
+
+input{
+  cursor: text;
+}
+
+.nav-logo{
+  margin: var(--spacing-base) var(--spacing-lg);
+}
+
 .find-pw-container{
-  width: 500px;
-  margin: 50px auto;
+  margin: 0 auto;
+  margin-top: var(--spacing-7xl);
 }
 
 .find-pw-title{
+  cursor: text;
   text-align: center;
-  font-size: min(3vw, var(--text-md));
-  font-weight: 700;
-  margin-bottom: 30px;
+  font-size: clamp(var(--text-base), 5vw ,var(--text-xl));
+  font-weight: var(--weight-lg);
+  margin-bottom: var(--spacing-6xl);
 }
 
 .sub-title{
+  cursor: text;
   white-space: normal;
+  color: var(--silver400);
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
+}
+
+.pw-id-wrapper{
+  position: relative;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+#pw-id{
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--spacing-lg) var(--spacing-base);
+  background-color: var(--dark-bg-2);
+  border-radius: var(--spacing-2xs);
+  color: var(--white);
+  border: none;
+  font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
+}
+
+#pw-id::placeholder{
   color: var(--silver600);
 }
 
-
-
-.form-input label input{
-  margin-top: 20px;
-  width: 100%;
-  padding: 20px 15px;
-  background-color: var(--silver800);
-  border-radius: 5px;
-  color: var(--silver700);
-  border: none;
+.id-cancel-btn{
+  width: var(--spacing-xl);
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 0;
 }
 
 .id-input-btn{
-  margin-top: 20px;
+  box-sizing: border-box;
   width: 100%;
-  padding: 20px 15px;
-  background-color: var(--silver500);
+  padding: var(--spacing-lg) var(--spacing-base);
   border-radius: 5px;
+  text-align: center;
+  color: var(--black);
+  background-color: var(--silver100);
+  font-weight: var(--weight-md);
+  font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
+}
+.id-input-btn:disabled{
+  background-color: var(--silver700);
   color: var(--silver400);
-  font-weight: 700;
+}
+.id-input-btn:hover{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .nav-logo > a > img{
+    height: var(--spacing-base);
+  }
+
+  .find-pw-container{
+    max-width: 500px;
+    margin-top: var(--spacing-lg);
+    width: min(80vw, 50rem);
+  }
+
+  .find-pw-title{
+
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .id-cancel-btn{
+    width: var(--spacing-lg);
+  }
+
+  .pw-id-wrapper{
+    margin-bottom: var(--spacing-md);
+  }
+
+  .id-input-btn,
+  #pw-id{
+    padding-top: var(--spacing-base);
+    padding-bottom: var(--spacing-base);
+  }
+
+
+
+}
+
+
+/* 태블릿 */
+@media (min-width: 769px) and (max-width: 1279px) {
+  .nav-logo > a > img{
+    height: var(--spacing-lg);
+    margin-left: var(--spacing-3xl);
+    margin-top: var(--spacing-base);
+
+  }
+
+  .find-pw-container{
+    max-width: 600px;
+    font-size: clamp(var(--text-sm), 2.5vw ,var(--text-lg));
+  }
+
+  .pw-id-wrapper{
+    margin-bottom: var(--spacing-lg);
+  }
+
+
+}
+
+/* 데스크탑 */
+@media (min-width: 1280px) {
+  .find-pw-container{
+    max-width: 768px;
+  }
+  .nav-logo > a > img{
+    margin-left: var(--spacing-7xl);
+    margin-top: var(--spacing-lg);
+  }
+
+
 }

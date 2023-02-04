@@ -12,13 +12,14 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/theme.css" />
     <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/title.css" />
     <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
     <title>Taing</title>
@@ -26,8 +27,7 @@
   <body>
     <header class="header">
       <h1 class="nav-logo">
-        <span class="a11y-hidden">TAING</span>
-        <a href="./index.html"><img src="./assets/icons/header_logo_132_42.png" alt="TAING" /></a>
+        <a href="./index.html"><img src="./assets/icons/header_logo_132_42.png" alt="타잉" /></a>
       </h1>
       <nav class="nav">
         <h2 class="a11y-hidden">메인 메뉴</h2>
@@ -48,7 +48,6 @@
             <a href="">파라마운트+</a>
           </li>
         </ul>
-
         <div class="header-nav-right">
           <button type="button" class="header-search">
             <img src="assets/icons/header_search_default_40_40.png" alt="search" />
@@ -60,6 +59,17 @@
       </nav>
     </header>
     <main class="main">
+      <article class="main-event-modal">
+        <a href=""><img src="./assets/image/modal_event_586.6_662.29.png" alt="메인 이벤트" /></a>
+        <ul class="main-evnent-modal-close">
+          <li>
+            <button type="button">오늘하루 보지 않기</button>
+          </li>
+          <li>
+            <button type="button">닫기</button>
+          </li>
+        </ul>
+      </article>
       <section class="visual">
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -94,7 +104,9 @@
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination-wrapper">
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </section>
       <section class="taing-recommend program">
@@ -105,85 +117,581 @@
               <div class="img-box">
                 <img src="./assets/image/main_treasurehunt_240_345.png" alt="보물찾기" />
               </div>
-              <p class="title-basic" aria-hidden="true">보물찾기</p>
+              <p class="title-simple" aria-hidden="true">보물찾기</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_lovecatcher_240_345.png" alt="러브캐처" />
               </div>
-              <p class="title-basic" aria-hidden="true">러브캐처</p>
+              <p class="title-simple" aria-hidden="true">러브캐처</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_drinkgirls_240_345.png" alt="술꾼도시여자들2" />
               </div>
-              <p class="title-basic" aria-hidden="true">술꾼도시여자들2</p>
+              <p class="title-simple" aria-hidden="true">술꾼도시여자들2</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_tursaking_240_345.png" alt="털사 킹" />
               </div>
-              <p class="title-basic" aria-hidden="true">털사 킹</p>
+              <p class="title-simple" aria-hidden="true">털사 킹</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_nothing_240_345.png" alt="아무것도 하고 싶지 않아" />
               </div>
-              <p class="title-basic" aria-hidden="true">아무것도 하고 싶지 않아</p>
+              <p class="title-simple" aria-hidden="true">아무것도 하고 싶지 않아</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_blackdog_240_345.png" alt="블랙독" />
               </div>
-              <p class="title-basic" aria-hidden="true">블랙독</p>
+              <p class="title-simple" aria-hidden="true">블랙독</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_tursaking_240_345.png" alt="우리들의 블루스" />
               </div>
-              <p class="title-basic" aria-hidden="true">우리들의 블루스</p>
+              <p class="title-simple" aria-hidden="true">우리들의 블루스</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_treasurehunt_240_345.png" alt="보물찾기" />
               </div>
-              <p class="title-basic" aria-hidden="true">보물찾기</p>
+              <p class="title-simple" aria-hidden="true">보물찾기</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_lovecatcher_240_345.png" alt="러브캐처" />
               </div>
-              <p class="title-basic" aria-hidden="true">러브캐처</p>
+              <p class="title-simple" aria-hidden="true">러브캐처</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_drinkgirls_240_345.png" alt="술꾼도시여자들2" />
               </div>
-              <p class="title-basic" aria-hidden="true">술꾼도시여자들2</p>
+              <p class="title-simple" aria-hidden="true">술꾼도시여자들2</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_tursaking_240_345.png" alt="털사 킹" />
               </div>
-              <p class="title-basic" aria-hidden="true">털사 킹</p>
+              <p class="title-simple" aria-hidden="true">털사 킹</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_nothing_240_345.png" alt="아무것도 하고 싶지 않아" />
               </div>
-              <p class="title-basic" aria-hidden="true">아무것도 하고 싶지 않아</p>
+              <p class="title-simple" aria-hidden="true">아무것도 하고 싶지 않아</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_blackdog_240_345.png" alt="블랙독" />
               </div>
-              <p class="title-basic" aria-hidden="true">블랙독</p>
+              <p class="title-simple" aria-hidden="true">블랙독</p>
             </div>
             <div class="swiper-slide">
               <div class="img-box">
                 <img src="./assets/image/main_tursaking_240_345.png" alt="우리들의 블루스" />
               </div>
-              <p class="title-basic" aria-hidden="true">우리들의 블루스</p>
+              <p class="title-simple" aria-hidden="true">우리들의 블루스</p>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-view-all">
+          <div class="swiper-pagination"></div>
+          <a href="/">전체보기</a>
+        </div>
+      </section>
+      <section class="quick-vod program">
+        <h2 class="taing-title">Quick VOD</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img-box">
+                <span class="quick-vod-icon"
+                  ><img src="./assets/icons/main_quckvod_96_30.png" alt="Quick VOD"
+                /></span>
+                <img src="./assets/image/main_newsroom_345_194.png" alt="JTBC 뉴스룸" />
+              </div>
+              <div class="title-basic">
+                <p aria-hidden="true">JTBC 뉴스룸</p>
+                <p class="sub"><span class="a11y-hidden">회차</span> 0화</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <span class="quick-vod-icon"
+                  ><img src="./assets/icons/main_quckvod_96_30.png" alt="Quick VOD"
+                /></span>
+                <img src="./assets/image/main_decidetolive_345_194.png" alt="나는 살기로 했다" />
+              </div>
+              <div class="title-basic">
+                <p aria-hidden="true">휴먼다큐 &lt;나는 살기로 했다&gt;</p>
+                <p class="sub"><span class="a11y-hidden">회차</span> 10화</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <span class="quick-vod-icon"
+                  ><img src="./assets/icons/main_quckvod_96_30.png" alt="Quick VOD"
+                /></span>
+                <img src="./assets/image/main_health_345_194.png" alt="건강면세점" />
+              </div>
+              <div class="title-basic">
+                <p aria-hidden="true">건강면세점</p>
+                <p class="sub"><span class="a11y-hidden">회차</span> 130화</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <span class="quick-vod-icon"
+                  ><img src="./assets/icons/main_quckvod_96_30.png" alt="Quick VOD"
+                /></span>
+                <img src="./assets/image/main_diffclass_345_194.png" alt="차이나는 클라스" />
+              </div>
+              <div class="title-basic">
+                <p aria-hidden="true">차이나는 클라스</p>
+                <p class="sub"><span class="a11y-hidden">회차</span> 254화</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <span class="quick-vod-icon"
+                  ><img src="./assets/icons/main_quckvod_96_30.png" alt="Quick VOD"
+                /></span>
+                <img src="./assets/image/main_realdeal_345_194.png" alt="알맹이" />
+              </div>
+              <div class="title-basic">
+                <p aria-hidden="true">알맹이</p>
+                <p class="sub"><span class="a11y-hidden">회차</span> 208화</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <span class="quick-vod-icon"
+                  ><img src="./assets/icons/main_quckvod_96_30.png" alt="Quick VOD"
+                /></span>
+                <img src="./assets/image/main_motherspring_345_194.png" alt="엄마의 봄날" />
+              </div>
+              <div class="title-basic">
+                <p aria-hidden="true">엄마의 봄날</p>
+                <p class="sub"><span class="a11y-hidden">회차</span> 380화</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-view-all">
+          <div class="swiper-pagination"></div>
+          <a href="/">전체보기</a>
+        </div>
+      </section>
+      <section class="real-time program">
+        <h2 class="taing-title">실시간 인기 프로그램</h2>
+        <div class="swiper">
+          <ol class="swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_treasurehunt_240_345.png" alt="보물찾기" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true">
+                <span class="update">보물찾기</span>
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_lovecatcher_240_345.png" alt="러브캐처" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true">
+                <span class="update">러브캐처</span>
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_drinkgirls_240_345.png" alt="술꾼도시여자들2" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true">
+                <span class="update">술꾼도시여자들2</span>
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_tursaking_240_345.png" alt="털사 킹" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true">
+                <span class="update">털사 킹</span>
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_nothing_240_345.png" alt="아무것도 하고 싶지 않아" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true">
+                <span class="update">아무것도 하고 싶지 않아</span>
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_blackdog_240_345.png" alt="블랙독" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true">
+                <span class="update">블랙독</span>
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_tursaking_240_345.png" alt="우리들의 블루스" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true">
+                <span class="update">우리들의 블루스</span>
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_treasurehunt_240_345.png" alt="보물찾기" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true"><span>보물찾기</span></p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_lovecatcher_240_345.png" alt="러브캐처" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true"><span>러브캐처</span></p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_drinkgirls_240_345.png" alt="술꾼도시여자들2" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true">
+                <span>술꾼도시여자들2</span>
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_tursaking_240_345.png" alt="털사 킹" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true"><span>털사 킹</span></p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_nothing_240_345.png" alt="아무것도 하고 싶지 않아" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true">
+                <span>아무것도 하고 싶지 않아</span>
+              </p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_blackdog_240_345.png" alt="블랙독" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true"><span>블랙독</span></p>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_tursaking_240_345.png" alt="우리들의 블루스" />
+              </div>
+              <p class="title-simple label-simple" aria-hidden="true">
+                <span>우리들의 블루스</span>
+              </p>
+            </li>
+          </ol>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-view-all">
+          <div class="swiper-pagination"></div>
+          <a href="/">전체보기</a>
+        </div>
+      </section>
+      <section class="live-time program">
+        <h2 class="taing-title">인기 LIVE 채널</h2>
+        <div class="swiper">
+          <ol class="swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_new_345_194.png" alt="JTBC 뉴스룸" />
+              </div>
+              <div class="title-basic label-basic">
+                <dl>
+                  <dt>JTBC</dt>
+                  <dd class="sub" aria-hidden="true">JTBC 뉴스룸</dd>
+                  <dd class="viewer"><span class="a11y-hidden">시청률</span>27.9%</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_eatrice_345_194.png" alt="줄 서는 식당 43회" />
+              </div>
+              <div class="title-basic label-basic">
+                <dl>
+                  <dt>tvN</dt>
+                  <dd class="sub" aria-hidden="true">줄 서는 식당 43회</dd>
+                  <dd class="viewer"><span class="a11y-hidden">시청률</span>26.3%</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_news2_345_194.png" alt="뉴스가 있는 저녁" />
+              </div>
+              <div class="title-basic label-basic">
+                <dl>
+                  <dt>YTN</dt>
+                  <dd class="sub" aria-hidden="true">뉴스가 있는 저녁</dd>
+                  <dd class="viewer"><span class="a11y-hidden">시청률</span>9%</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_chabeol_345_194.png" alt="재벌집 막내아들 5화" />
+              </div>
+              <div class="title-basic label-basic">
+                <dl>
+                  <dt>JTBC2</dt>
+                  <dd class="sub" aria-hidden="true">재벌집 막내아들 5화</dd>
+                  <dd class="viewer"><span class="a11y-hidden">시청률</span>6.2%</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_news3_345_194.png" alt="뉴스프라임" />
+              </div>
+              <div class="title-basic label-basic">
+                <dl>
+                  <dt>연합뉴스 TV</dt>
+                  <dd class="sub" aria-hidden="true">뉴스프라임</dd>
+                  <dd class="viewer"><span class="a11y-hidden">시청률</span>4.6%</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_new_345_194.png" alt="JTBC 뉴스룸" />
+              </div>
+              <div class="title-basic label-basic">
+                <dl>
+                  <dt>JTBC</dt>
+                  <dd class="sub" aria-hidden="true">JTBC 뉴스룸</dd>
+                  <dd class="viewer"><span class="a11y-hidden">시청률</span>27.9%</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_eatrice_345_194.png" alt="줄 서는 식당 43회" />
+              </div>
+              <div class="title-basic label-basic">
+                <dl>
+                  <dt>tvN</dt>
+                  <dd class="sub" aria-hidden="true">줄 서는 식당 43회</dd>
+                  <dd class="viewer"><span class="a11y-hidden">시청률</span>26.3%</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_news2_345_194.png" alt="뉴스가 있는 저녁" />
+              </div>
+              <div class="title-basic label-basic">
+                <dl>
+                  <dt>YTN</dt>
+                  <dd class="sub" aria-hidden="true">뉴스가 있는 저녁</dd>
+                  <dd class="viewer"><span class="a11y-hidden">시청률</span>9%</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_chabeol_345_194.png" alt="재벌집 막내아들 5화" />
+              </div>
+              <div class="title-basic label-basic">
+                <dl>
+                  <dt>JTBC2</dt>
+                  <dd class="sub" aria-hidden="true">재벌집 막내아들 5화</dd>
+                  <dd class="viewer"><span class="a11y-hidden">시청률</span>6.2%</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_news3_345_194.png" alt="뉴스프라임" />
+              </div>
+              <div class="title-basic label-basic">
+                <dl>
+                  <dt>연합뉴스 TV</dt>
+                  <dd class="sub" aria-hidden="true">뉴스프라임</dd>
+                  <dd class="viewer"><span class="a11y-hidden">시청률</span>4.6%</dd>
+                </dl>
+              </div>
+            </li>
+          </ol>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-view-all">
+          <div class="swiper-pagination"></div>
+          <a href="/">전체보기</a>
+        </div>
+      </section>
+      <section class="only-taing program">
+        <h2 class="taing-title">오직 타잉에만 있어요</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img-box">
+                <!-- <span class="main-free-badge"
+                ><img src="./assets/icons/main_free_46_30.png" alt="무료 시청 가능"
+              /></span> -->
+                <!-- <span class="main-allow-19-badge"
+                ><img src="./assets/icons/main_19_30_30.png" alt="19세 이상 시청 가능"
+              /></span> -->
+                <span class="main-allow-18-badge"
+                  ><img src="./assets/icons/main_18_30_30.png" alt="18세 이상 시청 가능" />
+                </span>
+                <img src="./assets/image/main_seeall_282_563.png" alt="전체관람가" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_lovecatcher_282_563.png" alt="러브캐처" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_transfer2_282_563.png" alt="환승연애2" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_bodyprice_283_563.png" alt="몸값" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_drinkgirls_282_563.png" alt="술꾼도시여자들2" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_goee_282_563.png" alt="괴이" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_seeall_282_563.png" alt="전체관람가" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_lovecatcher_282_563.png" alt="러브캐처" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_transfer2_282_563.png" alt="환승연애2" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_bodyprice_283_563.png" alt="몸값" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_drinkgirls_282_563.png" alt="술꾼도시여자들2" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_goee_282_563.png" alt="괴이" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-view-all">
+          <div class="swiper-pagination"></div>
+          <a href="/">전체보기</a>
+        </div>
+      </section>
+      <section class="broadcasting program">
+        <h2 class="taing-title a11y-hidden">Taing SPORTS 경기 생중계</h2>
+        <div class="swiper">
+          <img src="./assets/image/main_sports_1762_177.png" />
+        </div>
+      </section>
+      <section class="main-event program">
+        <h2 class="taing-title">이벤트</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_sinbyapart_346_120.png" alt="신비아파트" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_chabeol_346_120.png" alt="재벌집 막내아들" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_transfer_346_120.png" alt="환승연애2" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_surup_346_120.png" alt="슈룹" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_dessertmaker_346_120.png" alt="디저트 메이커" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_letmein_346_120.png" alt="렛미인" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_sinbyapart_346_120.png" alt="신비아파트" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_chabeol_346_120.png" alt="재벌집 막내아들" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_transfer_346_120.png" alt="환승연애2" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_surup_346_120.png" alt="슈룹" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_dessertmaker_346_120.png" alt="디저트 메이커" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-box">
+                <img src="./assets/image/main_letmein_346_120.png" alt="렛미인" />
+              </div>
             </div>
           </div>
           <div class="swiper-button-prev"></div>
@@ -256,11 +764,6 @@
               <li>
                 <a href="https://twitter.com/tvingdotcom">
                   <img src="assets/icons/footer_twitter_52_52.png" alt="트위터" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/CJTVING/">
-                  <img src="assets/icons/footer_facebook_52_52.png" alt="페이스북" />
                 </a>
               </li>
             </ul>
