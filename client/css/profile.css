@@ -26,6 +26,8 @@
   color: var(--silver200);
 }
 
+
+
 /* 연필 아이콘 */
 .user-btn-edit::before{
   content: "";
@@ -44,6 +46,7 @@
 /* 4개 이미지(버튼) 포커스 영역 */
 .user-btn:focus {
   outline-offset: -2px;
+
 }
 
 /* 4개 이미지(버튼) */
@@ -51,6 +54,16 @@
   font-size: 0;
   cursor: pointer;
   position: relative;
+  transform: translateY(9px);
+  transition: all 300ms ease-out; 
+
+
+}
+
+.user-btn:hover{
+  transform: translateY(-9px);
+  transition: all 300ms ease-out;
+
 }
 
 
@@ -124,18 +137,15 @@
   margin-bottom: var(--spacing-4xl); /* 44px */
 }
 
-/* li 4개 (이미지+텍스트) 합친거 ul */
-.profile-photo {
-  gap: var(--spacing-5xl); /* 52px */
-}
 
 /* li 4개 (이미지+텍스트) 합친거 ul */
 .profile-photo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
   padding: 5px;
+  gap: var(--spacing-5xl); /* 52px */
+
 }
 
 /* 이미지+텍스트 개별 li */
@@ -204,18 +214,14 @@
   margin-bottom: 1.75rem; /* 28px */
 }
 
-/* li 4개 (이미지+텍스트) 합친거 ul */
-.profile-photo {
-  gap: var(--spacing-xl); /* 32px */
-}
 
 /* li 4개 (이미지+텍스트) 합친거 ul */
 .profile-photo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
   padding: 5px;
+  gap: var(--spacing-xl); /* 32px */
 }
 
 /* 이미지+텍스트 개별 li */
