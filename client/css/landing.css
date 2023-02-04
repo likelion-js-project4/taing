@@ -110,12 +110,17 @@ body {
 
 /* 스와이퍼 영역 */
 .taing-only-contents .swiper {
-  background-color: blueviolet;
-  height: 31.875rem;
+  /* background-color: blueviolet; */
+  /* height: 31.875rem; */
+  height: 100%;
 }
 
 .small-slide {
   display: none;
+}
+
+.landing-img-box img {
+  width: 150%;
 }
 
 /* 내가 찾던 재미 */
