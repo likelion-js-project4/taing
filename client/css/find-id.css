@@ -66,6 +66,7 @@ input, h3{
 }
 
 .email-cancel-btn{
+  display: none;
   width: var(--spacing-xl);
   position: absolute;
   right: 3%;
