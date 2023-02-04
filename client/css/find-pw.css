@@ -59,6 +59,7 @@ input{
 }
 
 .id-cancel-btn{
+  display: none;
   width: var(--spacing-xl);
   position: absolute;
   top: 50%;

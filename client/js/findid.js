@@ -4,7 +4,7 @@ const btn_cancel = getNode('.email-cancel-btn');
 const email = getNode('#id-email');
 const input_btn = getNode('.email-input-btn');
 
-// 아이디찾기 input 값 들어오면 버튼 활성화 시키기
+// 아이디찾기 input 값 들어오면 버튼 활성화 시키기 및 X버튼 표시
 function email_change(){
   if (email.value ===""){
     input_btn.disabled=true;
