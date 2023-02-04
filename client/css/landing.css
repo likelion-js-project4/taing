@@ -8,7 +8,6 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-
   -ms-overflow-style: none; /* IE, Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -63,7 +62,7 @@ body {
 /* 타잉 소개 */
 .intro-wrapper {
   background: var(--black) url(../assets/image/randing_background_1920_1308.png)
-    no-repeat 0 150%/100%;
+    no-repeat 0 100%/100%;
 }
 
 .intro-wrapper > p:nth-child(1) {
@@ -77,13 +76,22 @@ body {
 }
 
 .start-taing {
-  font-size: 0;
-  width: 31.625rem;
   margin: 0 1.015625vw 21.0416vw;
+  width: 506px;
+  height: 80px;
+  border-radius: 4px;
+  background: var(--red-2) url('../assets/icons/randing_title_54_63.png')
+    no-repeat 12px 0;
+  color: var(--white);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-md);
+  line-height: var(--line-height-md);
+  padding: 18.5px 81px 18.5px 108px;
 }
 
 /* 타잉에만 있는 재미 */
 .taing-only-contents {
+  /* background-color: aqua; */
   padding-bottom: 1.375rem;
 }
 
@@ -100,8 +108,14 @@ body {
   margin-bottom: var(--spacing-5xl);
 }
 
-.swiper {
+/* 스와이퍼 영역 */
+.taing-only-contents .swiper {
+  background-color: blueviolet;
   height: 31.875rem;
+}
+
+.small-slide {
+  display: none;
 }
 
 /* 내가 찾던 재미 */
@@ -119,7 +133,6 @@ body {
 }
 
 /* 내가 찾던 재미 롤링 배너 */
-
 .rollingbanner > .wrap {
   display: flex;
   flex-flow: row nowrap;
@@ -151,18 +164,20 @@ body {
 /* 롤링 배너 애니메이션 */
 #roller0 {
   animation: 60s linear 0s infinite normal forwards running rollingleft1;
+  padding-right: 0.2vw;
 }
 
 #clone0 {
   animation: 60s linear 0s infinite normal none running rollingleft2;
+  padding-right: 0.4vw;
 }
 
 #roller1 {
-  animation: 50s linear 0s infinite normal forwards running rollingleft3;
+  animation: 50s linear 0s infinite normal forwards running rollingleft1;
 }
 
 #clone1 {
-  animation: 50s linear 0s infinite normal none running rollingleft4;
+  animation: 50s linear 0s infinite normal none running rollingleft2;
 }
 
 @keyframes rollingleft1 {
@@ -191,37 +206,12 @@ body {
   }
 }
 
-@keyframes rollingleft3 {
-  /* 원본용2 */
-  0% {
-    transform: translateX(-14%);
-  }
-  50% {
-    transform: translateX(-114.5%);
-  }
-  50.001% {
-    transform: translateX(86.5%);
-  }
-  100% {
-    transform: translateX(-14%);
-  }
-}
-
-@keyframes rollingleft4 {
-  /* 클론용2 */
-  0% {
-    transform: translateX(-14%);
-  }
-  100% {
-    transform: translateX(-215%);
-  }
-}
-
 /* 타잉 재소개 */
 .landing-bottom {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  /* background-color: white; */
 }
 
 .taing-reintro-wrapper > p > img,
@@ -247,6 +237,7 @@ body {
   .intro-wrapper > p:nth-child(1) {
     font-size: var(--text-md);
     margin-bottom: var(--spacing-xs);
+    margin-top: 20.18vw;
   }
 
   .intro-wrapper > p:nth-child(2) {
@@ -256,7 +247,13 @@ body {
   }
 
   .start-taing {
-    width: 17.6875rem;
+    width: 283px;
+    height: 48px;
+    background: var(--red-2) url('../assets/icons/randing_title_54_63.png')
+      no-repeat 10px 0/31.18px 36px;
+    font-size: var(--text-base);
+    padding: 12px 44px 12px 60px;
+    margin-bottom: 24.48vw;
   }
 
   /* 타잉에만 있는 재미 / 내가 찾던 재미 */
@@ -291,6 +288,14 @@ body {
     height: 25rem;
   }
 
+  .small-slide {
+    display: block;
+  }
+
+  .large-slide {
+    display: none;
+  }
+
   /* 타잉 재소개 */
   .taing-reintro-wrapper > p > img,
   .taing-reintro-description {
@@ -310,26 +315,34 @@ body {
 @media (min-width: 320px) and (max-width: 768px) {
   .intro-wrapper {
     background: var(--black)
-      url(../assets/image/randing_background_1920_1308.png) no-repeat 65% 100%/150%;
+      url(../assets/image/randing_background_1920_1308.png) no-repeat 50% 75%/170%;
   }
 
   .intro-wrapper > p:nth-child(1) {
     font-size: var(--text-base);
     margin-bottom: 0;
+    margin-top: 37.5vw;
   }
 
   .intro-wrapper > p:nth-child(2) {
+    font-size: var(--text-sm);
     margin-bottom: var(--spacing-base);
+  }
+
+  .start-taing {
+    width: 188px;
+    height: 34px;
+    background: var(--red-2) url('../assets/icons/randing_title_54_63.png')
+      no-repeat 10px 0/22.52px 26px;
+    font-size: var(--text-sm);
+    padding: 8px 16px 8px 38px;
+    margin-bottom: 30vw;
   }
 
   .taing-only-title,
   .taing-finding-title {
     font-size: var(--text-md);
     margin-bottom: 0;
-  }
-
-  .start-taing {
-    width: 11.75rem;
   }
 
   .intro-wrapper > p:nth-child(2),
@@ -360,6 +373,14 @@ body {
     height: 25rem;
   }
 
+  .small-slide {
+    display: block;
+  }
+
+  .large-slide {
+    display: none;
+  }
+
   /* 롤링 배너 */
   .rolling-img-box {
     width: 56.5625vw;
@@ -378,6 +399,14 @@ body {
     display: block;
     width: 100%;
     border-radius: 5px;
+  }
+
+  #roller0 {
+    padding-right: 1vw;
+  }
+
+  #clone0 {
+    padding-right: 3vw;
   }
 
   /* 타잉 재소개 */

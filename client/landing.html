@@ -20,10 +20,9 @@
     <link rel="stylesheet" href="./css/theme.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
-    <!-- <link rel="stylesheet" href="./css/main.css" /> -->
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/landing.css" />
-    <script src="./js/main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/landing.js" type="module"></script>
     <title>Taing</title>
   </head>
@@ -56,10 +55,7 @@
           </p>
           <p>간편하게 가입하고, 원하실 때 해지할 수 있어요.</p>
           <a href="./login.html" class="start-taing" >
-            <img
-              src="./assets/image/randing_red_button_504_79.png"
-              alt="새로워진 타잉을 만나보세요!"
-            />
+            새로워진 타잉을 만나보세요!
           </a>
         </div>
       </section>
@@ -70,22 +66,42 @@
           <p class="taing-only-title-description">오리지널 콘텐츠를 만나보세요!</p>
           <h3>차별화된 웰메이드 오리지널 콘텐츠</h3>
         </div>
-
         <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="img-box">
-                <img src="./assets/image/main_chaboel_1920_855.png" alt="재벌집 막내아들" />
-              </div>
-              <p class="visual-title">인생 2회차를 사는 판타지 드라마</p>
-              <a href="/" class="visual-more">자세히보기</a>
-            </div>
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <picture class="landing-img-box">
+                <source media="(max-width: 1279px)" srcset="./assets/image/randing_item1_277_400.png">
+                <img src="./assets/image/randing_item1_906_510.png" alt="러브캐처" />
+              </picture>
+            </li>
+            <li class="swiper-slide">
+              <picture class="landing-img-box">
+                <source media="(max-width: 1279px)" srcset="./assets/image/randing_item2_277_400.png">
+                <img src="./assets/image/randing_item2_906_510.png" alt="보물찾기" />
+              </picture>
+            </li>
+            <li class="swiper-slide large-slide">
+              <picture class="landing-img-box">
+                <img src="./assets/image/randing_item3_906_510.png" alt="푸드 크로니클" />
+              </picture>
+            </li>
+            <li class="swiper-slide large-slide">
+              <picture class="landing-img-box">
+                <img src="./assets/image/randing_item4_906_510.png" alt="몸값" />
+              </picture>
+            </li>
+            <li class="swiper-slide small-slide">
+              <picture class="landing-img-box">
+                <img src="./assets/image/randing_item3_277_400" alt="술꾼도시여자들2" />
+              </picture>
+            </li>
+            <li class="swiper-slide small-slide">
+              <picture class="landing-img-box">
+                <img src="./assets/image/randing_item4_277_400" alt="아일랜드" />
+              </picture>
+            </li>
+          </ul>
         </div>
-
       </section>
 
       <section class="taing-finding-contents">
@@ -103,7 +119,9 @@
               <div class="roller">
                 <ul class="rolling-wrapper">
                   <li class="rolling-item">
+                    
                     <div class="rolling-img-box">
+                      
                       <img src="./assets/image/randing_item1_470_264.png" alt="슈룹" />
                     </div>
                   </li>
@@ -181,11 +199,8 @@
             />
           </p>
           <p class="taing-reintro-description">지금 시작해보세요</p>
-          <a href="./login.html" class="start-taing">
-            <img
-              src="./assets/image/randing_red_button_504_79.png"
-              alt="새로워진 타잉을 만나보세요!"
-            />
+          <a href="./login.html" class="start-taing" >
+            새로워진 타잉을 만나보세요!
           </a>
         </div>
         
