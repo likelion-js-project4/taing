@@ -25,12 +25,24 @@ const landingSwiper = new Swiper('.taing-only-contents .swiper', {
   centeredSlides: true,
   mousewheel: true,
   on: {
-    reachEnd: function () {
-      landingSwiper.mousewheel.disable()
+    slideChange: function () {
+      setTimeout(function () {
+        landingSwiper.params.touchReleaseOnEdges = false
+        landingSwiper.params.mousewheel.releaseOnEdges = false
+      })
     },
-    // reachBegeinning: function () {
-    //   landingSwiper.mousewheel.disable()
-    // },
+    reachEnd: function () {
+      setTimeout(function () {
+        landingSwiper.params.touchReleaseOnEdges = true
+        landingSwiper.params.mousewheel.releaseOnEdges = true
+      }, 500)
+    },
+    reachBeginning: function () {
+      setTimeout(function () {
+        landingSwiper.params.touchReleaseOnEdges = true
+        landingSwiper.params.mousewheel.releaseOnEdges = true
+      }, 500)
+    },
   },
   breakpoints: {
     320: {
@@ -46,27 +58,6 @@ const landingSwiper = new Swiper('.taing-only-contents .swiper', {
     },
   },
 })
-
-// on: {
-//   slideChange: function() {
-//       setTimeout(function () {
-//           visual.params.touchReleaseOnEdges = false;
-//           visual.params.mousewheel.releaseOnEdges = false;
-//       });
-//   },
-//   reachEnd: function() {
-//       setTimeout(function () {
-//           visual.params.touchReleaseOnEdges = true;
-//           visual.params.mousewheel.releaseOnEdges = true;
-//       }, 500);
-//   },
-//   reachBeginning: function() {
-//       setTimeout(function () {
-//           visual.params.touchReleaseOnEdges = true;
-//           visual.params.mousewheel.releaseOnEdges = true;
-//       }, 500);
-//   }
-// }
 
 window.addEventListener('wheel', function (event) {
   if (event.deltaY < 0) {
