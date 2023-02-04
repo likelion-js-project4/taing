@@ -91,7 +91,6 @@ body {
 
 /* 타잉에만 있는 재미 */
 .taing-only-contents {
-  /* background-color: aqua; */
   padding-bottom: 1.375rem;
 }
 
@@ -110,8 +109,6 @@ body {
 
 /* 스와이퍼 영역 */
 .taing-only-contents .swiper {
-  /* background-color: blueviolet; */
-  /* height: 31.875rem; */
   height: 100%;
 }
 
@@ -120,7 +117,8 @@ body {
 }
 
 .landing-img-box img {
-  width: 150%;
+  display: block;
+  width: 100%;
 }
 
 /* 내가 찾던 재미 */
@@ -289,6 +287,7 @@ body {
     margin-bottom: var(--spacing-xl);
   }
 
+  /* 스와이퍼 영역 */
   .swiper {
     height: 25rem;
   }
@@ -372,6 +371,11 @@ body {
 
   .taing-finding-wrapper > h3 {
     display: none;
+  }
+
+  /* 스와이퍼 영역 */
+  .taing-only-contents .swiper {
+    margin-bottom: 3rem;
   }
 
   .swiper {

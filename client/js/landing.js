@@ -21,10 +21,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
 const landingSwiper = new Swiper('.taing-only-contents .swiper', {
   autoPlay: true,
-  slidesPerView: 2.2,
-  spaceBetween: 10,
+  spaceBetween: 15,
   centeredSlides: true,
-  // slidesPerGroup: 2,
   mousewheel: true,
   on: {
     reachEnd: function () {
@@ -34,17 +32,19 @@ const landingSwiper = new Swiper('.taing-only-contents .swiper', {
     //   landingSwiper.mousewheel.disable()
     // },
   },
-  // breakpoints: {
-  //   768: {
-  //     slidesPerView: 3,
-  //     slidesPerGroup: 3,
-  //   },
-  //   1280: {
-  //     slidesPerView: 5,
-  //     slidesPerGroup: 5,
-  //     spaceBetween: 16,
-  //   },
-  // },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+    },
+    768: {
+      slidesPerView: 2.7,
+      spaceBetween: 10,
+    },
+    1280: {
+      slidesPerView: 2.1,
+      spaceBetween: 30,
+    },
+  },
 })
 
 // on: {
