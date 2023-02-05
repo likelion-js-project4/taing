@@ -1,3 +1,6 @@
+import { getNode, css, getNodes } from '../lib/index.js'
+
+// 롤링 배너
 function appendClone(node, clone) {
   let wrap = node.closest('.wrap')
   wrap.appendChild(clone)
@@ -19,6 +22,7 @@ window.addEventListener('DOMContentLoaded', function () {
   })
 })
 
+// 스와이퍼
 const landingSwiper = new Swiper('.taing-only-contents .swiper', {
   autoPlay: false,
   spaceBetween: 15,
@@ -59,4 +63,54 @@ const landingSwiper = new Swiper('.taing-only-contents .swiper', {
   },
 })
 
-landingSwiper()
+// 글자 애니메이션
+const wrapper = getNode('.intro-wrapper')
+const h1 = getNode('.intro-wrapper > p:nth-child(1)')
+const introDescription = getNode('.intro-wrapper > p:nth-child(2)')
+const button = getNode('.start-taing-animation')
+
+const contentTitle = getNodes('.content-title')
+const contentDescription = getNodes('.content-description')
+const contentSubTitle = getNodes('.sub-title')
+const roller = getNode('.taing-finding-contents')
+
+let observerWrapper = new IntersectionObserver((e) => {
+  e.forEach((node) => {
+    css(node.target, 'animation', `fadeInUp 1s forwards ease`)
+  })
+})
+observerWrapper.observe(wrapper)
+
+let observer = new IntersectionObserver((e) => {
+  e.forEach((node) => {
+    if (node.isIntersecting)
+      css(node.target, 'animation', `fadeInUp 1.5s forwards ease-in-out`)
+  })
+})
+observer.observe(h1)
+observer.observe(introDescription)
+observer.observe(button)
+contentSubTitle.forEach((node) => {
+  observer.observe(node)
+})
+observer.observe(roller)
+
+let observeTitle = new IntersectionObserver((e) => {
+  e.forEach((node) => {
+    if (node.isIntersecting)
+      css(node.target, 'animation', `fadeInUp 1s forwards ease-in-out`)
+  })
+})
+contentTitle.forEach((node) => {
+  observeTitle.observe(node)
+})
+
+let observeDescription = new IntersectionObserver((e) => {
+  e.forEach((node) => {
+    if (node.isIntersecting)
+      css(node.target, 'animation', `fadeInUp 1.2s forwards ease-in-out`)
+  })
+})
+contentDescription.forEach((node) => {
+  observeDescription.observe(node)
+})
