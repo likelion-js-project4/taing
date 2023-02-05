@@ -1,4 +1,5 @@
 /* swiper common css */
+
 .swiper-pagination-bullet {
   background: var(--white);
 }
@@ -126,6 +127,36 @@
   border-color: var(--white);
 }
 
+.visual .swiper-pagination-wrapper{
+  position: absolute;
+  left: 4%;
+  bottom: 10%;
+  font-size:0;
+  z-index: 1;
+}
+
+.visual .swiper-pagination{
+  position: static;
+  display: inline-block;
+  width:auto;
+  vertical-align: middle;
+}
+
+.visual .swiper-button-autoplay{
+  display: inline-block;
+  width: 14px;
+  height: 16px;
+  background: url(../assets/icons/main_stop_14_16.png) no-repeat center;
+  cursor: pointer;
+  padding:var(--spacing-2xs);
+  margin-right:var(--spacing-2xs);
+  vertical-align: middle;
+}
+
+.visual .swiper-button-autoplay.is-play{
+  background-image: url(../assets/icons/main_paly_18_18.png);
+}
+
 .visual .swiper-button-prev,
 .visual .swiper-button-next {
   padding: 2%;
@@ -143,13 +174,6 @@
 
 .visual .swiper-button-next {
   right: 5px;
-}
-
-.visual .swiper-horizontal > .swiper-pagination-bullets,
-.visual .swiper-pagination-bullets.swiper-pagination-horizontal {
-  width: auto;
-  left: 4%;
-  bottom: 10%;
 }
 
 /* program css */
@@ -282,8 +306,7 @@
     bottom: 25%;
   }
 
-  .visual .swiper-horizontal > .swiper-pagination-bullets,
-  .visual .swiper-pagination-bullets.swiper-pagination-horizontal {
+  .visual .swiper-pagination-wrapper {
     bottom: 20%;
   }
 
@@ -346,11 +369,14 @@
     padding: 1.75rem 0;
   }
   .visual-more {
-    bottom: 17%;
+    bottom: 15%;
   }
-  .visual .swiper-horizontal > .swiper-pagination-bullets,
-  .visual .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 16%;
+  .visual .swiper-pagination-wrapper {
+    bottom: 13%;
+  }
+  .visual .swiper-button-autoplay{
+    background-size: 0.75rem;
+
   }
   .only-taing .swiper-view-all {
     top: 2%;
@@ -372,6 +398,11 @@
   .visual .swiper-pagination-bullet {
     width: 6px;
     height: 6px;
+  }
+
+  .visual .swiper-button-autoplay{
+    background-size: 0.5rem;
+    padding:1px
   }
 
   /* program moblie */
