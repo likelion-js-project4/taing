@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 
 const landingSwiper = new Swiper('.taing-only-contents .swiper', {
-  autoPlay: true,
+  autoPlay: false,
   spaceBetween: 15,
   centeredSlides: true,
   mousewheel: true,
@@ -59,8 +59,4 @@ const landingSwiper = new Swiper('.taing-only-contents .swiper', {
   },
 })
 
-window.addEventListener('wheel', function (event) {
-  if (event.deltaY < 0) {
-    landingSwiper.mousewheel.enable()
-  }
-})
+landingSwiper()
