@@ -157,7 +157,7 @@
 .profile-item>p {
   font-size: var(--text-lg);
   font-weight: var(--weight-sm);
-  margin-top: var(--spacing-base);
+  padding-top: var(--spacing-lg); /* 24px */
 }
 
 /* 프로필 편집 버튼 */
@@ -233,7 +233,7 @@
 .profile-item>p {
   font-size: var(--text-sm); /* 12px */
   font-weight: var(--weight-sm);
-  margin-top: var(--spacing-s);
+  padding-top: var(--spacing-md);
 }
 
 /* 프로필 편집 버튼 */
@@ -308,7 +308,7 @@
 .profile-item>p {
   font-size: var(--text-sm);
   font-weight: var(--weight-sm);
-  margin-top: var(--spacing-s);
+  padding-top: var(--spacing-base);
 }
 
 /* 프로필 편집 버튼 */
