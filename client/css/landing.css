@@ -21,16 +21,17 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 15% 23vw 5%;
+  padding: 20% 27vw 2%;
 }
+
 .pin-wrap > * {
-  min-width: 60vw;
-  padding: 0 5vw;
+  min-width: 48vw;
+  padding: 0 0.5vw;
 }
 
 .taing-only-wrapper{
   position: absolute;
-  top: 10%;
+  top: 15%;
   left:50%;
   transform: translateX(-50%);
 }
@@ -124,10 +125,6 @@ body {
 .taing-only-title-description {
   color: var(--silver200);
   margin-bottom: var(--spacing-xs);
-}
-
-.taing-only-wrapper > h3 {
-  margin-bottom: var(--spacing-5xl);
 }
 
 /* 스와이퍼 영역 */
