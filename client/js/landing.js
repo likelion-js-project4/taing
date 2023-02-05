@@ -73,14 +73,16 @@ const contentTitle = getNodes('.content-title')
 const contentDescription = getNodes('.content-description')
 const contentSubTitle = getNodes('.sub-title')
 const roller = getNode('.taing-finding-contents')
+const swiper = getNode('.taing-only-contents')
 
+// 백그라운드
 let observerWrapper = new IntersectionObserver((e) => {
   e.forEach((node) => {
     css(node.target, 'animation', `fadeInUp 1s forwards ease`)
   })
 })
 observerWrapper.observe(wrapper)
-
+// 인트로 글자
 let observer = new IntersectionObserver((e) => {
   e.forEach((node) => {
     if (node.isIntersecting)
@@ -88,12 +90,21 @@ let observer = new IntersectionObserver((e) => {
   })
 })
 observer.observe(h1)
-observer.observe(introDescription)
+// observer.observe(introDescription)
 observer.observe(button)
 contentSubTitle.forEach((node) => {
   observer.observe(node)
 })
 observer.observe(roller)
+observer.observe(swiper)
+
+let observeSub = new IntersectionObserver((e) => {
+  e.forEach((node) => {
+    if (node.isIntersecting)
+      css(node.target, 'animation', `fadeInUp2 1.5s forwards ease-in-out`)
+  })
+})
+observeSub.observe(introDescription)
 
 let observeTitle = new IntersectionObserver((e) => {
   e.forEach((node) => {
