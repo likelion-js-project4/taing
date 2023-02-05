@@ -1,15 +1,38 @@
-/* 스크롤바 제거  */
-body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+body {
+  transition: 0.3s ease-out;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  overscroll-behavior: none;
 }
 
-body {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  -ms-overflow-style: none; /* IE, Edge */
-  scrollbar-width: none; /* Firefox */
+#sectionPin {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+.pin-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15% 23vw 5%;
+}
+.pin-wrap > * {
+  min-width: 60vw;
+  padding: 0 5vw;
+}
+
+.taing-only-wrapper{
+  position: absolute;
+  top: 10%;
+  left:50%;
+  transform: translateX(-50%);
 }
 
 /* 공통 헤더 */
