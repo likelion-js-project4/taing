@@ -1,15 +1,22 @@
 /* 스크롤바 제거  */
-body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
+/* body::-webkit-scrollbar {
+  display: none; Chrome, Safari, Opera
+} */
 
-body {
+/* body {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
-  -ms-overflow-style: none; /* IE, Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; IE, Edge
+  scrollbar-width: none; Firefox
+} */
+
+body {
+  transition: 0.3s ease-out;
+  overflow-x: hidden;
+  width: 100%;
+  overscroll-behavior: none;
 }
 
 /* 공통 헤더 */
@@ -54,11 +61,6 @@ body {
   line-height: var(--line-height-lg);
 }
 
-.landing-visual,
-.taing-only-contents {
-  margin-bottom: 8.3%;
-}
-
 /* 타잉 소개 */
 .intro-wrapper {
   background: var(--black) url(../assets/image/randing_background_1920_1308.png)
@@ -76,6 +78,7 @@ body {
 }
 
 .start-taing {
+  /* background-color: aqua; */
   margin: 0 1.015625vw 21.0416vw;
   width: 506px;
   height: 80px;
@@ -91,9 +94,10 @@ body {
 
 /* 타잉에만 있는 재미 */
 .taing-only-contents {
+  /* background-color: aqua; */
+  margin-bottom: 8.3%;
   padding-bottom: 1.375rem;
 }
-
 .taing-only-title {
   margin-bottom: var(--spacing-md);
 }
@@ -103,22 +107,47 @@ body {
   margin-bottom: var(--spacing-xs);
 }
 
+/* 스와이퍼 영역 */
+#sectionPin {
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.taing-only-wrapper {
+  /* background-color: brown; */
+  margin-top: 5.2%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
 .taing-only-wrapper > h3 {
   margin-bottom: var(--spacing-5xl);
 }
 
-/* 스와이퍼 영역 */
-.taing-only-contents .swiper {
-  height: 100%;
+.pin-wrap {
+  /* background-color: deeppink; */
+  width: 300%;
+  display: flex;
+  flex-flow: row nowrap;
+  padding-left: 100%;
+  transform: translateX(-25%);
 }
 
-.small-slide {
-  display: none;
+.landing-img-box {
+  /* background-color: coral; */
+  display: block;
+  margin-right: 10px;
 }
 
 .landing-img-box img {
   display: block;
   width: 100%;
+}
+
+.small-slide {
+  display: none;
 }
 
 /* 내가 찾던 재미 */
@@ -313,8 +342,13 @@ body {
   }
 
   /* 스와이퍼 영역 */
-  .swiper {
+  /* .pin-wrap {
     height: 25rem;
+    background-color: aqua;
+  } */
+  .pin-wrap {
+    padding-left: 100%;
+    transform: translateX(-18.5%);
   }
 
   .small-slide {
@@ -403,9 +437,9 @@ body {
     margin-bottom: 3rem;
   }
 
-  .swiper {
+  /* .swiper {
     height: 25rem;
-  }
+  } */
 
   .small-slide {
     display: block;

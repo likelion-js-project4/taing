@@ -1,3 +1,4 @@
+/* global gsap */
 import { getNode, css, getNodes } from '../lib/index.js'
 
 // 롤링 배너
@@ -23,43 +24,59 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 
 // 스와이퍼
-const landingSwiper = new Swiper('.taing-only-contents .swiper', {
-  autoPlay: false,
-  spaceBetween: 15,
-  centeredSlides: true,
-  mousewheel: true,
-  on: {
-    slideChange: function () {
-      setTimeout(function () {
-        landingSwiper.params.touchReleaseOnEdges = false
-        landingSwiper.params.mousewheel.releaseOnEdges = false
-      })
-    },
-    reachEnd: function () {
-      setTimeout(function () {
-        landingSwiper.params.touchReleaseOnEdges = true
-        landingSwiper.params.mousewheel.releaseOnEdges = true
-      }, 500)
-    },
-    reachBeginning: function () {
-      setTimeout(function () {
-        landingSwiper.params.touchReleaseOnEdges = true
-        landingSwiper.params.mousewheel.releaseOnEdges = true
-      }, 500)
-    },
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1.2,
-    },
-    768: {
-      slidesPerView: 2.7,
-      spaceBetween: 10,
-    },
-    1280: {
-      slidesPerView: 2.1,
-      spaceBetween: 30,
-    },
+// const landingSwiper = new Swiper('.taing-only-contents .swiper', {
+//   autoPlay: false,
+//   spaceBetween: 15,
+//   centeredSlides: true,
+//   mousewheel: true,
+//   on: {
+//     slideChange: function () {
+//       setTimeout(function () {
+//         landingSwiper.params.touchReleaseOnEdges = false
+//         landingSwiper.params.mousewheel.releaseOnEdges = false
+//       })
+//     },
+//     reachEnd: function () {
+//       setTimeout(function () {
+//         landingSwiper.params.touchReleaseOnEdges = true
+//         landingSwiper.params.mousewheel.releaseOnEdges = true
+//       }, 500)
+//     },
+//     reachBeginning: function () {
+//       setTimeout(function () {
+//         landingSwiper.params.touchReleaseOnEdges = true
+//         landingSwiper.params.mousewheel.releaseOnEdges = true
+//       }, 500)
+//     },
+//   },
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 1.2,
+//     },
+//     768: {
+//       slidesPerView: 2.7,
+//       spaceBetween: 10,
+//     },
+//     1280: {
+//       slidesPerView: 2.1,
+//       spaceBetween: 30,
+//     },
+//   },
+// })
+gsap.registerPlugin(ScrollTrigger)
+
+let sections = gsap.utils.toArray('.landing-img-box')
+
+gsap.to(sections, {
+  xPercent: -50 * sections.length,
+  ease: 'none',
+  scrollTrigger: {
+    // markers: true,
+    trigger: '#sectionPin',
+    pin: true,
+    scrub: 1,
+    // snap: 1 / (sections.length - 1),
+    end: () => '+=' + getNode('#sectionPin').offsetWidth,
   },
 })
 
@@ -73,9 +90,8 @@ const contentTitle = getNodes('.content-title')
 const contentDescription = getNodes('.content-description')
 const contentSubTitle = getNodes('.sub-title')
 const roller = getNode('.taing-finding-contents')
-const swiper = getNode('.taing-only-contents')
 
-// 백그라운드
+// // 백그라운드
 let observerWrapper = new IntersectionObserver((e) => {
   e.forEach((node) => {
     css(node.target, 'animation', `fadeInUp 1s forwards ease`)
@@ -90,13 +106,11 @@ let observer = new IntersectionObserver((e) => {
   })
 })
 observer.observe(h1)
-// observer.observe(introDescription)
 observer.observe(button)
 contentSubTitle.forEach((node) => {
   observer.observe(node)
 })
 observer.observe(roller)
-observer.observe(swiper)
 
 let observeSub = new IntersectionObserver((e) => {
   e.forEach((node) => {

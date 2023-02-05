@@ -15,6 +15,8 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://use.typekit.net/skn8ash.css'>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/theme.css" />
@@ -23,27 +25,19 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/landing.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
     <script src="./js/landing.js" type="module"></script>
     <title>Taing</title>
   </head>
 
   <body>
+    <div class="container">
     <header class="header">
       <h1 class="nav-logo">
         <a href="./index.html"><img src="./assets/icons/header_logo_132_42.png" alt="타잉" /></a>
       </h1>
     </header>
-
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                                 인수인계 내용                            -->
-    <!-- ----------------------------------------------------------------------- -->
-    <!-- main영역은 헤더 밑부터 푸터 전까지 입니다 -->
-    <!-- section은 4개 영역으로 구성되어있습니다 : (1)비주얼에 소개부분, (2)타잉에만 있는 재미, (3)내가 찾던 재미, (4)하단에 재소개부분 -->
-    <!-- <p>태그 각각 폰트사이즈, 두께, 색깔이 다 달라서 CSS로 구분하셔야합니다 -->
-    <!-- <a>태그에 #표시 있는 부분에는 로그인 페이지 링크를 넣으시면 됩니다 -->
-    <!-- 이미지 파일 ("새로워진 타잉을 만나보세요!"와 "NO.1 K-콘텐츠 플랫폼")은 hotfix에 윤호님이 추가해뒀습니다 -->
-    <!-- 이 틀안에 swiper 넣으시면 됩니다 (마크업 수정은 자율적으로~) -->
-    <!-- 그럼 저는....20000... 다들 파이팅~>< -->
 
     <main class="landing-main">
       <section class="landing-visual">
@@ -61,43 +55,38 @@
       </section>
 
       <section class="taing-only-contents">
+        <div id="sectionPin">
         <div class="taing-only-wrapper">
           <h2 class="taing-only-title  content-title">타잉에만 있는 재미</h2>
           <p class="taing-only-title-description content-description">오리지널 콘텐츠를 만나보세요!</p>
           <h3 class="sub-title">차별화된 웰메이드 오리지널 콘텐츠</h3>
         </div>
-        <div class="swiper">
-          <ul class="swiper-wrapper">
-            <li class="swiper-slide">
-              <picture class="landing-img-box">
-                <source media="(max-width: 1279px)" srcset="./assets/image/randing_item1_277_400.png">
-                <img src="./assets/image/randing_item1_906_510.png" alt="러브캐처" />
-              </picture>
-            </li>
-            <li class="swiper-slide">
-              <picture class="landing-img-box">
-                <source media="(max-width: 1279px)" srcset="./assets/image/randing_item2_277_400.png">
-                <img src="./assets/image/randing_item2_906_510.png" alt="보물찾기" />
-              </picture>
-            </li>
-            <li class="swiper-slide">
-              <picture class="landing-img-box large-slide">
-                <img src="./assets/image/randing_item3_906_510.png" alt="푸드 크로니클" />
-              </picture>
-              <picture class="landing-img-box small-slide">
-                <img src="./assets/image/randing_item3_277_400.png" alt="술꾼도시여자들2" />
-              </picture>
-            </li>
-            <li class="swiper-slide">
-              <picture class="landing-img-box large-slide">
-                <img src="./assets/image/randing_item4_906_510.png" alt="몸값" />
-              </picture>
-              <picture class="landing-img-box small-slide">
-                <img src="./assets/image/randing_item4_277_400.png" alt="아일랜드" />
-              </picture>
-            </li>
-          </ul>
+        <div class="pin-wrap">
+          <picture class="landing-img-box">
+            <source media="(max-width: 1279px)" srcset="./assets/image/randing_item1_277_400.png">
+            <img src="./assets/image/randing_item1_906_510.png" alt="러브캐처" />
+          </picture>
+          
+          <picture class="landing-img-box">
+            <source media="(max-width: 1279px)" srcset="./assets/image/randing_item2_277_400.png">
+            <img src="./assets/image/randing_item2_906_510.png" alt="보물찾기" />
+          </picture>
+
+          <picture class="landing-img-box large-slide">
+            <img src="./assets/image/randing_item3_906_510.png" alt="푸드 크로니클" />
+          </picture>
+          <picture class="landing-img-box small-slide">
+            <img src="./assets/image/randing_item3_277_400.png" alt="술꾼도시여자들2" />
+          </picture>
+
+          <picture class="landing-img-box large-slide">
+            <img src="./assets/image/randing_item4_906_510.png" alt="몸값" />
+          </picture>
+          <picture class="landing-img-box small-slide">
+            <img src="./assets/image/randing_item4_277_400.png" alt="아일랜드" />
+          </picture>
         </div>
+      </div>
       </section>
 
       <section class="taing-finding-contents">
@@ -303,5 +292,6 @@
         </div>
       </section>
     </footer>
+    </div>
   </body>
 </html>
