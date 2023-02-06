@@ -160,6 +160,7 @@ label:focus{
 }
 
 .all-check-btn img{
+  width: var(--spacing-md);
   transform: translateY(3px);
   margin-right: var(--spacing-s);
 }
@@ -193,6 +194,10 @@ label:focus{
   display: none;
 }
 
+.register-content-item > label:checked{
+  color: var(--white);
+}
+
 .register-content-item > label{
   cursor: pointer;
   background: url(../assets/icons/login_bincheck_26_26.png) no-repeat 0 0;
@@ -218,7 +223,7 @@ label:focus{
 
 
 /* 모바일 */
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px){
   .nav-logo > a > img{
     height: var(--spacing-base);
 
@@ -290,7 +295,7 @@ label:focus{
 
 
 /* 태블릿 */
-@media (min-width: 769px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   .nav-logo > a > img{
     height: var(--spacing-lg);
     margin-left: var(--spacing-3xl);
@@ -310,10 +315,6 @@ label:focus{
     height: 1.125rem;
   }
 
-
-
-
-  
 }
 
 /* 데스크탑 */
