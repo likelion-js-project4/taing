@@ -3,7 +3,7 @@ import {insertLast} from '../dom/insert.js'
 const createVisualList = ({
   id = '',
   image = {
-    image_name1 : '',
+    visual : '',
     alt : '',
   },
   description = '',
@@ -13,7 +13,7 @@ const createVisualList = ({
   return /* html */`
   <div class="swiper-slide" data-index="user-${id}">
     <div class="img-box">
-      <img src="${image.image_name1}" alt="${image.alt}" />
+      <img src="${image.visual}" alt="${image.alt}" />
     </div>
     <p class="visual-title">${description}</p>
     <a href="/" class="visual-more">자세히보기</a>

@@ -5,7 +5,7 @@ export default function createSwiper(){
   const visualSwiper = new Swiper(".visual .swiper", {
     effect: "fade",
     autoplay:{
-      delay: 1000,
+      delay: 4000,
       disableOnInteraction: false
     },
     keyboard: {
