@@ -13,6 +13,9 @@ const emailCancelButton= getNode('.email-cancel-btn');
 const pw_see_button = getNode('.pw-see-btn');
 const pwcheck_see_button = getNode('.pw-see2-btn');
 
+const idContent = getNode('.register-id-content');
+const pwContent = getNode('.register-pw-content')
+
 // const register_list= getNodes('input[name=register]');
 const checkAll= getNode('#register-all');   //모두동의합니다 input
 const check1 = getNode('#register-item1');
@@ -41,11 +44,28 @@ const agreements={
 function cancel_active(node){
   const btn = node.nextElementSibling;  //해당 노드의 X버튼 
 
-  if(node.value===""){
-    console.log('hit');
-  }else{
+  if(!(node.value==="")){
     btn.style.display = "inline-block";
   }
+
+  // 아이디 input 인 경우
+  if(node.placeholder.includes("아이디")){
+    if(node.value.length<6 || node.value.length >13){
+      idContent.style.color='red';
+    }else{
+      idContent.style.color='var(--silver500)';
+    }
+  }
+
+  // 비밀번호 input 인 경우
+  if(node.placeholder.includes("비밀번호")){
+    if(node.value.length<8 || node.value.length >15){
+      pwContent.style.color='red';
+    }else{
+      pwContent.style.color='var(--silver500)';
+    }
+  }
+
 }
 
 //X버튼 누르면 글 지우기
@@ -86,23 +106,26 @@ function all_check(){
 }
 
 // 모두동의버튼 안누르고 모든 체크를 하면 동의하기버튼도 활성화
-if (check1 && check2 && check3 && check4 %% check5 && check6 && check7 && check8) {
-  checkAll.checked = true;
-} else {
-  checkAll.checked = false;
-}
+// if (check1 && check2 && check3 && check4 %% check5 && check6 && check7 && check8) {
+//   checkAll.checked = true;
+// } else {
+//   checkAll.checked = false;
+// }
 
 //모든 회원가입 조건을 만족시켰을시 버튼 활성화시키기
-// if(){
-//   submitButton.disabled=false;
-
+// for(let key in agreements) {
+//   if(key ==false){
+//     return false;
+//   }else{
+//     submitButton.disabled=false;
+//   }
 // }
 
 
 
 inputId.addEventListener('keyup', () => cancel_active(inputId));
 inputPassword.addEventListener('keyup', () => cancel_active(inputPassword));
-inputPasswordCheck.addEventListener('keyup', () => cancel_active(inputPasswordcheck));
+inputPasswordCheck.addEventListener('keyup', () => cancel_active(inputPasswordCheck));
 inputEmail.addEventListener('keyup', () => cancel_active(inputEmail));
 
 idCancelButton.addEventListener('click', ()=> delete_input(inputId));
