@@ -1,9 +1,9 @@
 import { insertLast } from '../../lib/index.js'
 
 // 최근검색어 렌더링
-const createSearchList = (keyword) => {
+const createSearchList = (keyword, index) => {
   return /* html */ `
-  <li class="list-item">
+  <li class="list-item" data-index=${index}>
     <a href="#">${keyword}</a>
     <button type="button" class="delete-btn">
       <img
@@ -15,6 +15,6 @@ const createSearchList = (keyword) => {
   `
 }
 
-export function renderSearchList(target, keyword) {
-  insertLast(target, createSearchList(keyword))
+export function renderSearchList(target, keyword, index) {
+  insertLast(target, createSearchList(keyword, index))
 }

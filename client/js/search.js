@@ -16,56 +16,27 @@ const deleteAllButton = getNode('.delete-all-btn')
 /* -------------------------------------------------------------------------- */
 /*                             최근검색어, 인기검색어 render                            */
 /* -------------------------------------------------------------------------- */
+function loadStorage(key) {
+  return JSON.parse(localStorage.getItem(key))
+}
+
+function saveStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value))
+}
+
 function renderList() {
-  let searchList = JSON.parse(localStorage.getItem(SEARCH_KEY))
+  let searchList = loadStorage(SEARCH_KEY)
   const noSearchKeyword = getNode('.search-current > p')
   if (!searchList && !noSearchKeyword) {
     let template = /* html */ `<p>검색 내역이 없습니다.</p>`
     return insertAfter(searchCurrentTitle, template)
   }
-  searchList.forEach((keyword) =>
-    renderSearchList(searchCurrentTarget, keyword),
+  searchList.forEach((keyword, index) =>
+    renderSearchList(searchCurrentTarget, keyword, index),
   )
   // 인기 검색어 render
 }
 renderList()
-
-/* -------------------------------------------------------------------------- */
-/*                                 최근 검색어 업데이트                                */
-/* -------------------------------------------------------------------------- */
-function updateSearch(keyword) {
-  let prevSearchArray = JSON.parse(localStorage.getItem(SEARCH_KEY))
-  let searchArray = prevSearchArray
-
-  if (prevSearchArray === null) {
-    searchArray = []
-  }
-  searchArray.push(keyword)
-  localStorage.setItem(SEARCH_KEY, JSON.stringify(searchArray))
-
-  // 검색 내역이 없습니다. 요소 지우기
-  const noSearchKeyword = getNode('.search-current > p')
-  if (noSearchKeyword) noSearchKeyword.remove()
-  // 업데이트된 최근검색어 렌더링
-  renderSearchList(searchCurrentTarget, keyword)
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                 form 제출 이벤트                                */
-/* -------------------------------------------------------------------------- */
-function inputHandler() {
-  const keyword = searchInput.value
-  // 최근 검색어 업데이트 하기
-  if (keyword === '') {
-    return css(alert, 'display', 'block')
-  }
-  updateSearch(keyword)
-  searchInput.value = ''
-}
-
-function alertHandler() {
-  css(alert, 'display', 'none')
-}
 
 /* -------------------------------------------------------------------------- */
 /*                                최근 검색어 모두 지우기                               */
@@ -84,14 +55,69 @@ function clearSearch() {
   renderList()
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 최근 검색어 업데이트                                */
+/* -------------------------------------------------------------------------- */
+function updateSearch(keyword) {
+  let prevSearchArray = loadStorage(SEARCH_KEY)
+  let searchArray = prevSearchArray
+
+  if (prevSearchArray === null) {
+    searchArray = []
+  }
+  searchArray.push(keyword)
+  saveStorage(SEARCH_KEY, searchArray)
+
+  // 검색 내역이 없습니다. 요소 지우기
+  const noSearchKeyword = getNode('.search-current > p')
+  if (noSearchKeyword) noSearchKeyword.remove()
+  // 업데이트된 최근검색어 렌더링
+  removeChildAll(searchCurrentTarget)
+  renderList()
+}
+
+function inputHandler() {
+  const keyword = searchInput.value
+  // 최근 검색어 업데이트 하기
+  if (keyword === '') {
+    return css(alert, 'display', 'block')
+  }
+  updateSearch(keyword)
+  searchInput.value = ''
+}
+
+function alertHandler() {
+  css(alert, 'display', 'none')
+}
+
 searchForm.addEventListener('submit', inputHandler)
 alertButton.addEventListener('click', alertHandler)
 deleteAllButton.addEventListener('click', clearSearch)
 
-// let response = await tiger('http://localhost:3000/users')
-// console.log(response)
+/* -------------------------------------------------------------------------- */
+/*                                 특정 검색어 지우기                                 */
+/* -------------------------------------------------------------------------- */
+// 선택한 최근 검색어 지우기
+function deleteSearch(deletedIndex) {
+  let searchList = loadStorage(SEARCH_KEY)
+  searchList.splice(deletedIndex, 1)
+  return searchList
+}
 
 function deleteHandler(e) {
-  console.log(e.target)
+  const target = e.target
+  if (target.tagName === 'IMG') {
+    const targetIndex = target.closest('li').dataset.index
+    console.log('targetIndex', targetIndex)
+    const deletedArray = deleteSearch(targetIndex)
+    if (deletedArray.length === 0) {
+      // 클리어
+      localStorage.removeItem(SEARCH_KEY)
+    } else {
+      saveStorage(SEARCH_KEY, deletedArray)
+    }
+    removeChildAll(searchCurrentTarget)
+    renderList()
+  }
 }
 searchCurrentTarget.addEventListener('click', deleteHandler)
