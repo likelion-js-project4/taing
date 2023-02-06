@@ -3,12 +3,17 @@ import createSwiper from "./createSwiper.js";
 import { 
   getNode as $,
   tiger,
-  renderVisualList
+  insertFirst,
+  renderQuickList,
+  renderVisualList,
+  renderContentsList
 } from "../lib/index.js";
 
-const visualContainer = $('.visual .swiper-wrapper')
+const visualContainer = $('.visual .swiper-wrapper');
+const taingRecommendContainer = $('.taing-recommend .swiper-wrapper');
+const quickVodContainer = $('.quick-vod .swiper-wrapper');
 
-async function visualList(){
+async function renderList(){
 
   try{
 
@@ -16,16 +21,19 @@ async function visualList(){
     let contentDate = response.data;
 
     contentDate.forEach(data => {
-      if(data.is_viual){
-        renderVisualList(visualContainer, data)
-      } return
+      if(data.is_viual) renderVisualList(visualContainer, data)
+      if(data.is_recommend) renderContentsList(taingRecommendContainer, data)
+      if(data.quick_vod.title) renderQuickList(quickVodContainer, data)
+      if(data.is_free){
+        insertFirst($('.img-box'), `<span class="main-free-badge"><img src="./assets/icons/main_free_46_30.png" alt="무료 시청 가능"/></span>`)
+      }
     });
 
   }catch(err){
-    
+
   }
 
 }
 
-visualList();
+renderList();
 createSwiper();

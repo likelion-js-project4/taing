@@ -26,7 +26,7 @@
       "description": "인생 2회차를 사는 판타지 드라마",
       "image": {
         "visual": "./assets/image/main_chaboel_1920_855.png",
-        "contents": "",
+        "contents": "./assets/image/main_chaboel_240_345.png",
         "vod": "",
         "popular": "./assets/image/main_chaboel_240_345.png",
         "live_channel": "./assets/image/main_chabeol_345_194.png",
@@ -38,7 +38,7 @@
       "is_adult_18": false,
       "is_adult_19": false,
       "is_viual": true,
-      "is_recommend": false,
+      "is_recommend": true,
       "quick_vod": {
         "title": "",
         "series": ""
@@ -211,7 +211,7 @@
       "description": "러브캐처의 desc입니다",
       "image": {
         "visual": "",
-        "contents": "./assets/image/main_lovecatcher_282_563.png",
+        "contents": "./assets/image/main_lovecatcher_240_345.png",
         "vod": "",
         "popular": "./assets/image/main_lovecatcher_282_563.png",
         "live_channel": "",
@@ -247,11 +247,11 @@
       "description": "술꾼도시여자들2의 desc입니다",
       "image": {
         "visual": "",
-        "contents": "./assets/image/main_lovecatcher_240_345.png",
+        "contents": "./assets/image/main_drinkgirls_240_345.png",
         "vod": "",
-        "popular": "./assets/image/main_lovecatcher_240_345.png",
+        "popular": "./assets/image/main_drinkgirls_240_345.png",
         "live_channel": "",
-        "only_taing": "./assets/image/main_lovecatcher_282_563.png",
+        "only_taing": "./assets/image/main_drinkgirls_282_563.png",
         "event": "",
         "alt": "술꾼도시여자들2"
       },
@@ -996,6 +996,42 @@
       },
       "is_only_taing": false,
       "is_event_now": true
+    },
+    {
+      "id": "contents_id28",
+      "title": "인생에 한 번쯤 킬리만자로",
+      "description": "인생에 한 번쯤 킬리만자로의 desc입니다",
+      "image": {
+        "visual": "",
+        "contents": "./assets/image/main_kilimanjaro_240_345.png",
+        "vod": "",
+        "popular": "",
+        "live_channel": "",
+        "only_taing": "./assets/image/main_kilimanjaro_240_345.png",
+        "event": "",
+        "alt": "인생에 한 번쯤 킬리만자로"
+      },
+      "is_free": true,
+      "is_adult_18": false,
+      "is_adult_19": false,
+      "is_viual": false,
+      "is_recommend": true,
+      "quick_vod": {
+        "title": "",
+        "series": ""
+      },
+      "popular_program": {
+        "rating": ""
+      },
+      "live_chnnel": {
+        "flatform": "",
+        "rating": "",
+        "title": "",
+        "series": "",
+        "view_ratio": ""
+      },
+      "is_only_taing": false,
+      "is_event_now": false
     }
   ]
 }
