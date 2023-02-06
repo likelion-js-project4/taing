@@ -1,23 +1,23 @@
 /* 스크롤바 제거  */
-/* body::-webkit-scrollbar {
-  display: none; Chrome, Safari, Opera
-} */
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 
-/* body {
+body {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
-  -ms-overflow-style: none; IE, Edge
-  scrollbar-width: none; Firefox
-} */
+  -ms-overflow-style: none; /*IE, Edge */
+  scrollbar-width: none; /* Firefox */
+}
 
-body {
+/* body {
   transition: 0.3s ease-out;
   overflow-x: hidden;
   width: 100%;
   overscroll-behavior: none;
-}
+} */
 
 /* 공통 헤더 */
 .header {
@@ -61,6 +61,11 @@ body {
   line-height: var(--line-height-lg);
 }
 
+.landing-visual,
+.taing-only-contents {
+  margin-bottom: 8.3%;
+}
+
 /* 타잉 소개 */
 .intro-wrapper {
   background: var(--black) url(../assets/image/randing_background_1920_1308.png)
@@ -94,8 +99,8 @@ body {
 
 /* 타잉에만 있는 재미 */
 .taing-only-contents {
-  background-color: aqua;
-  margin-bottom: 8.3%;
+  /* background-color: aqua; */
+  /* margin-bottom: 8.3%; */
   padding-bottom: 1.375rem;
 }
 .taing-only-title {
@@ -107,11 +112,25 @@ body {
   margin-bottom: var(--spacing-xs);
 }
 
+.taing-only-wrapper > h3 {
+  margin-bottom: var(--spacing-5xl);
+}
+
 /* 스와이퍼 영역 */
-#sectionPin {
+.taing-only-contents .swiper {
+  /* background-color: blueviolet; */
+  /* height: 31.875rem; */
+  height: 100%;
+}
+
+/* #sectionPin {
   background-color: blueviolet;
   display: flex;
   flex-flow: column nowrap;
+} */
+
+.swiper {
+  background-color: aqua;
 }
 
 .taing-only-wrapper {
@@ -126,25 +145,29 @@ body {
   margin-bottom: var(--spacing-5xl);
 }
 
-.pin-wrap {
+/* .pin-wrap {
   background-color: deeppink;
   width: 300%;
   display: flex;
   flex-flow: row nowrap;
   padding-left: 100%;
   transform: translateX(-25%);
-}
+} */
 
-.landing-img-box {
+/* .landing-img-box {
   background-color: coral;
   display: block;
   margin-right: 10px;
-}
+} */
 
 .landing-img-box img {
+  width: 150%;
+}
+
+/* .landing-img-box img {
   display: block;
   width: 100%;
-}
+} */
 
 .small-slide {
   display: none;
