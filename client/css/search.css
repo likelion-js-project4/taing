@@ -54,6 +54,51 @@
   top: var(--spacing-md);
 }
 
+/* alert 창 */
+.alert-section {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  display: none;
+  z-index: 3;
+}
+
+.alert-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu_msg,
+.enroll-btn {
+  width: 526px;
+  background-color: var(--dark-bg-2);
+  text-align: center;
+  font-size: var(--text-md);
+  font-weight: var(--weight-sm);
+}
+
+.menu_msg {
+  height: 110px;
+  line-height: 110px;
+  border-radius: 4px 4px 0 0;
+}
+
+.enroll-btn {
+  height: 82px;
+  line-height: 82px;
+  border-radius: 0 0 4px 4px;
+  color: var(--silver300);
+  cursor: pointer;
+}
+
+.enroll-btn:hover {
+  font-weight: var(--weight-lg);
+}
+
 /* 공통 컨텐츠 박스 */
 .search-content-box {
   display: flex;
