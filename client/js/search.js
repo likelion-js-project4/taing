@@ -1,4 +1,11 @@
-import { getNode, css, tiger, insertLast, insertAfter } from '../lib/index.js'
+import {
+  getNode,
+  css,
+  tiger,
+  insertLast,
+  insertAfter,
+  clearContents,
+} from '../lib/index.js'
 import { renderSearchList } from '../js/render/renderSearchList.js'
 
 const SEARCH_KEY = 'taing_search'
@@ -10,6 +17,8 @@ const alertButton = getNode('.enroll-btn')
 
 const searchCurrentTarget = getNode('.search-current > ul')
 const searchCurrentTitle = getNode('.search-current > h2')
+
+const deleteAllButton = getNode('.delete-all-btn')
 
 function renderList() {
   let searchList = JSON.parse(localStorage.getItem(SEARCH_KEY))
@@ -48,14 +57,30 @@ function inputHandler() {
     return css(alert, 'display', 'block')
   }
   updateSearch(keyword)
+  searchInput.value = ''
 }
 
 function alertHandler() {
   css(alert, 'display', 'none')
 }
 
+// 노드의 자식노드 모두 삭제
+function removeChildAll(node) {
+  while (node.firstChild) {
+    node.removeChild(node.firstChild)
+  }
+}
+
+// 최근 검색어 모두 지우기
+function clearSearch() {
+  localStorage.removeItem(SEARCH_KEY)
+  removeChildAll(searchCurrentTarget)
+  renderList()
+}
+
 searchForm.addEventListener('submit', inputHandler)
 alertButton.addEventListener('click', alertHandler)
+deleteAllButton.addEventListener('click', clearSearch)
 
 // 최근 검색어 localStorage에 업데이트
 
