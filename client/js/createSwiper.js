@@ -29,10 +29,6 @@ export default function createSwiper(){
 
   let pause;
 
-  const toggle = {
-    pause : true,
-  }
-
   function autoPlayHandler(){
     if(pause !== 1){
       visualSwiper.autoplay.stop();
