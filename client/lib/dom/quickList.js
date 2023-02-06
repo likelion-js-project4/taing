@@ -1,12 +1,10 @@
 import {insertLast} from '../dom/insert.js'
 
 const createQuickList = ({
-  id = '',
   image = {
     vod : '',
     alt : '',
   },
-  title = '',
   quick_vod = {
     "title": '',
     "series": '',

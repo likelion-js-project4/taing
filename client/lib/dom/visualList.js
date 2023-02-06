@@ -1,17 +1,15 @@
-import {insertLast} from '../dom/insert.js'
+import { insertLast } from '../dom/insert.js'
 
 const createVisualList = ({
-  id = '',
   image = {
     visual : '',
     alt : '',
   },
   description = '',
-  is_viual = '',
 } = {}) => { 
   
   return /* html */`
-  <div class="swiper-slide" data-index="user-${id}">
+  <div class="swiper-slide">
     <div class="img-box">
       <img src="${image.visual}" alt="${image.alt}" />
     </div>
@@ -25,14 +23,3 @@ const createVisualList = ({
 export const renderVisualList = (target, data) => {
     insertLast(target, createVisualList(data));
 }
-
-console.log(
-
-)
-
-/* console.log(createUserCard({
-  id : 1,
-  name:'tager',
-  email:'tiger@euid.dev',
-  website:'tiger.com'
-})) */
