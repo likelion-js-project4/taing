@@ -44,7 +44,10 @@ label:focus{
   flex-flow: column nowrap;
 }
 
-.register-wrapper p{
+.register-id-content,
+.register-pw-content,
+.register-pwcheck-content,
+.register-email-content{
   color: var(--silver500);
   font-size: clamp(var(--text-sm), 2vw, var(--text-md))
 }
@@ -88,13 +91,9 @@ label:focus{
   font-size: 0;
 }
 
-
-
 .register-input-wrap-inner{
   position: relative;
 }
-
-
 
 #register-pw-check{
   position: relative;
@@ -108,6 +107,12 @@ label:focus{
   transform: translateY(-50%);
   background-color: transparent;
   cursor: pointer;
+}
+
+.register-pwcheck-content,
+.register-email-content{
+  display: none;
+  color: red;
 }
 
 .btn-register{

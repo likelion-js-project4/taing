@@ -14,7 +14,9 @@ const pwSeeButton = getNode('.pw-see-btn');
 const pwCheckSeeButton = getNode('.pw-see2-btn');
 
 const idContent = getNode('.register-id-content');
-const pwContent = getNode('.register-pw-content')
+const pwContent = getNode('.register-pw-content');
+const pwCheckContent = getNode('.register-pwcheck-content');
+const emailContent = getNode('.register-email-content');
 
 const registerWrapper = getNodes('.register-content-wrapper'); 
 
@@ -50,13 +52,33 @@ function cancel_active(node){
   }
 
   // 비밀번호 input 인 경우
-  if(node.placeholder.includes("비밀번호")){
+  if(node.classList.value===("first-pw")){
     if(node.value.length<8 || node.value.length >15){
       pwContent.style.color='red';
     }else{
       pwContent.style.color='var(--silver500)';
     }
   }
+
+   // 비밀번호 확인 input 인 경우
+   if(node.classList.value===("second-pw")){
+    if(node.value.length<8 || node.value.length >15){
+      pwCheckContent.style.display="inline-block";
+    }else{
+      pwCheckContent.style.display="none";
+    }
+  }
+
+  let email_format = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+   // 이메일 input 인 경우
+  if(node.placeholder.includes("이메일")){
+    if(!(email_format.test(node.value))){
+      emailContent.style.display="inline-block";
+    }else{
+      emailContent.style.display="none";
+    }
+  }
+ 
 
 }
 
