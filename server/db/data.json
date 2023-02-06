@@ -12,8 +12,12 @@
       },
       "search": [
         {
-          "date": "new Date()",
-          "search_title": "string"
+          "date": "1675682935111",
+          "search_title": "일타스캔들"
+        },
+        {
+          "date": "1675682724308",
+          "search_title": "재벌집 막내아들"
         }
       ],
       "auto_login": false
@@ -1133,6 +1137,48 @@
       "is_only_taing": false,
       "is_event_now": false,
       "is_update": false
+    }
+  ],
+  "favorite_search": [
+    {
+      "rank": 1,
+      "keyword": "재벌집 막내아들"
+    },
+    {
+      "rank": 2,
+      "keyword": "미스터트롯2: 새로운 전설의 시작"
+    },
+    {
+      "rank": 3,
+      "keyword": "유 퀴즈 온 더 블럭"
+    },
+    {
+      "rank": 4,
+      "keyword": "대행사"
+    },
+    {
+      "rank": 5,
+      "keyword": "SHOW ME THE MONEY 11"
+    },
+    {
+      "rank": 6,
+      "keyword": "미씽: 그들이 있었다2"
+    },
+    {
+      "rank": 7,
+      "keyword": "술꾼도시여자들2"
+    },
+    {
+      "rank": 8,
+      "keyword": "캐나다 체크인"
+    },
+    {
+      "rank": 9,
+      "keyword": "미씽: 그들이 있었다 - 그들을 다시 만나다"
+    },
+    {
+      "rank": 10,
+      "keyword": "술꾼도시여자들"
     }
   ]
 }
