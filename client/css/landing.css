@@ -94,7 +94,7 @@ body {
 
 /* 타잉에만 있는 재미 */
 .taing-only-contents {
-  /* background-color: aqua; */
+  background-color: aqua;
   margin-bottom: 8.3%;
   padding-bottom: 1.375rem;
 }
@@ -109,13 +109,13 @@ body {
 
 /* 스와이퍼 영역 */
 #sectionPin {
-  /* background-color: blueviolet; */
+  background-color: blueviolet;
   display: flex;
   flex-flow: column nowrap;
 }
 
 .taing-only-wrapper {
-  /* background-color: brown; */
+  background-color: brown;
   margin-top: 5.2%;
   display: flex;
   flex-flow: column nowrap;
@@ -127,7 +127,7 @@ body {
 }
 
 .pin-wrap {
-  /* background-color: deeppink; */
+  background-color: deeppink;
   width: 300%;
   display: flex;
   flex-flow: row nowrap;
@@ -136,7 +136,7 @@ body {
 }
 
 .landing-img-box {
-  /* background-color: coral; */
+  background-color: coral;
   display: block;
   margin-right: 10px;
 }
