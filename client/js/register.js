@@ -1,4 +1,4 @@
-import { getNode, getNodes, RandomString, tiger } from "../lib/index.js";
+import { getNode, getNodes, RandomString, saveStorage, tiger } from "../lib/index.js";
 
 const inputId = getNode("#register-id");
 const inputPassword = getNode("#register-pw");
@@ -122,7 +122,7 @@ function all_check() {
 //   }
 // }
 
-async function postTest(id, email, password) {
+async function saveUser(id, email, password) {
   const user_uuid = RandomString(10);
 
   await tiger.post("http://localhost:3000/users", {
@@ -131,27 +131,44 @@ async function postTest(id, email, password) {
     email,
     password,
   });
+  saveStorage("user_uuid", user_uuid);
 }
 
 /* 유저 존재유무 체크 */
-async function checkUserExists(email) {
-  const userData = await tiger.get("http://localhost:3000/users");
-  const { data } = userData;
-  const user = data.filter((user) => user.email === email);
-
+async function checkUserExists(user) {
   if (user.length !== 0) {
     alert("이미 가입한 회원입니다.");
   }
   return;
 }
+/* 필수동의사항 선택 체크 */
+function checkAgreement() {
+  if (!(check2.checked && check3.checked && check4.checked)) {
+    alert("필수 동의 사항을 확인해주세요.");
+    return false;
+  } else return true;
+}
 
 /* 회원가입 */
-async function regiser(idNode, emailNode, passwordNode) {
+async function register(idNode, emailNode, passwordNode) {
   const id = idNode.value;
   const email = emailNode.value;
   const password = passwordNode.value;
-  postTest(id, email, password);
-  checkUserExists(emailNode);
+
+  const userData = await tiger.get("http://localhost:3000/users");
+  const { data } = userData;
+  const user = data.filter((user) => user.email === email);
+
+  const isChecked = checkAgreement();
+
+  if (isChecked) {
+    checkUserExists(user);
+    saveUser(id, email, password);
+    location.href = "/";
+  }
+
+  alert("Taing의 회원이 되어주셔서 감사합니다.");
+  return;
 }
 
 inputId.addEventListener("keyup", () => cancel_active(inputId));
@@ -168,4 +185,4 @@ pw_see_button.addEventListener("click", () => pw_see(pw_see_button));
 pwcheck_see_button.addEventListener("click", () => pw_see(pwcheck_see_button));
 
 checkAll.addEventListener("click", all_check);
-submitButton.addEventListener("click", () => regiser(inputId, inputPassword, inputEmail));
+submitButton.addEventListener("click", () => register(inputId, inputPassword, inputEmail));
