@@ -3,6 +3,7 @@ import { getNode, toggleClass } from '../lib/index.js';
 const autoLogin = getNode('.auto-login-btn');
 const password = getNode('.pw-see');
 
+// 자동로그인 클릭시 text색상 변경
 function auto_login() {
   toggleClass(autoLogin, 'clicked');
   const image = getNode('.auto-login-img');
@@ -13,9 +14,9 @@ function auto_login() {
     image.src = './assets/icons/login_checked_26_26.png';
   }
 }
-
 autoLogin.addEventListener('click', auto_login);
 
+// 비밀번호 눈 아이콘 누르면 type 변환 과 이미지변경 등 
 function pw_see() {
   const type = getNode('.pw-type');
   if (type.type.includes('pass')) {
@@ -32,5 +33,5 @@ function pw_see() {
     password.alt="비밀번호 암호화";
   }
 }
-
 password.addEventListener('click', pw_see);
+
