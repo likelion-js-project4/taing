@@ -321,11 +321,11 @@
   }
 
   .program .swiper-view-all {
-    display: none;
+    opacity: 0;
   }
 
   .program:hover .swiper-view-all {
-    display: block;
+    opacity: 1;
   }
 
   .program .swiper-button-prev,
