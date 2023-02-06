@@ -76,7 +76,8 @@ label:focus{
   font-size: 0;
 }
 
-.pw-cancel-btn{
+.pw-cancel-btn,
+.pwcheck-cancel-btn{
   display: none;
   width: var(--spacing-xl);
   position: absolute;
@@ -86,6 +87,8 @@ label:focus{
   cursor: pointer;
   font-size: 0;
 }
+
+
 
 .register-input-wrap-inner{
   position: relative;
@@ -241,11 +244,13 @@ label:focus{
 
   .id-cancel-btn,
   .email-cancel-btn,
-  .pw-cancel-btn{
+  .pw-cancel-btn,
+  .pwcheck-cancel-btn{
     width: var(--spacing-lg);
   }
 
-  .pw-cancel-btn{
+  .pw-cancel-btn,
+  .pwcheck-cancel-btn{
     right: min(16vw, var(--spacing-5xl));
   }
 

@@ -1,30 +1,40 @@
 import { getNode, getNodes} from '../lib/index.js';
 
-const title = getNode('.register-title');
 const input_id = getNode('#register-id');
 const input_pw = getNode('#register-pw');
 const input_pwcheck = getNode('#register-pw-check');
 const input_email = getNode('#register-email');
 
+const id_cancel_button= getNode('.id-cancel-btn');
+const pw_cancel_button= getNode('.pw-cancel-btn');
+const pwcheck_cancel_button= getNode('.pwcheck-cancel-btn');
+const email_cancel_button= getNode('.email-cancel-btn');
+
 const register_list= getNodes('input[name=register]');
 const btn_all_check = getNode('.all-register-check');
 
-
 const is_id_checked=false;
-console.log(register_list);
+
 //X버튼 활성화되는 함수
 function cancel_active(node){
   const btn = node.nextElementSibling;  //해당 노드의 X버튼 
 
-  // if(!node.value===""){
-  //   btn.style.display = "inline-block";
-  // }
+  // const cancel_btn = getNode(btn.class)
+
+  if(node.value===""){
+    console.log('hit');
+  }else{
+    btn.style.display = "inline-block";
+  }
 }
 
-// input_id.addEventListener('keyDown', cancel_active(input_id));
-// input_pw.addEventListener('keyup', cancel_active(input_pw));
-// input_pwcheck.addEventListener('keyup', cancel_active(input_pwcheck));
-// input_email.addEventListener('keyup', cancel_active(input_email));
+//X버튼 누르면 글 지우기
+function delete_input(node){
+  const node_cancel_button= node.nextElementSibling;
+
+  node.value="";
+  node_cancel_button.style.display = "none";
+}
 
 function all_check(){
   btn_all_check.lastElementChild.style.color='white';
@@ -34,10 +44,22 @@ function all_check(){
   // console.log(list_all);
 
 }
-btn_all_check.addEventListener('click', all_check);
+
 
 function list_click(){
   const a = getNode('.register-content-item');
   
 }
+
+input_id.addEventListener('keyup', () => cancel_active(input_id));
+input_pw.addEventListener('keyup', () => cancel_active(input_pw));
+input_pwcheck.addEventListener('keyup', () => cancel_active(input_pwcheck));
+input_email.addEventListener('keyup', () => cancel_active(input_email));
+
+id_cancel_button.addEventListener('click', ()=> delete_input(input_id));
+pw_cancel_button.addEventListener('click', ()=> delete_input(input_pw));
+pwcheck_cancel_button.addEventListener('click', ()=> delete_input(input_pwcheck));
+email_cancel_button.addEventListener('click', ()=> delete_input(input_email));
+
+btn_all_check.addEventListener('click', all_check);
 register_list.addEventListener('click', list_click);
