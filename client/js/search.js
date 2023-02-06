@@ -1,5 +1,21 @@
-import { getNode, css, insertAfter } from '../lib/index.js'
-import { renderSearchList } from '../js/render/renderSearchList.js'
+import { getNode, css, insertAfter, tiger } from '../lib/index.js'
+import {
+  renderCurrentList,
+  renderFavoriteList,
+} from '../js/render/renderSearchList.js'
+
+const defaultOption = {
+  method: 'GET',
+  mode: 'cors',
+  body: null,
+  cache: 'no-cache',
+  credential: 'same-orgin',
+  redirect: 'follow',
+  refererPolicy: 'no-referer',
+  headers: {
+    'Content-Type': 'application/json charset=UTF-8',
+  },
+}
 
 const SEARCH_KEY = 'taing_search'
 
@@ -10,6 +26,7 @@ const alertButton = getNode('.enroll-btn')
 
 const searchCurrentTarget = getNode('.search-current > ul')
 const searchCurrentTitle = getNode('.search-current > h2')
+const searchFavoriteTarget = getNode('.favorite-list')
 
 const deleteAllButton = getNode('.delete-all-btn')
 
@@ -24,7 +41,8 @@ function saveStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value))
 }
 
-function renderList() {
+// 최근 검색어 render
+function renderCurrent() {
   let searchList = loadStorage(SEARCH_KEY)
   const noSearchKeyword = getNode('.search-current > p')
   if (!searchList && !noSearchKeyword) {
@@ -32,11 +50,32 @@ function renderList() {
     return insertAfter(searchCurrentTitle, template)
   }
   searchList.forEach((keyword, index) =>
-    renderSearchList(searchCurrentTarget, keyword, index),
+    renderCurrentList(searchCurrentTarget, keyword, index),
   )
-  // 인기 검색어 render
 }
-renderList()
+
+// 인기 검색어 render
+let is_first = true // 처음 한번만 실행되게
+async function renderFavorite() {
+  if (is_first) {
+    is_first = !is_first
+    try {
+      const response = await tiger.get(
+        'http://localhost:3000/favorite_search',
+        defaultOption,
+      )
+      let userData = response.data
+      userData.forEach(({ rank, keyword }) => {
+        renderFavoriteList(searchFavoriteTarget, rank, keyword)
+      })
+    } catch (err) {
+      throw new Error('서버와의 통신에 실패하였습니다.')
+    }
+  }
+}
+
+renderCurrent()
+renderFavorite()
 
 /* -------------------------------------------------------------------------- */
 /*                                최근 검색어 모두 지우기                               */
@@ -52,7 +91,7 @@ function removeChildAll(node) {
 function clearSearch() {
   localStorage.removeItem(SEARCH_KEY)
   removeChildAll(searchCurrentTarget)
-  renderList()
+  renderCurrent()
 }
 
 /* -------------------------------------------------------------------------- */
@@ -73,7 +112,7 @@ function updateSearch(keyword) {
   if (noSearchKeyword) noSearchKeyword.remove()
   // 업데이트된 최근검색어 렌더링
   removeChildAll(searchCurrentTarget)
-  renderList()
+  renderCurrent()
 }
 
 function inputHandler() {
@@ -117,7 +156,7 @@ function deleteHandler(e) {
       saveStorage(SEARCH_KEY, deletedArray)
     }
     removeChildAll(searchCurrentTarget)
-    renderList()
+    renderCurrent()
   }
 }
 searchCurrentTarget.addEventListener('click', deleteHandler)

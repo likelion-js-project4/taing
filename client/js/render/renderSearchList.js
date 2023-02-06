@@ -1,7 +1,7 @@
 import { insertLast } from '../../lib/index.js'
 
 // 최근검색어 렌더링
-const createSearchList = (keyword, index) => {
+const createCurrentList = (keyword, index) => {
   return /* html */ `
   <li class="list-item" data-index=${index}>
     <a href="#">${keyword}</a>
@@ -15,6 +15,18 @@ const createSearchList = (keyword, index) => {
   `
 }
 
-export function renderSearchList(target, keyword, index) {
-  insertLast(target, createSearchList(keyword, index))
+const createFavoriteList = (rank, keyword) => {
+  return /* html */ `
+  <li class="no${rank}">
+    <a href="/">${keyword}</a>
+  </li>
+  `
+}
+
+export function renderCurrentList(target, keyword, index) {
+  insertLast(target, createCurrentList(keyword, index))
+}
+
+export function renderFavoriteList(target, keyword, index) {
+  insertLast(target, createFavoriteList(keyword, index))
 }
