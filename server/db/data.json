@@ -10,16 +10,6 @@
       "profile": {
         "src": "./assets/image/main_treasurehunt_240_345.png"
       },
-      "search": [
-        {
-          "date": "1675682935111",
-          "search_title": "일타스캔들"
-        },
-        {
-          "date": "1675682724308",
-          "search_title": "재벌집 막내아들"
-        }
-      ],
       "auto_login": false
     }
   ],
