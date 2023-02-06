@@ -157,7 +157,7 @@ label:focus{
   border: none;
 }
 
-.all-check-btn{
+.register-all-check{
   color: var(--silver300);
   background: transparent;
 }

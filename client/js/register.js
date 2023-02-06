@@ -10,6 +10,9 @@ const pw_cancel_button= getNode('.pw-cancel-btn');
 const pwcheck_cancel_button= getNode('.pwcheck-cancel-btn');
 const email_cancel_button= getNode('.email-cancel-btn');
 
+const pw_see_button = getNode('.pw-see-btn');
+const pwcheck_see_button = getNode('.pw-see2-btn');
+
 const register_list= getNodes('input[name=register]');
 const btn_all_check = getNode('.all-register-check');
 
@@ -36,6 +39,27 @@ function delete_input(node){
   node_cancel_button.style.display = "none";
 }
 
+//비밀번호 보이게 하기 
+function pw_see(node){
+  const pw_img = node.firstElementChild;
+  const pw_input = node.previousElementSibling.previousElementSibling;
+  
+  if (pw_input.type.includes('pass')) {
+    pw_input.type = 'text';
+  } else {
+    pw_input.type = 'password';
+  }
+
+  if (pw_img.src.includes('no')) {
+    pw_img.src = './assets/icons/login_see_36_36.svg';
+    pw_img.alt="비밀번호 복호화";
+  } else {
+    pw_img.src = './assets/icons/login_nosee_36_36.png';
+    pw_img.alt="비밀번호 암호화";
+  }
+}
+
+//모두 동의하기 버튼
 function all_check(){
   btn_all_check.lastElementChild.style.color='white';
   btn_all_check.firstElementChild.firstElementChild.src='./assets/icons/login_checked_26_26.png';
@@ -60,6 +84,9 @@ id_cancel_button.addEventListener('click', ()=> delete_input(input_id));
 pw_cancel_button.addEventListener('click', ()=> delete_input(input_pw));
 pwcheck_cancel_button.addEventListener('click', ()=> delete_input(input_pwcheck));
 email_cancel_button.addEventListener('click', ()=> delete_input(input_email));
+
+pw_see_button.addEventListener('click', () => pw_see(pw_see_button));
+pwcheck_see_button.addEventListener('click', () => pw_see(pwcheck_see_button));
 
 btn_all_check.addEventListener('click', all_check);
 register_list.addEventListener('click', list_click);
