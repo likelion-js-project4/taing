@@ -35,13 +35,17 @@
   border-bottom: 3px solid var(--white);
 }
 
+.search-form-input::placeholder {
+  color: var(--silver700);
+}
+
 .search-form-input {
   font-weight: var(--weight-md);
   font-size: var(--text-xl);
   width: 100%;
   height: 100%;
   padding: var(--spacing-2xs) 0 var(--spacing-2xs) var(--spacing-xs);
-  color: var(--silver700);
+  color: var(--white);
   caret-color: var(--white);
   cursor: text;
 }
@@ -116,6 +120,11 @@
   font-size: var(--text-lg);
   font-weight: var(--weight-md);
   padding: var(--spacing-2xs) var(--spacing-s) var(--spacing-md) 0;
+}
+
+.search-current > p {
+  color: var(--silver300);
+  font-size: var(--text-md);
 }
 
 .list-item {
@@ -269,6 +278,10 @@
   /* 태블릿 최근검색어 */
   .search-current h2 {
     font-size: var(--text-base);
+  }
+
+  .search-current > p {
+    font-size: var(--text-sm);
   }
 
   .list-item {
