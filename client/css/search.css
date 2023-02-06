@@ -43,6 +43,7 @@
   padding: var(--spacing-2xs) 0 var(--spacing-2xs) var(--spacing-xs);
   color: var(--silver700);
   caret-color: var(--white);
+  cursor: text;
 }
 
 .search-button {
