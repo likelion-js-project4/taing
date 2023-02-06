@@ -1,28 +1,45 @@
 import { getNode, getNodes} from '../lib/index.js';
 
-const input_id = getNode('#register-id');
-const input_pw = getNode('#register-pw');
-const input_pwcheck = getNode('#register-pw-check');
-const input_email = getNode('#register-email');
+const inputId = getNode('#register-id');
+const inputPassword = getNode('#register-pw');
+const inputPasswordCheck = getNode('#register-pw-check');
+const inputEmail = getNode('#register-email');
 
-const id_cancel_button= getNode('.id-cancel-btn');
-const pw_cancel_button= getNode('.pw-cancel-btn');
-const pwcheck_cancel_button= getNode('.pwcheck-cancel-btn');
-const email_cancel_button= getNode('.email-cancel-btn');
+const idCancelButton= getNode('.id-cancel-btn');
+const passwordCancelButton= getNode('.pw-cancel-btn');
+const pwCheckCancelButton= getNode('.pwcheck-cancel-btn');
+const emailCancelButton= getNode('.email-cancel-btn');
 
 const pw_see_button = getNode('.pw-see-btn');
 const pwcheck_see_button = getNode('.pw-see2-btn');
 
-const register_list= getNodes('input[name=register]');
-const btn_all_check = getNode('.all-register-check');
+// const register_list= getNodes('input[name=register]');
+const checkAll= getNode('#register-all');   //모두동의합니다 input
+const check1 = getNode('#register-item1');
+const check2 = getNode('#register-item2');
+const check3 = getNode('#register-item3');
+const check4 = getNode('#register-item4');
+const check5 = getNode('#register-item5');
+const check6 = getNode('#register-item6');
+const check7 = getNode('#register-item7');
+const check8 = getNode('#register-item8');
 
-const is_id_checked=false;
+const submitButton  = getNode('.btn-register');     //최종 가입하기버튼
 
-//X버튼 활성화되는 함수
+//회원가입 하기전 요건
+const agreements={
+  id : false,
+  pw : false,
+  email : false,
+  check1 : false,
+  check2 : false,
+  check3 : false,
+  check4 : false,
+};
+
+// input 함수
 function cancel_active(node){
   const btn = node.nextElementSibling;  //해당 노드의 X버튼 
-
-  // const cancel_btn = getNode(btn.class)
 
   if(node.value===""){
     console.log('hit');
@@ -43,7 +60,7 @@ function delete_input(node){
 function pw_see(node){
   const pw_img = node.firstElementChild;
   const pw_input = node.previousElementSibling.previousElementSibling;
-  
+
   if (pw_input.type.includes('pass')) {
     pw_input.type = 'text';
   } else {
@@ -61,32 +78,40 @@ function pw_see(node){
 
 //모두 동의하기 버튼
 function all_check(){
-  btn_all_check.lastElementChild.style.color='white';
-  btn_all_check.firstElementChild.firstElementChild.src='./assets/icons/login_checked_26_26.png';
- 
-  // const list_all = getNode('.register-content-wrap');
-  // console.log(list_all);
+  const checkboxes = getNodes('.register-content-item > input');
 
+  for (let checkbox of checkboxes){
+    checkbox.checked = this.checked;
+  }
 }
 
-
-function list_click(){
-  const a = getNode('.register-content-item');
-  
+// 모두동의버튼 안누르고 모든 체크를 하면 동의하기버튼도 활성화
+if (check1 && check2 && check3 && check4 %% check5 && check6 && check7 && check8) {
+  checkAll.checked = true;
+} else {
+  checkAll.checked = false;
 }
 
-input_id.addEventListener('keyup', () => cancel_active(input_id));
-input_pw.addEventListener('keyup', () => cancel_active(input_pw));
-input_pwcheck.addEventListener('keyup', () => cancel_active(input_pwcheck));
-input_email.addEventListener('keyup', () => cancel_active(input_email));
+//모든 회원가입 조건을 만족시켰을시 버튼 활성화시키기
+// if(){
+//   submitButton.disabled=false;
 
-id_cancel_button.addEventListener('click', ()=> delete_input(input_id));
-pw_cancel_button.addEventListener('click', ()=> delete_input(input_pw));
-pwcheck_cancel_button.addEventListener('click', ()=> delete_input(input_pwcheck));
-email_cancel_button.addEventListener('click', ()=> delete_input(input_email));
+// }
+
+
+
+inputId.addEventListener('keyup', () => cancel_active(inputId));
+inputPassword.addEventListener('keyup', () => cancel_active(inputPassword));
+inputPasswordCheck.addEventListener('keyup', () => cancel_active(inputPasswordcheck));
+inputEmail.addEventListener('keyup', () => cancel_active(inputEmail));
+
+idCancelButton.addEventListener('click', ()=> delete_input(inputId));
+passwordCancelButton.addEventListener('click', ()=> delete_input(inputPassword));
+pwCheckCancelButton.addEventListener('click', ()=> delete_input(inputPasswordcheck));
+emailCancelButton.addEventListener('click', ()=> delete_input(inputEmail));
 
 pw_see_button.addEventListener('click', () => pw_see(pw_see_button));
 pwcheck_see_button.addEventListener('click', () => pw_see(pwcheck_see_button));
 
-btn_all_check.addEventListener('click', all_check);
-register_list.addEventListener('click', list_click);
+checkAll.addEventListener('click', all_check);
+

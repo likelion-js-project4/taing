@@ -153,13 +153,14 @@ label:focus{
 .register-content-wrapper{
   margin-top: var(--spacing-xl);
 }
-.all-register-check{
-  border: none;
-}
 
 .register-all-check{
   color: var(--silver300);
-  background: transparent;
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-md));
+  padding: 0.5vh 0;
+  padding-left: var(--spacing-2xl);
+  background: url(../assets/icons/login_check_26_26.png) no-repeat 0 0;
+  background-position: 0 50%;
 }
 
 .all-check-btn img{
@@ -197,7 +198,17 @@ label:focus{
   display: none;
 }
 
-.register-content-item > label:checked{
+.register-content-item > input + label::before{
+  cursor: pointer;
+}
+
+#register-all:checked +label{
+  color: var(--white);
+  background: url(../assets/icons/login_checked_26_26.png) no-repeat 0 0;
+  background-position: 0 50%;
+}
+.register-content-item > input:checked + label{ 
+  background: url(../assets/icons/login_binchecked_26_26.png) no-repeat 0 0;
   color: var(--white);
 }
 
@@ -210,7 +221,8 @@ label:focus{
   align-items: center;
 }
 
-.register-content-item > input:focus{
+.register-content-item > input:focus,
+.register-content-wrapper >input:focus{
   outline: none;
   outline-offset: 0;
   box-shadow: 0 0 0 0 0;
@@ -259,7 +271,7 @@ label:focus{
   }
 
   .register-content-item label{
-    padding-left: var(--spacing-md);
+    padding-left: min(8vw, var(--spacing-xl));
     background-size: var(--spacing-base);
     margin-top: var(--spacing-xs);
   }
@@ -296,6 +308,13 @@ label:focus{
     width: var(--spacing-lg);
   }
 
+  .register-all-check,
+  .register-content-item > input:checked + label,
+  #register-all:checked +label{
+    background-size: var(--spacing-base);
+    padding-left: min(8vw, var(--spacing-xl));
+  }
+
 }
 
 
@@ -317,8 +336,16 @@ label:focus{
 
   .register-content-item label{
     padding-left: var(--spacing-xl);
+    background-size: var(--spacing-lg);
     height: 1.125rem;
   }
+
+  .register-all-check,
+  .register-content-item > input:checked + label,
+  #register-all:checked +label{
+    background-size: var(--spacing-lg);
+  }
+
 
 }
 
