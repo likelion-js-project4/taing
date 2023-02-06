@@ -19,10 +19,10 @@ input_id.addEventListener('keyup', input_id_change);
 function delete_input(){
   input_id.value="";
   btn_confirm.disabled=true;
-  btn_cancel.style.display=none;
+  btn_cancel.style.display="none";
 }
 btn_cancel.addEventListener('click', delete_input);
 
 //확인버튼 누르면 alert창 띄우기
 
-btn_confirm.addEventListener('click', alert('확인되었습니다.'));
+btn_confirm.addEventListener('click', ()=>alert('확인되었습니다.'));
