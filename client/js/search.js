@@ -1,4 +1,4 @@
-import { getNode, css, insertAfter, tiger } from '../lib/index.js'
+import { getNode, css, insertAfter, tiger, attr } from '../lib/index.js'
 import {
   renderCurrentList,
   renderFavoriteList,
@@ -29,6 +29,31 @@ const searchCurrentTitle = getNode('.search-current > h2')
 const searchFavoriteTarget = getNode('.favorite-list')
 
 const deleteAllButton = getNode('.delete-all-btn')
+const time = getNode('.search-favorite > time')
+
+/* -------------------------------------------------------------------------- */
+/*                                  현재 시간 렌더링                                 */
+/* -------------------------------------------------------------------------- */
+function renderDate() {
+  const today = new Date()
+  const year = today.getFullYear()
+  const month = String(today.getMonth() + 1).padStart(2, '0')
+  const day = String(today.getDate()).padStart(2, '0')
+
+  const hours = String(today.getHours()).padStart(2, '0')
+  const minutes = String(today.getMinutes()).padStart(2, '0')
+
+  let ampm = '오후'
+  if (hours < 12) ampm = '오전'
+
+  const template = `${year}.${month}.${day} ${ampm} ${hours}:${minutes} 기준`
+  const datetime = `${year}-${month}-${day}T${hours}:${minutes}`
+
+  time.innerText = template
+  attr(time, 'datetime', datetime)
+}
+
+renderDate()
 
 /* -------------------------------------------------------------------------- */
 /*                             최근검색어, 인기검색어 render                            */
@@ -55,10 +80,10 @@ function renderCurrent() {
 }
 
 // 인기 검색어 render
-let is_first = true // 처음 한번만 실행되게
+let isFirst = true // 처음 한번만 실행되게
 async function renderFavorite() {
-  if (is_first) {
-    is_first = !is_first
+  if (isFirst) {
+    isFirst = !isFirst
     try {
       const response = await tiger.get(
         'http://localhost:3000/favorite_search',
