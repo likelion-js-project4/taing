@@ -1,15 +1,15 @@
 /* 스크롤바 제거  */
-body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
+/* body::-webkit-scrollbar {
+  display: none; Chrome, Safari, Opera
+} */
 
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 0;
   margin: 0;
-  -ms-overflow-style: none; /*IE, Edge */
-  scrollbar-width: none; /* Firefox */
+  /* -ms-overflow-style: none; IE, Edge
+  scrollbar-width: none; Firefox */
 }
 
 /* body {

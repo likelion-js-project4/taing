@@ -25,7 +25,8 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 
 // 스와이퍼
-const landingSwiper = new Swiper('.taing-only-contents .swiper', {
+let landingSwiper = new Swiper('.taing-only-contents .swiper', {
+  // direction: 'horizontal',
   autoPlay: false,
   spaceBetween: 15,
   centeredSlides: true,
@@ -68,35 +69,80 @@ const landingSwiper = new Swiper('.taing-only-contents .swiper', {
 gsap.registerPlugin(ScrollTrigger)
 
 // let sections = gsap.utils.toArray('.swiper')
+// gsap.to('.swiper', {
+//   // xPercent: -50 * sections.length,
+//   ease: 'none',
+//   scrollTrigger: {
+//     markers: true,
+//     trigger: '.swiper',
+//     start: 'top 80%',
+//     end: 'top 30%',
+//     pin: true,
+//     scrub: 1,
+//     // snap: 1 / (sections.length - 1),
+//   },
+//   onUpdate: ({ progress }) => {
+//     console.log(progress)
+//     if (progress > 0) {
+//       landingSwiper.slideTo(0)
+//     }
+//     if (progress > 0.25) {
+//       landingSwiper.slideTo(1)
+//     }
+//     if (progress > 0.5) {
+//       landingSwiper.slideTo(2)
+//     }
+//     if (progress > 0.75) {
+//       landingSwiper.slideTo(3)
+//     }
+//   },
+// })
 
-gsap.to('.swiper', {
-  // xPercent: -50 * sections.length,
+gsap.to('.taing-only-contents', {
   ease: 'none',
   scrollTrigger: {
     markers: true,
-    trigger: '.swiper',
-    // start: 'top top',
-    pin: true,
-    scrub: 1,
-    // snap: 1 / (sections.length - 1),
+    trigger: '#sectionPin', // 얘가 발견되어야 작동한다.
+    pin: '.taing-only-contents .swiper', // 멈추는 구간?
+    scrub: 2,
+    start: 'top top',
+    end: 'bottom bottom',
     onUpdate: ({ progress }) => {
       console.log(progress)
-      if (progress > 0) {
-        landingSwiper.slideTo(0)
-      }
-      if (progress > 0.25) {
-        landingSwiper.slideTo(1)
-      }
-      if (progress > 0.5) {
-        landingSwiper.slideTo(2)
-      }
-      if (progress > 0.75) {
-        landingSwiper.slideTo(3)
-      }
     },
-    end: 'bottom bottom',
+    duration: 2,
   },
 })
+
+// gsap.to('.taing-only-contents', {
+//   ease: 'none',
+//   scrollTrigger: {
+//     markers: true,
+//     trigger: '#sectionPin', // 얘가 발견되어야 작동한다.
+//     pin: '.taing-only-contents .swiper', // 멈추는 구간?
+//     scrub: 2,
+//     start: 'bottom bottom',
+//     end: 'top top',
+//     onUpdate: ({ progress }) => {
+//       console.log(progress)
+//     },
+//     // end: '+=2000',
+//     // snap: 1 / (sections.length - 1),
+//     // onUpdate: ({ progress }) => {
+//     //   console.log(progress)
+//     //   if (progress >= 0) {
+//     //     landingSwiper.slideTo(0)
+//     //   } else if (progress > 0.25) {
+//     //     landingSwiper.slideTo(1)
+//     //   } else if (progress > 0.5) {
+//     //     landingSwiper.slideTo(2)
+//     //   } else {
+//     //     landingSwiper.slideTo(3)
+//     //   }
+//     // },
+//     duration: 2,
+//   },
+// })
 
 // 글자 애니메이션
 const wrapper = getNode('.intro-wrapper')
