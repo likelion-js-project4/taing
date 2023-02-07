@@ -23,10 +23,8 @@ export default function createSwiper(){
   
   const visualPagination = getNode('.visual .swiper-pagination-wrapper');
   insertFirst(visualPagination, `<button class="swiper-button-autoplay" type="button"></button>`);
-
   const autoPlayButton = getNode('.swiper-button-autoplay');
-  autoPlayButton.addEventListener('click', autoPlayHandler);
-
+  
   let pause;
 
   function autoPlayHandler(){
@@ -40,6 +38,9 @@ export default function createSwiper(){
       pause = 0;
     }
   }
+
+  autoPlayButton.addEventListener('click', autoPlayHandler);
+
 
   const taingRecommendSwiper = new Swiper(".taing-recommend .swiper", {
     slidesPerView: 3,
