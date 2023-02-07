@@ -25,18 +25,18 @@ body {
   padding: 33vh 0 2%;
 }
 
-.taing-only-wrapper{
+.taing-only-wrapper {
   position: absolute;
   top: 15%;
-  left:50%;
+  left: 50%;
   transform: translateX(-50%);
 }
 
-.swiper-slide .landing-img-box img{
+.swiper-slide .landing-img-box img {
   opacity: 0.4;
 }
 
-.swiper-slide-active .landing-img-box img{
+.swiper-slide-active .landing-img-box img {
   opacity: 1;
 }
 
@@ -134,6 +134,10 @@ body {
 .landing-img-box img {
   display: block;
   width: 100%;
+}
+
+.small-slide {
+  display: none;
 }
 
 /* 내가 찾던 재미 */
@@ -273,8 +277,8 @@ body {
 
 /* 데스크탑 디바이스 */
 @media (min-width: 1280px) {
-  .pin-wrap{
-    padding-top:45vh
+  .pin-wrap {
+    padding-top: 45vh;
   }
 }
 
@@ -328,6 +332,14 @@ body {
     font-weight: var(--weight-md);
     line-height: var(--line-height-md);
     margin-bottom: var(--spacing-xl);
+  }
+
+  .small-slide {
+    display: inline;
+  }
+
+  .large-slide {
+    display: none;
   }
 
   /* 타잉 재소개 */

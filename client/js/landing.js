@@ -1,4 +1,4 @@
-/* global gsap ScrollTrigger*/
+/* global gsap ScrollTrigger Swiper*/
 
 import { getNode as $, getNodes, css } from '../lib/index.js'
 
