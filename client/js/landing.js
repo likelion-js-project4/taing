@@ -38,20 +38,19 @@ gsap.to(sections, {
     trigger: "#sectionPin",
     pin: true,
     scrub: 1,
-    // snap: 1 / (sections.length - 1),
-    end: () => "+=" + $("#sectionPin").offsetWidth,
+    end: () => "+=" + $("#sectionPin").offsetWidth * 3,
     onUpdate: ({progress})=>{
       console.log(progress)
-      if(progress > 0.2){
+      if(progress > 0.1){
         landingSwiper.slideTo(0, 1000, true)
       }
       if(progress > 0.4){
         landingSwiper.slideTo(1, 1000, true)
       }
-      if(progress > 0.6){
+      if(progress > 0.7){
         landingSwiper.slideTo(2, 1000, true)
       }
-      if(progress > 0.8){
+      if(progress > 0.85){
         landingSwiper.slideTo(3, 1000, true)
       }
     }
