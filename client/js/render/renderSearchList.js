@@ -4,7 +4,7 @@ import { insertLast } from '../../lib/index.js'
 const createCurrentList = (keyword, index) => {
   return /* html */ `
   <li class="list-item" data-index=${index}>
-    <a href="#">${keyword}</a>
+    <a href="#" tabindex="-1">${keyword}</a>
     <button type="button" class="delete-btn">
       <img
         src="./assets/icons/search_delete_15_15.png"

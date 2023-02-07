@@ -150,7 +150,7 @@ async function updateSearch(keyword) {
 function inputHandler() {
   const keyword = searchInput.value
   // 최근 검색어 업데이트 하기
-  if (keyword === '') {
+  if (keyword.trim() === '') {
     return css(alert, 'display', 'block')
   }
   updateSearch(keyword)
