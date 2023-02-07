@@ -185,7 +185,8 @@ async function register(idNode, emailNode, passwordNode) {
   if (isChecked) {
     checkUserExists(user);
     saveUser(id, email, password);
-    location.href = "/";
+
+    location.href = "./login.html";
     alert("Taing의 회원이 되어주셔서 감사합니다.");
   }
 
