@@ -61,6 +61,7 @@ async function login(idNode, pwNode) {
     //로그인 성공 후 localStorage에 저장
     saveStorage("userLogin", "true");
     saveStorage("user_uuid", user[0].user_uuid);
+    saveStorage("user_id", user[0].id);
     if (auto) saveStorage("user_uuid", user[0].user_uuid);
     //routing 처리
     location.href = "index.html";

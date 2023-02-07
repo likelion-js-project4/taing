@@ -54,9 +54,12 @@ async function renderList() {
 
 const main = $(".main");
 const header = $(".header-alive");
+const userNameNode = $(".profile-username");
 
 const isUser = await loadStorage("user_uuid");
+const userName = await loadStorage("user_id");
 
+userNameNode.innerText = userName;
 function userLoginCheck() {
   if (!isUser) {
     // location.href = "/landing.html";

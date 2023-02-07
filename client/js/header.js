@@ -13,8 +13,6 @@ window.addEventListener("scroll", () => {
   header.style.backgroundColor = `rgba(0,0,0,${window.scrollY / 600})`;
 });
 
-function profileTransferHandler() {}
-
 // 1. profile버튼에 마우스 올리면 전환 팝업창 떠야함
 // 2. 로그인 한 유저의 로그인 정보를 받아와야함
 // 3. 로그아웃 모달창 만들어야함
@@ -24,6 +22,7 @@ function profileTransferHandler() {}
 function logout() {
   deleteStorage("user_uuid");
   deleteStorage("userLogin");
+  deleteStorage("user_id");
   main.removeChild(main.children[0]);
   location.href = "/landing.html";
 }
