@@ -12,7 +12,7 @@ const createQuickList = ({
 } = {}) => { 
   
   return /* html */`
-  <div class="swiper-slide">
+  <div class="swiper-slide" tabindex="0">
     <div class="img-box">
       <span class="quick-vod-icon"><img src="./assets/icons/main_quckvod_96_30.png" alt="Quick VOD" /></span>
       <img src="${image.vod}" alt="${image.alt}" />

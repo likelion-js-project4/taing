@@ -9,8 +9,8 @@ h1 {
 }
 
 .header {
-  /* background-color: var(--black); */
-  color: rgb(110, 110, 110);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  color: var(--silver200);
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -28,6 +28,8 @@ h1 {
   margin-left: var(--spacing-base);
 }
 .nav-logo {
+  display: flex;
+  align-items: center;
   font-size: 0;
 }
 .header-nav-left,
@@ -40,10 +42,14 @@ h1 {
   cursor: pointer;
   display: flex;
   align-items: center;
+  line-height: var(--line-height-lg);
 }
 .nav-item:hover {
   color: var(--white);
   transition: color 0.1s ease 0s;
+}
+.nav-item a{
+  padding: 0 var(--spacing-2xs);
 }
 .header-alive {
   display: flex;
@@ -183,8 +189,8 @@ h1 {
   .header {
     padding: 0.875rem var(--spacing-3xl);
   }
-  .nav-logo {
-    width: 4.625rem;
+  .nav-logo img{
+    max-height:1.5rem
   }
 
   .nav-item {

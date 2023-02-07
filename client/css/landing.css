@@ -25,18 +25,18 @@ body {
   padding: 33vh 0 2%;
 }
 
-.taing-only-wrapper{
+.taing-only-wrapper {
   position: absolute;
   top: 15%;
-  left:50%;
+  left: 50%;
   transform: translateX(-50%);
 }
 
-.swiper-slide .landing-img-box img{
+.swiper-slide .landing-img-box img {
   opacity: 0.4;
 }
 
-.swiper-slide-active .landing-img-box img{
+.swiper-slide-active .landing-img-box img {
   opacity: 1;
 }
 
@@ -136,6 +136,10 @@ body {
   width: 100%;
 }
 
+.small-slide {
+  display: none;
+}
+
 /* 내가 찾던 재미 */
 .taing-finding-contents {
   margin-bottom: 15.078125%;
@@ -179,6 +183,31 @@ body {
   border-radius: 5px;
 }
 
+/* 글자 애니메이션 */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 16%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInUp2 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
 /* 롤링 배너 애니메이션 */
 #roller0 {
   animation: 60s linear 0s infinite normal forwards running rollingleft1;
@@ -192,6 +221,7 @@ body {
 
 #roller1 {
   animation: 50s linear 0s infinite normal forwards running rollingleft1;
+  padding-right: 0.2vw;
 }
 
 #clone1 {
@@ -248,8 +278,8 @@ body {
 
 /* 데스크탑 디바이스 */
 @media (min-width: 1280px) {
-  .pin-wrap{
-    padding-top:45vh
+  .pin-wrap {
+    padding-top: 45vh;
   }
 }
 
@@ -303,6 +333,14 @@ body {
     font-weight: var(--weight-md);
     line-height: var(--line-height-md);
     margin-bottom: var(--spacing-xl);
+  }
+
+  .small-slide {
+    display: inline;
+  }
+
+  .large-slide {
+    display: none;
   }
 
   /* 타잉 재소개 */
@@ -375,6 +413,14 @@ body {
   }
 
   .taing-finding-wrapper > h3 {
+    display: none;
+  }
+
+  .small-slide {
+    display: inline;
+  }
+
+  .large-slide {
     display: none;
   }
 

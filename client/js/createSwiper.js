@@ -1,4 +1,4 @@
-import { getNode, insertFirst, addClass, removeClass } from "../lib/index.js";
+import { getNode, insertFirst, addClass, removeClass, attr } from "../lib/index.js";
 
 export default function createSwiper() {
   const visualSwiper = new Swiper(".visual .swiper", {
@@ -23,7 +23,7 @@ export default function createSwiper() {
   });
 
   const visualPagination = getNode(".visual .swiper-pagination-wrapper");
-  insertFirst(visualPagination, `<button class="swiper-button-autoplay" type="button"></button>`);
+  insertFirst(visualPagination, `<button type="button" class="swiper-button-autoplay" aria-label="멈춤"></button>`);
 
   const autoPlayButton = getNode(".swiper-button-autoplay");
 
@@ -33,13 +33,18 @@ export default function createSwiper() {
     if (pause !== 1) {
       visualSwiper.autoplay.stop();
       addClass(autoPlayButton, "is-play");
+      attr(autoPlayButton, "aria-label", "재생");
       pause = 1;
     } else {
       visualSwiper.autoplay.start();
       removeClass(autoPlayButton, "is-play");
+      attr(autoPlayButton, "aria-label", "멈춤");
       pause = 0;
     }
   }
+
+  autoPlayButton.addEventListener('click', autoPlayHandler);
+
 
   const taingRecommendSwiper = new Swiper(".taing-recommend .swiper", {
     slidesPerView: 3,
@@ -62,6 +67,31 @@ export default function createSwiper() {
     },
     pagination: {
       el: ".taing-recommend .swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  const latestViewSwiper = new Swiper(".latest-view .swiper", {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 8,
+    breakpoints: {
+      768: {
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+      },
+      1280: {
+        slidesPerView: 7,
+        slidesPerGroup: 7,
+        spaceBetween: 16,
+      },
+    },
+    navigation: {
+      nextEl: ".latest-view .swiper-button-next",
+      prevEl: ".latest-view .swiper-button-prev",
+    },
+    pagination: {
+      el: ".latest-view .swiper-pagination",
       clickable: true,
     },
   });
@@ -208,6 +238,7 @@ export default function createSwiper() {
   return (
     visualSwiper,
     taingRecommendSwiper,
+    latestViewSwiper,
     QuickVodSwiper,
     realTimeSwiper,
     liveTimeSwiper,

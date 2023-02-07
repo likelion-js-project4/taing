@@ -8,7 +8,7 @@ const createEventList = ({
 } = {}) => { 
   
   return /* html */`
-  <div class="swiper-slide">
+  <div class="swiper-slide" tabindex="0">
     <div class="img-box">
       <img src="${image.event}" alt="${image.alt}" />
     </div>
