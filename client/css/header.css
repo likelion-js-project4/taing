@@ -56,6 +56,52 @@ h1 {
   cursor: pointer;
   font-size: 0;
 }
+.header-profile-menu {
+  border: 1.5px solid rgb(77, 77, 77);
+  border-radius: 3px;
+  background-color: rgb(33, 33, 33);
+  position: fixed;
+  width: 19rem;
+  font-size: var(--spacing-md);
+  top: 4.5rem;
+  right: 5rem;
+  /* display: none; */
+}
+
+.header-profile-menu hr {
+  border-width: 1px 0 0;
+}
+.profile-box {
+  display: flex;
+  padding: var(--spacing-md);
+  gap: var(--spacing-xl);
+}
+.profile-box img {
+  width: 3.5rem;
+  cursor: pointer;
+}
+.profile-username {
+  margin-bottom: var(--spacing-xs);
+  color: #fff;
+  cursor: pointer;
+}
+.profile-transfer:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.profile-menu-box {
+  padding: var(--spacing-xs) 0;
+}
+.profile-menu-box li {
+  height: 3rem;
+  line-height: 3rem;
+  margin: var(--spacing-xs) 0;
+  padding: 0 var(--spacing-base);
+  cursor: pointer;
+}
+.profile-menu-box li:hover {
+  background-color: #fff;
+}
 
 @media (min-width: 1280px) {
   .header {
@@ -82,7 +128,25 @@ h1 {
 
   .header-search,
   .header-profile {
-    width: 1.5rem;
+    width: var(--spacinglg);
+  }
+
+  .header-profile-menu {
+    width: 15rem;
+    font-size: var(--spacing-base);
+    top: 4.5rem;
+    right: 3.5rem;
+  }
+  .profile-box {
+    padding: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-xl);
+  }
+  .profile-menu-box li {
+    height: var(--spacing-xl);
+    line-height: var(--spacing-xl);
+    margin: var(--spacing-2xs) 0;
+    padding: 0 var(--spacing-base);
   }
 }
 
@@ -105,5 +169,22 @@ h1 {
   .header-search,
   .header-profile {
     width: 1.125rem;
+  }
+  .header-profile-menu {
+    width: 15rem;
+    font-size: var(--spacing-s);
+    top: var(--spacing-xl);
+    right: var(--spacing-base);
+  }
+  .profile-box {
+    padding: var(--spacing-s);
+    display: flex;
+    gap: var(--spacing-base);
+  }
+  .profile-menu-box li {
+    height: var(--spacing-xl);
+    line-height: var(--spacing-xl);
+    margin: var(--spacing-2xs) 0;
+    padding: 0 var(--spacing-base);
   }
 }
