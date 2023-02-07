@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="TAING">
+    <meta property="og:description" name="description" content="타잉 오리지널 콘텐츠, 방송, 영화, 해외시리즈까지! 재미를 플레이해보세요.">
+    <meta property="og:image" content="./assets/icons/tving_logo_meta_new.png">
+    <!-- <meta property="og:url" content="http://www.mysite.com"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/icons/tving-favicon-160@3x.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-
-    <link
-      rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
-    />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/theme.css" />
@@ -23,7 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
     <script src="./js/header.js" type="module"></script>
-    <title>Taing</title>
+    <title>TAING</title>
   </head>
   <body>
     <header class="header">
@@ -34,19 +34,19 @@
         <h2 class="a11y-hidden">메인 메뉴</h2>
         <ul class="header-nav-left">
           <li class="nav-item">
-            <a href="" class="header-alive">
+            <a href="/" class="header-alive">
               <img src="./assets/icons/header_live_default_34_34.png" alt="실시간" />
               &nbsp;실시간
             </a>
           </li>
           <li class="nav-item">
-            <a href="">TV 프로그램</a>
+            <a href="/">TV 프로그램</a>
           </li>
           <li class="nav-item">
-            <a href="">영화</a>
+            <a href="/">영화</a>
           </li>
           <li class="nav-item">
-            <a href="">파라마운트+</a>
+            <a href="/">파라마운트+</a>
           </li>
         </ul> 
         <div class="header-nav-right">
@@ -72,6 +72,18 @@
       </section>
       <section class="taing-recommend program">
         <h2 class="taing-title">타잉에서 꼭 봐야하는 콘텐츠</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-view-all">
+          <div class="swiper-pagination"></div>
+          <a href="/">전체보기</a>
+        </div>
+      </section>
+      <section class="latest-view program">
+        <h2 class="taing-title">시청하는 콘텐츠</h2>
         <div class="swiper">
           <div class="swiper-wrapper"></div>
           <div class="swiper-button-prev"></div>
@@ -133,7 +145,7 @@
       <section class="broadcasting program">
         <h2 class="taing-title a11y-hidden">Taing SPORTS 경기 생중계</h2>
         <div class="swiper">
-          <img src="./assets/image/main_sports_1762_177.png" />
+          <img src="./assets/image/main_sports_1762_177.png" alt="Taing SPORTS 경기 생중계"/>
         </div>
       </section>
       <section class="main-event program">

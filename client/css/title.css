@@ -11,6 +11,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   vertical-align: middle;
+  margin-top:var(--spacing-xs)
 }
 
 .update{
@@ -34,6 +35,7 @@
   color: var(--silver200);
   line-height: var(--line-height-md);
   font-weight: var(--weight-md);
+  margin-top:var(--spacing-xs);
 }
 
 .title-basic .sub{
@@ -95,7 +97,7 @@
 
 .label-basic .viewer{
   font-size: clamp(var(--text-sm), 0.85vw ,var(--text-base));
-  color: var(--silver500);
+  color: var(--silver400);
   line-height: var(--line-height-lg);
   font-weight: var(--weight-sm);
 }
@@ -111,6 +113,12 @@
     height:8px;
   }
 
+  .title-simple,
+  .title-basic,
+  .label-simple,
+  .label-basic{
+    margin-top:ver(--spacing-s)
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1279px){
