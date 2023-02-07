@@ -42,9 +42,10 @@ function cancel_active(node){
     btn.style.display = "inline-block";
   }
 
+  let regId = /^[a-z]+[a-z0-9]{5,13}$/g;
   // 아이디 input 인 경우
   if(node.placeholder.includes("아이디")){
-    if(node.value.length<6 || node.value.length >13){
+    if(!(regId.test(node.value))){
       idContent.style.color='red';
       agreement.id=true;
     }else{
@@ -52,9 +53,10 @@ function cancel_active(node){
     }
   }
 
+  let regPw = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
   // 비밀번호 input 인 경우
   if(node.classList.value===("first-pw")){
-    if(node.value.length<8 || node.value.length >15){
+    if(!(regPw.test(node.value))){
       pwContent.style.color='red';
     }else{
       pwContent.style.color='var(--silver500)';
