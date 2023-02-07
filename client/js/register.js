@@ -26,6 +26,7 @@ const submitButton  = getNode('.btn-register');     //최종 가입하기버튼
 // input 함수
 function cancel_active(node){
   const btn = node.nextElementSibling;  //해당 노드의 X버튼 
+  const firstPw = getNode('#register-pw');
 
   if(!(node.value==="")){
     btn.style.display = "inline-block";
@@ -51,7 +52,7 @@ function cancel_active(node){
 
    // 비밀번호 확인 input 인 경우
    if(node.classList.value===("second-pw")){
-    if(node.value.length<8 || node.value.length >15){
+    if(!(node.value===firstPw.value)){
       pwCheckContent.style.display="inline-block";
     }else{
       pwCheckContent.style.display="none";
