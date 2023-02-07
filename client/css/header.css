@@ -85,7 +85,7 @@ h1 {
   margin-top: var(--spacing-md);
   transition: all 0.3s ease;
 }
-.header-profile-menu .header-profile-menu hr {
+.header-profile-menu hr {
   border-width: 1px 0 0;
   margin:0;
 }
