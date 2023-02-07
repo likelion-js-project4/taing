@@ -15,7 +15,7 @@
 }
 
 .swiper-slide {
-  padding-top: var(--spacing-s);
+  /* padding-top: var(--spacing-s); */
   transition: transform 0.5s;
 }
 
