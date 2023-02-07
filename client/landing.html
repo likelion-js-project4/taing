@@ -1,157 +1,297 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-
-  <link rel="stylesheet" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/normalize.css" />
-  <link rel="stylesheet" href="./css/theme.css" />
-  <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="./css/main.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
-  <script src="./js/landing.js" type="module"></script>
-  <title>Taing</title>
-</head>
-
-
-<body>
-  <header class="landing-header">
-    <h1 class="landing-logo">
-      <span class="a11y-hidden">TAING</span>
-      <a href="./index.html"><img src="./assets/icons/header_logo_132_42.png" alt="TAING" /></a>
-    </h1>
-  </header>
-
- <!-- ----------------------------------------------------------------------- -->
- <!--                                 인수인계 내용                            -->
- <!-- ----------------------------------------------------------------------- -->
- <!-- main영역은 헤더 밑부터 푸터 전까지 입니다 -->
- <!-- section은 4개 영역으로 구성되어있습니다 : (1)비주얼에 소개부분, (2)타잉에만 있는 재미, (3)내가 찾던 재미, (4)하단에 재소개부분 -->
- <!-- <p>태그 각각 폰트사이즈, 두께, 색깔이 다 달라서 CSS로 구분하셔야합니다 -->
- <!-- <a>태그에 #표시 있는 부분에는 로그인 페이지 링크를 넣으시면 됩니다 -->
- <!-- 이미지 파일 ("새로워진 타잉을 만나보세요!"와 "NO.1 K-콘텐츠 플랫폼")은 hotfix에 윤호님이 추가해뒀습니다 -->
- <!-- 이 틀안에 swiper 넣으시면 됩니다 (마크업 수정은 자율적으로~) -->
- <!-- 그럼 저는....20000... 다들 파이팅~>< -->
-
-
-  <main class="landing-main">
-
-    <section class="landing-visual">
-      <h2 class="taing-intro"></h2>
-      <div class="taing-intro-container">
-        <p>타잉 오리지널 콘텐츠,</p>
-        <p>방송, 영화, 해외시리즈까지!</p>
-        <p>재미를 플레이해보세요.</p>
-        <p>간편하게 가입하고, 원하실 때 해지할 수 있어요</p>
-        <a href="#"><img src="" alt="새로워진 타잉을 만나보세요!" /></a>
-    </section>
-
-
-    <section class="taing-only-contents">
-      <h2 class="taing-only-title">타잉에만 있는 재미</h2>
-      <p>오리지널 콘텐츠를 만나보세요!</p>
-      <p>차별화된 웰메이드 오리지널 콘텐츠</p>
-    </section>
-
-
-    <section class="taing-finding-contents">
-      <h2 class="taing-finding-title">내가 찾던 재미</h2>
-      <p>보고 싶은 콘텐츠를 발견하세요!</p>
-      <p>최신, 인기 TV프로그램, 영화, 해외시리즈, 파라마운드+ 오리지널 및 독점</p>
-    </section>
-
-
-    <section class="landing-bottom">
-      <h2 class="taing-reintro"></h2>
-      <p><img src="" alt="NO.1 K-콘텐츠 플랫폼" /></p>
-      <p>지금 시작해보세요</p>
-      <a href="#"><img src="" alt="새로워진 타잉을 만나보세요!" /></a>
-    </section>
-
-
-  </main>
-
-
-
-
-
-
-
-
-
-
-
-  <footer class="footer">
-    <section class="footer-container">
-      <div class="wrapper">
-        <div class="footer-top">
-          <div>
-            <span class="footer-notice">공지사항</span>
-            <span class="footer-notice-title">[안내] 개인정보 처리방침 개정 안내 (2023 1월 2일)</span>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://use.typekit.net/skn8ash.css'>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/landing.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+    <script src="./js/landing.js" type="module"></script>
+    <title>Taing</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="nav-logo">
+          <a href="./index.html"><img src="./assets/icons/header_logo_132_42.png" alt="타잉" /></a>
+        </h1>
+      </header>
+      <main class="landing-main">
+        <section class="landing-visual">
+          <h2 class="intro a11y-hidden">타잉 소개</h2>
+          <div class="intro-wrapper">
+            <p>타잉 오리지널 콘텐츠,
+              방송, 영화, 해외시리즈까지!
+              재미를 플레이해보세요.
+            </p>
+            <p>간편하게 가입하고, 원하실 때 해지할 수 있어요.</p>
+            <a href="./login.html" class="start-taing" >
+              새로워진 타잉을 만나보세요!
+            </a>
           </div>
-          <div>
-            <span class="link-brand">브랜드 바로가기 +</span><span class="link-group">그룹 계열사 바로가기 + </span>
+        </section>
+  
+        <section class="taing-only-contents">
+          <div id="sectionPin">
+            <div class="taing-only-wrapper">
+              <h2 class="taing-only-title">타잉에만 있는 재미</h2>
+              <p class="taing-only-title-description">오리지널 콘텐츠를 만나보세요!</p>
+              <h3>차별화된 웰메이드 오리지널 콘텐츠</h3>
+            </div>
+            <div class="swiper pin-wrap">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <picture class="landing-img-box">
+                    <source media="(max-width: 1279px)" srcset="./assets/image/randing_item1_277_400.png">
+                    <img src="./assets/image/randing_item1_906_510.png" alt="러브캐처" />
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="landing-img-box">
+                    <source media="(max-width: 1279px)" srcset="./assets/image/randing_item2_277_400.png">
+                    <img src="./assets/image/randing_item2_906_510.png" alt="보물찾기" />
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="landing-img-box">
+                    <source media="(max-width: 1279px)" srcset="./assets/image/randing_item1_277_400.png">
+                    <img src="./assets/image/randing_item1_906_510.png" alt="러브캐처" />
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture class="landing-img-box">
+                    <source media="(max-width: 1279px)" srcset="./assets/image/randing_item2_277_400.png">
+                    <img src="./assets/image/randing_item2_906_510.png" alt="보물찾기" />
+                  </picture>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <ul class="footer-nav">
-          <li><a href="https://www.tving.com/help/notice">고객센터</a></li>
-          <li><a href="https://www.tving.com/policy/terms">이용약관</a></li>
-          <li>
-            <a href="https://www.tving.com/policy/privacy"><strong>개인정보처리방침</strong></a>
-          </li>
-          <li><a href="https://www.tving.com/policy/youth">청소년 보호정책</a></li>
-          <li><a href="https://www.tving.com/policy/legal">법적고지</a></li>
-          <li><a href="https://www.tving.com/event/list">이벤트</a></li>
-          <li><a href="https://team.tving.com/">인재채용</a></li>
-        </ul>
-        <div class="copyright-box">
-          <p>
-            <span>대표이사 : YANG JIEUL</span><span class="business-infomation">사업자정보확인</span><span>사업자등록번호 :
-              188-88-01893</span><span>통신판매신고번호 : 2020-서울마포-3641호</span>
-          </p>
-          <p>
-            <span>사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동)</span><span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
-          </p>
-          <p>
-            <span class="customer-service"><a href="https://www.tving.com/help/qna">고객문의 바로가기</a></span><span>대표메일 :
-              tving@cj.net</span><span>고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</span>
-          </p>
-          <p>
-            <span>ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780</span><span>Mnet 고객센터(방송편성문의) : 1855-1631</span>
-          </p>
-          <ul class="sns-link-logo">
-            <li>
-              <a href="https://www.youtube.com/c/TVING_official"><img src="assets/icons/footer_youtube_52_52.png"
-                  alt="유튜브" /></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/tving.official/">
-                <img src="assets/icons/footer_instagram_52_52.png" alt="인스타그램" />
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/tvingdotcom">
-                <img src="assets/icons/footer_twitter_52_52.png" alt="트위터" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/CJTVING/">
-                <img src="assets/icons/footer_facebook_52_52.png" alt="페이스북" />
-              </a>
-            </li>
-          </ul>
-          <small class="copyright">Copyright © 주식회사 티빙 All right reserved.</small>
-        </div>
-      </div>
-    </section>
-  </footer>
-</body>
-
+        </section>
+  
+        <section class="taing-finding-contents">
+          <div class="taing-finding-wrapper">
+            <h2 class="taing-finding-title">내가 찾던 재미</h2>
+            <p class="taing-finding-title-description">보고 싶은 콘텐츠를 발견하세요!</p>
+            <h3>
+              최신, 인기 TV프로그램, 영화, 해외시리즈, 파라마운드+ 오리지널 및 독점
+            </h3> 
+          </div>
+          <div class="container first-container">
+            <div class="rollingbanner">
+              <div class="wrap">
+                <!-- "배너 뷰포트" -> overflow: hidden-->
+                <div class="roller">
+                  <ul class="rolling-wrapper">
+                    <li class="rolling-item">
+                      
+                      <div class="rolling-img-box">
+                        
+                        <img src="./assets/image/randing_item1_470_264.png" alt="슈룹" />
+                      </div>
+                    </li>
+                    <li class="rolling-item">
+                      <div class="rolling-img-box">
+                        <img src="./assets/image/randing_item2_470_264.png" alt="연예인 매니저로 살아남기" />
+                      </div>
+                    </li>
+                    <li class="rolling-item">
+                      <div class="rolling-img-box">
+                        <img src="./assets/image/randing_item3_470_264.png" alt="렛미인" />
+                      </div>
+                    </li>
+                    <li class="rolling-item">
+                      <div class="rolling-img-box">
+                        <img src="./assets/image/randing_item4_470_264.png" alt="유퀴즈 온 더 블럭" />
+                      </div>
+                    </li>
+                    <li class="rolling-item">
+                      <div class="rolling-img-box">
+                        <img src="./assets/image/randing_item5_470_264.png" alt="푸드 크로니클" />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="rollingbanner">
+              <div class="wrap">
+                <!-- "배너 뷰포트" -> overflow: hidden-->
+                <div class="roller">
+                  <ul class="rolling-wrapper">
+                    <li class="rolling-item">
+                      <div class="rolling-img-box">
+                        <img src="./assets/image/randing_item4_470_264.png" alt="유퀴즈 온 더 블럭" />
+                      </div>
+                    </li>
+                    <li class="rolling-item">
+                      <div class="rolling-img-box">
+                        <img src="./assets/image/randing_item5_470_264.png" alt="푸드 크로니클" />
+                      </div>
+                    </li>
+                    <li class="rolling-item">
+                      <div class="rolling-img-box">
+                        <img src="./assets/image/randing_item1_470_264.png" alt="슈룹" />
+                      </div>
+                    </li>
+                    <li class="rolling-item">
+                      <div class="rolling-img-box">
+                        <img src="./assets/image/randing_item2_470_264.png" alt="연예인 매니저로 살아남기" />
+                      </div>
+                    </li>
+                    <li class="rolling-item">
+                      <div class="rolling-img-box">
+                        <img src="./assets/image/randing_item3_470_264.png" alt="렛미인" />
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="landing-bottom">
+          <div class="taing-reintro-wrapper">
+            <h2 class="taing-reintro a11y-hidden">타잉 재소개</h2>
+            <p>
+              <img
+                src="./assets/image/randing_text_subtitle_279_110.png"
+                alt="NO.1 K-콘텐츠 플랫폼"
+              />
+            </p>
+            <p class="taing-reintro-description">지금 시작해보세요</p>
+            <a href="./login.html" class="start-taing" >
+              새로워진 타잉을 만나보세요!
+            </a>
+          </div>
+          
+        </section>
+      </main>
+      <footer class="footer">
+        <section class="footer-container">
+          <div class="wrapper">
+            <div class="footer-top">
+              <div>
+                <span class="footer-notice">공지사항</span>
+                <span class="footer-notice-title"></span>
+                  [안내] 개인정보 처리방침 개정 안내 (2023 1월 2일)
+                </span>
+              </div>
+              <div>
+                <span class="link-brand">브랜드 바로가기 +</span>
+                <span class="link-group">그룹 계열사 바로가기 +</span>
+              </div>
+            </div>
+            <ul class="footer-nav">
+              <li><a href="https://www.tving.com/help/notice">고객센터</a></li>
+              <li><a href="https://www.tving.com/policy/terms">이용약관</a></li>
+              <li>
+                <a href="https://www.tving.com/policy/privacy">
+                  <strong>개인정보처리방침</strong>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tving.com/policy/youth">청소년 보호정책</a>
+              </li>
+              <li><a href="https://www.tving.com/policy/legal">법적고지</a></li>
+              <li><a href="https://www.tving.com/event/list">이벤트</a></li>
+              <li><a href="https://team.tving.com/">인재채용</a></li>
+            </ul>
+            <div class="copyright-box">
+              <p>
+                <span>대표이사 : YANG JIEUL</span>
+                <span class="business-infomation">사업자정보확인</span>
+                <span>사업자등록번호 : 188-88-01893</span>
+                <span>통신판매신고번호 : 2020-서울마포-3641호</span>
+              </p>
+              <p>
+                <span>
+                  사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브
+                  15층(상암동)
+                </span>
+                <span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
+              </p>
+              <p>
+                <span class="customer-service">
+                  <a href="https://www.tving.com/help/qna">고객문의 바로가기</a>
+                </span>
+                <span>대표메일 : tving@cj.net</span>
+                <span>
+                  고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)
+                </span>
+              </p>
+              <p>
+                <span>
+                  ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780
+                </span>
+                <span>Mnet 고객센터(방송편성문의) : 1855-1631</span>
+              </p>
+              <ul class="sns-link-logo">
+                <li>
+                  <a href="https://www.youtube.com/c/TVING_official">
+                    <img
+                      src="assets/icons/footer_youtube_52_52.png"
+                      alt="유튜브"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/tving.official/">
+                    <img
+                      src="assets/icons/footer_instagram_52_52.png"
+                      alt="인스타그램"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/tvingdotcom">
+                    <img
+                      src="assets/icons/footer_twitter_52_52.png"
+                      alt="트위터"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/CJTVING/">
+                    <img
+                      src="assets/icons/footer_facebook_52_52.png"
+                      alt="페이스북"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <small class="copyright">
+                Copyright © 주식회사 티빙 All right reserved.
+              </small>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
 </html>
