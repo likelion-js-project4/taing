@@ -1,4 +1,11 @@
-import { getNode, toggleClass, getInputValue, tiger, saveStorage } from "../lib/index.js";
+import {
+  getNode,
+  toggleClass,
+  getInputValue,
+  tiger,
+  saveStorage,
+  loadStorage,
+} from "../lib/index.js";
 
 const autoLogin = getNode(".auto-login-btn");
 const password = getNode(".pw-see");
@@ -6,7 +13,7 @@ const type = getNode(".pw-type");
 const inputId = getNode("#login-id");
 const inputPw = getNode("#login-pw");
 const loginButton = getNode(".btn-login");
-
+console.log(autoLogin);
 function idCheck(db, id) {
   const user = db.filter((e) => e.email === id);
   console.log(1212, user);
@@ -49,12 +56,12 @@ async function login(idNode, pwNode) {
   const { data } = userData;
   const user = data.filter((e) => e.email === idNode.value);
   const isUser = userCheck(idNode, pwNode);
-  console.log(user);
-
+  const auto = await loadStorage("user_uuid");
+  console.log(auto);
   if (isUser) {
     //로그인 성공 후 localStorage에 저장
     saveStorage("userLogin", "true");
-    saveStorage("user_uuid", user[0].user_uuid);
+    if (auto) saveStorage("user_uuid", user[0].user_uuid);
     //routing 처리
     location.href = "index.html";
   }
