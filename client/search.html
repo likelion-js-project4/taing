@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TAING search Page, 
+      타잉 검색 페이지
+      "
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/theme.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/search.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -14,17 +26,17 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/theme.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/search.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/main.js" type="module"></script>
+    <script src="./js/search.js" type="module"></script>
     <title>Taing</title>
   </head>
   <body>
+    <section class="alert-section">
+      <div class="alert-wrapper">
+        <p class="menu_msg">검색어를 입력해주세요.</p>
+        <button class="enroll-btn">확인</button>
+      </div>
+    </section>
     <header class="header">
       <h1 class="nav-logo">
         <span class="a11y-hidden">TAING</span>
@@ -37,7 +49,10 @@
         <ul class="header-nav-left">
           <li class="nav-item">
             <a href="" class="header-alive">
-              <img src="./assets/icons/header_live_default_34_34.png" />
+              <img
+                src="./assets/icons/header_live_default_34_34.png"
+                alt="LIVE 아이콘"
+              />
               &nbsp;실시간
             </a>
           </li>
@@ -76,10 +91,9 @@
                     자료검색
                   </label>
                   <input
-                    type="search"
+                    type="text"
                     id="search"
                     class="search-form-input"
-                    required
                     placeholder="TV프로그램, 영화 제목 및 출연진으로 검색해보세요"
                   />
                 </div>
@@ -92,38 +106,11 @@
               </div>
             </fieldset>
           </form>
+
           <div class="search-content-box">
             <section class="search-current">
               <h2>최근 검색어</h2>
-              <ul>
-                <li class="list-item">
-                  <a href="#">재벌집</a>
-                  <button type="button" class="delete-btn">
-                    <img
-                      src="./assets/icons/search_delete_15_15.png"
-                      alt="삭제"
-                    />
-                  </button>
-                </li>
-                <li class="list-item">
-                  <a href="#">재벌집</a>
-                  <button type="button" class="delete-btn">
-                    <img
-                      src="./assets/icons/search_delete_15_15.png"
-                      alt="삭제"
-                    />
-                  </button>
-                </li>
-                <li class="list-item">
-                  <a href="#">재벌집</a>
-                  <button type="button" class="delete-btn">
-                    <img
-                      src="./assets/icons/search_delete_15_15.png"
-                      alt="삭제"
-                    />
-                  </button>
-                </li>
-              </ul>
+              <ul></ul>
               <button type="button" class="delete-all-btn">
                 <span aria-hidden="true">모두 지우기</span>
                 <img
@@ -134,38 +121,7 @@
             </section>
             <section class="search-favorite">
               <h2>실시간 인기 검색어</h2>
-              <ol class="favorite-list">
-                <li class="no1">
-                  <a href="/">재벌집 막내아들</a>
-                </li>
-                <li class="no2">
-                  <a href="/">미스터트롯2: 새로운 전설의 시작</a>
-                </li>
-                <li class="no3">
-                  <a href="/">유 퀴즈 온 더 블럭</a>
-                </li>
-                <li class="no4">
-                  <a href="/">대행사</a>
-                </li>
-                <li class="no5">
-                  <a href="/">SHOW ME THE MONNEY 11</a>
-                </li>
-                <li class="no6">
-                  <a href="/">미씽: 그들이 있었다2</a>
-                </li>
-                <li class="no7">
-                  <a href="/">술꾼도시여자들2</a>
-                </li>
-                <li class="no8">
-                  <a href="/">캐나다 체크인</a>
-                </li>
-                <li class="no9">
-                  <a href="/">미씽: 그들이 있었다 - 그들을 '다만나다</a>
-                </li>
-                <li class="no10">
-                  <a href="/">술꾼도시여자들</a>
-                </li>
-              </ol>
+              <ol class="favorite-list"></ol>
               <time datetime="2022-12-24T03:04">
                 2022.12.24 오전 03:04 기준
               </time>
