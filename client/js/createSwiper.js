@@ -67,6 +67,31 @@ export default function createSwiper(){
     },
   });
 
+  const latestViewSwiper = new Swiper(".latest-view .swiper", {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 8,
+    breakpoints: {
+      768: {
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+      },
+      1280: {
+        slidesPerView: 7,
+        slidesPerGroup: 7,
+        spaceBetween: 16,
+      },
+    },
+    navigation: {
+      nextEl: ".latest-view .swiper-button-next",
+      prevEl: ".latest-view .swiper-button-prev",
+    },
+    pagination: {
+      el: ".latest-view .swiper-pagination",
+      clickable: true,
+    },
+  });
+
   const QuickVodSwiper = new Swiper(".quick-vod .swiper", {
     slidesPerView: 2,
     slidesPerGroup: 2,
@@ -196,6 +221,7 @@ export default function createSwiper(){
   return(
     visualSwiper,
     taingRecommendSwiper,
+    latestViewSwiper,
     QuickVodSwiper,
     realTimeSwiper,
     liveTimeSwiper,
