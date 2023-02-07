@@ -1,8 +1,6 @@
-/* global gsap */
+/* global gsap ScrollTrigger*/
 
-import { 
-  getNode as $,
-} from "../lib/index.js";
+import { getNode as $, getNodes, css } from '../lib/index.js'
 
 let landingSwiper = new Swiper('.taing-only-contents .swiper', {
   // direction: 'horizontal',
@@ -27,35 +25,35 @@ let landingSwiper = new Swiper('.taing-only-contents .swiper', {
   },
 })
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
-let sections = gsap.utils.toArray(".landing-img-box");
+let sections = gsap.utils.toArray('.landing-img-box')
 
 gsap.to(sections, {
   xPercent: -100 * (sections.length - 1),
-  ease: "none",
+  ease: 'none',
   scrollTrigger: {
-    trigger: "#sectionPin",
+    trigger: '#sectionPin',
     pin: true,
     scrub: 1,
-    end: () => "+=" + $("#sectionPin").offsetWidth * 3,
-    onUpdate: ({progress})=>{
+    end: () => '+=' + $('#sectionPin').offsetWidth * 3,
+    onUpdate: ({ progress }) => {
       console.log(progress)
-      if(progress > 0.1){
+      if (progress > 0.1) {
         landingSwiper.slideTo(0, 1000, true)
       }
-      if(progress > 0.4){
+      if (progress > 0.4) {
         landingSwiper.slideTo(1, 1000, true)
       }
-      if(progress > 0.7){
+      if (progress > 0.7) {
         landingSwiper.slideTo(2, 1000, true)
       }
-      if(progress > 0.85){
+      if (progress > 0.85) {
         landingSwiper.slideTo(3, 1000, true)
       }
-    }
-  }
-});
+    },
+  },
+})
 
 function appendClone(node, clone) {
   let wrap = node.closest('.wrap')
@@ -78,15 +76,15 @@ window.addEventListener('DOMContentLoaded', function () {
   })
 })
 // 글자 애니메이션
-const wrapper = getNode('.intro-wrapper')
-const h1 = getNode('.intro-wrapper > p:nth-child(1)')
-const introDescription = getNode('.intro-wrapper > p:nth-child(2)')
-const button = getNode('.start-taing-animation')
+const wrapper = $('.intro-wrapper')
+const h1 = $('.intro-wrapper > p:nth-child(1)')
+const introDescription = $('.intro-wrapper > p:nth-child(2)')
+const button = $('.start-taing-animation')
 
 const contentTitle = getNodes('.content-title')
 const contentDescription = getNodes('.content-description')
 const contentSubTitle = getNodes('.sub-title')
-const roller = getNode('.taing-finding-contents')
+const roller = $('.taing-finding-contents')
 
 // // 백그라운드
 let observerWrapper = new IntersectionObserver((e) => {
