@@ -1,6 +1,6 @@
 import createSwiper from "./createSwiper.js";
 
-import { 
+import {
   getNode as $,
   tiger,
   renderOnlyList,
@@ -10,8 +10,9 @@ import {
   renderVisualList,
   renderPopularList,
   renderContentsList,
-  loadStorage,
   saveStorage,
+  loadStorage,
+  insertFirst,
   addClass,
   attr
 } from "../lib/index.js";
@@ -26,10 +27,8 @@ const liveChannelContainer = $('.live-time .swiper-wrapper');
 const onlyTaingContainer = $('.only-taing .swiper-wrapper');
 const eventContainer = $('.main-event .swiper-wrapper');
 
-async function renderList(){
-
-  try{
-
+async function renderList() {
+  try {
     let response = await tiger.get('http://localhost:3000/contents')
     let contentDate = response.data;
     let StorageArr = await loadStorage('slideArr');
@@ -50,18 +49,72 @@ async function renderList(){
         })
       }
     });
-
-  }catch(err){
-
-  }
-
+  } catch (err) {}
 }
+
+const main = $(".main");
+const header = $(".header-alive");
+
+const isUser = await loadStorage("user_uuid");
+
+function userLoginCheck() {
+  if (!isUser) {
+    // location.href = "/landing.html";
+    return;
+  }
+}
+
+async function modalHandler() {
+  const isModalClose = await loadStorage("close_today");
+  console.log(isModalClose);
+  if (isModalClose !== "true") {
+    insertFirst(
+      main,
+      `   <article class="main-event-modal">
+      <a href=""><img src="./assets/image/modal_event_586.6_662.29.png" alt="메인 이벤트" /></a>
+      <ul class="main-evnent-modal-close">
+        <li>
+          <button type="button">오늘하루 보지 않기</button>
+        </li>
+        <li>
+          <button type="button">닫기</button>
+        </li>
+      </ul>
+    </article>`
+    );
+
+    const mainModal = $(".main-event-modal");
+    const mainModalCloseDefaultButton = $(".main-evnent-modal-close li:last-child button");
+    const mainModalCloseTodayButton = $(".main-evnent-modal-close li:first-child button");
+
+    let isModalCloseToday = await loadStorage("close_today");
+    if (isModalCloseToday) {
+      main.removeChild(mainModal);
+    }
+
+    mainModalCloseDefaultButton.addEventListener("click", () => {
+      mainModal.style.display = "none";
+    });
+
+    mainModalCloseTodayButton.addEventListener("click", () => {
+      saveStorage("close_today", "true");
+      main.removeChild(mainModal);
+    });
+
+    mainModal.addEventListener("click", () => {
+      mainModal.style.display = "none";
+    });
+  }
+  return;
+}
+
+userLoginCheck();
+modalHandler();
 
 renderList();
 createSwiper();
 
 
-const contents = $('.main')
 const slideArr = [];
 
 function latestViewHandler(e){
@@ -86,4 +139,11 @@ function latestViewHandler(e){
   }
 }
 
-contents.addEventListener('click', latestViewHandler);
+main.addEventListener('click', latestViewHandler);
+
+header.addEventListener("mouseenter", () => {
+  header.children[0].src = "./assets/icons/header_live_active_34_34.png";
+});
+header.addEventListener("mouseleave", () => {
+  header.children[0].src = "./assets/icons/header_live_default_34_34.png";
+});

@@ -1,55 +1,67 @@
 @import url(./theme.css);
-button{
+button {
   cursor: pointer;
 }
 
-input{
+input {
   cursor: text;
 }
 
-label:focus{
+label:focus {
   outline: 1px solid var(--red-1);
   outline-offset: 0;
   box-shadow: 0 0 10px 3px rgba(255, 0, 64, 0.4);
 }
 
-
-.nav-logo{
+.nav-logo {
   margin: var(--spacing-base) var(--spacing-lg);
 }
 
-.register-container{
+.register-container {
   margin: 0 auto;
   margin-top: var(--spacing-7xl);
 }
 
-.register-title{
+.register-title {
   cursor: text;
   text-align: center;
-  font-size: clamp(var(--text-base), 5vw ,var(--text-xl));
+  font-size: clamp(var(--text-base), 5vw, var(--text-xl));
   font-weight: var(--weight-lg);
   padding: 0 var(--spacing-base);
 }
 
-.sub-title{
+.sub-title {
   cursor: text;
   text-align: center;
   color: var(--silver400);
-  font-size: clamp(var(--text-sm), 3vw ,var(--text-lg));
+  font-size: clamp(var(--text-sm), 3vw, var(--text-lg));
   margin: var(--spacing-lg) 0 var(--spacing-6xl);
 }
 
-.register-wrapper{
+.register-wrapper {
   display: flex;
   flex-flow: column nowrap;
 }
 
-.register-wrapper p{
+.register-id-content,
+.register-pw-content{
   color: var(--silver500);
-  font-size: clamp(var(--text-sm), 2vw, var(--text-md))
+  font-size: clamp(var(--text-sm), 2vw, var(--text-md));
 }
 
-.register-wrapper input{
+.register-pwcheck-content,
+.register-email-content{
+  display: none;
+  color: red;
+}
+
+.register-pwcheck-content,
+.register-email-content{
+  display: none;
+  color: red;
+}
+
+.register-wrapper input {
   width: 100%;
   background-color: var(--dark-bg-2);
   border-radius: var(--spacing-2xs);
@@ -59,40 +71,54 @@ label:focus{
   font-size: min(3vw, var(--text-base));
 }
 
-.register-input-wrap{
+.register-input-wrap {
   margin-top: var(--spacing-xl);
   position: relative;
 }
 
-.register-input-wrap-inner{
+.id-cancel-btn,
+.email-cancel-btn {
+  display: none;
+  width: var(--spacing-xl);
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 0;
+}
+
+.pw-cancel-btn,
+.pwcheck-cancel-btn {
+  display: none;
+  width: var(--spacing-xl);
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 0;
+}
+
+.register-input-wrap-inner {
   position: relative;
 }
 
-
-
-#register-pw-check{
+#register-pw-check {
   position: relative;
 }
 
-.pw-see-btn {
+.pw-see-btn,
+.pw-see2-btn {
   position: absolute;
   right: var(--spacing-md);
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
   background-color: transparent;
   cursor: pointer;
 }
 
-.pw-see2-btn{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: var(--spacing-md);
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.btn-register{
+.btn-register {
   box-sizing: border-box;
   margin-top: var(--spacing-2xl);
   width: 100%;
@@ -100,15 +126,15 @@ label:focus{
   border-radius: var(--spacing-2xs);
   color: var(--black);
   background-color: var(--silver100);
-  font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
+  font-size: clamp(var(--text-sm), 2vw, var(--text-lg));
   font-weight: var(--weight-lg);
-  padding: var(--spacing-md) var(--spacing-base) ;
+  padding: var(--spacing-md) var(--spacing-base);
 }
-.btn-register:disabled{
+.btn-register:disabled {
   background-color: var(--silver700);
   color: var(--silver400);
 }
-.btn-register:hover{
+.btn-register:hover {
   background-color: var(--white);
   color: var(--black);
 }
@@ -116,69 +142,84 @@ label:focus{
 #register-id,
 #register-pw,
 #register-pw-check,
-#register-email{
+#register-email {
   box-sizing: border-box;
   margin-bottom: 2px;
-  padding: var(--spacing-md) var(--spacing-base) ;
-  font-size: clamp(var(--text-sm), 2vw ,var(--text-lg));
+  padding: var(--spacing-md) var(--spacing-base);
+  font-size: clamp(var(--text-sm), 2vw, var(--text-lg));
 }
 
 #register-id:placeholder,
 #register-pw:placeholder,
 #register-pw-check:placeholder,
-#register-email:placeholder{
+#register-email:placeholder {
   color: var(--silver600);
 }
 
-
 /* 모두 동의합니다 */
-.register-content-wrapper{
+.register-content-wrapper {
   margin-top: var(--spacing-xl);
 }
-.all-register-check{
-  border: none;
-}
 
-.all-check-btn{
+.register-all-check{
   color: var(--silver300);
-  background: transparent;
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-md));
+  padding: 0.5vh 0;
+  padding-left: var(--spacing-2xl);
+  background: url(../assets/icons/login_check_26_26.png) no-repeat 0 0;
+  background-position: 0 50%;
 }
 
-.all-check-btn img{
+.all-check-btn img {
+  width: var(--spacing-md);
   transform: translateY(3px);
   margin-right: var(--spacing-s);
 }
 
 .all-check-btn,
-.register-content-item label{
-  font-size: clamp(var(--text-sm), 2vw ,var(--text-md));
+.register-content-item label {
+  font-size: clamp(var(--text-sm), 2vw, var(--text-md));
 }
 
 /* 동의하기 아이템들 */
-.register-content-wrap{
+.register-content-wrap {
   margin-top: 10px;
   display: flex;
   flex-flow: column nowrap;
 }
 
-.register-content-item{
+.register-content-item {
   background: transparent;
-  font-size: clamp(var(--spacing-s) , 4vw, var(--spacing-md));
+  font-size: clamp(var(--spacing-s), 4vw, var(--spacing-md));
   justify-items: center;
   margin-top: var(--spacing-s);
 }
 
-.register-content-item img{
+.register-content-item img {
   background: transparent;
   padding-right: var(--spacing-2xs);
   justify-content: center;
 }
 
-.register-content-item > input{
+.register-content-item > input {
   display: none;
 }
 
-.register-content-item > label{
+.register-content-item > input + label::before{
+  cursor: pointer;
+}
+
+#register-all:checked +label{
+  color: var(--white);
+  background: url(../assets/icons/login_checked_26_26.png) no-repeat 0 0;
+  background-position: 0 50%;
+}
+.register-content-item > input:checked + label{ 
+  background: url(../assets/icons/login_binchecked_26_26.png) no-repeat 0 0;
+  color: var(--white);
+}
+
+.register-content-item > label {
   cursor: pointer;
   background: url(../assets/icons/login_bincheck_26_26.png) no-repeat 0 0;
   padding: var(--spacing-3xs) var(--spacing-xs) var(--spacing-2xs);
@@ -187,7 +228,8 @@ label:focus{
   align-items: center;
 }
 
-.register-content-item > input:focus{
+.register-content-item > input:focus,
+.register-content-wrapper >input:focus{
   outline: none;
   outline-offset: 0;
   box-shadow: 0 0 0 0 0;
@@ -197,110 +239,129 @@ label:focus{
   transform: translateY(8px);
 }
 
-.item-space{
+.item-space {
   padding-left: var(--spacing-2xl);
 }
 
-
 /* 모바일 */
-@media (max-width: 768px) {
-  .nav-logo > a > img{
-    height: var(--spacing-base);
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .nav-logo > a > img {
+    height: var(--spacing-base);
   }
 
-  .register-container{
+  .register-container {
     max-width: 550px;
     padding: 0 var(--spacing-base);
     margin-top: var(--spacing-lg);
   }
 
-  .sub-title{
+  .sub-title {
     margin-bottom: var(--spacing-lg);
   }
 
-  .register-content-item{
+  .id-cancel-btn,
+  .email-cancel-btn,
+  .pw-cancel-btn,
+  .pwcheck-cancel-btn {
+    width: var(--spacing-lg);
+  }
+
+  .pw-cancel-btn,
+  .pwcheck-cancel-btn {
+    right: min(16vw, var(--spacing-5xl));
+  }
+
+  .register-content-item {
     margin-top: var(--spacing-xs);
   }
 
   .register-content-item label{
-    padding-left: var(--spacing-md);
+    padding-left: min(8vw, var(--spacing-xl));
     background-size: var(--spacing-base);
     margin-top: var(--spacing-xs);
   }
-  .register-content-item img{
+  .register-content-item img {
     min-width: 16px;
   }
 
-  .all-check-btn img{
+  .all-check-btn img {
     margin-right: var(--spacing-2xs);
   }
 
-  .register-content-wrapper{
+  .register-content-wrapper {
     margin-top: var(--spacing-base);
   }
 
-  .item-space{
+  .item-space {
     padding-left: var(--spacing-base);
   }
 
-  .register-input-wrap{
+  .register-input-wrap {
     margin-top: var(--spacing-base);
   }
 
   #register-id,
   #register-pw,
   #register-pw-check,
-  #register-email{
+  #register-email {
     padding-top: var(--spacing-base);
     padding-bottom: var(--spacing-base);
   }
 
   .pw-see-btn,
-  .pw-see2-btn{
+  .pw-see2-btn {
     width: var(--spacing-lg);
+  }
+
+  .register-all-check,
+  .register-content-item > input:checked + label,
+  #register-all:checked +label{
+    background-size: var(--spacing-base);
+    padding-left: min(8vw, var(--spacing-xl));
   }
 
 }
 
-
 /* 태블릿 */
-@media (min-width: 769px) and (max-width: 1279px) {
-  .nav-logo > a > img{
+@media (min-width: 768px) and (max-width: 1279px) {
+  .nav-logo > a > img {
     height: var(--spacing-lg);
+  }
+  .nav-logo > a {
     margin-left: var(--spacing-3xl);
-    margin-top: var(--spacing-base);
   }
 
-  .register-container{
+  .register-container {
     max-width: 600px;
   }
 
-  .register-content-item{
+  .register-content-item {
     margin-top: var(--spacing-xs);
   }
 
-  .register-content-item label{
+  .register-content-item label {
     padding-left: var(--spacing-xl);
+    background-size: var(--spacing-lg);
     height: 1.125rem;
   }
 
+  .register-all-check,
+  .register-content-item > input:checked + label,
+  #register-all:checked +label{
+    background-size: var(--spacing-lg);
+  }
 
 
-
-  
 }
 
 /* 데스크탑 */
 @media (min-width: 1280px) {
-  .register-container{
+  .register-container {
     max-width: 768px;
   }
   .nav-logo > a > img{
     margin-left: var(--spacing-7xl);
     margin-top: var(--spacing-lg);
   }
-
-
-
 }

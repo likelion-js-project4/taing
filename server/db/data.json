@@ -10,12 +10,6 @@
       "profile": {
         "src": "./assets/image/main_treasurehunt_240_345.png"
       },
-      "search": [
-        {
-          "date": "new Date()",
-          "search_title": "string"
-        }
-      ],
       "auto_login": false
     }
   ],
@@ -32,8 +26,13 @@
         "live_channel": "./assets/image/main_chabeol_345_194.png",
         "only_taing": "",
         "event": "./assets/image/main_chabeol_346_120.png",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "재벌집 막내아들"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -70,8 +69,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "미씽 : 그들이 있었다 시즌 2"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -108,8 +112,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "초능력자"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -146,8 +155,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "최강야구"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -184,8 +198,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "./assets/image/randing_item2_906_510.png",
+        "landing_swiper_small": "./assets/image/randing_item2_277_400.png",
+        "landing_roller": "",
         "alt": "보물찾기"
       },
+      "is_landing_swiper": true,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -221,8 +240,13 @@
         "live_channel": "",
         "only_taing": "./assets/image/main_lovecatcher_282_563.png",
         "event": "",
+        "landing_swiper": "./assets/image/randing_item1_906_510.png",
+        "landing_swiper_small": "./assets/image/randing_item1_277_400.png",
+        "landing_roller": "",
         "alt": "러브캐처"
       },
+      "is_landing_swiper": true,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -258,8 +282,13 @@
         "live_channel": "",
         "only_taing": "./assets/image/main_drinkgirls_282_563.png",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "./assets/image/randing_item3_277_400.png",
+        "landing_roller": "",
         "alt": "술꾼도시여자들2"
       },
+      "is_landing_swiper": true,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": true,
@@ -295,8 +324,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "털사 킹"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -332,8 +366,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "아무것도 하고싶지 않아"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": true,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -369,8 +408,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "블랙독"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -406,8 +450,13 @@
         "live_channel": "./assets/image/main_new_345_194.png",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "JTBC 뉴스룸"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -443,8 +492,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "휴먼다큐 <나는 살기로 했다>"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -480,8 +534,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "건강면세점"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -517,8 +576,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "차이나는 클라스"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -554,8 +618,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "알맹이"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -591,8 +660,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "엄마의 봄날"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -628,8 +702,13 @@
         "live_channel": "./assets/image/main_eatrice_345_194.png",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "줄 서는 식당"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -665,8 +744,13 @@
         "live_channel": "./assets/image/main_news2_345_194.png",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "뉴스가 있는 저녁"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -702,8 +786,13 @@
         "live_channel": "./assets/image/main_news3_345_194.png",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "뉴스프라임"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -739,8 +828,13 @@
         "live_channel": "",
         "only_taing": "./assets/image/main_seeall_282_563.png",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "전체관람가"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": true,
       "is_adult_19": false,
@@ -776,8 +870,13 @@
         "live_channel": "",
         "only_taing": "./assets/image/main_transfer2_282_563.png",
         "event": "./assets/image/main_transfer_346_120.png",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "환승연애2"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -813,8 +912,13 @@
         "live_channel": "",
         "only_taing": "./assets/image/main_bodyprice_283_563.png",
         "event": "",
+        "landing_swiper": "./assets/image/randing_item4_906_510.png",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "몸값"
       },
+      "is_landing_swiper": true,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -850,8 +954,13 @@
         "live_channel": "",
         "only_taing": "./assets/image/main_goee_282_563.png",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "괴이"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -887,8 +996,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "./assets/image/main_sinbyapart_346_120.png",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "신비아파트"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -924,8 +1038,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "./assets/image/main_surup_346_120.png",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "./assets/image/randing_item1_470_264.png",
         "alt": "슈룹"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": true,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -961,8 +1080,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "./assets/image/main_dessertmaker_346_120.png",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "디저트 메이커"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -998,8 +1122,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "./assets/image/main_letmein_346_120.png",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "./assets/image/randing_item3_470_264.png",
         "alt": "렛미인"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": true,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -1035,8 +1164,13 @@
         "live_channel": "",
         "only_taing": "./assets/image/main_kilimanjaro_240_345.png",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "인생에 한 번쯤 킬리만자로"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": false,
       "is_adult_19": false,
@@ -1072,8 +1206,13 @@
         "live_channel": "",
         "only_taing": "./assets/image/main_foodchronicle_282_563.png",
         "event": "",
+        "landing_swiper": "./assets/image/randing_item3_906_510.png",
+        "landing_swiper_small": "",
+        "landing_roller": "./assets/image/randing_item5_470_264.png",
         "alt": "푸드클로니클"
       },
+      "is_landing_swiper": true,
+      "is_landing_roller": true,
       "is_free": false,
       "is_adult_18": true,
       "is_adult_19": false,
@@ -1109,8 +1248,13 @@
         "live_channel": "",
         "only_taing": "",
         "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "",
         "alt": "우리들의 블루스"
       },
+      "is_landing_swiper": false,
+      "is_landing_roller": false,
       "is_free": false,
       "is_adult_18": true,
       "is_adult_19": false,
@@ -1133,6 +1277,174 @@
       "is_only_taing": false,
       "is_event_now": false,
       "is_update": false
+    },
+    {
+      "id": "contents_id31",
+      "title": "아일랜드",
+      "description": "아일랜드의 desc입니다",
+      "image": {
+        "visual": "",
+        "contents": "",
+        "vod": "",
+        "popular": "",
+        "live_channel": "",
+        "only_taing": "",
+        "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "./assets/image/randing_item4_277_400.png",
+        "landing_roller": "",
+        "alt": "아일랜드"
+      },
+      "is_landing_swiper": true,
+      "is_landing_roller": false,
+      "is_free": false,
+      "is_adult_18": false,
+      "is_adult_19": false,
+      "is_viual": false,
+      "is_recommend": false,
+      "quick_vod": {
+        "title": "",
+        "series": ""
+      },
+      "popular_program": {
+        "rating": ""
+      },
+      "live": {
+        "flatform": "",
+        "rating": "",
+        "title": "",
+        "series": "",
+        "view_ratio": ""
+      },
+      "is_only_taing": false,
+      "is_event_now": false,
+      "is_update": false
+    },
+    {
+      "id": "contents_id32",
+      "title": "유퀴즈 온 더 블럭",
+      "description": "유퀴즈 온 더 블럭의 desc입니다",
+      "image": {
+        "visual": "",
+        "contents": "",
+        "vod": "",
+        "popular": "",
+        "live_channel": "",
+        "only_taing": "",
+        "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "./assets/image/randing_item4_470_264.png",
+        "alt": "유퀴즈 온 더 블럭"
+      },
+      "is_landing_swiper": false,
+      "is_landing_roller": true,
+      "is_free": false,
+      "is_adult_18": false,
+      "is_adult_19": false,
+      "is_viual": false,
+      "is_recommend": false,
+      "quick_vod": {
+        "title": "",
+        "series": ""
+      },
+      "popular_program": {
+        "rating": ""
+      },
+      "live": {
+        "flatform": "",
+        "rating": "",
+        "title": "",
+        "series": "",
+        "view_ratio": ""
+      },
+      "is_only_taing": false,
+      "is_event_now": false,
+      "is_update": false
+    },
+    {
+      "id": "contents_id33",
+      "title": "연예인 매니저로 살아남기",
+      "description": "연예인 매니저로 살아남기의 desc입니다",
+      "image": {
+        "visual": "",
+        "contents": "",
+        "vod": "",
+        "popular": "",
+        "live_channel": "",
+        "only_taing": "",
+        "event": "",
+        "landing_swiper": "",
+        "landing_swiper_small": "",
+        "landing_roller": "./assets/image/randing_item2_470_264.png",
+        "alt": "연예인 매니저로 살아남기"
+      },
+      "is_landing_swiper": false,
+      "is_landing_roller": true,
+      "is_free": false,
+      "is_adult_18": false,
+      "is_adult_19": false,
+      "is_viual": false,
+      "is_recommend": false,
+      "quick_vod": {
+        "title": "",
+        "series": ""
+      },
+      "popular_program": {
+        "rating": ""
+      },
+      "live": {
+        "flatform": "",
+        "rating": "",
+        "title": "",
+        "series": "",
+        "view_ratio": ""
+      },
+      "is_only_taing": false,
+      "is_event_now": false,
+      "is_update": false
+    }
+  ],
+  "favorite_search": [
+    {
+      "rank": 1,
+      "keyword": "재벌집 막내아들"
+    },
+    {
+      "rank": 2,
+      "keyword": "미스터트롯2: 새로운 전설의 시작"
+    },
+    {
+      "rank": 3,
+      "keyword": "유 퀴즈 온 더 블럭"
+    },
+    {
+      "rank": 4,
+      "keyword": "대행사"
+    },
+    {
+      "rank": 5,
+      "keyword": "SHOW ME THE MONEY 11"
+    },
+    {
+      "rank": 6,
+      "keyword": "미씽: 그들이 있었다2"
+    },
+    {
+      "rank": 7,
+      "keyword": "술꾼도시여자들2"
+    },
+    {
+      "rank": 8,
+      "keyword": "캐나다 체크인"
+    },
+    {
+      "rank": 9,
+      "keyword": "미씽: 그들이 있었다 - 그들을 다시 만나다"
+    },
+    {
+      "rank": 10,
+      "keyword": "술꾼도시여자들"
     }
   ]
 }

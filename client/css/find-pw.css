@@ -59,6 +59,7 @@ input{
 }
 
 .id-cancel-btn{
+  display: none;
   width: var(--spacing-xl);
   position: absolute;
   top: 50%;
@@ -90,7 +91,7 @@ input{
 
 
 /* 모바일 */
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .nav-logo > a > img{
     height: var(--spacing-base);
   }
@@ -126,12 +127,12 @@ input{
 
 
 /* 태블릿 */
-@media (min-width: 769px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   .nav-logo > a > img{
     height: var(--spacing-lg);
+  }
+  .nav-logo > a {
     margin-left: var(--spacing-3xl);
-    margin-top: var(--spacing-base);
-
   }
 
   .find-pw-container{
@@ -151,7 +152,7 @@ input{
   .find-pw-container{
     max-width: 768px;
   }
-  .nav-logo > a > img{
+  .nav-logo > a{
     margin-left: var(--spacing-7xl);
     margin-top: var(--spacing-lg);
   }

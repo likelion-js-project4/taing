@@ -15,7 +15,7 @@
 }
 
 .swiper-slide {
-  padding-top: var(--spacing-s);
+  /* padding-top: var(--spacing-s); */
   transition: transform 0.5s;
 }
 
@@ -41,10 +41,6 @@
   backdrop-filter: blur(10px);
 }
 
-/* 임시 처리  */
-.main-event-modal {
-  display: none;
-}
 .main-event-modal > a {
   display: block;
   font-size: 0;
@@ -186,7 +182,7 @@
 }
 
 .program .swiper {
-  padding: 0 4%;
+  padding: var(--spacing-s) 4% 0;
 }
 
 .program ol {
