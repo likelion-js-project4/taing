@@ -68,15 +68,7 @@ renderDate()
 /* -------------------------------------------------------------------------- */
 /*                             최근검색어, 인기검색어 render                            */
 /* -------------------------------------------------------------------------- */
-// function loadStorage(key) {
-//   return JSON.parse(localStorage.getItem(key))
-// }
 
-// function saveStorage(key, value) {
-//   localStorage.setItem(key, JSON.stringify(value))
-// }
-
-// 최근 검색어 render
 async function renderCurrent() {
   let searchList = await loadStorage(SEARCH_KEY)
   const noSearchKeyword = getNode('.search-current > p')
@@ -90,7 +82,6 @@ async function renderCurrent() {
   )
 }
 
-// 인기 검색어 render
 async function getFavorite() {
   try {
     const response = await tiger.get(FAVORITE_URL, defaultOption)
