@@ -1,4 +1,4 @@
-import { getNode, insertFirst, addClass, removeClass } from "../lib/index.js";
+import { getNode, insertFirst, addClass, removeClass, attr } from "../lib/index.js";
 
 export default function createSwiper() {
   const visualSwiper = new Swiper(".visual .swiper", {
@@ -23,7 +23,7 @@ export default function createSwiper() {
   });
 
   const visualPagination = getNode(".visual .swiper-pagination-wrapper");
-  insertFirst(visualPagination, `<button class="swiper-button-autoplay" type="button"></button>`);
+  insertFirst(visualPagination, `<button type="button" class="swiper-button-autoplay" aria-label="멈춤"></button>`);
 
   const autoPlayButton = getNode(".swiper-button-autoplay");
 
@@ -33,10 +33,12 @@ export default function createSwiper() {
     if (pause !== 1) {
       visualSwiper.autoplay.stop();
       addClass(autoPlayButton, "is-play");
+      attr(autoPlayButton, "aria-label", "재생");
       pause = 1;
     } else {
       visualSwiper.autoplay.start();
       removeClass(autoPlayButton, "is-play");
+      attr(autoPlayButton, "aria-label", "멈춤");
       pause = 0;
     }
   }

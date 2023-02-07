@@ -71,7 +71,7 @@ async function modalHandler() {
     insertFirst(
       main,
       `   <article class="main-event-modal">
-      <a href=""><img src="./assets/image/modal_event_586.6_662.29.png" alt="메인 이벤트" /></a>
+      <a href="/"><img src="./assets/image/modal_event_586.6_662.29.png" alt="메인 이벤트" /></a>
       <ul class="main-evnent-modal-close">
         <li>
           <button type="button">오늘하루 보지 않기</button>

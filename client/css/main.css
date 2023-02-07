@@ -182,7 +182,13 @@
 }
 
 .program .swiper {
-  padding: var(--spacing-s) 4% 0;
+  padding: var(--spacing-s) 4%;
+}
+
+.program .swiper-slide:focus {
+  outline: 1px solid var(--red-1);
+  outline-offset: 0;
+  box-shadow: 0 0 10px 3px rgba(255, 0, 64, 0.4);
 }
 
 .program ol {
@@ -203,7 +209,6 @@
 
 .program .img-box {
   position: relative;
-  margin-bottom: var(--spacing-xs);
 }
 
 .program .img-box > img {
@@ -312,6 +317,12 @@
   top: 0;
 }
 
+/* 타잉에서 꼭 봐야하는 콘텐츠 */
+
+.taing-recommend .swiper-slide{
+  cursor: pointer;
+}
+
 @media (min-width: 1280px) {
   /* visual desktop css */
   .visual-title {
@@ -328,9 +339,6 @@
   }
 
   /* program desktop css */
-  .program .img-box {
-    margin-bottom: var(--spacing-s);
-  }
 
   .program .swiper-view-all {
     opacity: 0;
