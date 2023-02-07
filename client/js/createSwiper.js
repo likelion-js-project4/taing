@@ -3,8 +3,9 @@ import { getNode, insertFirst, addClass, removeClass } from "../lib/index.js";
 export default function createSwiper() {
   const visualSwiper = new Swiper(".visual .swiper", {
     effect: "fade",
+
     autoplay: {
-      delay: 1000,
+      delay: 4000,
       disableOnInteraction: false,
     },
     keyboard: {
@@ -28,9 +29,17 @@ export default function createSwiper() {
 
   let pause;
 
-  const toggle = {
-    pause: true,
-  };
+  function autoPlayHandler() {
+    if (pause !== 1) {
+      visualSwiper.autoplay.stop();
+      addClass(autoPlayButton, "is-play");
+      pause = 1;
+    } else {
+      visualSwiper.autoplay.start();
+      removeClass(autoPlayButton, "is-play");
+      pause = 0;
+    }
+  }
 
   const taingRecommendSwiper = new Swiper(".taing-recommend .swiper", {
     slidesPerView: 3,

@@ -54,6 +54,7 @@ async function login(idNode, pwNode) {
   }
 }
 
+// 자동로그인 클릭시 text색상 변경
 function auto_login() {
   toggleClass(autoLogin, "clicked");
   const image = getNode(".auto-login-img");
@@ -64,6 +65,7 @@ function auto_login() {
     image.src = "./assets/icons/login_checked_26_26.png";
   }
 }
+
 //마우스 버튼을 눌렀을 때
 function pw_see_mousedown() {
   if (type.type.includes("pass")) {

@@ -33,7 +33,7 @@
         <form action="#" class="register-wrapper">
           <div class="register-input-wrap">
             <label for="register-id" class="a11y-hidden"> 아이디입력 </label>
-            <input type="text" id="register-id" placeholder="아이디" value="cf98774" />
+            <input type="text" id="register-id" placeholder="아이디" />
             <button type="button" class="id-cancel-btn">
               <img src="./assets/icons/login_cancel_36_36.png" alt="취소" />
             </button>
@@ -43,13 +43,7 @@
           <div class="register-input-wrap">
             <label for="register-pw" class="a11y-hidden"> 비밀번호 입력 </label>
             <div class="register-input-wrap-inner">
-              <input
-                type="password"
-                id="register-pw"
-                placeholder="비밀번호"
-                class="first-pw"
-                value="asd123"
-              />
+              <input type="password" id="register-pw" placeholder="비밀번호" class="pw-type" />
               <button type="button" class="pw-cancel-btn">
                 <img src="./assets/icons/login_cancel_36_36.png" alt="취소" />
               </button>
@@ -72,8 +66,7 @@
                 type="password"
                 id="register-pw-check"
                 placeholder="비밀번호 확인"
-                class="second-pw"
-                value="asd123"
+                class="pw-type"
               />
               <button type="button" class="pwcheck-cancel-btn">
                 <img src="./assets/icons/login_cancel_36_36.png" alt="취소" />
@@ -98,12 +91,26 @@
         </form>
 
         <div class="register-content-wrapper">
-          <input type="checkbox" id="register-all" name="register" tabindex="-1" />
-          <label for="register-all" class="register-all-check" tabindex="0">모두 동의합니다.</label>
+          <button href="#" class="all-register-check">
+            <span class="all-check-btn">
+              <img
+                src="./assets/icons/login_check_26_26.png"
+                alt="모두 동의합니다 체크"
+                class="auto-login-img"
+              />
+              모두 동의합니다.
+            </span>
+          </button>
 
           <ul class="register-content-wrap">
             <li class="register-content-item">
-              <input type="checkbox" id="register-item1" name="register" tabindex="-1" />
+              <input
+                type="checkbox"
+                id="register-item1"
+                name="register"
+                tabindex="-1"
+                checked="true"
+              />
               <label for="register-item1" tabindex="0"> 만 14세 이상입니다. </label>
             </li>
             <li class="register-content-item">
@@ -124,6 +131,7 @@
             </li>
             <li class="register-content-item">
               <input type="checkbox" id="register-item5" name="register" tabindex="-1" />
+
               <label for="register-item5" tabindex="0"> [선택] 개인정보 제 3자 제공동의 </label>
             </li>
             <li class="register-content-item">
@@ -134,6 +142,7 @@
             </li>
             <li class="register-content-item item-space">
               <input type="checkbox" id="register-item7" name="register" tabindex="-1" />
+
               <label for="register-item7" tabindex="0"> [선택] 마케팅 정보 SMS 수신동의 </label>
             </li>
             <li class="register-content-item item-space">

@@ -231,6 +231,7 @@ label:focus {
 }
 
 /* 모바일 */
+
 @media (min-width: 320px) and (max-width: 767px) {
   .nav-logo > a > img {
     height: var(--spacing-base);
