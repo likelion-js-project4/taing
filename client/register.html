@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TAING register Page, 
+      타잉 회원가입 페이지
+      "
+    />
     <link
       rel="stylesheet"
       as="style"
@@ -43,7 +49,7 @@
           <div class="register-input-wrap">
             <label for="register-pw" class="a11y-hidden"> 비밀번호 입력 </label>
             <div class="register-input-wrap-inner">
-              <input type="password" id="register-pw" placeholder="비밀번호" class="pw-type" />
+              <input type="password" id="register-pw" placeholder="비밀번호" class="first-pw" />
               <button type="button" class="pw-cancel-btn">
                 <img src="./assets/icons/login_cancel_36_36.png" alt="취소" />
               </button>
@@ -62,12 +68,7 @@
           <div class="register-input-wrap">
             <label for="register-pw-check" class="a11y-hidden"> 비밀번호 확인 </label>
             <div class="register-input-wrap-inner">
-              <input
-                type="password"
-                id="register-pw-check"
-                placeholder="비밀번호 확인"
-                class="pw-type"
-              />
+              <input type="password" id="register-pw-check" placeholder="비밀번호 확인" class="second-pw" />
               <button type="button" class="pwcheck-cancel-btn">
                 <img src="./assets/icons/login_cancel_36_36.png" alt="취소" />
               </button>
@@ -79,6 +80,7 @@
                 />
               </button>
             </div>
+            <p class="register-pwcheck-content">일치하지 않습니다. 다시 입력해주세요.</p>
           </div>
           <!-- 이메일 -->
           <div class="register-input-wrap">
@@ -88,30 +90,20 @@
               <img src="./assets/icons/login_cancel_36_36.png" alt="취소" />
             </button>
           </div>
+          <p class="register-email-content">올바른 이메일 형식이 아닙니다.</p>
+        
         </form>
 
         <div class="register-content-wrapper">
-          <button href="#" class="all-register-check">
-            <span class="all-check-btn">
-              <img
-                src="./assets/icons/login_check_26_26.png"
-                alt="모두 동의합니다 체크"
-                class="auto-login-img"
-              />
-              모두 동의합니다.
-            </span>
-          </button>
+          <input type ="checkbox" id="register-all" name="register" tabindex="-1"/>
+          <label for="register-all" class="register-all-check" tabindex="0">모두 동의합니다.</label>
 
           <ul class="register-content-wrap">
             <li class="register-content-item">
-              <input
-                type="checkbox"
-                id="register-item1"
-                name="register"
-                tabindex="-1"
-                checked="true"
-              />
-              <label for="register-item1" tabindex="0"> 만 14세 이상입니다. </label>
+              <input type="checkbox" id="register-item1" name="register" tabindex="-1" />
+              <label for="register-item1" tabindex="0">
+                만 14세 이상입니다.
+              </label>
             </li>
             <li class="register-content-item">
               <input type="checkbox" id="register-item2" name="register" tabindex="-1" />
