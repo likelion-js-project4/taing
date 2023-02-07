@@ -47,8 +47,7 @@ const isUser = await loadStorage("user_uuid");
 
 function userLoginCheck() {
   if (!isUser) {
-    console.log(123);
-    location.href = "/landing.html";
+    // location.href = "/landing.html";
     return;
   }
 }

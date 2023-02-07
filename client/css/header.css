@@ -56,23 +56,23 @@ h1 {
   cursor: pointer;
   font-size: 0;
 }
-.header-profile:hover ~ .header-profile-menu {
+.header-profile-wrapper:hover .header-profile-menu {
   visibility: visible;
   opacity: 1;
-  z-index: 2;
+  top: 3.5rem;
 }
 .header-profile-menu {
   border: 1.5px solid rgb(77, 77, 77);
   border-radius: 3px;
   background-color: rgb(33, 33, 33);
-  position: fixed;
+  position: absolute;
   width: 19rem;
   font-size: var(--spacing-md);
-  top: 3.5rem;
-  right: 5rem;
+  top: 2.5rem;
+  right: 4.3rem;
   visibility: hidden;
   opacity: 0;
-  /* margin: 20px; */
+  transition: all 0.3s ease;
 }
 
 .header-profile-menu hr {
