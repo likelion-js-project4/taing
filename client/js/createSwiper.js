@@ -1,16 +1,17 @@
-import { getNode, insertFirst, addClass, removeClass } from '../lib/index.js';
+import { getNode, insertFirst, addClass, removeClass } from "../lib/index.js";
 
-export default function createSwiper(){
-  
+export default function createSwiper() {
   const visualSwiper = new Swiper(".visual .swiper", {
     effect: "fade",
-    autoplay:{
+
+    autoplay: {
       delay: 4000,
-      disableOnInteraction: false
+      disableOnInteraction: false,
     },
     keyboard: {
       enabled: true,
     },
+
     navigation: {
       nextEl: ".visual .swiper-button-next",
       prevEl: ".visual .swiper-button-prev",
@@ -20,23 +21,22 @@ export default function createSwiper(){
       clickable: true,
     },
   });
-  
-  const visualPagination = getNode('.visual .swiper-pagination-wrapper');
+
+  const visualPagination = getNode(".visual .swiper-pagination-wrapper");
   insertFirst(visualPagination, `<button class="swiper-button-autoplay" type="button"></button>`);
 
-  const autoPlayButton = getNode('.swiper-button-autoplay');
-  autoPlayButton.addEventListener('click', autoPlayHandler);
+  const autoPlayButton = getNode(".swiper-button-autoplay");
 
   let pause;
 
-  function autoPlayHandler(){
-    if(pause !== 1){
+  function autoPlayHandler() {
+    if (pause !== 1) {
       visualSwiper.autoplay.stop();
-      addClass(autoPlayButton, 'is-play');
+      addClass(autoPlayButton, "is-play");
       pause = 1;
-    }else{
+    } else {
       visualSwiper.autoplay.start();
-      removeClass(autoPlayButton, 'is-play');
+      removeClass(autoPlayButton, "is-play");
       pause = 0;
     }
   }
@@ -192,7 +192,20 @@ export default function createSwiper(){
     },
   });
 
-  return(
+  function autoPlayHandler() {
+    if (pause !== 1) {
+      visualSwiper.autoplay.stop();
+      addClass(autoPlayButton, "is-play");
+      pause = 1;
+    } else {
+      visualSwiper.autoplay.start();
+      removeClass(autoPlayButton, "is-play");
+      pause = 0;
+    }
+  }
+
+  autoPlayButton.addEventListener("click", autoPlayHandler);
+  return (
     visualSwiper,
     taingRecommendSwiper,
     QuickVodSwiper,

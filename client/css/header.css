@@ -9,7 +9,7 @@ h1 {
 }
 
 .header {
-  background-color: var(--black);
+  /* background-color: var(--black); */
   color: rgb(110, 110, 110);
   display: flex;
   justify-content: space-between;
