@@ -1,4 +1,12 @@
-import { getNode, css, insertAfter, tiger, attr } from '../lib/index.js'
+import {
+  getNode,
+  css,
+  insertAfter,
+  tiger,
+  attr,
+  loadStorage,
+  saveStorage,
+} from '../lib/index.js'
 import {
   renderCurrentList,
   renderFavoriteList,
@@ -18,6 +26,8 @@ const defaultOption = {
 }
 
 const SEARCH_KEY = 'taing_search'
+const SERVER_ERROR_MESSAGE = '서버와의 통신에 실패하였습니다.'
+const FAVORITE_URL = 'http://localhost:3000/favorite_search'
 
 const searchInput = getNode('.search-form-input')
 const searchForm = getNode('.search-form')
@@ -46,10 +56,10 @@ function renderDate() {
   let ampm = '오후'
   if (hours < 12) ampm = '오전'
 
-  const template = `${year}.${month}.${day} ${ampm} ${hours}:${minutes} 기준`
+  const timeTemplate = `${year}.${month}.${day} ${ampm} ${hours}:${minutes} 기준`
   const datetime = `${year}-${month}-${day}T${hours}:${minutes}`
 
-  time.innerText = template
+  time.innerText = timeTemplate
   attr(time, 'datetime', datetime)
 }
 
@@ -58,20 +68,21 @@ renderDate()
 /* -------------------------------------------------------------------------- */
 /*                             최근검색어, 인기검색어 render                            */
 /* -------------------------------------------------------------------------- */
-function loadStorage(key) {
-  return JSON.parse(localStorage.getItem(key))
-}
+// function loadStorage(key) {
+//   return JSON.parse(localStorage.getItem(key))
+// }
 
-function saveStorage(key, value) {
-  localStorage.setItem(key, JSON.stringify(value))
-}
+// function saveStorage(key, value) {
+//   localStorage.setItem(key, JSON.stringify(value))
+// }
 
 // 최근 검색어 render
-function renderCurrent() {
-  let searchList = loadStorage(SEARCH_KEY)
+async function renderCurrent() {
+  let searchList = await loadStorage(SEARCH_KEY)
   const noSearchKeyword = getNode('.search-current > p')
   if (!searchList && !noSearchKeyword) {
-    let template = /* html */ `<p>검색 내역이 없습니다.</p>`
+    let template = /* html */ '<p>검색 내역이 없습니다.</p>'
+
     return insertAfter(searchCurrentTitle, template)
   }
   searchList.forEach((keyword, index) =>
@@ -80,22 +91,24 @@ function renderCurrent() {
 }
 
 // 인기 검색어 render
+async function getFavorite() {
+  try {
+    const response = await tiger.get(FAVORITE_URL, defaultOption)
+
+    return response.data
+  } catch (err) {
+    throw new Error(SERVER_ERROR_MESSAGE)
+  }
+}
+
 let isFirst = true // 처음 한번만 실행되게
 async function renderFavorite() {
   if (isFirst) {
     isFirst = !isFirst
-    try {
-      const response = await tiger.get(
-        'http://localhost:3000/favorite_search',
-        defaultOption,
-      )
-      let userData = response.data
-      userData.forEach(({ rank, keyword }) => {
-        renderFavoriteList(searchFavoriteTarget, rank, keyword)
-      })
-    } catch (err) {
-      throw new Error('서버와의 통신에 실패하였습니다.')
-    }
+    const favoriteData = await getFavorite()
+    favoriteData.forEach(({ rank, keyword }) => {
+      renderFavoriteList(searchFavoriteTarget, rank, keyword)
+    })
   }
 }
 
@@ -122,8 +135,8 @@ function clearSearch() {
 /* -------------------------------------------------------------------------- */
 /*                                 최근 검색어 업데이트                                */
 /* -------------------------------------------------------------------------- */
-function updateSearch(keyword) {
-  let prevSearchArray = loadStorage(SEARCH_KEY)
+async function updateSearch(keyword) {
+  let prevSearchArray = await loadStorage(SEARCH_KEY)
   let searchArray = prevSearchArray
 
   if (prevSearchArray === null) {
@@ -164,25 +177,28 @@ deleteAllButton.addEventListener('click', clearSearch)
 /* -------------------------------------------------------------------------- */
 /*                                 특정 검색어 지우기                                 */
 /* -------------------------------------------------------------------------- */
-// 선택한 최근 검색어 지우기
-function deleteSearch(deletedIndex) {
-  let searchList = loadStorage(SEARCH_KEY)
+
+async function deleteSearch(deletedIndex) {
+  let searchList = await loadStorage(SEARCH_KEY)
   searchList.splice(deletedIndex, 1)
+
   return searchList
 }
 
-function deleteHandler(e) {
+function validateIsEmpty(deletedArray) {
+  if (deletedArray.length === 0) {
+    localStorage.removeItem(SEARCH_KEY)
+  } else {
+    saveStorage(SEARCH_KEY, deletedArray)
+  }
+}
+
+async function deleteHandler(e) {
   const target = e.target
   if (target.tagName === 'IMG') {
     const targetIndex = target.closest('li').dataset.index
-    console.log('targetIndex', targetIndex)
-    const deletedArray = deleteSearch(targetIndex)
-    if (deletedArray.length === 0) {
-      // 클리어
-      localStorage.removeItem(SEARCH_KEY)
-    } else {
-      saveStorage(SEARCH_KEY, deletedArray)
-    }
+    const deletedArray = await deleteSearch(targetIndex)
+    validateIsEmpty(deletedArray)
     removeChildAll(searchCurrentTarget)
     renderCurrent()
   }
