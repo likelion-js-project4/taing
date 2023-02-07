@@ -45,12 +45,18 @@ async function userCheck(idNode, pwNode) {
 }
 
 async function login(idNode, pwNode) {
+  const userData = await tiger.get("http://localhost:3000/users");
+  const { data } = userData;
+  const user = data.filter((e) => e.email === idNode.value);
   const isUser = userCheck(idNode, pwNode);
+  console.log(user);
 
   if (isUser) {
     //로그인 성공 후 localStorage에 저장
     saveStorage("userLogin", "true");
+    saveStorage("user_uuid", user[0].user_uuid);
     //routing 처리
+    location.href = "index.html";
   }
 }
 
