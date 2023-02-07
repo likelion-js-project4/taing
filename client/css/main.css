@@ -340,28 +340,29 @@
 
   /* program desktop css */
 
-  .program .swiper-view-all {
-    opacity: 0;
-  }
-
-  .program:hover .swiper-view-all {
-    opacity: 1;
-  }
-
+  .program .swiper-view-all,
   .program .swiper-button-prev,
-  .program .swiper-button-next {
+  .program .swiper-button-next{
     opacity: 0;
   }
 
+  .program:focus .swiper-view-all,
+  .program:focus-within .swiper-view-all,
+  .program:hover .swiper-view-all,
+  .program:focus .swiper-button-prev,
+  .program:focus-within .swiper-button-prev,
   .program:hover .swiper-button-prev,
-  .program:hover .swiper-button-next {
+  .program:focus .swiper-button-next,
+  .program:focus-within .swiper-button-next,
+  .program:hover .swiper-button-next{
     opacity: 1;
   }
 
   .program .swiper-button-next.swiper-button-disabled,
-  .program .swiper-button-prev.swiper-button-disabled {
+  .program .swiper-button-prev.swiper-button-disabled{
     opacity: 0;
   }
+
   .quick-vod-icon > img,
   .main-free-badge > img,
   .main-allow-18-badge > img,
