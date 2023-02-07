@@ -48,7 +48,7 @@ h1 {
   color: var(--white);
   transition: color 0.1s ease 0s;
 }
-.nav-item a{
+.nav-item a {
   padding: 0 var(--spacing-2xs);
 }
 .header-alive {
@@ -62,11 +62,14 @@ h1 {
   cursor: pointer;
   font-size: 0;
 }
-.header-profile-wrapper:hover .header-profile-menu {
+.header-profile-wrapper:hover .header-profile-menu,
+.header-profile-wrapper:focus-within .header-profile-menu,
+.header-profile-wrapper:focus .header-profile-menu {
   visibility: visible;
   opacity: 1;
   top: 3.5rem;
 }
+
 .header-profile-menu {
   border: 1.5px solid rgb(77, 77, 77);
   border-radius: 3px;
@@ -80,8 +83,7 @@ h1 {
   opacity: 0;
   transition: all 0.3s ease;
 }
-
-.header-profile-menu hr {
+.header-profile-menu .header-profile-menu hr {
   border-width: 1px 0 0;
 }
 .profile-box {
@@ -117,12 +119,17 @@ h1 {
 }
 
 .alert-section {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 2;
+  font-size: var(--text-md);
   width: 100%;
   height: 100%;
-  /* display: none; */
-  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .alert-wrapper {
@@ -134,8 +141,8 @@ h1 {
 }
 .alert-wrapper > div {
   display: flex;
-  gap: 1px;
-  width: 526px;
+
+  width: 100%;
   background-color: var(--dark-bg-2);
   border-radius: 0 0 4px 4px;
 }
@@ -189,8 +196,8 @@ h1 {
   .header {
     padding: 0.875rem var(--spacing-3xl);
   }
-  .nav-logo img{
-    max-height:1.5rem
+  .nav-logo img {
+    max-height: 1.5rem;
   }
 
   .nav-item {
@@ -218,6 +225,26 @@ h1 {
     line-height: var(--spacing-xl);
     margin: var(--spacing-2xs) 0;
     padding: 0 var(--spacing-base);
+  }
+  .menu_msg,
+  .enroll-btn,
+  .cancel-btn {
+    font-size: 1rem;
+  }
+
+  .menu_msg {
+    width: 18.5rem;
+  }
+  .enroll-btn,
+  .cancel-btn {
+    width: 9.25rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
+  .menu_msg {
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border-radius: 4px 4px 0 0;
   }
 }
 
@@ -257,5 +284,26 @@ h1 {
     line-height: var(--spacing-xl);
     margin: var(--spacing-2xs) 0;
     padding: 0 var(--spacing-base);
+  }
+
+  .menu_msg,
+  .enroll-btn,
+  .cancel-btn {
+    font-size: 0.75rem;
+  }
+
+  .menu_msg {
+    width: 12.25rem;
+  }
+  .enroll-btn,
+  .cancel-btn {
+    width: 6.125rem;
+    height: 2.875rem;
+    line-height: 2.875rem;
+  }
+  .menu_msg {
+    height: 2.875rem;
+    line-height: 2.875rem;
+    border-radius: 4px 4px 0 0;
   }
 }
