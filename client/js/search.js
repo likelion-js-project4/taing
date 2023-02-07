@@ -128,6 +128,9 @@ function updateSearch(keyword) {
 
   if (prevSearchArray === null) {
     searchArray = []
+  } else if (prevSearchArray.length === 10) {
+    prevSearchArray.splice(0, 1)
+    searchArray = prevSearchArray
   }
   searchArray.push(keyword)
   saveStorage(SEARCH_KEY, searchArray)
