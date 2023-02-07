@@ -47,9 +47,10 @@ function cancel_active(node){
   if(node.placeholder.includes("아이디")){
     if(!(regId.test(node.value))){
       idContent.style.color='red';
-      agreement.id=true;
+      
     }else{
       idContent.style.color='var(--silver500)';
+      agreement.id=true;
     }
   }
 
@@ -67,9 +68,10 @@ function cancel_active(node){
    if(node.classList.value===("second-pw")){
     if(!(node.value===firstPw.value)){
       pwCheckContent.style.display="inline-block";
-      agreement.pw=true;
+      
     }else{
       pwCheckContent.style.display="none";
+      agreement.pw=true;
     }
   }
 
@@ -78,9 +80,10 @@ function cancel_active(node){
   if(node.placeholder.includes("이메일")){
     if(!(email_format.test(node.value))){
       emailContent.style.display="inline-block";
-      agreement.email=true;
+      
     }else{
       emailContent.style.display="none";
+      agreement.email=true;
     }
   }
 }
