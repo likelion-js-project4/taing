@@ -25,6 +25,7 @@ function logout() {
   deleteStorage("user_uuid");
   deleteStorage("userLogin");
   main.removeChild(main.children[0]);
+  location.href = "/landing.html";
 }
 function logoutHandler() {
   // 모달창 띄우기
@@ -49,7 +50,6 @@ function logoutHandler() {
   enrollButton.addEventListener("click", logout);
   cancelButton.addEventListener("click", () => {
     main.removeChild(main.children[0]);
-    location.href = "/landing.html";
   });
 }
 
