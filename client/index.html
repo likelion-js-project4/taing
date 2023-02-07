@@ -11,20 +11,12 @@
       name="description"
       content="타잉 오리지널 콘텐츠, 방송, 영화, 해외시리즈까지! 재미를 플레이해보세요."
     />
-    <meta
-      property="og:image"
-      content="./assets/icons/tving_logo_meta_new.png"
-    />
+
+    <meta property="og:image" content="./assets/icons/tving_logo_meta_new.png" />
     <!-- <meta property="og:url" content="http://www.mysite.com"> -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="./assets/icons/tving-favicon-160@3x.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/icons/tving-favicon-160@3x.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
     <link
       rel="stylesheet"
       as="style"
@@ -57,10 +49,7 @@
         <ul class="header-nav-left">
           <li class="nav-item">
             <a href="/" class="header-alive">
-              <img
-                src="./assets/icons/header_live_default_34_34.png"
-                alt="실시간"
-              />
+              <img src="./assets/icons/header_live_default_34_34.png" alt="실시간" />
               &nbsp;실시간
             </a>
           </li>
@@ -76,18 +65,43 @@
         </ul>
         <div class="header-nav-right">
           <button type="button" class="header-search">
-            <img
-              src="assets/icons/header_search_default_40_40.png"
-              alt="search"
-            />
+            <img src="assets/icons/header_search_default_40_40.png" alt="search" />
           </button>
-          <button class="header-profile">
-            <img src="assets/icons/header_logo_40_40.png" alt="profile" />
-          </button>
+          <div class="header-profile-wrapper">
+            <button class="header-profile">
+              <img src="assets/icons/header_logo_40_40.png" alt="profile" />
+            </button>
+            <div class="header-profile-menu">
+              <div class="profile-box">
+                <div><img src="./assets/image/tving.png" alt="프로필" /></div>
+                <div>
+                  <p class="profile-username"></p>
+                  <a class="profile-transfer" href="/">프로필 전환</a>
+                </div>
+              </div>
+              <hr />
+              <ul class="profile-menu-box">
+                <li><a href="/">MY</a></li>
+                <li><a href="/">이용권</a></li>
+                <li><a href="/">쿠폰등록</a></li>
+                <li><a href="/">고객센터</a></li>
+                <li class="logout-modal"><a>로그아웃</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
     <main class="main">
+      <!-- <section class="alert-section">
+        <div class="alert-wrapper">
+          <p class="menu_msg">검색어를 입력해주세요.</p>
+          <div>
+            <button class="enroll-btn">확인</button>
+            <button class="cancel-btn">취소</button>
+          </div>
+        </div>
+      </section> -->
       <section class="visual">
         <div class="swiper">
           <div class="swiper-wrapper"></div>
@@ -173,10 +187,7 @@
       <section class="broadcasting program">
         <h2 class="taing-title a11y-hidden">Taing SPORTS 경기 생중계</h2>
         <div class="swiper">
-          <img
-            src="./assets/image/main_sports_1762_177.png"
-            alt="Taing SPORTS 경기 생중계"
-          />
+          <img src="./assets/image/main_sports_1762_177.png" alt="Taing SPORTS 경기 생중계" />
         </div>
       </section>
       <section class="main-event program">
@@ -230,10 +241,7 @@
               <span>통신판매신고번호 : 2020-서울마포-3641호</span>
             </p>
             <p>
-              <span>
-                사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브
-                15층(상암동)
-              </span>
+              <span> 사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동) </span>
               <span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
             </p>
             <p>
@@ -241,45 +249,30 @@
                 <a href="https://www.tving.com/help/qna">고객문의 바로가기</a>
               </span>
               <span>대표메일 : tving@cj.net</span>
-              <span>
-                고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)
-              </span>
+              <span> 고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무) </span>
             </p>
             <p>
-              <span>
-                ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780
-              </span>
+              <span> ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780 </span>
               <span>Mnet 고객센터(방송편성문의) : 1855-1631</span>
             </p>
             <ul class="sns-link-logo">
               <li>
                 <a href="https://www.youtube.com/c/TVING_official">
-                  <img
-                    src="assets/icons/footer_youtube_52_52.png"
-                    alt="유튜브"
-                  />
+                  <img src="assets/icons/footer_youtube_52_52.png" alt="유튜브" />
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/tving.official/">
-                  <img
-                    src="assets/icons/footer_instagram_52_52.png"
-                    alt="인스타그램"
-                  />
+                  <img src="assets/icons/footer_instagram_52_52.png" alt="인스타그램" />
                 </a>
               </li>
               <li>
                 <a href="https://twitter.com/tvingdotcom">
-                  <img
-                    src="assets/icons/footer_twitter_52_52.png"
-                    alt="트위터"
-                  />
+                  <img src="assets/icons/footer_twitter_52_52.png" alt="트위터" />
                 </a>
               </li>
             </ul>
-            <small class="copyright">
-              Copyright © 주식회사 티빙 All right reserved.
-            </small>
+            <small class="copyright"> Copyright © 주식회사 티빙 All right reserved. </small>
           </div>
         </div>
       </section>
