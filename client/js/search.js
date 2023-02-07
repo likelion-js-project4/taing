@@ -195,3 +195,20 @@ async function deleteHandler(e) {
   }
 }
 searchCurrentTarget.addEventListener('click', deleteHandler)
+
+/* -------------------------------------------------------------------------- */
+/*                                 검색창 내용 바꾸기                                 */
+/* -------------------------------------------------------------------------- */
+
+function resizeHandler() {
+  if (window.innerWidth < 450) {
+    return attr(searchInput, 'placeholder', '검색')
+  }
+  attr(
+    searchInput,
+    'placeholder',
+    'TV프로그램, 영화 제목 및 출연진으로 검색해보세요',
+  )
+}
+
+window.addEventListener('resize', resizeHandler)
