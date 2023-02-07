@@ -221,6 +221,7 @@ body {
 
 #roller1 {
   animation: 50s linear 0s infinite normal forwards running rollingleft1;
+  padding-right: 0.2vw;
 }
 
 #clone1 {
@@ -412,6 +413,14 @@ body {
   }
 
   .taing-finding-wrapper > h3 {
+    display: none;
+  }
+
+  .small-slide {
+    display: inline;
+  }
+
+  .large-slide {
     display: none;
   }
 
