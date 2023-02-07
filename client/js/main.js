@@ -4,6 +4,16 @@ import { getNode, saveStorage, loadStorage, insertFirst } from "../lib/index.js"
 const main = getNode("main");
 const header = getNode(".header-alive");
 
+const isUser = await loadStorage("user_uuid");
+
+function userLoginCheck() {
+  if (!isUser) {
+    console.log(123);
+    location.href = "/landing.html";
+    return;
+  }
+}
+
 async function modalHandler() {
   const isModalClose = await loadStorage("close_today");
   console.log(isModalClose);
@@ -48,6 +58,7 @@ async function modalHandler() {
   return;
 }
 
+userLoginCheck();
 modalHandler();
 createSwiper();
 

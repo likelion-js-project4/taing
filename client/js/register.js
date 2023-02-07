@@ -185,4 +185,4 @@ pw_see_button.addEventListener("click", () => pw_see(pw_see_button));
 pwcheck_see_button.addEventListener("click", () => pw_see(pwcheck_see_button));
 
 checkAll.addEventListener("click", all_check);
-submitButton.addEventListener("click", () => register(inputId, inputPassword, inputEmail));
+submitButton.addEventListener("click", () => register(inputId, inputEmail, inputPassword));
