@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TAING" />
+    <meta
+      property="og:description"
+      name="description"
+      content="타잉 오리지널 콘텐츠, 방송, 영화, 해외시리즈까지! 재미를 플레이해보세요."
+    />
+
+    <meta property="og:image" content="./assets/icons/tving_logo_meta_new.png" />
+    <!-- <meta property="og:url" content="http://www.mysite.com"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/icons/tving-favicon-160@3x.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
     <link
@@ -19,47 +30,78 @@
     <link rel="stylesheet" href="./css/title.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/search.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
     <script src="./js/header.js" type="module"></script>
-    <title>Taing</title>
+    <title>TAING</title>
   </head>
   <body>
     <header class="header">
       <h1 class="nav-logo">
-        <a href="./index.html"><img src="./assets/icons/header_logo_132_42.png" alt="타잉" /></a>
+        <a href="./index.html">
+          <img src="./assets/icons/header_logo_132_42.png" alt="타잉" />
+        </a>
       </h1>
       <nav class="nav">
         <h2 class="a11y-hidden">메인 메뉴</h2>
         <ul class="header-nav-left">
           <li class="nav-item">
-            <a href="" class="header-alive">
+            <a href="/" class="header-alive">
               <img src="./assets/icons/header_live_default_34_34.png" alt="실시간" />
               &nbsp;실시간
             </a>
           </li>
           <li class="nav-item">
-            <a href="">TV 프로그램</a>
+            <a href="/">TV 프로그램</a>
           </li>
           <li class="nav-item">
-            <a href="">영화</a>
+            <a href="/">영화</a>
           </li>
           <li class="nav-item">
-            <a href="">파라마운트+</a>
+            <a href="/">파라마운트+</a>
           </li>
-        </ul> 
+        </ul>
         <div class="header-nav-right">
           <button type="button" class="header-search">
             <img src="assets/icons/header_search_default_40_40.png" alt="search" />
           </button>
-          <button class="header-profile">
-            <img src="assets/icons/header_logo_40_40.png" alt="profile" />
-          </button>
+          <div class="header-profile-wrapper">
+            <button class="header-profile">
+              <img src="assets/icons/header_logo_40_40.png" alt="profile" />
+            </button>
+            <div class="header-profile-menu">
+              <div class="profile-box">
+                <div><img src="./assets/image/tving.png" alt="프로필" /></div>
+                <div>
+                  <p class="profile-username"></p>
+                  <a class="profile-transfer" href="/">프로필 전환</a>
+                </div>
+              </div>
+              <hr />
+              <ul class="profile-menu-box">
+                <li><a href="/">MY</a></li>
+                <li><a href="/">이용권</a></li>
+                <li><a href="/">쿠폰등록</a></li>
+                <li><a href="/">고객센터</a></li>
+                <li class="logout-modal"><a>로그아웃</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
     <main class="main">
+      <!-- <section class="alert-section">
+        <div class="alert-wrapper">
+          <p class="menu_msg">검색어를 입력해주세요.</p>
+          <div>
+            <button class="enroll-btn">확인</button>
+            <button class="cancel-btn">취소</button>
+          </div>
+        </div>
+      </section> -->
       <section class="visual">
         <div class="swiper">
           <div class="swiper-wrapper"></div>
@@ -79,7 +121,19 @@
         </div>
         <div class="swiper-view-all">
           <div class="swiper-pagination"></div>
-          <a href="/">전체보기</a>
+          <a href="/"><span class="a11y-hidden">타잉에서 꼭 봐야하는 콘텐츠</span>전체보기</a>
+        </div>
+      </section>
+      <section class="latest-view program">
+        <h2 class="taing-title">시청하는 콘텐츠</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-view-all">
+          <div class="swiper-pagination"></div>
+          <a href="/"><span class="a11y-hidden">시청하는 콘텐츠</span>전체보기</a>
         </div>
       </section>
       <section class="quick-vod program">
@@ -91,7 +145,7 @@
         </div>
         <div class="swiper-view-all">
           <div class="swiper-pagination"></div>
-          <a href="/">전체보기</a>
+          <a href="/"><span class="a11y-hidden">Quick VOD</span>전체보기</a>
         </div>
       </section>
       <section class="real-time program">
@@ -103,7 +157,7 @@
         </div>
         <div class="swiper-view-all">
           <div class="swiper-pagination"></div>
-          <a href="/">전체보기</a>
+          <a href="/"><span class="a11y-hidden">실시간 인기 프로그램</span>전체보기</a>
         </div>
       </section>
       <section class="live-time program">
@@ -115,7 +169,7 @@
         </div>
         <div class="swiper-view-all">
           <div class="swiper-pagination"></div>
-          <a href="/">전체보기</a>
+          <a href="/"><span class="a11y-hidden">인기 LIVE 채널</span>전체보기</a>
         </div>
       </section>
       <section class="only-taing program">
@@ -127,13 +181,13 @@
         </div>
         <div class="swiper-view-all">
           <div class="swiper-pagination"></div>
-          <a href="/">전체보기</a>
+          <a href="/"><span class="a11y-hidden">오직 타잉에만 있어요</span>전체보기</a>
         </div>
       </section>
       <section class="broadcasting program">
         <h2 class="taing-title a11y-hidden">Taing SPORTS 경기 생중계</h2>
         <div class="swiper">
-          <img src="./assets/image/main_sports_1762_177.png" />
+          <img src="./assets/image/main_sports_1762_177.png" alt="Taing SPORTS 경기 생중계" />
         </div>
       </section>
       <section class="main-event program">
@@ -145,7 +199,7 @@
         </div>
         <div class="swiper-view-all">
           <div class="swiper-pagination"></div>
-          <a href="/">전체보기</a>
+          <a href="/"><span class="a11y-hidden">이벤트</span>전체보기</a>
         </div>
       </section>
     </main>
@@ -155,52 +209,57 @@
           <div class="footer-top">
             <div>
               <span class="footer-notice">공지사항</span>
-              <span class="footer-notice-title"
-                >[안내] 개인정보 처리방침 개정 안내 (2023 1월 2일)</span
-              >
+              <span class="footer-notice-title">
+                [안내] 개인정보 처리방침 개정 안내 (2023 1월 2일)
+              </span>
             </div>
             <div>
-              <span class="link-brand">브랜드 바로가기 +</span
-              ><span class="link-group">그룹 계열사 바로가기 + </span>
+              <span class="link-brand">브랜드 바로가기 +</span>
+              <span class="link-group">그룹 계열사 바로가기 +</span>
             </div>
           </div>
           <ul class="footer-nav">
             <li><a href="https://www.tving.com/help/notice">고객센터</a></li>
             <li><a href="https://www.tving.com/policy/terms">이용약관</a></li>
             <li>
-              <a href="https://www.tving.com/policy/privacy"><strong>개인정보처리방침</strong></a>
+              <a href="https://www.tving.com/policy/privacy">
+                <strong>개인정보처리방침</strong>
+              </a>
             </li>
-            <li><a href="https://www.tving.com/policy/youth">청소년 보호정책</a></li>
+            <li>
+              <a href="https://www.tving.com/policy/youth">청소년 보호정책</a>
+            </li>
             <li><a href="https://www.tving.com/policy/legal">법적고지</a></li>
             <li><a href="https://www.tving.com/event/list">이벤트</a></li>
             <li><a href="https://team.tving.com/">인재채용</a></li>
           </ul>
           <div class="copyright-box">
             <p>
-              <span>대표이사 : YANG JIEUL</span
-              ><span class="business-infomation">사업자정보확인</span
-              ><span>사업자등록번호 : 188-88-01893</span
-              ><span>통신판매신고번호 : 2020-서울마포-3641호</span>
+              <span>대표이사 : YANG JIEUL</span>
+              <span class="business-infomation">사업자정보확인</span>
+              <span>사업자등록번호 : 188-88-01893</span>
+              <span>통신판매신고번호 : 2020-서울마포-3641호</span>
             </p>
             <p>
-              <span>사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동)</span
-              ><span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
+              <span> 사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동) </span>
+              <span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
             </p>
             <p>
-              <span class="customer-service"
-                ><a href="https://www.tving.com/help/qna">고객문의 바로가기</a></span
-              ><span>대표메일 : tving@cj.net</span
-              ><span>고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</span>
+              <span class="customer-service">
+                <a href="https://www.tving.com/help/qna">고객문의 바로가기</a>
+              </span>
+              <span>대표메일 : tving@cj.net</span>
+              <span> 고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무) </span>
             </p>
             <p>
-              <span>ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780</span
-              ><span>Mnet 고객센터(방송편성문의) : 1855-1631</span>
+              <span> ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780 </span>
+              <span>Mnet 고객센터(방송편성문의) : 1855-1631</span>
             </p>
             <ul class="sns-link-logo">
               <li>
-                <a href="https://www.youtube.com/c/TVING_official"
-                  ><img src="assets/icons/footer_youtube_52_52.png" alt="유튜브"
-                /></a>
+                <a href="https://www.youtube.com/c/TVING_official">
+                  <img src="assets/icons/footer_youtube_52_52.png" alt="유튜브" />
+                </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/tving.official/">
@@ -213,7 +272,7 @@
                 </a>
               </li>
             </ul>
-            <small class="copyright">Copyright © 주식회사 티빙 All right reserved.</small>
+            <small class="copyright"> Copyright © 주식회사 티빙 All right reserved. </small>
           </div>
         </div>
       </section>
