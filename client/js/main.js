@@ -1,4 +1,4 @@
-import createSwiper from "./createSwiper.js";
+import createSwiper from './createSwiper.js';
 
 import {
   getNode as $,
@@ -15,7 +15,7 @@ import {
   insertFirst,
   addClass,
   attr
-} from "../lib/index.js";
+} from '../lib/index.js';
 
 const visualContainer = $('.visual .swiper-wrapper');
 const taingRecommendContainer = $('.taing-recommend .swiper-wrapper');
@@ -52,57 +52,57 @@ async function renderList() {
   } catch (err) {}
 }
 
-const main = $(".main");
-const header = $(".header-alive");
+const main = $('.main');
+const header = $('.header-alive');
 
-const isUser = await loadStorage("user_uuid");
+const isUser = await loadStorage('user_uuid');
 
 function userLoginCheck() {
   if (!isUser) {
-    // location.href = "/landing.html";
+    // location.href = '/landing.html';
     return;
   }
 }
 
 async function modalHandler() {
-  const isModalClose = await loadStorage("close_today");
+  const isModalClose = await loadStorage('close_today');
   console.log(isModalClose);
-  if (isModalClose !== "true") {
+  if (isModalClose !== 'true') {
     insertFirst(
       main,
-      `   <article class="main-event-modal">
-      <a href="/"><img src="./assets/image/modal_event_586.6_662.29.png" alt="메인 이벤트" /></a>
-      <ul class="main-evnent-modal-close">
+      `   <article class='main-event-modal'>
+      <a href='/'><img src='./assets/image/modal_event_586.6_662.29.png' alt='메인 이벤트' /></a>
+      <ul class='main-evnent-modal-close'>
         <li>
-          <button type="button">오늘하루 보지 않기</button>
+          <button type='button'>오늘하루 보지 않기</button>
         </li>
         <li>
-          <button type="button">닫기</button>
+          <button type='button'>닫기</button>
         </li>
       </ul>
     </article>`
     );
 
-    const mainModal = $(".main-event-modal");
-    const mainModalCloseDefaultButton = $(".main-evnent-modal-close li:last-child button");
-    const mainModalCloseTodayButton = $(".main-evnent-modal-close li:first-child button");
+    const mainModal = $('.main-event-modal');
+    const mainModalCloseDefaultButton = $('.main-evnent-modal-close li:last-child button');
+    const mainModalCloseTodayButton = $('.main-evnent-modal-close li:first-child button');
 
-    let isModalCloseToday = await loadStorage("close_today");
+    let isModalCloseToday = await loadStorage('close_today');
     if (isModalCloseToday) {
       main.removeChild(mainModal);
     }
 
-    mainModalCloseDefaultButton.addEventListener("click", () => {
-      mainModal.style.display = "none";
+    mainModalCloseDefaultButton.addEventListener('click', () => {
+      mainModal.style.display = 'none';
     });
 
-    mainModalCloseTodayButton.addEventListener("click", () => {
-      saveStorage("close_today", "true");
+    mainModalCloseTodayButton.addEventListener('click', () => {
+      saveStorage('close_today', 'true');
       main.removeChild(mainModal);
     });
 
-    mainModal.addEventListener("click", () => {
-      mainModal.style.display = "none";
+    mainModal.addEventListener('click', () => {
+      mainModal.style.display = 'none';
     });
   }
   return;
@@ -124,8 +124,8 @@ function latestViewHandler(e){
     target = target.parentNode;
     if(target.nodeName === 'BODY'){
       target = null;
-      return
-    }
+      return 
+    } 
   }
   
   if(target.dataset.index){
@@ -141,9 +141,9 @@ function latestViewHandler(e){
 
 main.addEventListener('click', latestViewHandler);
 
-header.addEventListener("mouseenter", () => {
-  header.children[0].src = "./assets/icons/header_live_active_34_34.png";
+header.addEventListener('mouseenter', () => {
+  header.children[0].src = './assets/icons/header_live_active_34_34.png';
 });
-header.addEventListener("mouseleave", () => {
-  header.children[0].src = "./assets/icons/header_live_default_34_34.png";
+header.addEventListener('mouseleave', () => {
+  header.children[0].src = './assets/icons/header_live_default_34_34.png';
 });
