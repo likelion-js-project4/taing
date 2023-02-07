@@ -141,7 +141,7 @@ h1 {
 }
 .alert-wrapper > div {
   display: flex;
-
+  position: relative;
   width: 100%;
   background-color: var(--dark-bg-2);
   border-radius: 0 0 4px 4px;
@@ -172,6 +172,16 @@ h1 {
 }
 .enroll-btn {
   border-radius: 0 0 0 4px;
+}
+.enroll-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: var(--spacing-lg);
+  margin-top: -10px;
+  background-color: #fff;
 }
 .cancel-btn {
   border-radius: 0 0 4px 0;
@@ -246,6 +256,10 @@ h1 {
     line-height: 3.5rem;
     border-radius: 4px 4px 0 0;
   }
+  .enroll-btn::after {
+    height: var(--spacing-base);
+    margin-top: -8px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -305,5 +319,9 @@ h1 {
     height: 2.875rem;
     line-height: 2.875rem;
     border-radius: 4px 4px 0 0;
+  }
+  .enroll-btn::after {
+    height: var(--spacing-s);
+    margin-top: -5px;
   }
 }
