@@ -19,14 +19,10 @@ body {
 .pin-wrap {
   height: 100vh;
   display: flex;
-  justify-content: flex-start;
+  flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
-  padding: 20% 27vw 2%;
-}
-
-.pin-wrap > * {
-  min-width: 48vw;
-  padding: 0 0.5vw;
+  padding: 33vh 0 2%;
 }
 
 .taing-only-wrapper{
@@ -34,6 +30,14 @@ body {
   top: 15%;
   left:50%;
   transform: translateX(-50%);
+}
+
+.swiper-slide .landing-img-box img{
+  opacity: 0.4;
+}
+
+.swiper-slide-active .landing-img-box img{
+  opacity: 1;
 }
 
 /* 공통 헤더 */
@@ -125,15 +129,6 @@ body {
 .taing-only-title-description {
   color: var(--silver200);
   margin-bottom: var(--spacing-xs);
-}
-
-/* 스와이퍼 영역 */
-.taing-only-contents .swiper {
-  height: 100%;
-}
-
-.small-slide {
-  display: none;
 }
 
 .landing-img-box img {
@@ -253,6 +248,9 @@ body {
 
 /* 데스크탑 디바이스 */
 @media (min-width: 1280px) {
+  .pin-wrap{
+    padding-top:45vh
+  }
 }
 
 /* 태블릿 디바이스 */
@@ -305,19 +303,6 @@ body {
     font-weight: var(--weight-md);
     line-height: var(--line-height-md);
     margin-bottom: var(--spacing-xl);
-  }
-
-  /* 스와이퍼 영역 */
-  .swiper {
-    height: 25rem;
-  }
-
-  .small-slide {
-    display: block;
-  }
-
-  .large-slide {
-    display: none;
   }
 
   /* 타잉 재소개 */
@@ -390,23 +375,6 @@ body {
   }
 
   .taing-finding-wrapper > h3 {
-    display: none;
-  }
-
-  /* 스와이퍼 영역 */
-  .taing-only-contents .swiper {
-    margin-bottom: 3rem;
-  }
-
-  .swiper {
-    height: 25rem;
-  }
-
-  .small-slide {
-    display: block;
-  }
-
-  .large-slide {
     display: none;
   }
 
