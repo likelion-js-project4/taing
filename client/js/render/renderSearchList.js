@@ -18,7 +18,7 @@ const createCurrentList = (keyword, index) => {
 const createFavoriteList = (rank, keyword) => {
   return /* html */ `
   <li class="no${rank}">
-    <a href="/">${keyword}</a>
+    <a href="#">${keyword}</a>
   </li>
   `
 }
