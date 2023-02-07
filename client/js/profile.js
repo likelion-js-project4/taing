@@ -4,7 +4,6 @@ const profileEditButton = getNode('#edit-btn');
 const profileUserButton = getNodes('.user-btn')
 
 
-// console.log(profileUserButton);
 let toggle = true;
 
   //편집버튼을 누른상황 = true
@@ -21,8 +20,6 @@ function clickEditHandler() {
   removeClass(profileEditButton, 'profile-edit-btn')
   addClass(profileEditButton,'profile-complete-btn')
   profileUserButton.forEach(profileUserButton=>addClass(profileUserButton,'user-edit-btn'))
-  // for (let index = 0; index < profileUserButton.length; index++) {
-  // addClass(profileUserButton,'user-edit-btn');
   profileEditButton.textContent = "완료"
   toggle = !toggle;
 
@@ -30,16 +27,10 @@ function clickEditHandler() {
   removeClass(profileEditButton,'profile-complete-btn')
   addClass(profileEditButton, 'profile-edit-btn')
   profileUserButton.forEach(profileUserButton=>removeClass(profileUserButton,'user-edit-btn'))
-  // for (let index = 0; index < profileUserButton.length; index++) {
-  //  removeClass(profileUserButton,'user-edit-btn');
   profileEditButton.textContent = "프로필 편집"
     toggle = !toggle;
   }
   }
     
-
-
-
-
 
 profileEditButton.addEventListener('click',clickEditHandler);
