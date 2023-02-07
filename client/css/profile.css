@@ -26,8 +26,9 @@
   color: var(--silver200);
 }
 
+
 /* 연필 아이콘 */
-.user-btn-edit::before{
+.user-edit-btn::before{
   content: "";
   background: url(../assets/image/profile_resource5_234_234.png) no-repeat ; 
   display: block;
@@ -44,6 +45,7 @@
 /* 4개 이미지(버튼) 포커스 영역 */
 .user-btn:focus {
   outline-offset: -2px;
+
 }
 
 /* 4개 이미지(버튼) */
@@ -51,6 +53,15 @@
   font-size: 0;
   cursor: pointer;
   position: relative;
+  transform: translateY(9px);
+  transition: all 300ms ease-out; 
+}
+
+
+/* 4개 이미지(버튼) 마우스 대면 위로 떠있는 효과 */
+.user-btn:hover{
+  transform: translateY(-9px);
+  transition: all 300ms ease-out;
 }
 
 
@@ -80,6 +91,25 @@
   background-color: transparent;
 }
 
+/* 프로필 완료 버튼 포커스 영역 */
+.profile-complete-btn:hover {
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+
+/* 프로필 완료 버튼 */
+.profile-complete-btn {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--black);
+  border: 1px solid #565656;
+  border-radius: 4px;
+  background-color: var(--silver100);
+}
 
 
 
@@ -124,18 +154,15 @@
   margin-bottom: var(--spacing-4xl); /* 44px */
 }
 
-/* li 4개 (이미지+텍스트) 합친거 ul */
-.profile-photo {
-  gap: var(--spacing-5xl); /* 52px */
-}
 
 /* li 4개 (이미지+텍스트) 합친거 ul */
 .profile-photo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
   padding: 5px;
+  gap: var(--spacing-5xl); /* 52px */
+
 }
 
 /* 이미지+텍스트 개별 li */
@@ -147,7 +174,7 @@
 .profile-item>p {
   font-size: var(--text-lg);
   font-weight: var(--weight-sm);
-  margin-top: var(--spacing-base);
+  padding-top: var(--spacing-lg); /* 24px */
 }
 
 /* 프로필 편집 버튼 */
@@ -161,13 +188,28 @@
   justify-content: center;
 }
 
+
+/* 프로필 완료 버튼 */
+.profile-complete-btn {
+  margin-bottom: var(--spacing-8xl); /* 130px */
+  margin-top: 4.125rem; /* 66px */
+  font-weight: var(--weight-md);
+  font-size: var(--text-lg);
+  width: 17rem;
+  height: 5.375rem;
+  justify-content: center;
 }
+
+
+}
+
+
 
 
 /* -------------------------------------------------------------------------- */
 /*                                     테블릿                                    */
 /* -------------------------------------------------------------------------- */
-@media (min-width: 769px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1279px) {
 
 /* 맨위 공간 */
 .profile-header {
@@ -204,18 +246,14 @@
   margin-bottom: 1.75rem; /* 28px */
 }
 
-/* li 4개 (이미지+텍스트) 합친거 ul */
-.profile-photo {
-  gap: var(--spacing-xl); /* 32px */
-}
 
 /* li 4개 (이미지+텍스트) 합친거 ul */
 .profile-photo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
   padding: 5px;
+  gap: var(--spacing-xl); /* 32px */
 }
 
 /* 이미지+텍스트 개별 li */
@@ -227,7 +265,7 @@
 .profile-item>p {
   font-size: var(--text-sm); /* 12px */
   font-weight: var(--weight-sm);
-  margin-top: var(--spacing-s);
+  padding-top: var(--spacing-md);
 }
 
 /* 프로필 편집 버튼 */
@@ -240,6 +278,18 @@
   height: 3.8rem;
   justify-content: center;
 }
+
+/* 프로필 완료 버튼 */
+.profile-complete-btn {
+  margin-bottom: var(--spacing-7xl); /* 70px */
+  margin-top: 2.75rem; /* 44px */
+  font-weight: var(--weight-md); 
+  font-size: var(--text-sm); /* 12px */
+  width: 11.8rem;
+  height: 3.8rem;
+  justify-content: center
+}
+
 }
 
 
@@ -247,7 +297,7 @@
 /* -------------------------------------------------------------------------- */
 /*                                     모바일                                    */
 /* -------------------------------------------------------------------------- */
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
 
 /* 맨위 공간 */
 .profile-header {
@@ -302,7 +352,7 @@
 .profile-item>p {
   font-size: var(--text-sm);
   font-weight: var(--weight-sm);
-  margin-top: var(--spacing-s);
+  padding-top: var(--spacing-base);
 }
 
 /* 프로필 편집 버튼 */
@@ -315,5 +365,17 @@
   height: 2.625rem;
   justify-content: center;
 }
+
+/* 프로필 완료 버튼 */
+.profile-complete-btn {
+  margin-bottom: var(--spacing-5xl); /* 52px */
+  margin-top:  var(--spacing-xl); /* 32px */
+  font-weight: var(--weight-md);
+  font-size: var(--text-sm);
+  width: 8.4375rem;
+  height: 2.625rem;
+  justify-content: center;
+}
+
 
 }

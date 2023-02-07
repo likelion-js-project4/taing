@@ -1,8 +1,62 @@
-/* global gsap ScrollTrigger */
-/* global Swiper */
-import { getNode, css, getNodes } from '../lib/index.js'
+/* global gsap */
 
-// 롤링 배너
+import { 
+  getNode as $,
+} from "../lib/index.js";
+
+let landingSwiper = new Swiper('.taing-only-contents .swiper', {
+  // direction: 'horizontal',
+  spaceBetween: 15,
+  centeredSlides: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1280: {
+      slidesPerView: 2.24,
+      spaceBetween: 30,
+    },
+  },
+})
+
+gsap.registerPlugin(ScrollTrigger);
+
+let sections = gsap.utils.toArray(".landing-img-box");
+
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#sectionPin",
+    pin: true,
+    scrub: 1,
+    end: () => "+=" + $("#sectionPin").offsetWidth * 3,
+    onUpdate: ({progress})=>{
+      console.log(progress)
+      if(progress > 0.1){
+        landingSwiper.slideTo(0, 1000, true)
+      }
+      if(progress > 0.4){
+        landingSwiper.slideTo(1, 1000, true)
+      }
+      if(progress > 0.7){
+        landingSwiper.slideTo(2, 1000, true)
+      }
+      if(progress > 0.85){
+        landingSwiper.slideTo(3, 1000, true)
+      }
+    }
+  }
+});
+
 function appendClone(node, clone) {
   let wrap = node.closest('.wrap')
   wrap.appendChild(clone)
@@ -23,127 +77,6 @@ window.addEventListener('DOMContentLoaded', function () {
       item.querySelector('ul').offsetWidth + 'px'
   })
 })
-
-// 스와이퍼
-let landingSwiper = new Swiper('.taing-only-contents .swiper', {
-  // direction: 'horizontal',
-  autoPlay: false,
-  spaceBetween: 15,
-  centeredSlides: true,
-  mousewheel: true,
-  on: {
-    slideChange: function () {
-      setTimeout(function () {
-        landingSwiper.params.touchReleaseOnEdges = false
-        landingSwiper.params.mousewheel.releaseOnEdges = false
-      })
-    },
-    reachEnd: function () {
-      setTimeout(function () {
-        landingSwiper.params.touchReleaseOnEdges = true
-        landingSwiper.params.mousewheel.releaseOnEdges = true
-      }, 500)
-    },
-    reachBeginning: function () {
-      setTimeout(function () {
-        landingSwiper.params.touchReleaseOnEdges = true
-        landingSwiper.params.mousewheel.releaseOnEdges = true
-      }, 500)
-    },
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1.2,
-    },
-    768: {
-      slidesPerView: 2.7,
-      spaceBetween: 10,
-    },
-    1280: {
-      slidesPerView: 2.1,
-      spaceBetween: 30,
-    },
-  },
-})
-
-gsap.registerPlugin(ScrollTrigger)
-
-// let sections = gsap.utils.toArray('.swiper')
-// gsap.to('.swiper', {
-//   // xPercent: -50 * sections.length,
-//   ease: 'none',
-//   scrollTrigger: {
-//     markers: true,
-//     trigger: '.swiper',
-//     start: 'top 80%',
-//     end: 'top 30%',
-//     pin: true,
-//     scrub: 1,
-//     // snap: 1 / (sections.length - 1),
-//   },
-//   onUpdate: ({ progress }) => {
-//     console.log(progress)
-//     if (progress > 0) {
-//       landingSwiper.slideTo(0)
-//     }
-//     if (progress > 0.25) {
-//       landingSwiper.slideTo(1)
-//     }
-//     if (progress > 0.5) {
-//       landingSwiper.slideTo(2)
-//     }
-//     if (progress > 0.75) {
-//       landingSwiper.slideTo(3)
-//     }
-//   },
-// })
-
-gsap.to('.taing-only-contents', {
-  ease: 'none',
-  scrollTrigger: {
-    markers: true,
-    trigger: '#sectionPin', // 얘가 발견되어야 작동한다.
-    pin: '.taing-only-contents .swiper', // 멈추는 구간?
-    scrub: 2,
-    start: 'top top',
-    end: 'bottom bottom',
-    onUpdate: ({ progress }) => {
-      console.log(progress)
-    },
-    duration: 2,
-  },
-})
-
-// gsap.to('.taing-only-contents', {
-//   ease: 'none',
-//   scrollTrigger: {
-//     markers: true,
-//     trigger: '#sectionPin', // 얘가 발견되어야 작동한다.
-//     pin: '.taing-only-contents .swiper', // 멈추는 구간?
-//     scrub: 2,
-//     start: 'bottom bottom',
-//     end: 'top top',
-//     onUpdate: ({ progress }) => {
-//       console.log(progress)
-//     },
-//     // end: '+=2000',
-//     // snap: 1 / (sections.length - 1),
-//     // onUpdate: ({ progress }) => {
-//     //   console.log(progress)
-//     //   if (progress >= 0) {
-//     //     landingSwiper.slideTo(0)
-//     //   } else if (progress > 0.25) {
-//     //     landingSwiper.slideTo(1)
-//     //   } else if (progress > 0.5) {
-//     //     landingSwiper.slideTo(2)
-//     //   } else {
-//     //     landingSwiper.slideTo(3)
-//     //   }
-//     // },
-//     duration: 2,
-//   },
-// })
-
 // 글자 애니메이션
 const wrapper = getNode('.intro-wrapper')
 const h1 = getNode('.intro-wrapper > p:nth-child(1)')

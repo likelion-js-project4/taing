@@ -5,7 +5,7 @@ export default function createSwiper(){
   const visualSwiper = new Swiper(".visual .swiper", {
     effect: "fade",
     autoplay:{
-      delay: 1000,
+      delay: 4000,
       disableOnInteraction: false
     },
     keyboard: {
@@ -28,10 +28,6 @@ export default function createSwiper(){
   autoPlayButton.addEventListener('click', autoPlayHandler);
 
   let pause;
-
-  const toggle = {
-    pause : true,
-  }
 
   function autoPlayHandler(){
     if(pause !== 1){
