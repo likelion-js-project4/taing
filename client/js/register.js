@@ -21,7 +21,17 @@ const emailContent = getNode('.register-email-content');
 const checkAll= getNode('#register-all');   //모두동의합니다 input
 const checkBoxes = getNodes('.register-content-item > input');  //전체 체크박스
 
+const check2 = getNode('#register-item2');
+const check3 = getNode('#register-item3');
+const check4 = getNode('#register-item4');
+
 const submitButton  = getNode('.btn-register');     //최종 가입하기버튼
+
+const agreement={
+  id : false,
+  pw : false,
+  email : false
+}
 
 // input 함수
 function cancel_active(node){
@@ -32,18 +42,22 @@ function cancel_active(node){
     btn.style.display = "inline-block";
   }
 
+  let regId = /^[a-z]+[a-z0-9]{5,13}$/g;
   // 아이디 input 인 경우
   if(node.placeholder.includes("아이디")){
-    if(node.value.length<6 || node.value.length >13){
+    if(!(regId.test(node.value))){
       idContent.style.color='red';
+      
     }else{
       idContent.style.color='var(--silver500)';
+      agreement.id=true;
     }
   }
 
+  let regPw = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
   // 비밀번호 input 인 경우
   if(node.classList.value===("first-pw")){
-    if(node.value.length<8 || node.value.length >15){
+    if(!(regPw.test(node.value))){
       pwContent.style.color='red';
     }else{
       pwContent.style.color='var(--silver500)';
@@ -54,8 +68,10 @@ function cancel_active(node){
    if(node.classList.value===("second-pw")){
     if(!(node.value===firstPw.value)){
       pwCheckContent.style.display="inline-block";
+      
     }else{
       pwCheckContent.style.display="none";
+      agreement.pw=true;
     }
   }
 
@@ -64,8 +80,10 @@ function cancel_active(node){
   if(node.placeholder.includes("이메일")){
     if(!(email_format.test(node.value))){
       emailContent.style.display="inline-block";
+      
     }else{
       emailContent.style.display="none";
+      agreement.email=true;
     }
   }
 }
@@ -146,7 +164,10 @@ function checkAgreement() {
   if (!(check2.checked && check3.checked && check4.checked)) {
     alert("필수 동의 사항을 확인해주세요.");
     return false;
-  } else return true;
+  } if(!(agreement.id && agreement.pw && agreement.email)){
+    alert("아이디, 비밀번호, 이메일등을 확인하세요.");
+    return false;
+  }else return true;
 }
 
 /* 회원가입 */
@@ -165,9 +186,9 @@ async function register(idNode, emailNode, passwordNode) {
     checkUserExists(user);
     saveUser(id, email, password);
     location.href = "/";
+    alert("Taing의 회원이 되어주셔서 감사합니다.");
   }
 
-  alert("Taing의 회원이 되어주셔서 감사합니다.");
   return;
 }
 
@@ -183,3 +204,5 @@ emailCancelButton.addEventListener('click', ()=> delete_input(inputEmail));
 
 pwSeeButton.addEventListener('click', () => pw_see(pwSeeButton));
 pwCheckSeeButton.addEventListener('click', () => pw_see(pwCheckSeeButton));
+
+submitButton.addEventListener('click', ()=>register(inputId, inputEmail, inputPasswordCheck));
