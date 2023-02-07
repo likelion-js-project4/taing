@@ -43,9 +43,22 @@ label:focus {
   flex-flow: column nowrap;
 }
 
-.register-wrapper p {
+.register-id-content,
+.register-pw-content{
   color: var(--silver500);
   font-size: clamp(var(--text-sm), 2vw, var(--text-md));
+}
+
+.register-pwcheck-content,
+.register-email-content{
+  display: none;
+  color: red;
+}
+
+.register-pwcheck-content,
+.register-email-content{
+  display: none;
+  color: red;
 }
 
 .register-wrapper input {
@@ -148,9 +161,9 @@ label:focus {
   margin-top: var(--spacing-xl);
 }
 
-.register-all-check {
+.register-all-check{
   color: var(--silver300);
-  font-size: clamp(var(--text-sm), 2vw, var(--text-md));
+  font-size: clamp(var(--text-sm), 2vw ,var(--text-md));
   padding: 0.5vh 0;
   padding-left: var(--spacing-2xl);
   background: url(../assets/icons/login_check_26_26.png) no-repeat 0 0;
@@ -192,16 +205,16 @@ label:focus {
   display: none;
 }
 
-.register-content-item > input + label::before {
+.register-content-item > input + label::before{
   cursor: pointer;
 }
 
-#register-all:checked + label {
+#register-all:checked +label{
   color: var(--white);
   background: url(../assets/icons/login_checked_26_26.png) no-repeat 0 0;
   background-position: 0 50%;
 }
-.register-content-item > input:checked + label {
+.register-content-item > input:checked + label{ 
   background: url(../assets/icons/login_binchecked_26_26.png) no-repeat 0 0;
   color: var(--white);
 }
@@ -216,7 +229,7 @@ label:focus {
 }
 
 .register-content-item > input:focus,
-.register-content-wrapper > input:focus {
+.register-content-wrapper >input:focus{
   outline: none;
   outline-offset: 0;
   box-shadow: 0 0 0 0 0;
@@ -263,7 +276,7 @@ label:focus {
     margin-top: var(--spacing-xs);
   }
 
-  .register-content-item label {
+  .register-content-item label{
     padding-left: min(8vw, var(--spacing-xl));
     background-size: var(--spacing-base);
     margin-top: var(--spacing-xs);
@@ -303,18 +316,20 @@ label:focus {
 
   .register-all-check,
   .register-content-item > input:checked + label,
-  #register-all:checked + label {
+  #register-all:checked +label{
     background-size: var(--spacing-base);
     padding-left: min(8vw, var(--spacing-xl));
   }
+
 }
 
 /* 태블릿 */
 @media (min-width: 768px) and (max-width: 1279px) {
   .nav-logo > a > img {
     height: var(--spacing-lg);
+  }
+  .nav-logo > a {
     margin-left: var(--spacing-3xl);
-    margin-top: var(--spacing-base);
   }
 
   .register-container {
@@ -333,9 +348,11 @@ label:focus {
 
   .register-all-check,
   .register-content-item > input:checked + label,
-  #register-all:checked + label {
+  #register-all:checked +label{
     background-size: var(--spacing-lg);
   }
+
+
 }
 
 /* 데스크탑 */
@@ -343,7 +360,7 @@ label:focus {
   .register-container {
     max-width: 768px;
   }
-  .nav-logo > a > img {
+  .nav-logo > a > img{
     margin-left: var(--spacing-7xl);
     margin-top: var(--spacing-lg);
   }
