@@ -218,9 +218,9 @@ input{
 @media (min-width: 768px) and (max-width: 1279px) {
   .nav-logo > a > img{
     height: var(--spacing-lg);
+  }
+  .nav-logo > a {
     margin-left: var(--spacing-3xl);
-    margin-top: var(--spacing-base);
-
   }
 
   .login-container{
