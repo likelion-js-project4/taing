@@ -121,7 +121,7 @@ const roller = $('.taing-finding-contents')
 // // 백그라운드
 let observerWrapper = new IntersectionObserver((e) => {
   e.forEach((node) => {
-    css(node.target, 'animation', `fadeInUp 1s forwards ease`)
+    css(node.target, 'animation', 'fadeInUp 1s forwards ease')
   })
 })
 observerWrapper.observe(wrapper)
@@ -129,7 +129,7 @@ observerWrapper.observe(wrapper)
 let observer = new IntersectionObserver((e) => {
   e.forEach((node) => {
     if (node.isIntersecting)
-      css(node.target, 'animation', `fadeInUp 1.5s forwards ease-in-out`)
+      css(node.target, 'animation', 'fadeInUp 1.5s forwards ease-in-out')
   })
 })
 observer.observe(h1)
@@ -142,7 +142,7 @@ observer.observe(roller)
 let observeSub = new IntersectionObserver((e) => {
   e.forEach((node) => {
     if (node.isIntersecting)
-      css(node.target, 'animation', `fadeInUp2 1.5s forwards ease-in-out`)
+      css(node.target, 'animation', 'fadeInUp2 1.5s forwards ease-in-out')
   })
 })
 observeSub.observe(introDescription)
@@ -150,7 +150,7 @@ observeSub.observe(introDescription)
 let observeTitle = new IntersectionObserver((e) => {
   e.forEach((node) => {
     if (node.isIntersecting)
-      css(node.target, 'animation', `fadeInUp 1s forwards ease-in-out`)
+      css(node.target, 'animation', 'fadeInUp 1s forwards ease-in-out')
   })
 })
 contentTitle.forEach((node) => {
@@ -160,7 +160,7 @@ contentTitle.forEach((node) => {
 let observeDescription = new IntersectionObserver((e) => {
   e.forEach((node) => {
     if (node.isIntersecting)
-      css(node.target, 'animation', `fadeInUp 1.2s forwards ease-in-out`)
+      css(node.target, 'animation', 'fadeInUp 1.2s forwards ease-in-out')
   })
 })
 contentDescription.forEach((node) => {

@@ -1,4 +1,4 @@
-import { insertAfter, insertFirst } from '../../lib/index.js'
+import { insertAfter, insertFirst, isElement } from '../../lib/index.js'
 
 const createSearch = () => {
   return /* html */ `
@@ -60,16 +60,28 @@ const createSearchAlert = () => {
     <section class="alert-section">
       <div class="alert-wrapper">
         <p class="menu_msg">검색어를 입력해주세요.</p>
-        <button class="enrol  l-btn">확인</button>
+        <button class="enroll-btn">확인</button>
       </div>
     </section>
   `
 }
 
-export function renderSearch(target) {
-  insertAfter(target, createSearch())
-}
+const TRUE = true
 
 export function renderSearchAlert(target) {
   insertFirst(target, createSearchAlert())
+
+  return new Promise((resolve, reject) => {
+    if (TRUE) resolve('서치 경고창 렌더링 성공')
+    else reject('서치 경고창 렌더링 실패')
+  })
+}
+
+export function renderSearch(target) {
+  insertAfter(target, createSearch())
+
+  return new Promise((resolve, reject) => {
+    if (TRUE) resolve('서치 렌더링 성공')
+    else reject('서치 렌더링 실패')
+  })
 }
