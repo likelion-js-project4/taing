@@ -208,8 +208,6 @@ function latestViewHandler(e) {
 function renderSearchFunction() {
   const searchInput = $('.search-form-input')
   const searchForm = $('.search-form')
-  const alert = $('.alert-section')
-  const alertButton = $('.enroll-btn')
 
   const searchCurrentTarget = $('.search-current > ul')
   const searchCurrentTitle = $('.search-current > h2')
@@ -217,6 +215,10 @@ function renderSearchFunction() {
 
   const deleteAllButton = $('.delete-all-btn')
   const time = $('.search-favorite > time')
+
+  renderSearchAlert(searchForm)
+  const alert = $('.alert-section')
+  const alertButton = $('.enroll-btn')
 
   // 현재 시간 렌더링
   renderDate(time)
@@ -272,13 +274,9 @@ function renderSearchView() {
     alertView.remove()
   } else {
     css(header, 'backgroundColor', '#191919')
-    renderSearch(nav)
-      .then(() => {
-        renderSearchAlert(body)
-      })
-      .then(() => {
-        renderSearchFunction()
-      })
+    renderSearch(nav).then(() => {
+      renderSearchFunction()
+    })
   }
 
   isSearschView = !isSearschView

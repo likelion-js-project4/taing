@@ -69,7 +69,7 @@ const createSearchAlert = () => {
 const TRUE = true
 
 export function renderSearchAlert(target) {
-  insertFirst(target, createSearchAlert())
+  insertAfter(target, createSearchAlert())
 
   return new Promise((resolve, reject) => {
     if (TRUE) resolve('서치 경고창 렌더링 성공')

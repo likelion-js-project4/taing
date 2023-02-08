@@ -29,18 +29,6 @@ const SEARCH_KEY = 'taing_search'
 const SERVER_ERROR_MESSAGE = '서버와의 통신에 실패하였습니다.'
 const FAVORITE_URL = 'http://localhost:3000/favorite_search'
 
-// const searchInput = getNode('.search-form-input')
-// const searchForm = getNode('.search-form')
-// const alert = getNode('.alert-section')
-// const alertButton = getNode('.enroll-btn')
-
-// const searchCurrentTarget = getNode('.search-current > ul')
-// const searchCurrentTitle = getNode('.search-current > h2')
-// const searchFavoriteTarget = getNode('.favorite-list')
-
-// const deleteAllButton = getNode('.delete-all-btn')
-// const time = getNode('.search-favorite > time')
-
 /* -------------------------------------------------------------------------- */
 /*                                  현재 시간 렌더링                                 */
 /* -------------------------------------------------------------------------- */
@@ -62,8 +50,6 @@ export function renderDate(node) {
   node.innerText = timeTemplate
   attr(node, 'datetime', datetime)
 }
-
-// renderDate(time)
 
 /* -------------------------------------------------------------------------- */
 /*                             최근검색어, 인기검색어 render                            */
@@ -98,9 +84,6 @@ export async function renderFavorite(node) {
     renderFavoriteList(node, rank, keyword)
   })
 }
-
-// renderCurrent(searchCurrentTitle, searchCurrentTarget)
-// renderFavorite(searchFavoriteTarget)
 
 /* -------------------------------------------------------------------------- */
 /*                                최근 검색어 모두 지우기                               */
@@ -154,7 +137,6 @@ export function inputHandler({
   searchCurrentTitle,
 }) {
   const keyword = searchInput.value
-  console.log('인풋이 들어오나 안들어오나!', keyword)
   // 최근 검색어 업데이트 하기
   if (keyword.trim() === '') {
     return css(alert, 'display', 'block')
@@ -166,10 +148,6 @@ export function inputHandler({
 export function alertHandler(alert) {
   css(alert, 'display', 'none')
 }
-
-// searchForm.addEventListener('submit', () => inputHandler(alert))
-// alertButton.addEventListener('click', alertHandler)
-// deleteAllButton.addEventListener('click', clearSearch)
 
 /* -------------------------------------------------------------------------- */
 /*                                 특정 검색어 지우기                                 */
@@ -189,32 +167,3 @@ export function validateIsEmpty(deletedArray) {
     saveStorage(SEARCH_KEY, deletedArray)
   }
 }
-
-// export async function deleteHandler(e) {
-//   const target = e.target
-//   if (target.tagName === 'IMG') {
-//     const targetIndex = target.closest('li').dataset.index
-//     const deletedArray = await deleteSearch(targetIndex)
-//     validateIsEmpty(deletedArray)
-//     removeChildAll(searchCurrentTarget)
-//     renderCurrent(searchCurrentTitle, searchCurrentTarget)
-//   }
-// }
-// searchCurrentTarget.addEventListener('click', deleteHandler)
-
-/* -------------------------------------------------------------------------- */
-/*                                 검색창 내용 바꾸기                                 */
-/* -------------------------------------------------------------------------- */
-
-// function resizeHandler() {
-//   if (window.innerWidth < 450) {
-//     return attr(searchInput, 'placeholder', '검색')
-//   }
-//   attr(
-//     searchInput,
-//     'placeholder',
-//     'TV프로그램, 영화 제목 및 출연진으로 검색해보세요',
-//   )
-// }
-
-// window.addEventListener('resize', resizeHandler)
