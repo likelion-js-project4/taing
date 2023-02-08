@@ -1,4 +1,4 @@
-import { insertAfter, insertFirst, isElement } from '../../lib/index.js'
+import { insertAfter } from '../../lib/index.js'
 
 const createSearch = () => {
   return /* html */ `

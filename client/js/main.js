@@ -33,9 +33,7 @@ import {
 
 const SERVER_ERROR_MESSAGE = '서버와의 통신에 실패하였습니다.'
 
-const body = $('body')
 const nav = $('.nav')
-
 const header = $('.main-header')
 const main = $('.main')
 const userNameNode = $('.profile-username')
