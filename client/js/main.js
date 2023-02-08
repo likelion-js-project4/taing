@@ -81,8 +81,8 @@ function logoutHandler() {
   </section> 
     `
   );
-  const enrollButton = getNode(".logout-enroll-btn");
-  const cancelButton = getNode(".logout-cancel-btn");
+  const enrollButton = $(".logout-enroll-btn");
+  const cancelButton = $(".logout-cancel-btn");
 
   enrollButton.addEventListener("click", logout);
   cancelButton.addEventListener("click", () => {
