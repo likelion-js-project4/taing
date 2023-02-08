@@ -40,20 +40,20 @@ function logoutHandler() {
   insertFirst(
     main,
     `
-    <section class="alert-section">
-      <div class="alert-wrapper">
-      <p class="menu_msg">로그아웃 하시겠습니까?</p>
+    <section class="logout-alert-section">
+      <div class="logout-alert-wrapper">
+      <p class="logout-menu_msg">로그아웃 하시겠습니까?</p>
       <div>
-        <button class="enroll-btn">확인</button>
-        <button class="cancel-btn">취소</button>
+        <button class="logout-enroll-btn">확인</button>
+        <button class="logout-cancel-btn">취소</button>
       </div>
     </div>
   </section> 
     `
   );
-  const alert = getNode(".alert-section");
-  const enrollButton = getNode(".enroll-btn");
-  const cancelButton = getNode(".cancel-btn");
+  const alert = getNode(".logout-alert-section");
+  const enrollButton = getNode(".logout-enroll-btn");
+  const cancelButton = getNode(".logout-cancel-btn");
 
   enrollButton.addEventListener("click", logout);
   cancelButton.addEventListener("click", () => {
