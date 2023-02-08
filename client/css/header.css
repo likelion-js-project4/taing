@@ -50,16 +50,19 @@ h1 {
 }
 .nav-item a {
   padding: 0 var(--spacing-2xs);
+  display: flex;
+  align-items: center;
 }
 
 .header-alive {
-  background: url(../assets/icons/header_live_default_34_34.png) no-repeat;
+  background: url(../assets/icons/header_live_default_34_34.png) no-repeat center;
   background-size: contain;
   width: 2rem;
   height: 2rem;
+  margin-bottom:var(--spacing-2xs)
 }
-.header-alive:hover,
-.header-alive:hover + .header-alive a {
+
+.nav-item a:hover .header-alive {
   background-image: url(../assets/icons/header_live_active_34_34.png);
   color: #fff;
 }
