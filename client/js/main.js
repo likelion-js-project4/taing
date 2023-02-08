@@ -53,7 +53,6 @@ async function renderList() {
 }
 
 const main = $(".main");
-const header = $(".header-alive");
 const userNameNode = $(".profile-username");
 
 const isUser = await loadStorage("user_uuid");
@@ -140,10 +139,3 @@ function latestViewHandler(e) {
 }
 
 main.addEventListener("click", latestViewHandler);
-
-header.addEventListener("mouseenter", () => {
-  header.children[0].src = "./assets/icons/header_live_active_34_34.png";
-});
-header.addEventListener("mouseleave", () => {
-  header.children[0].src = "./assets/icons/header_live_default_34_34.png";
-});

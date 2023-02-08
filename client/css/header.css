@@ -58,9 +58,12 @@ h1 {
   width: 2rem;
   height: 2rem;
 }
-.header-alive:hover {
+.header-alive:hover,
+.header-alive:hover + .header-alive a {
   background-image: url(../assets/icons/header_live_active_34_34.png);
+  color: #fff;
 }
+
 .header-search,
 .header-profile {
   all: unset;
