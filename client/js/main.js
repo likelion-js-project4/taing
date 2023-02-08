@@ -15,8 +15,16 @@ import {
   insertFirst,
   addClass,
   attr,
+  deleteStorage,
 } from "../lib/index.js";
+import { renderSearch, renderSearchAlert } from "./render/renderHeader.js";
+
+const body = $("body");
+const nav = $(".nav");
+
 const header = $(".main-header");
+const main = $(".main");
+const userNameNode = $(".profile-username");
 
 const visualContainer = $(".visual .swiper-wrapper");
 const taingRecommendContainer = $(".taing-recommend .swiper-wrapper");
@@ -27,12 +35,60 @@ const popularContainer = $(".real-time .swiper-wrapper");
 const liveChannelContainer = $(".live-time .swiper-wrapper");
 const onlyTaingContainer = $(".only-taing .swiper-wrapper");
 const eventContainer = $(".main-event .swiper-wrapper");
+const searchButton = $(".header-search");
+const logoutButton = $(".logout-modal");
 
 header.style.backgroundColor = "";
 window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
   header.style.backgroundColor = `rgba(0,0,0,${window.scrollY / 600})`;
 });
+
+let isSearschView = false;
+function renderSearchView() {
+  if (isSearschView) {
+    const searchView = $(".search-container");
+    const alertView = $(".alert-section");
+    searchView.remove();
+    alertView.remove();
+  } else {
+    renderSearch(nav);
+    renderSearchAlert(body);
+  }
+
+  isSearschView = !isSearschView;
+}
+
+function logout() {
+  deleteStorage("user_uuid");
+  deleteStorage("userLogin");
+  deleteStorage("user_id");
+  main.removeChild(main.children[0]);
+  location.href = "/landing.html";
+}
+function logoutHandler() {
+  // 모달창 띄우기
+  insertFirst(
+    main,
+    `
+    <section class="logout-alert-section">
+      <div class="logout-alert-wrapper">
+      <p class="logout-menu_msg">로그아웃 하시겠습니까?</p>
+      <div>
+        <button class="logout-enroll-btn">확인</button>
+        <button class="logout-cancel-btn">취소</button>
+      </div>
+    </div>
+  </section> 
+    `
+  );
+  const enrollButton = getNode(".logout-enroll-btn");
+  const cancelButton = getNode(".logout-cancel-btn");
+
+  enrollButton.addEventListener("click", logout);
+  cancelButton.addEventListener("click", () => {
+    main.removeChild(main.children[0]);
+  });
+}
 
 async function renderList() {
   try {
@@ -59,16 +115,13 @@ async function renderList() {
   } catch (err) {}
 }
 
-const main = $(".main");
-const userNameNode = $(".profile-username");
-
 const isUser = await loadStorage("user_uuid");
 const userName = await loadStorage("user_id");
 
 userNameNode.innerText = userName;
 function userLoginCheck() {
   if (!isUser) {
-    // location.href = '/landing.html';
+    location.href = "/landing.html";
     return;
   }
 }
@@ -146,3 +199,5 @@ function latestViewHandler(e) {
 }
 
 main.addEventListener("click", latestViewHandler);
+searchButton.addEventListener("click", renderSearchView);
+logoutButton.addEventListener("click", logoutHandler);
