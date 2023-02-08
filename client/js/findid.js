@@ -6,7 +6,7 @@ const input_btn = getNode('.email-input-btn');
 
 // 아이디찾기 input 값 들어오면 버튼 활성화 시키기 및 X버튼 표시
 function email_change(){
-  if (email.value ===""){
+  if (email.value ===''){
     input_btn.disabled=true;
   }
   else{
@@ -18,7 +18,7 @@ email.addEventListener('keyup', email_change);
 
 //아이디찾기 X버튼 누르면 input text 지우기
 function delete_input(){
-  email.value="";
+  email.value='';
   input_btn.disabled=true;
   btn_cancel.style.display='none';
 }
@@ -30,8 +30,8 @@ function alertMessage(){
 
   if(email_format.test(email.value)) alert('이메일확인');
   else{
-    alert("이메일 주소를 입력해주세요.");
-    email.value="";
+    alert('이메일 주소를 입력해주세요.');
+    email.value='';
   }
 }
 input_btn.addEventListener('click', alertMessage);

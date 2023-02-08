@@ -360,7 +360,7 @@ label:focus {
   .register-container {
     max-width: 768px;
   }
-  .nav-logo > a > img{
+  .nav-logo > a {
     margin-left: var(--spacing-7xl);
     margin-top: var(--spacing-lg);
   }

@@ -154,7 +154,7 @@ h1 {
   padding: 0 var(--spacing-base);
 }
 
-.alert-section {
+.logout-alert-section {
   position: fixed;
   z-index: 2;
   font-size: var(--text-md);
@@ -168,23 +168,23 @@ h1 {
   backdrop-filter: blur(10px);
 }
 
-.alert-wrapper {
+.logout-alert-wrapper {
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
-.alert-wrapper > div {
+.logout-alert-wrapper > div {
   display: flex;
   position: relative;
   width: 100%;
   background-color: var(--dark-bg-2);
   border-radius: 0 0 4px 4px;
 }
-.menu_msg,
-.enroll-btn,
-.cancel-btn {
+.logout-menu_msg,
+.logout-enroll-btn,
+.logout-cancel-btn {
   width: 526px;
   background-color: var(--dark-bg-2);
   text-align: center;
@@ -192,25 +192,26 @@ h1 {
   font-weight: var(--weight-sm);
 }
 
-.menu_msg {
+.logout-menu_msg {
   height: 110px;
   line-height: 140px;
   border-radius: 4px 4px 0 0;
 }
 
-.enroll-btn,
-.cancel-btn {
+.logout-enroll-btn,
+.logout-cancel-btn {
   width: 263px;
   height: 82px;
   line-height: 82px;
   color: var(--silver300);
   cursor: pointer;
 }
-.enroll-btn {
+.logout-enroll-btn {
   border-radius: 0 0 0 4px;
 }
-.enroll-btn::after {
-  content: '';
+
+.logout-enroll-btn::after {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -219,11 +220,11 @@ h1 {
   margin-top: -10px;
   background-color: #fff;
 }
-.cancel-btn {
+.logout-cancel-btn {
   border-radius: 0 0 4px 0;
 }
 
-.enroll-btn:hover {
+.logout-enroll-btn:hover {
   font-weight: var(--weight-lg);
 }
 
@@ -270,27 +271,27 @@ h1 {
     margin: var(--spacing-2xs) 0;
     padding: 0 var(--spacing-base);
   }
-  .menu_msg,
-  .enroll-btn,
-  .cancel-btn {
+  .logout-menu_msg,
+  .logout-enroll-btn,
+  .logout-cancel-btn {
     font-size: 1rem;
   }
 
-  .menu_msg {
+  .logout-menu_msg {
     width: 18.5rem;
   }
-  .enroll-btn,
-  .cancel-btn {
+  .logout-enroll-btn,
+  .logout-cancel-btn {
     width: 9.25rem;
     height: 3.5rem;
     line-height: 3.5rem;
   }
-  .menu_msg {
+  .logout-menu_msg {
     height: 3.5rem;
     line-height: 3.5rem;
     border-radius: 4px 4px 0 0;
   }
-  .enroll-btn::after {
+  .logout-enroll-btn::after {
     height: var(--spacing-base);
     margin-top: -8px;
   }
@@ -476,23 +477,23 @@ h1 {
     z-index: 3;
   }
 
-  .alert-wrapper {
+  .logout-alert-wrapper {
     height: 100vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
   }
-  .alert-wrapper > div {
+  .logout-alert-wrapper > div {
     display: flex;
     gap: 1px;
     width: 526px;
     background-color: var(--dark-bg-2);
     border-radius: 0 0 4px 4px;
   }
-  .menu_msg,
-  .enroll-btn,
-  .cancel-btn {
+  .logout-menu_msg,
+  .logout-enroll-btn,
+  .logout-cancel-btn {
     width: 526px;
     background-color: var(--dark-bg-2);
     text-align: center;
@@ -500,28 +501,28 @@ h1 {
     font-weight: var(--weight-sm);
   }
 
-  .menu_msg {
+  .logout-menu_msg {
     height: 110px;
     line-height: 140px;
     border-radius: 4px 4px 0 0;
   }
 
-  .enroll-btn,
-  .cancel-btn {
+  .logout-enroll-btn,
+  .logout-cancel-btn {
     width: 263px;
     height: 82px;
     line-height: 82px;
     color: var(--silver300);
     cursor: pointer;
   }
-  .enroll-btn {
+  .logout-enroll-btn {
     border-radius: 0 0 0 4px;
   }
-  .cancel-btn {
+  .logout-cancel-btn {
     border-radius: 0 0 4px 0;
   }
 
-  .enroll-btn:hover {
+  .logout-enroll-btn:hover {
     font-weight: var(--weight-lg);
   }
 
@@ -627,27 +628,27 @@ h1 {
     padding: 0 var(--spacing-base);
   }
 
-  .menu_msg,
-  .enroll-btn,
-  .cancel-btn {
+  .logout-menu_msg,
+  .logout-enroll-btn,
+  .logout-cancel-btn {
     font-size: 0.75rem;
   }
 
-  .menu_msg {
+  .logout-menu_msg {
     width: 12.25rem;
   }
-  .enroll-btn,
-  .cancel-btn {
+  .logout-enroll-btn,
+  .logout-cancel-btn {
     width: 6.125rem;
     height: 2.875rem;
     line-height: 2.875rem;
   }
-  .menu_msg {
+  .logout-menu_msg {
     height: 2.875rem;
     line-height: 2.875rem;
     border-radius: 4px 4px 0 0;
   }
-  .enroll-btn::after {
+  .logout-enroll-btn::after {
     height: var(--spacing-s);
     margin-top: -5px;
   }
