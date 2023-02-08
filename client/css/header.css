@@ -51,10 +51,15 @@ h1 {
 .nav-item a {
   padding: 0 var(--spacing-2xs);
 }
+
 .header-alive {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  background: url(../assets/icons/header_live_default_34_34.png) no-repeat;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+}
+.header-alive:hover {
+  background-image: url(../assets/icons/header_live_active_34_34.png);
 }
 .header-search,
 .header-profile {

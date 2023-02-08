@@ -1,5 +1,5 @@
-import { attr, deleteStorage, getNode, insertFirst } from "../lib/index.js";
-import { renderSearch, renderSearchAlert } from "../js/render/renderHeader.js";
+import { attr, deleteStorage, getNode, insertFirst } from "../../lib/index.js";
+import { renderSearch, renderSearchAlert } from "../render/renderHeader.js";
 
 const body = getNode("body");
 const header = getNode(".header");
