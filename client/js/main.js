@@ -16,6 +16,7 @@ import {
   addClass,
   attr,
 } from "../lib/index.js";
+const header = $(".main-header");
 
 const visualContainer = $(".visual .swiper-wrapper");
 const taingRecommendContainer = $(".taing-recommend .swiper-wrapper");
@@ -26,6 +27,12 @@ const popularContainer = $(".real-time .swiper-wrapper");
 const liveChannelContainer = $(".live-time .swiper-wrapper");
 const onlyTaingContainer = $(".only-taing .swiper-wrapper");
 const eventContainer = $(".main-event .swiper-wrapper");
+
+header.style.backgroundColor = "";
+window.addEventListener("scroll", () => {
+  console.log(window.scrollY);
+  header.style.backgroundColor = `rgba(0,0,0,${window.scrollY / 600})`;
+});
 
 async function renderList() {
   try {
