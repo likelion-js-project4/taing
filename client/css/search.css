@@ -1,8 +1,8 @@
 /* 모든 디바이스 (All Device) */
 /* 공통 헤더 */
-.header {
-  background-color: var(--dark-bg-1) !important;
-}
+/* .header {
+  background-color: var(--dark-bg-1);
+} */
 
 /* 공통 검색 */
 .search-container {
@@ -60,7 +60,9 @@
 
 /* alert 창 */
 .alert-section {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
