@@ -2,10 +2,10 @@ import { insertLast } from '../../lib/index.js'
 
 const createSwiperList = ({ landing_swiper, landing_swiper_small, alt }) => {
   return /* html */ `
-    <div class="swiper-slide">
+    <div class="swiper-slide" >
       <picture class="landing-img-box">
         <source media="(max-width: 1279px)" srcset=${landing_swiper_small}>
-        <img src=${landing_swiper} alt=${alt} />
+        <img src=${landing_swiper} alt=${alt} tabindex="0 "/>
       </picture>
     </div>
   `

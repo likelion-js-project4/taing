@@ -118,10 +118,10 @@ const contentDescription = getNodes('.content-description')
 const contentSubTitle = getNodes('.sub-title')
 const roller = $('.taing-finding-contents')
 
-// // 백그라운드
+// 백그라운드
 let observerWrapper = new IntersectionObserver((e) => {
   e.forEach((node) => {
-    css(node.target, 'animation', `fadeInUp 1s forwards ease`)
+    css(node.target, 'animation', 'fadeInUp 1s forwards ease')
   })
 })
 observerWrapper.observe(wrapper)
