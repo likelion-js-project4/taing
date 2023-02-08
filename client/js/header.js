@@ -1,39 +1,39 @@
-import { attr, deleteStorage, getNode, insertFirst } from "../lib/index.js";
-import { renderSearch, renderSearchAlert } from "../js/render/renderHeader.js";
+import { deleteStorage, getNode, insertFirst } from '../lib/index.js'
+import { renderSearch, renderSearchAlert } from './render/renderHeader.js'
 
-const body = getNode("body");
-const header = getNode(".header");
-const nav = getNode(".nav");
-const main = getNode("main");
-const searchButton = getNode(".header-search");
-const logoutButton = getNode(".logout-modal");
+const body = getNode('body')
+const header = getNode('.header')
+const nav = getNode('.nav')
+const main = getNode('main')
+const searchButton = getNode('.header-search')
+const logoutButton = getNode('.logout-modal')
 
-header.style.backgroundColor = "";
-window.addEventListener("scroll", () => {
-  header.style.backgroundColor = `rgba(0,0,0,${window.scrollY / 600})`;
-});
+header.style.backgroundColor = ''
+window.addEventListener('scroll', () => {
+  header.style.backgroundColor = `rgba(0,0,0,${window.scrollY / 600})`
+})
 
-let isSearschView = false;
+let isSearschView = false
 function renderSearchView() {
   if (isSearschView) {
-    const searchView = getNode(".search-container");
-    const alertView = getNode(".alert-section");
-    searchView.remove();
-    alertView.remove();
+    const searchView = getNode('.search-container')
+    const alertView = getNode('.alert-section')
+    searchView.remove()
+    alertView.remove()
   } else {
-    renderSearch(nav);
-    renderSearchAlert(body);
+    renderSearch(nav)
+    renderSearchAlert(body)
   }
 
-  isSearschView = !isSearschView;
+  isSearschView = !isSearschView
 }
 
 function logout() {
-  deleteStorage("user_uuid");
-  deleteStorage("userLogin");
-  deleteStorage("user_id");
-  main.removeChild(main.children[0]);
-  location.href = "/landing.html";
+  deleteStorage('user_uuid')
+  deleteStorage('userLogin')
+  deleteStorage('user_id')
+  main.removeChild(main.children[0])
+  location.href = '/landing.html'
 }
 function logoutHandler() {
   // 모달창 띄우기
@@ -49,16 +49,16 @@ function logoutHandler() {
       </div>
     </div>
   </section> 
-    `
-  );
-  const alert = getNode(".alert-section");
-  const enrollButton = getNode(".enroll-btn");
-  const cancelButton = getNode(".cancel-btn");
+    `,
+  )
+  // const alert = getNode('.alert-section')
+  const enrollButton = getNode('.enroll-btn')
+  const cancelButton = getNode('.cancel-btn')
 
-  enrollButton.addEventListener("click", logout);
-  cancelButton.addEventListener("click", () => {
-    main.removeChild(main.children[0]);
-  });
+  enrollButton.addEventListener('click', logout)
+  cancelButton.addEventListener('click', () => {
+    main.removeChild(main.children[0])
+  })
 }
-searchButton.addEventListener("click", renderSearchView);
-logoutButton.addEventListener("click", logoutHandler);
+searchButton.addEventListener('click', renderSearchView)
+logoutButton.addEventListener('click', logoutHandler)

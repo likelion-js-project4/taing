@@ -1,4 +1,4 @@
-@import url("./theme.css");
+@import url('./theme.css');
 
 body {
   position: relative;
@@ -9,7 +9,11 @@ h1 {
 }
 
 .header {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
   color: var(--silver200);
   display: flex;
   justify-content: space-between;
@@ -120,7 +124,7 @@ h1 {
 }
 
 .profile-transfer::after {
-  content: "";
+  content: '';
   background: url(../assets/icons/main_next_70_70.png) no-repeat;
   display: inline-block;
   width: 20px;
@@ -206,7 +210,7 @@ h1 {
   border-radius: 0 0 0 4px;
 }
 .enroll-btn::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -307,7 +311,7 @@ h1 {
   .nav-item {
     display: none;
   }
-  @import url("./theme.css");
+  @import url('./theme.css');
 
   body {
     position: relative;
@@ -318,7 +322,11 @@ h1 {
   }
 
   .header {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
     color: var(--silver200);
     display: flex;
     justify-content: space-between;
@@ -429,7 +437,7 @@ h1 {
   }
 
   .profile-transfer::after {
-    content: "";
+    content: '';
     background: url(../assets/icons/main_next_70_70.png) no-repeat;
     display: inline-block;
     width: 20px;

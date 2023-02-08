@@ -12,6 +12,8 @@ import {
   renderFavoriteList,
 } from '../js/render/renderSearchList.js'
 
+import { movePage } from './modules/index.js'
+
 const defaultOption = {
   method: 'GET',
   mode: 'cors',
@@ -29,6 +31,7 @@ const SEARCH_KEY = 'taing_search'
 const SERVER_ERROR_MESSAGE = '서버와의 통신에 실패하였습니다.'
 const FAVORITE_URL = 'http://localhost:3000/favorite_search'
 
+const headerSearchButton = getNode('.header-search')
 const searchInput = getNode('.search-form-input')
 const searchForm = getNode('.search-form')
 const alert = getNode('.alert-section')
@@ -212,3 +215,12 @@ function resizeHandler() {
 }
 
 window.addEventListener('resize', resizeHandler)
+
+/* -------------------------------------------------------------------------- */
+/*                                 main으로 넘어가기                                */
+/* -------------------------------------------------------------------------- */
+function moveMain() {
+  movePage('index.html')
+}
+
+headerSearchButton.addEventListener('click', moveMain)
