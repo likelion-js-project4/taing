@@ -29,7 +29,7 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
 
 ## 📌 주요 기능
 
-1. 랜딩페이지
+### 1. 랜딩페이지
   <img src="https://user-images.githubusercontent.com/69625013/217635979-933a8679-d840-447a-ba7b-74bb795cc467.png" width="800">
     
   - 스크롤에 따라 움직이는 스와이퍼(Horizontal Scrolling) <- gsap과 swiper.js를 이용해 구현
@@ -37,7 +37,7 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
   - 화면에 나타나면 위로 올라오는 글씨 애니메이션(IntersectionObserver)
   
   
-2. 메인페이지
+### 2. 메인페이지
   <img src="https://user-images.githubusercontent.com/69625013/217636379-90d19282-4147-4989-a7c8-ce0edc9ccb6a.png" width="500">
   <img src="https://user-images.githubusercontent.com/69625013/217636394-6a394ddb-6907-488b-9218-c4f87f994819.png" width="500">
   
@@ -47,7 +47,7 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
   - localStorage에 저장된 시청하고 있는 콘텐츠 렌더링
   
   
-3. 로그인
+### 3. 로그인
   <img src="https://user-images.githubusercontent.com/69625013/217636571-f7775219-8c1e-4962-bece-013cea4247e5.png" width="500">
   
   - 비밀번호 입력 숨김처리
@@ -56,7 +56,7 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
   - 로그인 성공 시 메인페이지로 이동 (location.href)
   
   
-4. 회원가입
+### 4. 회원가입
   <img src="https://user-images.githubusercontent.com/69625013/217636394-6a394ddb-6907-488b-9218-c4f87f994819.png" width="500">
     
   - 아이디, 비밀번호, 이메일 입력조건 검사 → 조건 만족 시 아래 경고 문구 비활성화
@@ -66,7 +66,7 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
   - 유니크값 localStorage에 저장, 로그아웃 시 해당 유니크값은 삭제
   
   
-5. 아이디/비밀번호 찾기
+### 5. 아이디/비밀번호 찾기
   <img src="https://user-images.githubusercontent.com/69625013/217637010-0e40b57b-144b-44cc-974a-5aa2e6346ee4.png" width="500">
   <img src="https://user-images.githubusercontent.com/69625013/217637012-04fa26e0-2254-4f2d-9ce8-bb2b550a6176.png" width="500">
   
@@ -74,7 +74,7 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
   - X 버튼 클릭 시 input창의 데이터 삭제, 확인 버튼 비활성화
   
   
-6. 검색
+### 6. 검색
   <img src="https://user-images.githubusercontent.com/69625013/217637072-ac50e422-6b44-4732-97b7-04c3463925b2.png" width="500">
   
   - localStorage를 이용한 최근검색어 업데이트
@@ -84,7 +84,7 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
   - 현재 시간 렌더링
   
   
-7. 프로필 전환/편집
+### 7. 프로필 전환/편집
   <img src="https://user-images.githubusercontent.com/69625013/217637145-80270056-4817-4d99-88f1-143e1fa5f9b5.png" width="500">
   
   - 사진 hover 시 위로 올라가는 애니메이션
