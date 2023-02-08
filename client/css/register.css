@@ -51,12 +51,7 @@ label:focus {
 
 .register-pwcheck-content,
 .register-email-content{
-  display: none;
-  color: red;
-}
-
-.register-pwcheck-content,
-.register-email-content{
+  font-size: clamp(var(--text-sm), 2vw, var(--text-md));
   display: none;
   color: red;
 }
@@ -93,9 +88,9 @@ label:focus {
   display: none;
   width: var(--spacing-xl);
   position: absolute;
-  right: 10%;
   top: 50%;
   transform: translateY(-50%);
+  right: 10%;
   cursor: pointer;
   font-size: 0;
 }
@@ -117,6 +112,13 @@ label:focus {
   background-color: transparent;
   cursor: pointer;
 }
+
+.pw-see-btn,
+.pw-see2-btn{
+  width: var(--spacing-xl);
+}
+
+
 
 .btn-register {
   box-sizing: border-box;
@@ -346,6 +348,10 @@ label:focus {
     height: 1.125rem;
   }
 
+  .pw-see-btn,
+  .pw-see2-btn {
+    width: var(--spacing-lg);
+  }
   .register-all-check,
   .register-content-item > input:checked + label,
   #register-all:checked +label{
@@ -364,4 +370,14 @@ label:focus {
     margin-left: var(--spacing-7xl);
     margin-top: var(--spacing-lg);
   }
+
+  .pw-see-btn,
+  .pw-see2-btn{
+    width: var(--spacing-xl);
+  }
+  .pw-see-btn >img,
+  .pw-see2-btn >img{
+    width: 100%;
+  }
+  
 }

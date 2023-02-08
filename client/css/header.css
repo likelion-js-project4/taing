@@ -9,11 +9,7 @@ h1 {
 }
 
 .header {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
   color: var(--silver200);
   display: flex;
   justify-content: space-between;
@@ -24,7 +20,7 @@ h1 {
   width: 100%;
 }
 
-.header > .nav {
+.main-header > .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,12 +50,23 @@ h1 {
 }
 .nav-item a {
   padding: 0 var(--spacing-2xs);
-}
-.header-alive {
   display: flex;
   align-items: center;
-  gap: 5px;
 }
+
+.header-alive {
+  background: url(../assets/icons/header_live_default_34_34.png) no-repeat center;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom:var(--spacing-2xs)
+}
+
+.nav-item a:hover .header-alive {
+  background-image: url(../assets/icons/header_live_active_34_34.png);
+  color: #fff;
+}
+
 .header-search,
 .header-profile {
   all: unset;
@@ -229,7 +236,7 @@ h1 {
 }
 
 @media (min-width: 1280px) {
-  .header {
+  .main-header {
     padding: var(--spacing-base) var(--spacing-7xl);
   }
 
@@ -240,7 +247,7 @@ h1 {
 }
 
 @media (min-width: 769px) and (max-width: 1279px) {
-  .header {
+  .main-header {
     padding: 0.875rem var(--spacing-3xl);
   }
   .nav-logo img {
@@ -298,7 +305,7 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .header {
+  .main-header {
     padding: var(--spacing-xs) var(--spacing-base);
   }
   .nav-logo {
@@ -323,11 +330,7 @@ h1 {
   }
 
   .header {
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
     color: var(--silver200);
     display: flex;
     justify-content: space-between;
