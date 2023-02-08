@@ -1,14 +1,14 @@
-import { getNode, getNodes, RandomString, saveStorage, tiger } from "../lib/index.js";
+import { getNode, getNodes, RandomString, saveStorage, tiger } from '../lib/index.js';
 
-const inputId = getNode("#register-id");
-const inputPassword = getNode("#register-pw");
-const inputPasswordCheck = getNode("#register-pw-check");
-const inputEmail = getNode("#register-email");
+const inputId = getNode('#register-id');
+const inputPassword = getNode('#register-pw');
+const inputPasswordCheck = getNode('#register-pw-check');
+const inputEmail = getNode('#register-email');
 
-const idCancelButton = getNode(".id-cancel-btn");
-const passwordCancelButton = getNode(".pw-cancel-btn");
-const pwCheckCancelButton = getNode(".pwcheck-cancel-btn");
-const emailCancelButton = getNode(".email-cancel-btn");
+const idCancelButton = getNode('.id-cancel-btn');
+const passwordCancelButton = getNode('.pw-cancel-btn');
+const pwCheckCancelButton = getNode('.pwcheck-cancel-btn');
+const emailCancelButton = getNode('.email-cancel-btn');
 
 const pwSeeButton = getNode(".pw-see-btn");
 const pwCheckSeeButton = getNode(".pw-see2-btn");
@@ -38,50 +38,51 @@ function cancel_active(node) {
   const btn = node.nextElementSibling; //해당 노드의 X버튼
   const firstPw = getNode("#register-pw");
 
-  if (!(node.value === "")) {
-    btn.style.display = "inline-block";
+  if(!(node.value==='')){
+    btn.style.display = 'inline-block';
   }
 
   let regId = /^[a-z]+[a-z0-9]{5,13}$/g;
   // 아이디 input 인 경우
-  if (node.placeholder.includes("아이디")) {
-    if (!regId.test(node.value)) {
-      idContent.style.color = "red";
-    } else {
-      idContent.style.color = "var(--silver500)";
-      agreement.id = true;
+  if(node.placeholder.includes('아이디')){
+    if(!(regId.test(node.value))){
+      idContent.style.color='red';
+    }else{
+      idContent.style.color='var(--silver500)';
+      agreement.id=true;
     }
   }
 
   let regPw = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
   // 비밀번호 input 인 경우
-  if (node.classList.value === "first-pw") {
-    if (!regPw.test(node.value)) {
-      pwContent.style.color = "red";
-    } else {
-      pwContent.style.color = "var(--silver500)";
+  if(node.classList.value===('first-pw')){
+    if(!(regPw.test(node.value))){
+      pwContent.style.color='red';
+    }else{
+      pwContent.style.color='var(--silver500)';
     }
   }
 
-  // 비밀번호 확인 input 인 경우
-  if (node.classList.value === "second-pw") {
-    if (!(node.value === firstPw.value)) {
-      pwCheckContent.style.display = "inline-block";
-    } else {
-      pwCheckContent.style.display = "none";
-      agreement.pw = true;
+   // 비밀번호 확인 input 인 경우
+   if(node.classList.value===('second-pw')){
+    if(!(node.value===firstPw.value)){
+      pwCheckContent.style.display='inline-block';
+      
+    }else{
+      pwCheckContent.style.display='none';
+      agreement.pw=true;
     }
   }
 
-  let email_format =
-    /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
-  // 이메일 input 인 경우
-  if (node.placeholder.includes("이메일")) {
-    if (!email_format.test(node.value)) {
-      emailContent.style.display = "inline-block";
-    } else {
-      emailContent.style.display = "none";
-      agreement.email = true;
+  let email_format = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+   // 이메일 input 인 경우
+  if(node.placeholder.includes('이메일')){
+    if(!(email_format.test(node.value))){
+      emailContent.style.display='inline-block';
+      
+    }else{
+      emailContent.style.display='none';
+      agreement.email=true;
     }
   }
 }
@@ -89,8 +90,8 @@ function cancel_active(node) {
 //X버튼 누르면 글 지우기
 function delete_input(node) {
   const node_cancel_button = node.nextElementSibling;
-  node.value = "";
-  node_cancel_button.style.display = "none";
+  node.value = '';
+  node_cancel_button.style.display = 'none';
 }
 
 //비밀번호 보이게 하기
@@ -98,18 +99,18 @@ function pw_see(node) {
   const pw_img = node.firstElementChild;
   const pw_input = node.previousElementSibling.previousElementSibling;
 
-  if (pw_input.type.includes("pass")) {
-    pw_input.type = "text";
+  if (pw_input.type.includes('pass')) {
+    pw_input.type = 'text';
   } else {
-    pw_input.type = "password";
+    pw_input.type = 'password';
   }
 
-  if (pw_img.src.includes("no")) {
-    pw_img.src = "./assets/icons/login_see_36_36.svg";
-    pw_img.alt = "비밀번호 복호화";
+  if (pw_img.src.includes('no')) {
+    pw_img.src = './assets/icons/login_see_36_36.svg';
+    pw_img.alt = '비밀번호 복호화';
   } else {
-    pw_img.src = "./assets/icons/login_nosee_36_36.png";
-    pw_img.alt = "비밀번호 암호화";
+    pw_img.src = './assets/icons/login_nosee_36_36.png';
+    pw_img.alt = '비밀번호 암호화';
   }
 }
 
@@ -121,8 +122,8 @@ checkAll.addEventListener("click", () => {
 });
 
 //모두 클릭되면 (모두 동의합니다) 도 체크되기
-checkBoxes.forEach((item) => {
-  item.addEventListener("click", () => {
+checkBoxes.forEach(item => {
+  item.addEventListener('click', ()=>{
     let count = 0;
     checkBoxes.forEach((item) => {
       if (item.checked) {
@@ -140,31 +141,33 @@ checkBoxes.forEach((item) => {
 async function saveUser(id, email, password) {
   const user_uuid = RandomString(10);
 
-  await tiger.post("http://localhost:3000/users", {
+  await tiger.post('http://localhost:3000/users', {
     user_uuid,
     id,
     email,
     password,
   });
-  saveStorage("user_uuid", user_uuid);
+  saveStorage('user_uuid', user_uuid);
 }
 
 /* 유저 존재유무 체크 */
 async function checkUserExists(user) {
   if (user.length !== 0) {
-    alert("이미 가입한 회원입니다.");
+    alert('이미 가입한 회원입니다.');
   }
+
   return;
 }
 
 /* 필수동의사항 선택 체크 */
 function checkAgreement() {
   if (!(check2.checked && check3.checked && check4.checked)) {
-    alert("필수 동의 사항을 확인해주세요.");
+    alert('필수 동의 사항을 확인해주세요.');
+
     return false;
-  }
-  if (!(agreement.id && agreement.pw && agreement.email)) {
-    alert("아이디, 비밀번호, 이메일등을 확인하세요.");
+  } if(!(agreement.id && agreement.pw && agreement.email)){
+    alert('아이디, 비밀번호, 이메일등을 확인하세요.');
+
     return false;
   } else return true;
 }
@@ -175,7 +178,7 @@ async function register(idNode, emailNode, passwordNode) {
   const email = emailNode.value;
   const password = passwordNode.value;
 
-  const userData = await tiger.get("http://localhost:3000/users");
+  const userData = await tiger.get('http://localhost:3000/users');
   const { data } = userData;
   const user = data.filter((user) => user.email === email);
 
@@ -184,8 +187,8 @@ async function register(idNode, emailNode, passwordNode) {
   if (isChecked) {
     checkUserExists(user);
     saveUser(id, email, password);
-    location.href = "./login.html";
-    alert("Taing의 회원이 되어주셔서 감사합니다.");
+    location.href = './login.html';
+    alert('Taing의 회원이 되어주셔서 감사합니다.');
   }
 
   return;
@@ -196,10 +199,10 @@ inputPassword.addEventListener("keyup", () => cancel_active(inputPassword));
 inputPasswordCheck.addEventListener("keyup", () => cancel_active(inputPasswordCheck));
 inputEmail.addEventListener("keyup", () => cancel_active(inputEmail));
 
-idCancelButton.addEventListener("click", () => delete_input(inputId));
-passwordCancelButton.addEventListener("click", () => delete_input(inputPassword));
-pwCheckCancelButton.addEventListener("click", () => delete_input(inputPasswordcheck));
-emailCancelButton.addEventListener("click", () => delete_input(inputEmail));
+idCancelButton.addEventListener('click', ()=> delete_input(inputId));
+passwordCancelButton.addEventListener('click', ()=> delete_input(inputPassword));
+pwCheckCancelButton.addEventListener('click', ()=> delete_input(inputPasswordCheck));
+emailCancelButton.addEventListener('click', ()=> delete_input(inputEmail));
 
 pwSeeButton.addEventListener("click", () => pw_see(pwSeeButton));
 pwCheckSeeButton.addEventListener("click", () => pw_see(pwCheckSeeButton));

@@ -6,20 +6,20 @@ const btn_confirm = getNode('.id-input-btn');
 
 //input 값 들어오면 버튼 활성화 및 X버튼 표시
 function input_id_change(){
-  if(input_id.value ===""){
+  if(input_id.value ===''){
     btn_confirm.disabled=true;
   }else{
     btn_confirm.disabled=false;
-    btn_cancel.style.display="inline-block";
+    btn_cancel.style.display='inline-block';
   }
 }
 input_id.addEventListener('keyup', input_id_change);
 
 //X버튼 누르면 input text 지우기
 function delete_input(){
-  input_id.value="";
+  input_id.value='';
   btn_confirm.disabled=true;
-  btn_cancel.style.display="none";
+  btn_cancel.style.display='none';
 }
 btn_cancel.addEventListener('click', delete_input);
 
