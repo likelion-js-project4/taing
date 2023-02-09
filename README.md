@@ -30,7 +30,9 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
 ## 📌 주요 기능
 
 ### 1. 랜딩페이지
+<div align=center>
   <img src="https://user-images.githubusercontent.com/69625013/217635979-933a8679-d840-447a-ba7b-74bb795cc467.png" width="800">
+</div>
     
   - 스크롤에 따라 움직이는 스와이퍼(Horizontal Scrolling) <- gsap과 swiper.js를 이용해 구현
   - 무한 롤링 배너
@@ -38,8 +40,10 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
   
   
 ### 2. 메인페이지
+<div align=center>
   <img src="https://user-images.githubusercontent.com/69625013/217636379-90d19282-4147-4989-a7c8-ce0edc9ccb6a.png" width="500">
   <img src="https://user-images.githubusercontent.com/69625013/217636394-6a394ddb-6907-488b-9218-c4f87f994819.png" width="500">
+</div>
   
   - 비주얼 스와이퍼, 각종 컨텐츠 스와이퍼 동적 렌더링
   - 비주얼 영역 스와이퍼 재생 제어 버튼 (swiper ********Autoplay Method)
@@ -48,7 +52,9 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
   
   
 ### 3. 로그인
+<div align=center>
   <img src="https://user-images.githubusercontent.com/69625013/217636571-f7775219-8c1e-4962-bece-013cea4247e5.png" width="500">
+</div>
   
   - 비밀번호 입력 숨김처리
   - 로그인 버튼 클릭 시 fetch를 이용해 이메일 및 비밀번호 유효성 검사
@@ -57,7 +63,9 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
   
   
 ### 4. 회원가입
+<div align=center>
   <img src="https://user-images.githubusercontent.com/69625013/217636394-6a394ddb-6907-488b-9218-c4f87f994819.png" width="500">
+</div>
     
   - 아이디, 비밀번호, 이메일 입력조건 검사 → 조건 만족 시 아래 경고 문구 비활성화
   - 입력조건 갖추지 않고 가입하기 버튼 클릭 시 alert창 표시
@@ -67,15 +75,19 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
   
   
 ### 5. 아이디/비밀번호 찾기
+<div align=center>
   <img src="https://user-images.githubusercontent.com/69625013/217637010-0e40b57b-144b-44cc-974a-5aa2e6346ee4.png" width="500">
   <img src="https://user-images.githubusercontent.com/69625013/217637012-04fa26e0-2254-4f2d-9ce8-bb2b550a6176.png" width="500">
+</div>
   
   - input 창에 text 입력시 키값을 감지해 확인 버튼 활성화 + 입력값 삭제 버튼 표시
   - X 버튼 클릭 시 input창의 데이터 삭제, 확인 버튼 비활성화
   
   
 ### 6. 검색
+<div align=center>
   <img src="https://user-images.githubusercontent.com/69625013/217637072-ac50e422-6b44-4732-97b7-04c3463925b2.png" width="500">
+</div>
   
   - localStorage를 이용한 최근검색어 업데이트
   - dataset과 이벤트위임을 이용한 선택 검색어 삭제
@@ -85,7 +97,9 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
   
   
 ### 7. 프로필 전환/편집
+<div align=center>
   <img src="https://user-images.githubusercontent.com/69625013/217637145-80270056-4817-4d99-88f1-143e1fa5f9b5.png" width="500">
+</div>
   
   - 사진 hover 시 위로 올라가는 애니메이션
   - 편집 버튼을 누르면
