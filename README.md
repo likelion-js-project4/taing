@@ -37,6 +37,9 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
 
 
 
+https://github.com/user-attachments/assets/6e115812-6cb6-4734-aec5-1c101c6fd5ef
+
+
 
 https://github.com/user-attachments/assets/7859d740-8646-4562-8625-8eb0448a537f
 
