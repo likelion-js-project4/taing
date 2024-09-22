@@ -29,6 +29,20 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
 - IDE: VScode
 - Database: json-server^0.17.1 - data.json
 
+
+## 구현 영상
+
+
+
+
+
+
+
+https://github.com/user-attachments/assets/7859d740-8646-4562-8625-8eb0448a537f
+
+
+
+
 ## 📌 주요 기능
 
 ### 1. 랜딩페이지
