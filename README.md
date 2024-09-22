@@ -30,22 +30,6 @@ HTML, CSS, VanillaJS를 이용한 TVING 사이트 클론코딩
 - Database: json-server^0.17.1 - data.json
 
 
-## 구현 영상
-
-
-
-
-
-
-https://github.com/user-attachments/assets/6e115812-6cb6-4734-aec5-1c101c6fd5ef
-
-
-
-https://github.com/user-attachments/assets/7859d740-8646-4562-8625-8eb0448a537f
-
-
-
-
 ## 📌 주요 기능
 
 ### 1. 랜딩페이지
@@ -119,7 +103,10 @@ https://github.com/user-attachments/assets/7859d740-8646-4562-8625-8eb0448a537f
 <div align=center>
   <img src="https://user-images.githubusercontent.com/69625013/217637145-80270056-4817-4d99-88f1-143e1fa5f9b5.png" width="500">
 </div>
+
   
+https://github.com/user-attachments/assets/7859d740-8646-4562-8625-8eb0448a537f
+
   - 사진 hover 시 위로 올라가는 애니메이션
   - 편집 버튼을 누르면
       - 완료 버튼으로 변환
